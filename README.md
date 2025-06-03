@@ -10,12 +10,12 @@ No campo da Análise de Sistemas, a comunicação clara e a documentação preci
 * **Comunicação da Equipe:** Atualizações de tarefas, discussões em sistemas de controle de versão (como GitHub/GitLab), READMEs de projetos.
 * **Análise de Dados:** Notas rápidas sobre insights, explicações para visualizações.
 
-
 ### Links Úteis para Outros Arquivos Markdown
 
+- [Markdown Básico](https://ricardotecpro.github.io/markdown/)
 - [Github Pages](./githubpages.md)
 - [Markdoww Conceitos](./markdown.md)
-
-
+- [Markdown Cheatsheet](https://www.markdownguide.org/cheat-sheet/)
+- [Markdown Guide](https://www.markdownguide.org/)
+- [Markdown Themes](https://pages.github.com/themes)
 - [Exemplo de Documentação Técnica](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github)
-
