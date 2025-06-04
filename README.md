@@ -1,7 +1,6 @@
+### [ricardotecpro.github.io](https://ricardotecpro.github.io/)
+
 # Ambiente de Desenvolvimento! 🚀
-
-[ricardotecpro.github.io/modulo_08_ambiente_desenvolvimento](ricardotecpro.github.io/modulo_08_ambiente_desenvolvimentohttps://ricardotecpro.github.io/modulo_08_ambiente_desenvolvimento)
-
 
 Este curso foi desenhado para fornecer uma base sólida em conceitos fundamentais de computação, preparando você para explorar diversas áreas da tecnologia. Aqui, você aprenderá desde a configuração do seu ambiente de desenvolvimento até o uso de ferramentas essenciais no dia a dia de um profissional de TI.
 
