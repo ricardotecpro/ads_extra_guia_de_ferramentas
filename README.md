@@ -1,5 +1,3 @@
-[ricardotecpro.github.io](https://ricardotecpro.github.io/)
-
 # **Guia de Ambiente de Desenvolvimento 🚀**
 
 Bem-vindo(a) ao seu guia definitivo para construir um ambiente de desenvolvimento robusto e eficiente. Seja você um estudante iniciando na área, um profissional em transição ou alguém buscando aprimorar suas habilidades, este material foi criado para fornecer uma base sólida e prática.
@@ -65,12 +63,6 @@ Sugerimos a seguinte ordem para absorver os conceitos de forma progressiva e est
   * Acesso a um computador com conexão à internet.
   * Conhecimentos básicos de uso do sistema operacional (navegar na web, criar pastas, etc.).
 
-## 🤝 Contribua com o Projeto
+---
 
-Este é um projeto de código aberto e vivo\! Encontrou um erro, tem uma sugestão ou quer adicionar um novo guia? Sua contribuição é muito bem-vinda. Você pode abrir uma *issue* ou enviar um *pull request* diretamente no repositório.
-
------
-
-✨ **Boa jornada de aprendizado\!**
-
-*Criado e mantido por [ricardotecpro.github.io](https://ricardotecpro.github.io/)*
+### [ricardotecpro.github.io](https://ricardotecpro.github.io/)

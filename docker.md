@@ -1,5 +1,3 @@
-### [ricardotecpro.github.io](https://ricardotecpro.github.io/)
-
 # 🐳 Docker
 Fundamentos e práticas essenciais do Docker
 
@@ -421,5 +419,6 @@ Para criar uma aplicação Java simples e dockerizá-la, siga os passos abaixo:
 
 [Docker Exemplo 1](ricardotecpro.github.io/modulo_08_ambiente_desenvolvimentohttps://ricardotecpro.github.io/modulo_08_ambiente_desenvolvimento/docker/calculadora-java/README.md)
 
+---
 
-
+### [ricardotecpro.github.io](https://ricardotecpro.github.io/)

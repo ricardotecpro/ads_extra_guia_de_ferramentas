@@ -1,5 +1,3 @@
-### [ricardotecpro.github.io](https://ricardotecpro.github.io/)
-
 # 🚀 Ambientes de Linha de Comando! 🖥️
 
 ## 🤔 O Que Você Vai Aprender Neste Curso?
@@ -339,3 +337,7 @@ Estamos animados para embarcar nesta jornada com você! Prepare-se para transfor
 * **Oh My Zsh:** [Oh My Zsh](https://ohmyz.sh/)
 * **Comunidades e Fóruns:**
     * [Stack Overflow](https://stackoverflow.com/)
+
+---
+
+### [ricardotecpro.github.io](https://ricardotecpro.github.io/)

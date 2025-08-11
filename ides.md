@@ -274,4 +274,7 @@ Ambientes de Desenvolvimento Integrado (IDEs) como IntelliJ IDEA e Visual Studio
 - [Neovim](https://neovim.io/)
 - [LunarVim](https://www.lunarvim.org/)
 - [AstroNvim](https://astronvim.com/)
-- 
+
+---
+
+### [ricardotecpro.github.io](https://ricardotecpro.github.io/)
