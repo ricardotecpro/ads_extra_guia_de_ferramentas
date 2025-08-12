@@ -1,68 +1,192 @@
 # **Guia de Ambiente de Desenvolvimento 🚀**
 
-Bem-vindo(a) ao seu guia definitivo para construir um ambiente de desenvolvimento robusto e eficiente. Seja você um estudante iniciando na área, um profissional em transição ou alguém buscando aprimorar suas habilidades, este material foi criado para fornecer uma base sólida e prática.
+Bem-vindo(a) ao seu guia definitivo para criar um **ambiente de desenvolvimento robusto, organizado e produtivo**.
+Este material foi pensado para **iniciantes e profissionais em transição**, com foco em prática e aplicação real.
 
-Nosso objetivo é desmistificar a configuração de ferramentas essenciais, permitindo que você se concentre no que realmente importa: **desenvolver software de qualidade.**
-
-## 🎯 O que você vai dominar?
-
-Ao final desta trilha, você estará apto(a) a:
-
-  * **Dominar IDEs:** Configurar ambientes de desenvolvimento para escrever, depurar e testar código como um profissional.
-  * **Virtualizar com Docker:** Criar ambientes de desenvolvimento consistentes, portáteis e isolados com contêineres.
-  * **Ganhar fluência no Terminal (Linux & Windows):** Utilizar a linha de comando para automação, gerenciamento de arquivos e execução de scripts.
-  * **Construir uma base sólida:** Compreender as boas práticas que sustentam o desenvolvimento de software moderno.
-
-## 🛠️ Kit de Ferramentas Essenciais
-
-Para uma jornada de sucesso, você precisará configurar e dominar as seguintes ferramentas. Siga nossos guias detalhados para começar com o pé direito.
-
-  * **Docker**
-
-      * Plataforma líder para criar, distribuir e executar aplicações em contêineres, garantindo que seu código funcione da mesma forma em qualquer lugar.
-      * ➡️ **Guia de Instalação e Uso:** **[Docker](https://www.google.com/search?q=./docker.md)**
-
-  * **Ambientes de Desenvolvimento Integrado (IDEs)**
-
-      * Ferramentas que unem editor de código, depurador e outras utilidades para maximizar sua produtividade.
-      * ➡️ **Opções e Configuração:** **[IDEs](https://www.google.com/search?q=./ides.md)**
-
-  * **Terminal (Windows & Linux)**
-
-      * A interface de linha de comando é a ferramenta mais poderosa para interagir com seu sistema e automatizar tarefas.
-      * ➡️ **Comandos Essenciais:** **[Terminal no Windows e Linux](https://www.google.com/search?q=./terminal_windown_linux.md)**
-
-## 📚 Trilha de Aprendizagem Sugerida
-
-Sugerimos a seguinte ordem para absorver os conceitos de forma progressiva e estruturada:
-
-1.  **Módulo 1: Preparando o Terreno**
-
-      * Introdução à Computação e Desenvolvimento
-      * Configurando sua [IDE (Ambiente de Desenvolvimento)](https://www.google.com/search?q=./ides.md)
-      * Dominando o [Terminal no Windows e Linux](https://www.google.com/search?q=./terminal_windown_linux.md)
-
-2.  **Módulo 2: Virtualização com Contêineres**
-
-      * Fundamentos do [Docker](https://www.google.com/search?q=./docker.md)
-      * **Prática:** Criando e gerenciando seus primeiros contêineres
-
-3.  **Módulo 3: Fundamentos de Programação**
-
-      * Lógica de Programação Essencial
-      * Introdução a uma Linguagem (Ex: Python, Java, JavaScript)
-
-4.  **Módulo 4: Colocando a Mão na Massa**
-
-      * Desenvolvendo sua primeira aplicação do zero
-      * Versionamento de código com Git e GitHub
-
-## 🤓 Pré-requisitos
-
-  * Curiosidade e muita vontade de aprender\!
-  * Acesso a um computador com conexão à internet.
-  * Conhecimentos básicos de uso do sistema operacional (navegar na web, criar pastas, etc.).
+Ao final desta jornada, você será capaz de **instalar, configurar e usar** ferramentas modernas para desenvolver software com eficiência.
 
 ---
 
-### [ricardotecpro.github.io](https://ricardotecpro.github.io/)
+## 🎯 Objetivos de Aprendizagem
+
+Você vai aprender a:
+
+* **Configurar IDEs** para escrever, depurar e testar código como um profissional.
+* **Usar o Terminal** (Windows & Linux) para automatizar e gerenciar sistemas.
+* **Controlar versões** com Git e GitHub.
+* **Programar do zero** em uma linguagem como Python ou Java.
+* **Trabalhar com Docker** para criar ambientes portáteis e padronizados.
+* **Desenvolver um projeto prático completo** com aplicação real.
+
+---
+
+## 📚 Trilha de Aprendizado
+
+### **Módulo 0 – Ambientação**
+
+Objetivo: preparar seu computador e sua organização para iniciar o curso.
+
+**Conteúdo:**
+
+* Estrutura de pastas para projetos (`/projetos`, `/documentos`, `/downloads`).
+* Como manter backups de código (Google Drive, Dropbox, GitHub).
+* Preparando o ambiente para receber as ferramentas.
+
+---
+
+### **Módulo 1 – Preparando o Ambiente**
+
+Objetivo: instalar e configurar as principais ferramentas.
+
+**Ferramentas:**
+
+1. **IDE** — [Guia de Instalação e Configuração](./ides.md)
+
+   * Visual Studio Code, IntelliJ IDEA ou Eclipse.
+   * Extensões recomendadas.
+
+2. **Terminal** — [Comandos Essenciais no Windows e Linux](./terminal_windows_linux.md)
+
+   * `cd`, `ls/dir`, `mkdir`, `rm`, `cp`, `mv`.
+   * Permissões de arquivos e execução de scripts.
+
+3. **Git & GitHub** — Configuração inicial.
+
+   ```bash
+   git config --global user.name "Seu Nome"
+   git config --global user.email "seuemail@example.com"
+   ```
+
+**Prática:**
+
+* Criar um repositório local, adicionar um arquivo `README.md` e enviar para o GitHub.
+
+```bash
+echo "# Meu Primeiro Repositório" > README.md
+git init
+git add README.md
+git commit -m "Primeiro commit"
+git branch -M main
+git remote add origin https://github.com/seuusuario/meu-repo.git
+git push -u origin main
+```
+
+---
+
+### **Módulo 2 – Fundamentos de Programação**
+
+Objetivo: aprender lógica e implementar seu primeiro código.
+
+**Conteúdo:**
+
+* Variáveis, condicionais, loops, funções.
+* Entrada e saída de dados.
+* Escolha da linguagem: Python (fácil e rápido) ou Java (forte tipagem e OO).
+
+**Exemplo em Python:**
+
+```python
+nome = input("Digite seu nome: ")
+for i in range(3):
+    print(f"Olá, {nome}! Bem-vindo(a) ao mundo da programação.")
+```
+
+**Exemplo em Java:**
+
+```java
+import java.util.Scanner;
+public class OlaMundo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite seu nome: ");
+        String nome = sc.nextLine();
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Olá, " + nome + "! Bem-vindo(a) ao mundo da programação.");
+        }
+        sc.close();
+    }
+}
+```
+
+**Prática:**
+
+* Criar um programa que leia uma lista de tarefas e as exiba numeradas.
+
+---
+
+### **Módulo 3 – Trabalhando com Contêineres**
+
+Objetivo: entender e aplicar Docker no desenvolvimento.
+
+**Conteúdo:**
+
+* Conceito de container.
+* Diferença entre máquinas virtuais e containers.
+* Instalação do Docker — [Guia Completo](./docker.md).
+* Comandos básicos:
+
+```bash
+docker --version
+docker run hello-world
+docker ps
+docker stop <container_id>
+```
+
+**Prática:**
+
+* Rodar um banco de dados PostgreSQL no Docker:
+
+```bash
+docker run --name meu-postgres -e POSTGRES_PASSWORD=123456 -p 5432:5432 -d postgres
+```
+
+---
+
+### **Módulo 4 – Projeto Final: Lista de Tarefas**
+
+Objetivo: integrar todos os conhecimentos em um projeto funcional.
+
+**Etapas:**
+
+1. Criar backend simples (Python Flask ou Java Spring Boot).
+2. Criar frontend (HTML/CSS/JS simples ou Angular).
+3. Versionar com GitHub.
+4. Containerizar com Docker.
+
+**Exemplo — Dockerfile para um app Python Flask:**
+
+```dockerfile
+FROM python:3.11-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+COPY . .
+CMD ["python", "app.py"]
+```
+
+**Execução:**
+
+```bash
+docker build -t minha-todolist .
+docker run -p 5000:5000 minha-todolist
+```
+
+---
+
+## ✅ Conclusão e Próximos Passos
+
+Parabéns!
+Se você concluiu todos os módulos:
+
+* Já domina o uso de IDE, terminal e Git.
+* Consegue escrever programas básicos.
+* Entende e usa Docker para desenvolvimento.
+* Criou seu primeiro projeto real.
+
+📌 Continue estudando frameworks, banco de dados avançados e práticas de DevOps para ampliar seu conhecimento.
+
+---
+
+Se quiser, posso também **criar todos os códigos práticos completos para cada módulo** em um repositório modelo, já prontos para rodar e testar. Isso deixaria o guia totalmente *hands-on*.
+
+Quer que eu já prepare esse pacote com todos os códigos e pastas organizadas?
