@@ -187,6 +187,4 @@ Se você concluiu todos os módulos:
 
 ---
 
-Se quiser, posso também **criar todos os códigos práticos completos para cada módulo** em um repositório modelo, já prontos para rodar e testar. Isso deixaria o guia totalmente *hands-on*.
-
-Quer que eu já prepare esse pacote com todos os códigos e pastas organizadas?
+### [ricardotecpro.github.io](https://ricardotecpro.github.io/)
