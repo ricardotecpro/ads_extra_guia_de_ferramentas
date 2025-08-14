@@ -1,5 +1,3 @@
-### [ricardotecpro.github.io](https://ricardotecpro.github.io/)
-
 # Ambiente de Desenvolvimento Integrado (IDEs) 🖥️
 
 Um Ambiente de Desenvolvimento Integrado (IDE) é uma aplicação de software que fornece funcionalidades abrangentes para programadores de software, auxiliando no desenvolvimento de software. IDEs normalmente consistem em pelo menos um editor de código-fonte, ferramentas de automação de compilação e um depurador. Ao centralizar essas ferramentas, um IDE pode aumentar significativamente a produtividade do programador.
