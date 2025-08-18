@@ -1,4 +1,4 @@
-# **Guia de Ambiente de Desenvolvimento 🚀**
+# **Ambiente de Desenvolvimento 🚀**
 
 Bem-vindo(a) ao seu guia definitivo para criar um **ambiente de desenvolvimento robusto, organizado e produtivo**.
 Este material foi pensado para **iniciantes e profissionais em transição**, com foco em prática e aplicação real.
@@ -167,8 +167,8 @@ CMD ["python", "app.py"]
 **Execução:**
 
 ```bash
-docker build -t minha-todolist .
-docker run -p 5000:5000 minha-todolist
+docker build -t minha-listatarefas .
+docker run -p 5000:5000 minha-listatarefas
 ```
 
 ---
