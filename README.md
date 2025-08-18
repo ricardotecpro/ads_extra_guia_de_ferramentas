@@ -40,7 +40,7 @@ Objetivo: instalar e configurar as principais ferramentas.
 
 **Ferramentas:**
 
-1. **IDE** — [Guia de Instalação e Configuração](./ides.md)
+1. **IDE** — [Guia de Instalação e Configuração](./topicos/ides.md)
 
    * Visual Studio Code, IntelliJ IDEA ou Eclipse.
    * Extensões recomendadas.
