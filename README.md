@@ -14,7 +14,7 @@ Você vai aprender a:
 * **Configurar IDEs** para escrever, depurar e testar código como um profissional.
 * **Usar o Terminal** (Windows & Linux) para automatizar e gerenciar sistemas.
 * **Controlar versões** com Git e GitHub.
-* **Programar do zero** em uma linguagem como Python ou Java.
+* **Programar do zero** em uma linguagem como JavaScript, Python ou Java.
 * **Trabalhar com Docker** para criar ambientes portáteis e padronizados.
 * **Desenvolver um projeto prático completo** com aplicação real.
 
