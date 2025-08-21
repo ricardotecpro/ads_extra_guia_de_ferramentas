@@ -137,3 +137,4 @@ A colaboração eficaz é crucial para o sucesso de qualquer projeto de software
 Ferramentas que fazem a ponte entre a ideia e a implementação visual.
 
   - **Figma**: A ferramenta líder de mercado para design de interfaces (UI), prototipagem interativa e, crucialmente, para o "handoff" — a entrega das especificações de design para os desenvolvedores.
+
