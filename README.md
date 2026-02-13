@@ -119,6 +119,16 @@ Plataformas que automatizam o processo de build, teste e deploy do software.
   - **GitHub Actions / GitLab CI/CD**: Soluções de CI/CD modernas e poderosas, integradas diretamente às plataformas de hospedagem de código, que se tornaram o padrão para a maioria dos projetos novos.
   - **Jenkins**: O "veterano" do mundo da automação. É uma solução de código aberto extremamente poderosa e flexível, embora possa ser mais complexa de configurar e manter.
 
+  - **GitLab Runner**: 
+  - **Ansible**: 
+  - **Terraform**: 
+  - **Puppet**:   
+  - **Chef**: 
+  - **SaltStack**: 
+  - **Packer**: 
+  - **Docker Compose**: 
+  
+
 ### 📦 Contêineres e Orquestração
 
 Tecnologias que revolucionaram a forma como as aplicações são empacotadas e implantadas.
@@ -138,3 +148,6 @@ Ferramentas que fazem a ponte entre a ideia e a implementação visual.
 
   - **Figma**: A ferramenta líder de mercado para design de interfaces (UI), prototipagem interativa e, crucialmente, para o "handoff" — a entrega das especificações de design para os desenvolvedores.
 
+---
+
+### 🔗 [ricardotecpro.github.io](https://ricardotecpro.github.io/)

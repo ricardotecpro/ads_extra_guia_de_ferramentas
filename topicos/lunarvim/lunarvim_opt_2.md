@@ -273,11 +273,6 @@ which lvim
 
 O comando `sudo mv /opt/nvim-linux-x86_64 /opt/nvim` já garante que o PATH `/opt/nvim/bin` funciona corretamente sem alterações extras. Precisa incluir mais alguma configuração automática ou ajuste?
 
-
-
-
-Claro! Aqui está a **versão atualizada do tutorial de instalação do Neovim no Debian/Ubuntu**, considerando o uso do arquivo `.tar.gz`, com:
-
 - Download e extração
     
 - Renomeação para `/opt/nvim`
@@ -287,7 +282,6 @@ Claro! Aqui está a **versão atualizada do tutorial de instalação do Neovim n
 - Verificação
     
 - Comandos de desinstalação
-    
 
 ---
 
