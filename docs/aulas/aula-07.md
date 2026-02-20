@@ -1,0 +1,93 @@
+# Aula 07 - Bancos de Dados NoSQL e Cache ⚡
+
+!!! tip "Objetivo"
+    **Objetivo**: Entender quando utilizar bancos de dados não relacionais (NoSQL), compreender o conceito de documentos e descobrir como o Cache (Redis) acelera aplicações de larga escala.
+
+---
+
+## 1. Além das Tabelas: O Mundo NoSQL 🧠
+
+Nem todo dado se encaixa bem em linhas e colunas rígidas. Para dados flexíveis e que precisam escalar rapidamente, usamos o **NoSQL (Not Only SQL)**.
+
+### 📄 Orientado a Documentos (MongoDB)
+Em vez de tabelas, usamos **Coleções** e **Documentos** (muito parecidos com arquivos JSON).
+*   **Flexibilidade**: Um documento de "Produto" pode ter campos diferentes de outro no mesmo banco.
+*   **Escalabilidade**: Muito fácil de distribuir entre vários servidores.
+
+---
+
+## 2. NoSQL vs SQL: Qual Usar? ⚖️
+
+| Característica | 💾 SQL (Relacional) | ⚡ NoSQL (Documentos) |
+| :--- | :--- | :--- |
+| **Esquema** | Rígido (Fixo) | Flexível (Dinâmico) |
+| **Relacionamentos** | Complexos (Joins) | Simples (Embarcados) |
+| **Foco** | Consistência e Precisão | Velocidade e Escala |
+| **Exemplos** | Postgres, MySQL | MongoDB, Cassandra |
+
+---
+
+## 3. Redis: A Velocidade da Memória 🚀
+
+O **Redis** é um banco de dados que vive na **Memória RAM**, e não no disco rígido. Isso o torna incrivelmente rápido (milissegundos!).
+
+### 🧠 Conceito: Cache
+Imagine que um site de notícias tem 1 milhão de acessos na mesma matéria. Em vez de perguntar para o banco de dados lento 1 milhão de vezes, salvamos a resposta no **Redis** (Cache) por alguns minutos.
+
+### Exemplo de Uso (Mermaid)
+
+```mermaid
+sequenceDiagram
+    participant User as Usuário
+    participant App as Aplicação
+    participant Cache as Redis (Cache)
+    participant DB as Postgres (Lento)
+
+    User->>App: Acessa Produto 1
+    App->>Cache: Tem no Cache?
+    Cache-->>App: Não (Miss)
+    App->>DB: Busca no Disco
+    DB-->>App: Retorna Dados
+    App->>Cache: Salva no Cache
+    App-->>User: Exibe Produto
+```
+
+---
+
+## 4. Praticando com Redis no Terminal 💻
+
+```termynal
+$ redis-cli
+127.0.0.1:6379> SET saudacao "Olá Mundo"
+OK
+127.0.0.1:6379> GET saudacao
+"Olá Mundo"
+127.0.0.1:6379> EXPIRE saudacao 10
+(integer) 1
+# (Apaga o dado automaticamente em 10 segundos)
+```
+
+---
+
+## 5. Mini-Projeto: Explorando um JSON 🚀
+
+No NoSQL, a estrutura mais comum é o **JSON**. Sua missão é criar o "esquema" de um documento para um sistema de cursos:
+
+1.  Abra seu VS Code.
+2.  Crie um arquivo chamado `aula.json`.
+3.  Descreva uma aula utilizando a estrutura JSON (campos como nome, duracao, lista de ferramentas).
+4.  Certifique-se de que o JSON esteja válido (use um validador online se necessário).
+
+---
+
+## 6. Exercício de Fixação 📝
+
+1.  **Básico**: Qual a principal diferença entre um Banco de Dados Relacional e um Orientado a Documentos?
+2.  **Básico**: Por que o **Redis** é muito mais rápido que o PostgreSQL?
+3.  **Intermediário**: Em qual situação usar o MongoDB é melhor do que usar o MySQL?
+4.  **Intermediário**: Explique o conceito de "Expiração de Cache" e por que ele é necessário.
+5.  **Desafio**: Pesquise o que é "Consistência Eventual" em bancos de dados distribuídos.
+
+---
+
+**Próxima Aula**: Vamos garantir que tudo funcione com os [Frameworks de Teste e Qualidade](./aula-08.md)! 🧪

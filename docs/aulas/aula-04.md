@@ -1,0 +1,100 @@
+# Aula 04 - Controle de Versão com Git: Fundamentos 🛠️
+
+!!! tip "Objetivo"
+    **Objetivo**: Entender o conceito de versionamento distribuído, configurar o Git pela primeira vez e dominar o fluxo básico de salvamento de trabalho (Local Workflow).
+
+---
+
+## 1. O que é o Git? 🧠
+
+O **Git** é um sistema de controle de versão distribuído. Ele funciona como uma "Máquina do Tempo" para o seu código, permitindo que você salve estados do projeto e retorne a eles se algo der errado.
+
+### 🧠 Conceito: Snapshot vs Backup
+Diferente de uma cópia simples de arquivos, o Git tira "fotos" (snapshots) das mudanças. Se você não alterou um arquivo, o Git apenas aponta para a versão anterior, economizando espaço e tempo.
+
+---
+
+## 2. Configuração Inicial ⚙️
+
+Antes de começar, o Git precisa saber quem você é. Isso é importante para que cada alteração tenha um autor identificado.
+
+```termynal
+$ git config --global user.name "Seu Nome"
+$ git config --global user.email "seu@email.com"
+$ git config --list
+user.name=Seu Nome
+user.email=seu@email.com
+```
+
+---
+
+## 3. O Fluxo de Trabalho Local 🔄
+
+Para salvar alterações no Git, passamos por três estados principais:
+
+1.  **Working Directory**: Onde você edita seus arquivos.
+2.  **Staging Area (Index)**: A "sala de espera". Aqui você escolhe o que será salvo.
+3.  **Local Repository**: Onde a "foto" é guardada permanentemente.
+
+### Visualização do Fluxo (Mermaid)
+
+```mermaid
+graph LR
+    WD[Working Directory] -- git add --> SA[Staging Area]
+    SA -- git commit --> LR[Local Repository]
+    LR -- git checkout --> WD
+```
+
+---
+
+## 4. Comandos de Sobrevivência ⌨️
+
+Estes são os comandos que você usará 90% do tempo:
+
+| Comando | Ação |
+| :--- | :--- |
+| `git init` | Transforma a pasta atual em um repositório Git. |
+| `git status` | Mostra o que foi alterado e o que está na "sala de espera". |
+| `git add .` | Adiciona todas as mudanças para a Staging Area. |
+| `git commit -m "mensagem"` | Salva as mudanças com uma descrição. |
+| `git log` | Mostra o histórico de todas as fotos (commits). |
+
+---
+
+## 5. Exemplo Prático de Commit 💻
+
+```termynal
+$ git init
+Initialized empty Git repository in /projeto/.git/
+$ touch README.md
+$ git status
+Untracked files: README.md
+$ git add README.md
+$ git commit -m "Initial commit: adicionar README"
+[master (root-commit) 8b1f2] Initial commit
+```
+
+---
+
+## 6. Mini-Projeto: Minha Primeira Máquina do Tempo 🚀
+
+1.  Crie uma pasta chamada `meu-primeiro-repo`.
+2.  Inicie o Git nesta pasta.
+3.  Crie um arquivo `historia.txt` e escreva uma frase.
+4.  Adicione o arquivo ao Git e faça um commit com a mensagem "Início da história".
+5.  Altere o arquivo, adicione outra frase e faça um novo commit "Capítulo 2".
+6.  Use o comando `git log` para ver suas duas "fotos" salvas.
+
+---
+
+## 7. Exercício de Fixação 📝
+
+1.  **Básico**: Para que serve o comando `git status`?
+2.  **Básico**: Por que é obrigatório colocar uma mensagem no `git commit`?
+3.  **Intermediário**: Qual a diferença entre o `Working Directory` e a `Staging Area`?
+4.  **Intermediário**: O que acontece se você deletar a pasta oculta `.git` do seu projeto?
+5.  **Desafio**: Pesquise o que é o arquivo `.gitignore` e dê um exemplo de arquivo que nunca deve ser enviado para o Git.
+
+---
+
+**Próxima Aula**: Vamos aprender a levar nosso código para a nuvem com as [Plataformas de Colaboração (GitHub/GitLab)](./aula-05.md)! 🤝
