@@ -1,104 +1,162 @@
-# Aula 06 - Services e Regras de Negócio 🧠
-## O Cérebro da Aplicação
+# Aula 06: Bancos de Dados Relacionais 💾
 
 ---
 
-## Agenda 📅
-
-1. Por que separar as coisas? <!-- .element: class="fragment" -->
-2. Responsabilidades do Service <!-- .element: class="fragment" -->
-3. O Fluxo: Controller -> Service <!-- .element: class="fragment" -->
-4. Tratamento de Erros Profissional <!-- .element: class="fragment" -->
-5. DTOs: Protegendo os Dados <!-- .element: class="fragment" -->
-6. Service vs ViewModel (Mobile) <!-- .element: class="fragment" -->
+## 🎯 Nossa Missão
+*   Entender o modelo relacional.
+*   Dominar a linguagem SQL básica.
+*   Conhecer os principais SGBDs (Postgres, MySQL).
+*   Usar ferramentas visuais (DBeaver).
 
 ---
 
-## 1. O Problema: "Controller Gordo" 🍔
-
-- Lógica de negócio misturada com HTTP. <!-- .element: class="fragment" -->
-- Código impossível de reutilizar. <!-- .element: class="fragment" -->
-- Difícil de testar. <!-- .element: class="fragment" -->
-
----
-
-## 2. A Solução: Layered Architecture 🧱
-
-- **Controller**: Trata o transporte (HTTP). <!-- .element: class="fragment" -->
-- **Service**: Trata a regra (O QUE fazer). <!-- .element: class="fragment" -->
+## 🤔 O que é um Banco de Dados?
+É um sistema organizado para armazenar, gerenciar e recuperar informações.
+*   **Persistent**: Os dados ficam lá mesmo se desligar. <!-- .element: class="fragment" -->
+*   **Seguro**: Controle de quem pode ver ou mudar. <!-- .element: class="fragment" -->
+*   **Escalável**: Suporta de 10 a milhões de linhas. <!-- .element: class="fragment" -->
 
 ---
 
-## 3. O que vai no Service? ⚖️
-
-- Validações complexas. <!-- .element: class="fragment" -->
-- Cálculos de valores. <!-- .element: class="fragment" -->
-- Envio de e-mails/notificações. <!-- .element: class="fragment" -->
-- Integração com repositórios. <!-- .element: class="fragment" -->
+## 🧩 O Modelo Relacional
+Imagine uma coleção de planilhas Excel que se conversam.
+*   **Tabelas**: Categorias de dados (ex: Usuarios). <!-- .element: class="fragment" -->
+*   **Colunas**: Atributos (ex: Nome, Email). <!-- .element: class="fragment" -->
+*   **Linhas**: Registros individuais (ex: O usuário João). <!-- .element: class="fragment" -->
 
 ---
 
-## 4. Tratamento de Erros ⚠️
+## 🏗️ Conceitos: Chaves
+O segredo da organização.
+*   **Primary Key (PK)**: O RG da linha. Único e obrigatório. <!-- .element: class="fragment" -->
+*   **Foreign Key (FK)**: O link para outra tabela. Cria a relação. <!-- .element: class="fragment" -->
 
-- O Service **Lança** (Throws). <!-- .element: class="fragment" -->
-- O Controller **Captura** (Catches). <!-- .element: class="fragment" -->
+---
 
-```javascript
-// Service
-if (!saldo) throw new Error("Saldo Insuficiente");
+## 🗺️ Exemplo de Tabela
+**Tabela: Ferramentas**
+| id (PK) | nome | categoria |
+| :--- | :--- | :--- |
+| 1 | VS Code | Editor |
+| 2 | Git | Versionador |
+| 3 | Postgres | Banco |
 
-// Controller
-try { ... } catch (e) { res.status(400)... }
+---
+
+## 🗣️ SQL: Structured Query Language
+A língua oficial dos bancos relacionais.
+*   Não é uma linguagem de programação, é uma linguagem de consulta.
+*   Padronizada, mas cada banco tem seu "sotaque".
+
+---
+
+## 🔍 SELECT: Buscando Dados
+```sql
+SELECT nome, email FROM usuarios;
 ```
+*   O `*` (asterisco) busca todas as colunas. <!-- .element: class="fragment" -->
+*   Sempre filtre o que você precisa para não pesar o banco! <!-- .element: class="fragment" -->
 
 ---
 
-## 5. DTOs: Filtrando a Saída 📦
-
-- Nunca envie "tudo" do banco para o cliente. <!-- .element: class="fragment" -->
-- Proteja campos sensíveis (Ex: `senha_hash`). <!-- .element: class="fragment" -->
-- Melhore a performance (menos dados trafegados). <!-- .element: class="fragment" -->
-
----
-
-## 6. Service vs ViewModel 🆚
-
-- No Backend: **Service** é o cérebro. <!-- .element: class="fragment" -->
-- No Mobile/Front: **ViewModel** é o cérebro. <!-- .element: class="fragment" -->
-- Ambos servem para "limpar" a camada de visualização. <!-- .element: class="fragment" -->
+## 🎯 WHERE: Filtrando Resultados
+```sql
+SELECT * FROM produtos 
+WHERE preco > 100 AND categoria = 'Eletrônicos';
+```
+*   Operadores: `=`, `>`, `<`, `<>`, `LIKE`, `IN`. <!-- .element: class="fragment" -->
 
 ---
 
-## 7. Prática: Validando um Cadastro 💻
-
-- Verificando se o e-mail é válido. <!-- .element: class="fragment" -->
-- Verificando se o usuário já existe. <!-- .element: class="fragment" -->
-- Lançando erros específicos. <!-- .element: class="fragment" -->
-
----
-
-## Desafio: Onde colocar? ⚡
-
-Se uma regra diz: "Usuários VIP ganham 20% de desconto", essa regra deve ficar no **Controller** ou no **Service**?
+## ➕ INSERT: Inserindo Dados
+```sql
+INSERT INTO categorias (nome) 
+VALUES ('Desenvolvimento');
+```
+*   Lembre-se de respeitar os tipos de dados (Texto vs Número). <!-- .element: class="fragment" -->
 
 ---
 
-## Resumo ✅
-
-- Controllers recebem, Services processam. <!-- .element: class="fragment" -->
-- Mantenha seus Controllers "finos" (Slim Controllers). <!-- .element: class="fragment" -->
-- Centralize as regras para facilitar a manutenção. <!-- .element: class="fragment" -->
-- DTOs são as fronteiras dos dados. <!-- .element: class="fragment" -->
-
----
-
-## Próxima Aula: Onde os dados vivem! 🗄️
-
-### Repositories e Banco de Dados
-
-- PostgreSQL e SQL básico. <!-- .element: class="fragment" -->
-- Camada de persistência. <!-- .element: class="fragment" -->
+## 🔄 UPDATE: Alterando Dados
+```sql
+UPDATE usuarios 
+SET nivel = 'Senior' 
+WHERE id = 42;
+```
+*   **Atenção**: Sempre use o `WHERE` ou você vai alterar a tabela inteira! 😱 <!-- .element: class="fragment" -->
 
 ---
 
-## Dúvidas? 🧠
+## ❌ DELETE: Removendo Dados
+```sql
+DELETE FROM logs 
+WHERE data < '2024-01-01';
+```
+*   **Atenção**: Sem `WHERE`, você apaga tudo! Cuidado redobrado. <!-- .element: class="fragment" -->
+
+---
+
+## 🐘 PostgreSQL: O Elefante Poderoso
+*   Open Source e extremamente robusto. <!-- .element: class="fragment" -->
+*   Foco em conformidade com padrões e integridade. <!-- .element: class="fragment" -->
+*   Suporta tipos complexos (JSON, Geometria). <!-- .element: class="fragment" -->
+*   **Queridinho das grandes empresas.** <!-- .element: class="fragment" -->
+
+---
+
+## 🐬 MySQL: A Rapidez da Web
+*   Muito popular em sites e blogs (WordPress). <!-- .element: class="fragment" -->
+*   Simples de usar e configurar. <!-- .element: class="fragment" -->
+*   Atualmente pertence à Oracle, mas tem o fork livre MariaDB. <!-- .element: class="fragment" -->
+
+---
+
+## 🦫 DBeaver: A Interface Universal
+Por que usar um GUI Client?
+*   Visualizar tabelas como se fossem planilhas. <!-- .element: class="fragment" -->
+*   Autocompletar comandos SQL. <!-- .element: class="fragment" -->
+*   Gerar diagramas (DER) automaticamente. <!-- .element: class="fragment" -->
+*   Exportar dados para Excel/CSV facilmente. <!-- .element: class="fragment" -->
+
+---
+
+## 📐 Modelagem: Normalização
+Organizar para não repetir.
+*   Evite salvar o nome do país em cada usuário. <!-- .element: class="fragment" -->
+*   Crie uma tabela `Paises` e use uma `ID` (FK). <!-- .element: class="fragment" -->
+*   Isso economiza espaço e evita erros de digitação. <!-- .element: class="fragment" -->
+
+---
+
+## 📉 Índices: Velocidade de Busca
+*   Como o índice de um livro. <!-- .element: class="fragment" -->
+*   Acelera muito a busca em tabelas com milhões de linhas. <!-- .element: class="fragment" -->
+*   **Custo**: Deixa a inserção um pouco mais lenta. <!-- .element: class="fragment" -->
+
+---
+
+## 🛡️ Transações: Tudo ou Nada (ACID)
+Imagine uma transferência bancária:
+1.  Tira dinheiro da conta A. <!-- .element: class="fragment" -->
+2.  Coloca dinheiro na conta B. <!-- .element: class="fragment" -->
+*   Se o passo 2 falhar, o passo 1 deve ser desfeito automaticamente. <!-- .element: class="fragment" -->
+
+---
+
+## 🏆 Checklist de Banco Pro
+*   [ ] Entende a diferença entre PK e FK. <!-- .element: class="fragment" -->
+*   [ ] Consegue fazer um SELECT com filtro. <!-- .element: class="fragment" -->
+*   [ ] Instalou e conectou o DBeaver. <!-- .element: class="fragment" -->
+*   [ ] Sabe que rodar DELETE sem WHERE é perigoso. <!-- .element: class="fragment" -->
+
+---
+
+## 📝 Prática de Hoje
+1.  Conectar ao banco via DBeaver.
+2.  Criar uma tabela `Ferramentas`.
+3.  Inserir 3 linhas e fazer um SELECT filtrado.
+
+---
+
+## 🏁 Dúvidas?
+O banco de dados é o coração da aplicação! ❤️🚀
