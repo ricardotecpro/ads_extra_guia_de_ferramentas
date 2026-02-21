@@ -53,6 +53,8 @@ def generate_slide_html(lesson_number: int) -> str:
             showSlideNumber: 'all',
             controls: true,
             progress: true,
+            transition: 'slide',
+            backgroundTransition: 'fade',
             plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
         }});
 

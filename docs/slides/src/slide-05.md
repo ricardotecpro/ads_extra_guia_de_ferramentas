@@ -1,102 +1,161 @@
-# Aula 05 - Implementação de APIs ⚙️
-## Controllers e Rotas
+# Aula 05: Plataformas de Colaboração 🤝
 
 ---
 
-## Agenda 📅
-
-1. Camadas do Backend { .fragment }
-2. O Papel do Controller { .fragment }
-3. Rotas e Handlers { .fragment }
-4. Capturando Dados (Params/Body) { .fragment }
-5. Status Codes na Prática { .fragment }
-6. Injeção de Dependência { .fragment }
+## 🎯 Nossa Missão
+*   Levar o código local para a nuvem.
+*   Trabalhar em equipe sem sobrescrever o colega.
+*   Dominar Pull Requests e Code Review.
+*   Conhecer GitHub, GitLab e Bitbucket.
 
 ---
 
-## 1. Organização em Camadas 🧱
-
-- **Controller**: Trata a entrada (HTTP). { .fragment }
-- **Service**: Regras de negócio. { .fragment }
-- **Repository**: Acesso ao banco. { .fragment }
-
----
-
-## 2. O Papel do Controller 🎮
-
-- Ele é o ponto de entrada. { .fragment }
-- **Não deve ter lógica complexa!** { .fragment }
-- Deve apenas orquestrar a execução. { .fragment }
-
-> **Controller** = Garçom 🤵
-> **Service** = Cozinheiro 👨‍🍳
+## ☁️ Por que usar repositórios remotos?
+*   **Backup Seguro**: Se o PC pifar, o código está na nuvem. { .fragment }
+*   **Colaboração**: Várias pessoas no mesmo projeto. { .fragment }
+*   **Deploy**: Servidores buscam o código de lá. { .fragment }
+*   **Portfólio**: Mostrar seu trabalho para o mundo. { .fragment }
 
 ---
 
-## 3. Rotas e Handlers 📍
+## 🏢 O Big Three das Plataformas
+1.  **GitHub**: A maior e mais social. { .fragment }
+2.  **GitLab**: Foco em empresas e CI/CD integrado. { .fragment }
+3.  **Bitbucket**: Integração nativa com Jira. { .fragment }
 
-- **Rota**: Verbo HTTP + Path. { .fragment }
-- **Handler**: Função executada. { .fragment }
+---
 
-```javascript
-router.post('/login', controller.realizarLogin);
+## 🔗 Conectando Local com Remoto
+`git remote add origin <url-do-servidor>`
+*   **origin**: É o apelido padrão do seu servidor remoto. { .fragment }
+*   Você pode ter mais de um remoto (ex: `upstream`). { .fragment }
+
+---
+
+## 🚀 Enviando Código: `git push`
+O ato de "empurrar" seus commits para a nuvem.
+```bash
+git push -u origin main
+```
+*   `-u`: Salva a preferência (upstream), depois basta usar `git push`. { .fragment }
+
+---
+
+## 📥 Trazendo Código: `git pull`
+Sincronizando as mudanças que outros fizeram.
+*   Executa um `fetch` (busca) + `merge` (une). { .fragment }
+*   Mantenha seu código local sempre atualizado! { .fragment }
+
+---
+
+## 👯‍♀️ Clonando um Projeto: `git clone`
+Baixando um repositório que já existe online.
+*   Cria a pasta, inicia o git e baixa todos os arquivos. { .fragment }
+*   Baixa todo o histórico de commits. { .fragment }
+
+---
+
+## 🌳 Trabalhando com Branches
+O segredo da colaboração segura.
+```mermaid
+graph LR
+    M((Main)) --- A((Fix A))
+    M --- B((Feature B))
+    A -.-> M
+    B -.-> M
+```
+*   **Main**: Sempre código funcional e testado. { .fragment }
+*   **Features**: Branches para cada tarefa nova. { .fragment }
+
+---
+
+## 🏗️ O Ciclo de Vida de uma Alteração
+```mermaid
+sequenceDiagram
+    participant D as Desenvolvedor
+    participant G as GitHub (Cloud)
+    participant T as Time (Equipe)
+
+    D->>D: Cria Branch & Commits
+    D->>G: git push branch
+    D->>G: Abre Pull Request (PR)
+    G->>T: Notifica Time
+    T->>G: Faz Code Review & Sugestões
+    D->>G: Ajusta Código
+    G->>G: Merge para Main
 ```
 
 ---
 
-## 4. Capturando Dados 📥
-
-- **Path Params**: `/id/123` (Identificação). { .fragment }
-- **Query Params**: `?q=busca` (Filtro). { .fragment }
-- **Body**: Enviando JSON (Criação/Update). { .fragment }
-
----
-
-## 5. Respostas de Qualidade 📤
-
-- Nunca esqueça o Status Code! { .fragment }
-- Sucesso: 200, 201, 204. { .fragment }
-- Erro: 400, 401, 404, 500. { .fragment }
+## 📝 O Pull Request (PR)
+Não é apenas código, é uma conversa.
+*   **Título Claro**: O que isso resolve? { .fragment }
+*   **Descrição**: Explique as mudanças complexas. { .fragment }
+*   **Prints/Vídeos**: Se houver mudança visual. { .fragment }
 
 ---
 
-## 6. Injeção de Dependência 💉
-
-- Receber serviços prontos. { .fragment }
-- Facilita testar o Controller "isolado". { .fragment }
-
----
-
-## 7. Prática: O Primeiro Endpoint 💻
-
-- Mapeando um `GET /ping`. { .fragment }
-- Retornando um `pong` em JSON. { .fragment }
-- Testando no Insomnia/Postman. { .fragment }
+## 🔍 Code Review: A Etapa de Ouro
+Por que revisar código alheio?
+*   Encontrar bugs que o autor não viu. { .fragment }
+*   Aprender novas técnicas. { .fragment }
+*   Garantir a padronização do time. { .fragment }
+*   **Seja gentil nas críticas!** { .fragment }
 
 ---
 
-## Desafio: Params vs Query ⚡
-
-Se você quer listar todos os alunos de uma sala com o nome "Pedro", qual tipo de parâmetro você usaria para o nome?
-
----
-
-## Resumo ✅
-
-- Controllers são a porta de entrada. { .fragment }
-- Devem ser leves e objetivos. { .fragment }
-- Capturam dados e retornam status/JSON. { .fragment }
-- Seguem as rotas definidas. { .fragment }
+## 👯‍♂️ Fork: Colaboração Externa
+Muito comum em Open Source.
+*   Você cria uma cópia do projeto de outra pessoa na sua conta. { .fragment }
+*   Faz as mudanças e envia um PR de volta para o autor original. { .fragment }
 
 ---
 
-## Próxima Aula: Regras de Negócio! 🧠
-
-### Services e Validações
-
-- Onde o cálculo acontece. { .fragment }
-- Isolando o código do "mundo externo". { .fragment }
+## 🐙 GitHub: Recursos Sociais
+*   **Stars**: Curtir um projeto. { .fragment }
+*   **Watch**: Receber notificações de mudanças. { .fragment }
+*   **Profile**: Seu currículo visual como dev. { .fragment }
 
 ---
 
-## Dúvidas? ⚙️
+## 🛑 Cuidados com a Segurança
+*   **NUNCA** envie senhas (`.env`) para o GitHub. { .fragment }
+*   Use Chaves SSH para conexão segura sem senha. { .fragment }
+*   Ative o Double Factor Authentication (2FA). { .fragment }
+
+---
+
+## ⚠️ Lidando com Conflitos (Remoto)
+Se você e um colega mudam a mesma linha:
+1.  O `push` será rejeitado. { .fragment }
+2.  Você deve fazer `git pull`. { .fragment }
+3.  Resolver o conflito localmente. { .fragment }
+4.  Fazer novo `add/commit/push`. { .fragment }
+
+---
+
+## 📊 Insights do GitHub
+*   **Network Graph**: Visualizar as branches. { .fragment }
+*   **Contributors**: Quem mais trabalhou no projeto? { .fragment }
+*   **Dependency Graph**: Quais bibliotecas seu código usa? { .fragment }
+
+---
+
+## 🏆 Checklist Pro do Dia
+*   [ ] Repositório remoto configurado. { .fragment }
+*   [ ] `git push` realizado com sucesso. { .fragment }
+*   [ ] Entende o papel de uma Branch de Feature. { .fragment }
+*   [ ] Sabe abrir um Pull Request descritivo. { .fragment }
+
+---
+
+## 📝 Prática de Hoje
+1.  Criar um Repo Público no GitHub.
+2.  Conectar seu projeto local e fazer Push.
+3.  Editar online, fazer Pull local.
+4.  Simular um PR com um colega.
+
+---
+
+## 🏁 Dúvidas?
+O código agora é global! 🌎🚀

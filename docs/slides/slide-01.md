@@ -1,140 +1,152 @@
-# Aula 01 - Introdução a Microsserviços 🌐
-## De Monólitos a Sistemas Distribuídos
+# Aula 01: Introdução ao Ecossistema de Ferramentas 🌐
 
 ---
 
-## Agenda de Hoje 📅
-
-1. Panorama do Software Moderno <!-- .element: class="fragment" -->
-2. Monólitos vs Microsserviços <!-- .element: class="fragment" -->
-3. A Economia das APIs <!-- .element: class="fragment" -->
-4. Escalabilidade Vertical vs Horizontal <!-- .element: class="fragment" -->
-5. Cinto de Utilidades (Ferramentas) <!-- .element: class="fragment" -->
-6. Setup do Ambiente <!-- .element: class="fragment" -->
+## 🎯 Nosso Objetivo Hoje
+*   Entender o ecossistema do desenvolvedor moderno.
+*   Diferenciar as categorias de ferramentas.
+*   Conhecer o poder da automação.
+*   Primeiros passos no Terminal.
 
 ---
 
-## 1. O Mundo Cloud-Native ☁️
-
-- Sistemas globais exigem disponibilidade **24/7**. <!-- .element: class="fragment" -->
-- Milhões de requisições por segundo. <!-- .element: class="fragment" -->
-- Deploy contínuo (várias vezes ao dia). <!-- .element: class="fragment" -->
-
----
-
-## 2. A Evolução da Arquitetura 🏛️➡️🏗️
+## 🚀 Por que ferramentas importam?
+*   Economia de Tempo ⏳
+*   Padronização 📏
+*   Qualidade do Código 💎
+*   Trabalho em Equipe 🤝
 
 ---
 
-## 2.1 O Monólito 🏛️
-
-- Um único projeto, um único deploy. <!-- .element: class="fragment" -->
-- Tudo ou nada: erro em um lugar afeta tudo. <!-- .element: class="fragment" -->
-- Difícil de escalar partes específicas. <!-- .element: class="fragment" -->
-- **Ideal para**: Projetos pequenos, MVPs rápidos. <!-- .element: class="fragment" -->
-
----
-
-## 2.2 Microsserviços 🏗️
-
-- Conjunto de serviços independentes. <!-- .element: class="fragment" -->
-- Comunicação via rede (APIs). <!-- .element: class="fragment" -->
-- Cada um com seu banco de dados. <!-- .element: class="fragment" -->
-- **Ideal para**: Sistemas complexos e escaláveis. <!-- .element: class="fragment" -->
+## 🧩 O "Cinto de Utilidades" do Dev
+Um desenvolvedor profissional não vive apenas de escrever código.
+Ele gerencia:
+*   Tarefas <!-- .element: class="fragment" -->
+*   Versões <!-- .element: class="fragment" -->
+*   Ambientes <!-- .element: class="fragment" -->
+*   Qualidade <!-- .element: class="fragment" -->
 
 ---
 
-## 3. O Papel das APIs 📡
-
-- **Contract-First**: Acordo de comunicação. <!-- .element: class="fragment" -->
-- REST como padrão dominante. <!-- .element: class="fragment" -->
-- JSON: A língua universal. <!-- .element: class="fragment" -->
-
----
-
-## Escalabilidade: Vertical vs Horizontal
-
-| Vertical (Scale Up) | Horizontal (Scale Out) |
-| :--- | :--- |
-| Aumenta CPU/RAM | Adiciona mais servidores |
-| Tem limite físico | Virtualmente ilimitada |
-| Causa downtime no upgrade | Zero downtime (Redundância) |
+## 🛠️ Categorias de Ferramentas
+1.  **Gestão de Projetos** (Jira, Trello) <!-- .element: class="fragment" -->
+2.  **Ambiente de Dev** (VS Code, Terminal) <!-- .element: class="fragment" -->
+3.  **Controle de Versão** (Git, GitHub) <!-- .element: class="fragment" -->
+4.  **Banco de Dados** (Postgres, DBeaver) <!-- .element: class="fragment" -->
 
 ---
 
-## Arquitetura de Microsserviços
+## 🛠️ Categorias de Ferramentas (Cont.)
+5.  **Qualidade e Testes** (Jest, Sonar) <!-- .element: class="fragment" -->
+6.  **Infraestrutura e CI/CD** (Docker, Actions) <!-- .element: class="fragment" -->
+7.  **Comunicação** (Slack, Teams) <!-- .element: class="fragment" -->
+8.  **Design** (Figma) <!-- .element: class="fragment" -->
 
+---
+
+## 🧠 Conceito: Automação
+> "Se você faz a mesma coisa mais de 3 vezes, você deve automatizá-la."
+
+---
+
+## 📈 O Ciclo de Vida do Software
 ```mermaid
 graph LR
-    User[Cliente] --> AGW[API Gateway]
-    AGW --> S1[Usuários]
-    AGW --> S2[Pedidos]
-    AGW --> S3[Pagamentos]
-    S1 --> DB1[(DB)]
-    S2 --> DB2[(DB)]
-    S3 --> DB3[(DB)]
+    P[Planejar] --> C[Codar]
+    C --> T[Testar]
+    T --> D[Deploy]
+    D --> O[Operar]
+    O --> P
 ```
 
 ---
 
-## 4. Ferramentas Indispensáveis 🛠️
+## 💻 IDE vs Editor de Código
+*   **Editor**: Leve, rápido, extensível (ex: VS Code). <!-- .element: class="fragment" -->
+*   **IDE**: Completa, "pesada", ferramentas nativas (ex: IntelliJ). <!-- .element: class="fragment" -->
 
 ---
 
-## Client HTTP: Postman & Insomnia
-
-- Testar rotas sem Frontend. <!-- .element: class="fragment" -->
-- Analisar Headers e Status Codes. <!-- .element: class="fragment" -->
-- Simular diferentes cenários de erro. <!-- .element: class="fragment" -->
-
----
-
-## Containerização: Docker 🐋
-
-- "Roda na minha máquina, roda em qualquer lugar". <!-- .element: class="fragment" -->
-- Isola dependências e versões. <!-- .element: class="fragment" -->
-- Facilita a subida de múltiplos serviços locais. <!-- .element: class="fragment" -->
+## 🖥️ O Poder do Terminal (CLI)
+A interface de linha de comando é a casa do desenvolvedor.
+*   **Rapidez**: Sem cliques infinitos. <!-- .element: class="fragment" -->
+*   **Scripts**: Repetir tarefas complexas. <!-- .element: class="fragment" -->
+*   **Controle**: Acesso total ao sistema. <!-- .element: class="fragment" -->
 
 ---
 
-## 5. Estrutura de Projeto Backend 📂
-
-- Divisão clara de responsabilidades. <!-- .element: class="fragment" -->
-- Controllers, Services e Repositories. <!-- .element: class="fragment" -->
-- Tratamento global de exceções. <!-- .element: class="fragment" -->
-
----
-
-## 6. Setup do Ambiente 🚀
+## ⌨️ Comandos Básicos (Terminal)
+*   `ls`: Listar arquivos. <!-- .element: class="fragment" -->
+*   `cd`: Entrar em pasta. <!-- .element: class="fragment" -->
+*   `mkdir`: Criar pasta. <!-- .element: class="fragment" -->
+*   `pwd`: Onde eu estou? <!-- .element: class="fragment" -->
 
 ---
 
-## Requisitos:
-
-- IDE: VS Code ou IntelliJ. <!-- .element: class="fragment" -->
-- Postman (Desktop ou Extensão). <!-- .element: class="fragment" -->
-- Docker Desktop. <!-- .element: class="fragment" -->
-- Git & GitHub. <!-- .element: class="fragment" -->
-
----
-
-## Resumo da Aula ✅
-
-- Microsserviços trazem resiliência e escala. <!-- .element: class="fragment" -->
-- APIs são o coração da comunicação moderna. <!-- .element: class="fragment" -->
-- Ferramentas como Docker mudaram o jogo. <!-- .element: class="fragment" -->
-- Começamos nossa jornada Fullstack! <!-- .element: class="fragment" -->
+## 📂 Organização de Pastas
+Mantenha seus projetos organizados!
+*   Ex: `~/SourceCode/REPOS/github/` <!-- .element: class="fragment" -->
+*   Evite espaços nos nomes de pastas. <!-- .element: class="fragment" -->
+*   Use `hifen-ou-underscore`. <!-- .element: class="fragment" -->
 
 ---
 
-## Próxima Aula: Arquitetura e Gateway 🏗️
-
-- Como os serviços conversam? <!-- .element: class="fragment" -->
-- O que é Service Discovery? <!-- .element: class="fragment" -->
-- Protegendo a porta de entrada. <!-- .element: class="fragment" -->
+## 🦀 Ferramentas de Gestão
+*   **Jira**: O padrão corporativo. <!-- .element: class="fragment" -->
+*   **Trello**: Visual e simples (Kanban). <!-- .element: class="fragment" -->
+*   **GitHub Issues**: Integrado ao código. <!-- .element: class="fragment" -->
 
 ---
 
-## Dúvidas? 🤔
+## 🐙 O Ecossistema Git
+*   **Git**: O software local. <!-- .element: class="fragment" -->
+*   **GitHub**: A rede social do código. <!-- .element: class="fragment" -->
+*   **GitLab**: Foco em CI/CD e empresas. <!-- .element: class="fragment" -->
 
-> "A arquitetura de hoje é o legado de amanhã. Escolha com sabedoria."
+---
+
+## 📦 O Mundo dos Contêineres
+O que é Docker?
+*   Empacota o app. <!-- .element: class="fragment" -->
+*   Funciona igual em todo lugar. <!-- .element: class="fragment" -->
+*   "Na minha máquina funciona" acabou! <!-- .element: class="fragment" -->
+
+---
+
+## 💎 Qualidade de Código
+*   **Linters**: Corretor ortográfico de código. <!-- .element: class="fragment" -->
+*   **Formatters**: Deixa o código padronizado. <!-- .element: class="fragment" -->
+*   **Testes**: Garante que nada quebra. <!-- .element: class="fragment" -->
+
+---
+
+## 📡 Ferramentas de API
+Testando a comunicação entre sistemas.
+*   Postman <!-- .element: class="fragment" -->
+*   Insomnia <!-- .element: class="fragment" -->
+
+---
+
+## 🎨 O Elo com o Design
+*   **Figma**: Onde o app nasce visualmente.
+*   **Handoff**: A entrega para o desenvolvedor.
+
+---
+
+## 🏆 Conclusão da Intro
+Você não precisa dominar todas hoje.
+*   Escolha uma de cada categoria. <!-- .element: class="fragment" -->
+*   Pratique a linha de comando. <!-- .element: class="fragment" -->
+*   Mantenha a curiosidade ativa. <!-- .element: class="fragment" -->
+
+---
+
+## 📝 Próximos Passos
+1.  Instalar o VS Code.
+2.  Configurar o Git.
+3.  Criar conta no GitHub.
+
+---
+
+## 🏁 Dúvidas?
+Vamos para a prática! 🚀

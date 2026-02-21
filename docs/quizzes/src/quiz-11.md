@@ -1,71 +1,71 @@
-# Quiz 11 - Refresh Token e Segurança Avançada 🏗️
+# Quiz: Aula 11 - CI/CD Moderno (GitHub Actions) 🚀
 
-1. Por que não é recomendado que o Access Token dure muitos dias?
-    - [ ] Porque ele ocupa muito espaço no servidor
-    - [x] Por segurança: se for roubado, o hacker terá acesso por pouco tempo
-    - [ ] Porque o navegador apaga tokens longos automaticamente
-    - [ ] Porque o Google não permite
-    *Explicação: Tokens curtos minimizam o estrago em caso de vazamento de credenciais.*
+1.  **O que significa a sigla CI?**
+    *   ( ) Core Integration.
+    *   (x) Continuous Integration (Integração Contínua).
+    *   ( ) Code Identification.
+    *   ( ) Computer Intelligence.
+    *   *Explicação: CI foca na integração frequente do código de vários desenvolvedores, validada por testes automáticos.*
 
-2. Para que serve o Refresh Token?
-    - [ ] Para mudar a senha do usuário
-    - [x] Para pedir um novo Access Token sem que o usuário tenha que digitar a senha novamente
-    - [ ] Para aumentar a velocidade da internet
-    - [ ] Para carregar imagens mais rápido
-    *Explicação: Ele garante uma boa experiência de uso (UX) sem sacrificar a segurança.*
+2.  **Qual o principal benefício do CD (Continuous Delivery/Deployment)?**
+    *   ( ) Deletar o código antigo automaticamente.
+    *   (x) Automatizar a entrega do software para os ambientes de teste ou produção, reduzindo processos manuais.
+    *   ( ) Fazer o backup do banco de dados na máquina do desenvolvedor.
+    *   ( ) Substituir a necessidade de ter um servidor.
+    *   *Explicação: O CD garante que o deploy seja um processo repetível e seguro.*
 
-3. O que significa a sigla CORS?
-    - [ ] Central-Order-Resource-System
-    - [x] Cross-Origin Resource Sharing
-    - [ ] Code-Origin-Restriction-Safe
-    - [ ] Chrome-Only-Response-System
-    *Explicação: É o mecanismo que define quais sites externos podem acessar sua API.*
+3.  **No GitHub Actions, o que é um "Workflow"?**
+    *   ( ) O nome do cargo do desenvolvedor.
+    *   (x) Um processo automatizado configurável que executará um ou mais jobs.
+    *   ( ) Uma pasta onde guardamos imagens.
+    *   ( ) O layout visual do GitHub.
+    *   *Explicação: Workflows são as pipelines descritas em arquivos YAML.*
 
-4. Quem aplica o bloqueio de CORS?
-    - [ ] O Provedor de Internet
-    - [ ] O Microprocessador do celular
-    - [x] O Navegador (Chrome, Firefox, Safari)
-    - [ ] O Teclado do usuário
-    *Explicação: O navegador bloqueia a leitura da resposta se o servidor não enviar os headers de permissão corretos.*
+4.  **Em qual formato de arquivo as configurações do GitHub Actions são escritas?**
+    *   ( ) JSON.
+    *   (x) YAML (.yml ou .yaml).
+    *   ( ) HTML.
+    *   ( ) XML.
+    *   *Explicação: YAML é o padrão da indústria para arquivos de configuração devido à sua legibilidade.*
 
-5. Qual a função da biblioteca Helmet?
-    - [ ] Proteger o servidor contra quedas físicas
-    - [x] Configurar automaticamente diversos headers de segurança no HTTP
-    - [ ] Aumentar o brilho da tela
-    - [ ] Traduzir o app para inglês
-    *Explicação: O Helmet ajuda a esconder detalhes do servidor e prevenir ataques como XSS.*
+5.  **O que é um "Trigger" (Gatilho) no Actions?**
+    *   ( ) Um erro que para a pipeline.
+    *   (x) Um evento que inicia a execução do workflow (ex: push, pull_request).
+    *   ( ) O botão de deletar o repositório.
+    *   ( ) Uma senha secreta do desenvolvedor.
+    *   *Explicação: O trigger define "quando" a automação deve começar.*
 
-6. O que é "Rate Limiting"?
-    - [ ] O limite de velocidade do Wi-Fi
-    - [x] Uma técnica para limitar o número de requisições que um usuário/IP pode fazer em um tempo
-    - [ ] Quando o app fica lento de propósito
-    - [ ] O limite de amigos que alguém pode ter
-    *Explicação: É essencial para evitar ataques de força bruta (Brute Force) e ataques de negação de serviço (DoS).*
+6.  **Para que serve um "Runner" no contexto de CI/CD?**
+    *   ( ) Para o desenvolvedor correr atrás dos prazos.
+    *   (x) É o servidor/máquina virtual que realmente executa os comandos do seu workflow.
+    *   ( ) É um tipo de plugin do VS Code.
+    *   ( ) É o comando para deletar arquivos temporários.
+    *   *Explicação: O Runner é o "trabalhador" que roda os testes e faz o build do seu app.*
 
-7. Por que devemos evitar `origin: '*'` no CORS em produção?
-    - [ ] Porque o servidor fica pesado
-    - [x] Porque qualquer site malicioso do mundo poderia tentar roubar dados da sua API
-    - [ ] Porque o Google penaliza sites assim
-    - [ ] Porque os usuários não gostam
-    *Explicação: O ideal é listar apenas os domínios oficiais que você confia.*
+7.  **O que acontece se um Job da sua pipeline falhar?**
+    *   ( ) O GitHub deleta sua conta.
+    *   (x) O workflow é interrompido, o GitHub sinaliza com um "X" vermelho e avisa o desenvolvedor.
+    *   ( ) O código é enviado para o servidor de qualquer forma.
+    *   ( ) Nada, o processo continua sem problemas.
+    *   *Explicação: A falha serve para alertar que algo no código novo não está correto.*
 
-8. O que é o ataque XSS (Cross-Site Scripting)?
-    - [ ] Quando o banco de dados é deletado
-    - [x] Quando um invasor consegue injetar scripts maliciosos em páginas vistas por outros usuários
-    - [ ] Quando o cabo USB desconecta
-    - [ ] Quando a senha é muito curta
-    *Explicação: O invasor pode usar isso para roubar tokens ou cookies de outros usuários.*
+8.  **O que são "GitHub Secrets"?**
+    *   ( ) Segredos sobre a história da empresa.
+    *   (x) Variáveis de ambiente criptografadas (como senhas e chaves de API) que a pipeline usa com segurança.
+    *   ( ) Comentários escondidos no código.
+    *   ( ) Membros ocultos da equipe.
+    *   *Explicação: Secrets permitem usar dados sensíveis na automação sem expô-los no código.*
 
-9. Qual desses é o lugar mais seguro para guardar o Refresh Token no navegador?
-    - [ ] localStorage
-    - [ ] sessionStorage
-    - [x] Cookie com a flag HttpOnly
-    - [ ] No histórico de navegação
-    *Explicação: Cookies HttpOnly não podem ser lidos via Javascript, o que protege contra ataques XSS.*
+9.  **Qual a vantagem de usar `on: [pull_request]` em vez de apenas `on: [push]`?**
+    *   ( ) Não há vantagem.
+    *   (x) Permite testar o código antes mesmo dele entrar na branch principal, auxiliando no Code Review.
+    *   ( ) Economiza dinheiro para o GitHub.
+    *   ( ) Faz o deploy ser mais rápido.
+    *   *Explicação: Testar PRs garante que a integração só ocorra se o código estiver estável.*
 
-10. O que acontece em um "Refresh Token Rotation"?
-    - [ ] O token muda de cor
-    - [x] Sempre que um novo Access Token é pedido, o Refresh Token antigo é invalidado e um novo é gerado
-    - [ ] O usuário é obrigado a trocar a senha
-    - [ ] O servidor reinicia
-    *Explicação: É uma camada extra de segurança para detectar se um Refresh Token foi roubado.*
+10. **O que é um "Step" dentro de um Job do GitHub Actions?**
+    *   ( ) Um degrau na escada da empresa.
+    *   (x) Uma tarefa individual que executa um comando ou uma ação específica.
+    *   ( ) O nome do arquivo YAML.
+    *   ( ) Um tipo de branch.
+    *   *Explicação: Jobs são compostos por vários Steps executados em sequência.*

@@ -1,71 +1,71 @@
-# Quiz 06 - Services e Regras de Negócio 🧠
+# Quiz: Aula 06 - Bancos de Dados Relacionais 💾
 
-1. O que acontece se colocarmos toda a lógica de negócio dentro do Controller?
-    - [ ] O app fica mais rápido
-    - [x] O código fica difícil de testar, manter e reutilizar (o famoso "Controller Gordo")
-    - [ ] O banco de dados se apaga sozinho
-    - [ ] O roteamento para de funcionar
-    *Explicação: Acoplar lógica de negócio ao transporte HTTP cria dívida técnica e dificulta a evolução do sistema.*
+1.  **O que significa a sigla SQL?**
+    *   ( ) Simple Query Language.
+    *   (x) Structured Query Language (Linguagem de Consulta Estruturada).
+    *   ( ) System Quality Logic.
+    *   ( ) Standard Quantum List.
+    *   *Explicação: SQL é a linguagem padrão para interagir com bancos de dados relacionais.*
 
-2. Qual a principal responsabilidade do Service?
-    - [ ] Definir as rotas do app
-    - [x] Executar as regras de negócio, validações e cálculos
-    - [ ] Gerar as respostas JSON para o cliente
-    - [ ] Configurar a porta do servidor
-    *Explicação: O Service é onde o conhecimento do domínio da aplicação (as regras do "negócio") reside.*
+2.  **Qual o papel de uma "Primary Key" (Chave Primária)?**
+    *   ( ) Abrir o banco de dados.
+    *   (x) Identificar de forma única e exclusiva cada registro (linha) em uma tabela.
+    *   ( ) Salvar a senha dos usuários.
+    *   ( ) Listar os nomes em ordem alfabética.
+    *   *Explicação: Não podem existir dois registros com a mesma Chave Primária na mesma tabela.*
 
-3. Como um Service deve notificar o Controller sobre uma falha de validação?
-    - [ ] Retornando um número 400
-    - [x] Lançando uma exceção ou erro (throw Error)
-    - [ ] Enviando um e-mail para o administrador
-    - [ ] Mudando a cor do console
-    *Explicação: O lançamento de erros permite que o Controller capture o fluxo e decida qual resposta HTTP enviar.*
+3.  **Qual comando SQL é usado para buscar dados em uma tabela?**
+    *   ( ) `FIND`
+    *   (x) `SELECT`
+    *   ( ) `GET`
+    *   ( ) `SEARCH`
+    *   *Explicação: O `SELECT` é a base de todas as consultas em bancos relacionais.*
 
-4. Por que o Service não deve acessar os objetos `req` ou `res`?
-    - [ ] Porque eles são secretos
-    - [x] Para manter o Service independente do protocolo de transporte (podendo ser usado em gRPC, CLI, etc)
-    - [ ] Porque isso gasta muita internet
-    - [ ] Para economizar linhas de código
-    *Explicação: A camada de serviço deve ser "cega" para o transporte, focando apenas nos dados e regras.*
+4.  **Sobre o PostgreSQL, é correto afirmar:**
+    *   ( ) É uma ferramenta paga de design.
+    *   (x) É um dos SGBDs relacionais mais poderosos, gratuitos e utilizados no mundo.
+    *   ( ) Só funciona em sistemas Windows.
+    *   ( ) Serve apenas para guardar arquivos de imagem.
+    *   *Explicação: O "Postgres" é amplamente respeitado por sua robustez e conformidade com padrões.*
 
-5. O que define uma "Regra de Negócio"?
-    - [ ] O nome das variáveis do sistema
-    - [x] As diretrizes que ditam como o serviço deve operar (ex: "só maiores de 18 podem comprar")
-    - [ ] O tipo de servidor onde o app está rodando
-    - [ ] A cor do logotipo da empresa
-    *Explicação: Regras de negócio são as "leis" do funcionamento daquela aplicação específica.*
+5.  **O que é o DBeaver?**
+    *   ( ) Um tipo de banco de dados.
+    *   (x) Uma ferramenta visual (Client GUI) que se conecta a vários tipos de bancos de dados.
+    *   ( ) Uma linguagem de programação.
+    *   ( ) Um antivírus para servidores.
+    *   *Explicação: O DBeaver facilita a vida do dev ao permitir gerenciar bancos graficamente.*
 
-6. Qual a vantagem de reutilizar um Service em diferentes Controllers?
-    - [ ] Nenhuma, é melhor copiar o código
-    - [x] Consistência: a regra é aplicada da mesma forma em todo o sistema
-    - [ ] Economiza espaço de memória no disco
-    - [ ] Deixa o site mais colorido
-    *Explicação: Centralizar a regra no Service garante que, se a lei mudar, você só precisa alterar em um lugar.*
+6.  **O que faz a cláusula `WHERE` em um comando SQL?**
+    *   ( ) Diz onde o banco de dados deve ser salvo.
+    *   (x) Filtra os resultados da consulta com base em uma condição.
+    *   ( ) Deleta a tabela inteira.
+    *   ( ) Muda o nome das colunas.
+    *   *Explicação: Ex: `SELECT * FROM usuarios WHERE idade > 18;`*
 
-7. O que é um DTO (Data Transfer Object)?
-    - [ ] Um tipo de cabo para conectar servidores
-    - [x] Um objeto simples usado para transportar dados entre camadas sem expor a lógica interna
-    - [ ] O nome do motor de busca do Google
-    - [ ] Um comando do terminal Linux
-    *Explicação: DTOs ajudam a filtrar campos sensíveis (como senhas) antes de enviá-los ao mundo externo.*
+7.  **Qual a diferença entre SQL e SGBD?**
+    *   ( ) São sinônimos.
+    *   (x) SQL é a linguagem; SGBD é o software que gerencia o banco (ex: MySQL, Postgres).
+    *   ( ) SGBD é o código; SQL é o hardware.
+    *   ( ) SQL é para a web; SGBD é para o desktop.
+    *   *Explicação: Você usa a linguagem SQL para dar ordens ao software SGBD.*
 
-8. O que significa "Separation of Concerns" (Separação de Preocupações)?
-    - [ ] Cada desenvolvedor deve trabalhar sozinho
-    - [x] Cada camada do sistema deve ter uma responsabilidade única e bem definida
-    - [ ] O banco de dados deve ficar em outro país
-    - [ ] O site deve ter várias cores diferentes
-    *Explicação: Dividir o sistema em Controller, Service e Repository é aplicar esse princípio fundamental.*
+8.  **Para que serve uma "Foreign Key" (Chave Estrangeira)?**
+    *   ( ) Para permitir o acesso de usuários de outros países.
+    *   (x) Para criar um relacionamento entre duas tabelas diferentes.
+    *   ( ) Para criptografar os dados do banco.
+    *   ( ) Para traduzir o nome das tabelas para inglês.
+    *   *Explicação: Ela "liga" um registro de uma tabela a um registro de outra (ex: Pedido ligado a um Cliente).*
 
-9. Qual o momento ideal para chamar o Service dentro de uma rota?
-    - [ ] Antes de receber a requisição
-    - [x] Após o Controller validar os parâmetros básicos de entrada
-    - [ ] Depois que a resposta já foi enviada ao cliente
-    - [ ] Nunca, o Controller deve fazer tudo
-    *Explicação: O Controller "limpa" a entrada e passa os dados "puros" para o Service processar.*
+9.  **Qual comando é usado para adicionar novos dados a uma tabela?**
+    *   ( ) `ADD`
+    *   (x) `INSERT`
+    *   ( ) `SAVE`
+    *   ( ) `CREATE`
+    *   *Explicação: O `INSERT INTO` é usado para criar novas linhas com informações.*
 
-10. Como o Controller deve tratar o retorno de um Service?
-    - [ ] Ignorando o resultado
-    - [x] Capturando o dado retornado e devolvendo em um JSON com Status 200/201
-    - [ ] Pedindo para o usuário reiniciar o computador
-    - [ ] Exibindo o código fonte na tela
-    *Explicação: O Controller é o tradutor final que comunica o sucesso ou erro do Service para o cliente HTTP.*
+10. **Por que usar um Client GUI como o DBeaver em vez de apenas o terminal?**
+    *   ( ) Porque desenvolvedores profissionais não usam terminal.
+    *   (x) Para visualizar tabelas, diagramas e dados de forma mais rápida e intuitiva.
+    *   ( ) Porque o terminal estraga o banco de dados.
+    *   ( ) Porque o DBeaver é obrigatório para rodar o SQL.
+    *   *Explicação: Ferramentas visuais aumentam a produtividade em tarefas de inspeção e modelagem.*

@@ -1,71 +1,71 @@
-# Quiz 13 - Estado e Reatividade (useState) 🎣
+# Quiz: Aula 13 - Contêineres com Docker 📦
 
-1. O que acontece quando o valor de um "State" muda no React?
-    - [ ] O computador reinicia
-    - [x] O React re-seta (redesenha) o componente na tela com os novos dados
-    - [ ] O código Javascript é deletado
-    - [ ] Nada, o desenvolvedor deve atualizar a tela manualmente
-    *Explicação: A reatividade automática é um dos maiores poderes do React.*
+1.  **O que é o Docker?**
+    *   ( ) Um tipo de banco de dados SQL.
+    *   (x) Uma plataforma que permite empacotar e rodar aplicações em ambientes isolados chamados contêineres.
+    *   ( ) Um editor de código baseado na nuvem.
+    *   ( ) Um sistema operacional que substitui o Windows.
+    *   *Explicação: O Docker garante que o app rode igual em qualquer lugar, eliminando o "na minha máquina funciona".*
 
-2. Qual a forma correta de criar um estado para guardar um número?
-    - [ ] let x = 0;
-    - [ ] const x = 0;
-    - [x] const [x, setX] = useState(0);
-    - [ ] val x by state(0);
-    *Explicação: Usamos o "Array Destructuring" para pegar a variável e a função disparadora.*
+2.  **Qual a diferença entre Imagem e Contêiner?**
+    *   ( ) Imagem é o software instalado; Contêiner é o hardware.
+    *   (x) Imagem é o molde/receita estática; Contêiner é a instância daquela imagem em execução.
+    *   ( ) Imagem é para Linux; Contêiner é para Windows.
+    *   ( ) Não há diferença, são o mesmo conceito.
+    *   *Explicação: Você baixa uma Imagem e a "roda" como um Contêiner.*
 
-3. Por que não podemos fazer `contador = contador + 1` diretamente?
-    - [ ] Porque gasta muita energia
-    - [ ] Porque o Javascript proíbe
-    - [x] Porque o React não ficará sabendo da mudança e não atualizará a tela
-    - [ ] Porque isso apaga o banco de dados
-    *Explicação: A função `set...` é quem avisa ao React que algo mudou.*
+3.  **Qual o papel do arquivo `Dockerfile`?**
+    *   ( ) Guardar as senhas do banco de dados.
+    *   (x) Definir as instruções (passo a passo) para construir uma imagem Docker.
+    *   ( ) Salvar o histórico de commits do projeto.
+    *   ( ) Criar o design das telas.
+    *   *Explicação: É onde você diz qual S.O. usar, quais pastas copiar e qual comando rodar.*
 
-4. O que é um Hook?
-    - [ ] Um erro CSS
-    - [x] Uma função especial (como useState) que permite "enganchar" recursos do React em componentes de função
-    - [ ] Um tipo de cabo USB
-    - [ ] O vilão do Peter Pan
-    *Explicação: Hooks revolucionaram o React, removendo a necessidade de usar "Classes" complexas.*
+4.  **O que o comando `docker run` faz?**
+    *   ( ) Apenas instala o Docker no computador.
+    *   (x) Cria e inicia um novo contêiner a partir de uma imagem.
+    *   ( ) Deleta todas as imagens antigas.
+    *   ( ) Envia a imagem para o GitHub.
+    *   *Explicação: É o comando principal para colocar seu software "no ar" dentro de um contêiner.*
 
-5. Qual o evento correto para detectar o clique em um botão no React?
-    - [ ] onclick
-    - [x] onClick (com o C maiúsculo)
-    - [ ] click
-    - [ ] on-press
-    *Explicação: Eventos no React seguem o padrão CamelCase.*
+5.  **Para que serve o Docker Compose?**
+    *   ( ) Para editar arquivos YAML.
+    *   (x) Para orquestrar e rodar múltiplos contêineres (ex: API + Banco) simultaneamente com um único comando.
+    *   ( ) Para substituir o Kubernetes.
+    *   ( ) Para diminuir o tamanho das imagens.
+    *   *Explicação: Facilita gerenciar aplicações complexas que dependem de vários serviços.*
 
-6. Como você adiciona um novo elemento em um array de estado `lista` sem quebrar a imutabilidade?
-    - [ ] lista.push(novo)
-    - [ ] lista += novo
-    - [x] setLista([...lista, novo])
-    - [ ] setLista(novo)
-    *Explicação: Usamos o "Spread Operator" (...) para criar uma cópia da lista original com o novo item.*
+6.  **Qual a vantagem do Docker em relação às Máquinas Virtuais (VMs) tradicionais?**
+    *   ( ) O Docker é mais caro.
+    *   (x) O Docker é muito mais leve e rápido, pois compartilha o Kernel do sistema operacional hospedeiro.
+    *   ( ) O Docker permite rodar jogos de videogame.
+    *   ( ) As VMs não permitem rodar bancos de dados.
+    *   *Explicação: Contêineres não precisam de um S.O. completo dentro deles, apenas o estritamente necessário.*
 
-7. Em um "Input Controlado", quem manda no valor que aparece na caixinha de texto?
-    - [ ] O usuário
-    - [ ] O Teclado
-    - [x] O Estado (State)
-    - [ ] O CSS
-    *Explicação: O valor do input é amarrado ao estado, garantindo que o JS tenha controle total do que é digitado.*
+7.  **O que significa mapear portas (ex: `-p 8080:80`) no Docker?**
+    *   ( ) Mudar a senha do roteador.
+    *   (x) Ligar uma porta da sua máquina real (8080) à porta interna do contêiner (80).
+    *   ( ) Acelerar a velocidade de download da imagem.
+    *   ( ) Bloquear o acesso externo ao contêiner.
+    *   *Explicação: Permite que você acesse o serviço rodando "dentro" do Docker pelo seu navegador.*
 
-8. O que o parâmetro `e` em `onChange={(e) => ...}` representa?
-    - [ ] Erro
-    - [ ] Estilo
-    - [x] O Objeto de Evento que contém dados como `target.value`
-    - [ ] Email
-    *Explicação: O evento contém todas as informações sobre a interação que acabou de acontecer.*
+8.  **O que é o Docker Hub?**
+    *   ( ) Um hub USB para conectar servidores.
+    *   (x) Um registro online oficial onde pessoas e empresas compartilham suas imagens Docker.
+    *   ( ) O nome do criador do Docker.
+    *   ( ) Um editor de texto para imagens.
+    *   *Explicação: É como o "GitHub das imagens Docker".*
 
-9. Qual o valor inicial de `cont` em `const [cont, setCont] = useState(10)`?
-    - [ ] 0
-    - [ ] null
-    - [x] 10
-    - [ ] undefined
-    *Explicação: O valor dentro dos parênteses do useState define o ponto de partida.*
+9.  **Ao deletar um contêiner, por padrão, o que acontece com os dados salvos dentro dele?**
+    *   ( ) Eles são enviados para o e-mail do desenvolvedor.
+    *   (x) Eles são perdidos permanentemente (o contêiner é efêmero).
+    *   ( ) Eles são salvos automaticamente no HD da máquina real.
+    *   ( ) Eles ficam suspensos no servidor até o próximo contêiner ligar.
+    *   *Explicação: Contêineres são descartáveis; para salvar dados, usamos Volumes.*
 
-10. Se um componente pai muda seu estado, o que acontece com seus componentes filhos?
-    - [ ] Eles param de funcionar
-    - [x] Eles também são re-renderizados pelo React
-    - [ ] Eles ficam travados
-    - [ ] Eles mudam de cor sozinhos
-    *Explicação: O fluxo de dados no React é descendente; se o pai muda, a árvore abaixo dele se atualiza.*
+10. **O que faz o comando `docker build`?**
+    *   ( ) Testa a velocidade da rede.
+    *   (x) Lê o Dockerfile e cria uma imagem pronta para uso a partir dele.
+    *   ( ) Formata o código fonte do projeto.
+    *   ( ) Deleta contêineres que não estão sendo usados.
+    *   *Explicação: É o processo de "compilação" ou construção da sua imagem personalizada.*

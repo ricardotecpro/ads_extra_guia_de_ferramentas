@@ -4,32 +4,32 @@ Pratique o que aprendeu com desafios graduais para cada aula.
 
 <div class="grid cards" markdown>
 
--   :material-numeric-1-box: **Módulo 1: Fundamentos de Backend**
+-   :material-numeric-1-box: **Módulo 1: Fundamentos e Gestão**
     ---
-    - [Ex 01 - Intro a Microsserviços](exercicio-01.md)
-    - [Ex 02 - Arquitetura e Gateway](exercicio-02.md)
-    - [Ex 03 - Modelagem REST](exercicio-03.md)
-    - [Ex 04 - Documentação e Mocks](exercicio-04.md)
+    - [Ex 01 - Intro ao Ecossistema](exercicio-01.md)
+    - [Ex 02 - Gestão de Projetos](exercicio-02.md)
+    - [Ex 03 - Ambiente de Dev](exercicio-03.md)
+    - [Ex 04 - Git Fundamentos](exercicio-04.md)
 
--   :material-numeric-2-box: **Módulo 2: Manipulação de Dados**
+-   :material-numeric-2-box: **Módulo 2: Colaboração e Dados**
     ---
-    - [Ex 05 - Controllers e Rotas](exercicio-05.md)
-    - [Ex 06 - Services e Lógica](exercicio-06.md)
-    - [Ex 07 - Banco de Dados SQL](exercicio-07.md)
-    - [Ex 08 - Validação de Dados](exercicio-08.md)
+    - [Ex 05 - Plataformas Git](exercicio-05.md)
+    - [Ex 06 - DB Relacional](exercicio-06.md)
+    - [Ex 07 - NoSQL e Cache](exercicio-07.md)
+    - [Ex 08 - Frameworks de Teste](exercicio-08.md)
 
--   :material-numeric-3-box: **Módulo 3: Segurança e Autenticação**
+-   :material-numeric-3-box: **Módulo 3: Qualidade e Automação**
     ---
-    - [Ex 09 - Autenticação JWT](exercicio-09.md)
-    - [Ex 10 - Controle de Acesso (RBAC)](exercicio-10.md)
-    - [Ex 11 - Segurança Avançada](exercicio-11.md)
+    - [Ex 09 - Ferramentas de API](exercicio-09.md)
+    - [Ex 10 - Qualidade de Código](exercicio-10.md)
+    - [Ex 11 - CI/CD Moderno](exercicio-11.md)
 
--   :material-numeric-4-box: **Módulo 4: Aplicações SPA (React)**
+-   :material-numeric-4-box: **Módulo 4: Infraestrutura e Integração**
     ---
-    - [Ex 12 - Introdução ao React](exercicio-12.md)
-    - [Ex 13 - Estado e Hooks](exercicio-13.md)
-    - [Ex 14 - Chamadas de API](exercicio-14.md)
-    - [Ex 15 - Navegação Router](exercicio-15.md)
-    - [Ex 16 - Planejamento Projeto Final](exercicio-16.md)
+    - [Ex 12 - Automação e IaC](exercicio-12.md)
+    - [Ex 13 - Docker e Compose](exercicio-13.md)
+    - [Ex 14 - K8s e Runners](exercicio-14.md)
+    - [Ex 15 - Comunicação](exercicio-15.md)
+    - [Ex 16 - Design e Figma](exercicio-16.md)
 
 </div>

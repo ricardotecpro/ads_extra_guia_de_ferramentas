@@ -1,71 +1,71 @@
-# Quiz 16 - Projeto Final e Carreira 🎓
+# Quiz: Aula 16 - Design, Prototipagem e Handoff 🎨
 
-1. Qual o principal objetivo do "Trabalho de Conclusão de Curso (TCC)" no TecPro?
-    - [ ] Ganhar um prêmio em dinheiro
-    - [x] Consolidar o aprendizado em um projeto Full-Stack real para servir de portfólio para o mercado
-    - [ ] Escrever o código mais longo do mundo
-    - [ ] Criar um site que não use internet
-    *Explicação: O projeto final prova que você sabe conectar o Frontend ao Backend com segurança.*
+1.  **O que é o Figma?**
+    *   ( ) Um compilador de código JavaScript.
+    *   (x) Uma ferramenta colaborativa de design de interface e prototipagem baseada na nuvem.
+    *   ( ) Um banco de dados para guardar imagens.
+    *   ( ) Um sistema operacional para designers.
+    *   *Explicação: O Figma permite que designers e devs colaborem no mesmo arquivo visual.*
 
-2. Por que o `README.md` no seu GitHub é considerado seu "Cartão de Visitas"?
-    - [ ] Porque ele tem as cores da sua empresa
-    - [x] Porque é a primeira coisa que um recrutador ou tech lead olha para entender seu projeto
-    - [ ] Porque ele apaga o resto do código
-    - [ ] Porque o GitHub cobra se você não tiver um
-    *Explicação: Um bom README com prints e tecnologias demonstra profissionalismo e clareza.*
+2.  **Qual o principal objetivo de um "Protótipo" no Figma?**
+    *   ( ) Ser o site final que o usuário vai usar.
+    *   (x) Simular a navegação e o comportamento do aplicativo antes de escrever o código.
+    *   ( ) Escrever o código CSS automaticamente para o banco de dados.
+    *   ( ) Fazer backup das fotos dos desenvolvedores.
+    *   *Explicação: Protótipos ajudam a validar ideias e fluxos com pouco custo.*
 
-3. Como você pode tornar seu projeto "impecável" para o mercado?
-    - [ ] Colocando o máximo de animações possível, mesmo que trave
-    - [x] Usando rotas seguras, código limpo, tratamento de erros e um design organizado
-    - [ ] Cobrando caro para as pessoas verem o código
-    - [ ] Copiando o código de outro site sem mudar nada
-    *Explicação: Qualidade técnica e atenção aos detalhes são o que diferenciam um júnior de um pleno.*
+3.  **O que é o "Handoff"?**
+    *   ( ) Quando o desenvolvedor desiste do projeto.
+    *   (x) O processo de entrega do design (do Figma) para o desenvolvedor começar a codificar.
+    *   ( ) O ato de apertar as mãos no final da reunião.
+    *   ( ) Quando o servidor desliga sozinho.
+    *   *Explicação: É o momento de transição entre a fase criativa e a fase de implementação técnica.*
 
-4. O que é o `TypeScript` (citado como próximo passo)?
-    - [ ] Um novo tipo de processador
-    - [x] Uma linguagem que adiciona "tipos" ao Javascript, evitando erros comuns em tempo de desenvolvimento
-    - [ ] O sucessor do HTML
-    - [ ] Uma ferramenta para criar foguetes em 3D
-    *Explicação: TypeScript é o padrão em grandes empresas para projetos robustos.*
+4.  **Qual a função do "Dev Mode" no Figma?**
+    *   ( ) Esconder o design dos programadores.
+    *   (x) Proporcionar uma interface focada em desenvolvedores para facilitar a inspeção de código e extração de assets.
+    *   ( ) Transformar o Figma em um editor de código como o VS Code.
+    *   ( ) Bloquear a edição do design.
+    *   *Explicação: O Dev Mode mostra propriedades CSS, medidas e nomes de componentes de forma técnica.*
 
-5. O que significa ser um desenvolvedor `T-Shaped`?
-    - [ ] Ter uma camiseta com estampa de código
-    - [x] Ter conhecimento amplo em várias áreas (Backend, Frontend, UX) e profundo em uma (ex: Node.js)
-    - [ ] Programar apenas com a mão esquerda
-    - [ ] Saber usar apenas uma linguagem de programação
-    *Explicação: É o perfil mais valorizado pelas empresas modernas de tecnologia.*
+5.  **Por que é melhor exportar ícones em formato SVG do que PNG?**
+    *   ( ) Porque PNG é proibido na internet.
+    *   (x) Porque SVG é vetorial e pode ser redimensionado sem perder qualidade em qualquer tela.
+    *   ( ) Porque SVG é mais colorido.
+    *   ( ) Porque o arquivo SVG é sempre maior e mais seguro.
+    *   *Explicação: Ícones em SVG se adaptam a diferentes densidades de tela (retina, mobile, etc.).*
 
-6. Qual a importância das `Soft Skills` para um desenvolvedor Full-Stack?
-    - [ ] Nenhuma, dev só precisa falar com o computador
-    - [x] Essencial para trabalhar em equipe, entender o cliente e explicar decisões técnicas
-    - [ ] Serve apenas para quem trabalha no RH
-    - [ ] É o nome de uma biblioteca de animação suave
-    *Explicação: Software é feito por pessoas para pessoas. Saber se comunicar é vital.*
+6.  **O que é um "Design System" no contexto de ferramentas visuais?**
+    *   ( ) Uma regra que proíbe usar cores repetidas.
+    *   (x) Uma biblioteca padronizada de componentes (botões, fontes, cores) que garante a consistência do produto.
+    *   ( ) O nome da empresa que criou o Figma.
+    *   ( ) Um tipo de banco de dados para imagens.
+    *   *Explicação: Facilita a vida do designer (ao criar) e do dev (ao reutilizar componentes no código).*
 
-7. O que é o `Next.js`?
-    - [ ] Um curso para aprender Javascript em 5 minutos
-    - [x] O framework React mais popular que permite criar sites rápidos com renderização no servidor (SSR)
-    - [ ] O nome do navegador do Google
-    - [ ] Uma versão do Javascript que roda apenas em smartwatches
-    *Explicação: Next.js é a evolução natural para quem já domina os fundamentos do React.*
+7.  **Sobre UI (User Interface) e UX (User Experience), é correto afirmar:**
+    *   ( ) São nomes diferentes para a mesma coisa.
+    *   (x) UI foca na aparência visual (botões, cores); UX foca em como o usuário se sente e navega pelo app.
+    *   ( ) Desenvolvedores só precisam se preocupar com UX.
+    *   ( ) UX é para o backend e UI para o frontend.
+    *   *Explicação: Um app bonito (UI) mas confuso (UX) é um fracasso; o equilíbrio é o segredo.*
 
-8. Como se manter atualizado em um mercado que muda todo mês?
-    - [ ] Lendo livros de 20 anos atrás
-    - [x] Acompanhando documentações oficiais, comunidades, newsletters e praticando sempre
-    - [ ] Esperando o chefe mandar estudar
-    - [ ] Decorando todos os comandos de uma vez
-    *Explicação: Estudo contínuo é parte fundamental da rotina de um desenvolvedor.*
+8.  **Como o Figma ajuda equipes remotas?**
+    *   ( ) Enviando e-mails automáticos toda hora.
+    *   (x) Permitindo que todos vejam as alterações em tempo real e comentem diretamente sobre os elementos visuais.
+    *   ( ) Ele substitui a necessidade de reuniões de vídeo.
+    *   ( ) Ele permite que o designer use o mouse do desenvolvedor à distância.
+    *   *Explicação: O recurso de "Multi-player" do Figma é revolucionário para a colaboração online.*
 
-9. O que fazer ao encontrar um bug impossível no seu código?
-    - [ ] Chorar e desistir da carreira
-    - [x] Consultar a documentação, fóruns como StackOverflow, usar IA (com sabedoria) e debugar passo a passo
-    - [ ] Apagar o Windows e reinstalar tudo
-    - [ ] Ignorar o erro e avisar o usuário para não clicar ali
-    *Explicação: Resolver problemas complexos é a alma do trabalho do programador.*
+9.  **O que um desenvolvedor deve inspecionar no Figma ao implementar um botão?**
+    *   ( ) Apenas a cor.
+    *   (x) Cor (Hex), Fonte, Tamanho (Px), Espaçamentos (Padding/Margin) e Arredondamento (Border-radius).
+    *   ( ) O nome do designer que fez o botão.
+    *   ( ) A data em que o botão foi desenhado.
+    *   *Explicação: Todos esses detalhes garantem que o código seja fiel ao design original.*
 
-10. Qual a mensagem final do curso para o aluno?
-    - [ ] Que agora você já sabe tudo e não precisa mais estudar
-    - [x] Que você construiu uma base sólida e agora tem o poder de criar soluções web completas
-    - [ ] Que o mercado de programação vai acabar amanhã
-    - [ ] Que o PHP é a única linguagem que existe
-    *Explicação: O curso é apenas o início de uma carreira incrível e cheia de inovação.*
+10. **Qual a maior vantagem do Figma ser baseado na nuvem (Browser)?**
+    *   ( ) Consome mais internet do que os outros programas.
+    *   (x) Não precisa de instalação pesada e garante que todos estejam sempre na última versão do arquivo.
+    *   ( ) Deixa o computador mais quente.
+    *   ( ) Impede que o arquivo seja deletado pelo servidor.
+    *   *Explicação: Acabou o problema do arquivo "final_v2_ultima_agora_sim.psd". Existe apenas um link.*

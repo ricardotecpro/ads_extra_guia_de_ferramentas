@@ -23,12 +23,11 @@ Este roadmap descreve as fases de aprendizado e desenvolvimento das competência
 - [ ] **Contêineres**: Dockerização completa de aplicações.
 - [ ] **Orquestração**: Noções básicas de Kubernetes para escala.
 - [ ] **Design & Soft Skills**: Comunicação em equipe e uso do Figma.
- Mermaid de arquitetura de serviços
 
-## 🚀 Fase 4: Lançamento e Manutenção
+## 🚀 Próximos Passos (Manutenção)
 - [x] Deploy GitHub Pages (GitHub Actions)
-- [ ] Atualização para novas versões de frameworks (Spring/Node/React)
-- [ ] Inclusão de exemplos de mensageria (RabbitMQ/Kafka)
+- [ ] Atualização para novas versões das ferramentas (Docker/Git/VS Code)
+- [ ] Inclusão de exemplos de ferramentas de monitoramento (Prometheus/Grafana)
 
 ---
 **Status Atual**: Finalizado / Manutenção

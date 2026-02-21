@@ -1,71 +1,71 @@
-# Quiz 04 - Documentação e Mocks 📝
+# Quiz: Aula 04 - Git Fundamentos 🛠️
 
-1. O que é o OpenAPI (OAS)?
-    - [ ] Uma linguagem de programação para backend
-    - [x] Uma especificação padrão para descrever e documentar APIs RESTful
-    - [ ] Um navegador web para desenvolvedores
-    - [ ] Um banco de dados em nuvem
-    *Explicação: O OpenAPI define um formato padrão para descrever recursos, rotas e respostas de uma API.*
+1.  **O que o Git faz essencialmente?**
+    *   ( ) Hospeda sites na internet.
+    *   (x) Gerencia o histórico de alterações de arquivos (versionamento).
+    *   ( ) Compila código Java em linguagem de máquina.
+    *   ( ) Edita imagens e vídeos.
+    *   *Explicação: O Git permite salvar "fotos" do seu projeto em diferentes momentos do tempo.*
 
-2. Qual a principal diferença entre OpenAPI e Swagger?
-    - [ ] Swagger é pago e OpenAPI é gratuito
-    - [x] OpenAPI é a especificação e Swagger é o conjunto de ferramentas (UI, Editor, etc)
-    - [ ] OpenAPI foi substituída pelo Swagger em 2021
-    - [ ] Não há diferença, são nomes para a mesma cor
-    *Explicação: Pense no OpenAPI como as "regras" e no Swagger como as "ferramentas" que usam essas regras.*
+2.  **Qual o primeiro comando que você deve rodar ao iniciar um novo projeto com Git?**
+    *   ( ) `git commit`
+    *   (x) `git init`
+    *   ( ) `git push`
+    *   ( ) `git add`
+    *   *Explicação: `git init` cria o repositório local e a pasta oculta `.git`.*
 
-3. Para que serve o Swagger UI?
-    - [ ] Para editar o banco de dados diretamente
-    - [x] Para gerar uma página visual e interativa onde se pode testar os endpoints documentados
-    - [ ] Para compilar o código Java para o servidor
-    - [ ] Para baixar músicas gratuitas
-    *Explicação: O Swagger UI lê o arquivo YAML/JSON e cria uma interface amigável para humanos.*
+3.  **Para que serve a "Staging Area" (ou Index)?**
+    *   ( ) Para deletar arquivos permanentemente.
+    *   (x) Para selecionar quais arquivos alterados devem ser incluídos no próximo commit.
+    *   ( ) Para ver o código de outros desenvolvedores.
+    *   ( ) Para hospedar o site online.
+    *   *Explicação: Você usa o `git add` para mover arquivos para esta área de "preparação".*
 
-4. Qual o objetivo principal de um "Mock de API"?
-    - [ ] Substituir o backup do sistema
-    - [x] Simular o comportamento de uma API real para permitir o desenvolvimento paralelo
-    - [ ] Aumentar a segurança contra vírus
-    - [ ] Esconder o endereço IP do servidor
-    *Explicação: Mocks permitem que o Frontend programe contra um servidor "de mentira" enquanto o real não está pronto.*
+4.  **Qual comando salva permanentemente as alterações no histórico local?**
+    *   ( ) `git save`
+    *   (x) `git commit`
+    *   ( ) `git snapshot`
+    *   ( ) `git store`
+    *   *Explicação: O `commit` é o salvamento oficial de uma versão do código.*
 
-5. O que significa "Developer Experience" (DX)?
-    - [ ] O tempo que o desenvolvedor gasta jogando videogame
-    - [x] A facilidade e satisfação de um desenvolvedor ao usar sua ferramenta ou API
-    - [ ] A quantidade de memória RAM do monitor
-    - [ ] O nome do sistema operacional dos servidores
-    *Explicação: Uma boa DX significa documentação clara, erros úteis e facilidade de integração.*
+5.  **O que a mensagem de commit deve descrever?**
+    *   ( ) O nome do desenvolvedor.
+    *   (x) O que foi alterado e por que (de forma concisa e clara).
+    *   ( ) A data e hora exatas do salvamento.
+    *   ( ) O número de linhas deletadas.
+    *   *Explicação: Mensagens boas ajudam a entender a evolução do projeto no futuro.*
 
-6. Qual formato de arquivo é mais utilizado para escrever especificações OpenAPI?
-    - [ ] .html
-    - [x] .yaml ou .json
-    - [ ] .docx
-    - [ ] .pdf
-    *Explicação: YAML é preferido por ser mais legível por humanos e suportar identação clara.*
+6.  **Como você verifica quais arquivos foram modificados mas ainda não foram "comitados"?**
+    *   ( ) `git check`
+    *   (x) `git status`
+    *   ( ) `git verify`
+    *   ( ) `git show`
+    *   *Explicação: O `git status` mostra o estado atual da sua pasta em relação ao último commit.*
 
-7. Por que retornar mensagens de erro explicativas no corpo da resposta (Body) é uma boa prática?
-    - [ ] Para o log ficar mais colorido
-    - [x] Para ajudar o consumidor da API a entender exatamente o que errou sem precisar perguntar ao autor
-    - [ ] Porque o HTTP obriga a escrever textos longos
-    - [ ] Para ocupar mais espaço no servidor
-    *Explicação: Um erro `400` com a mensagem `"Data de nascimento é obrigatória"` economiza horas de suporte.*
+7.  **O que acontece se você rodar `git log`?**
+    *   ( ) O Git apaga o repositório.
+    *   (x) O Git exibe a lista cronológica de todos os commits realizados.
+    *   ( ) O Git abre o editor de código.
+    *   ( ) O Git faz o upload dos arquivos para a nuvem.
+    *   *Explicação: O `log` é o livro de história do seu projeto.*
 
-8. Qual componente do Swagger permite digitar e validar a especificação da API em tempo real?
-    - [ ] Swagger Hub
-    - [x] Swagger Editor
-    - [ ] Swagger Inspector
-    - [ ] Swagger Play
-    *Explicação: O Editor valida a sintaxe YAML e mostra o preview da documentação instantaneamente.*
+8.  **Qual a diferença entre o Git na sua máquina e o GitHub?**
+    *   ( ) Não há diferença, são o mesmo software.
+    *   (x) O Git é a ferramenta local; o GitHub é uma plataforma online que hospeda repositórios Git.
+    *   ( ) O GitHub é para designers e o Git para programadores.
+    *   ( ) O Git é pago e o GitHub é sempre gratuito.
+    *   *Explicação: O Git funciona offline; o GitHub é o servidor onde você compartilha o código.*
 
-9. Em qual fase do projeto o "Design de Contrato" deve ocorrer?
-    - [ ] Somente no fim do projeto para arquivar
-    - [x] No início, antes mesmo de começar a codificar as rotas (API First)
-    - [ ] Apenas se o cliente pedir
-    - [ ] Nunca, é perda de tempo
-    *Explicação: No API First, o contrato é acordado primeiro para que as equipes de Front e Back trabalhem em sintaxe.*
+9.  **O que o comando `git add .` faz?**
+    *   ( ) Deleta todos os arquivos da pasta.
+    *   (x) Adiciona todos os arquivos novos e modificados da pasta atual para a Staging Area.
+    *   ( ) Cria um ponto final no histórico.
+    *   ( ) Envia os arquivos para o servidor remoto.
+    *   *Explicação: O ponto `.` representa "tudo o que está no diretório atual".*
 
-10. Qual ferramenta pode ser usada para subir um mock server local a partir de uma collection?
-    - [ ] Microsoft Excel
-    - [x] Postman / Mockoon
-    - [ ] Notepad++
-    - [ ] Windows Paint
-    *Explicação: Postman e Mockoon facilitam a criação de respostas estáticas baseadas em rotas.*
+10. **Por que o arquivo `.gitignore` é importante?**
+    *   ( ) Para esconder fotos pessoais do desenvolvedor.
+    *   (x) Para dizer ao Git quais arquivos e pastas ele deve ignorar (ex: senhas, pasta `node_modules`).
+    *   ( ) Para deletar arquivos automaticamente do repositório.
+    *   ( ) Para impedir que outros desenvolvedores editem o código.
+    *   *Explicação: Evita que "lixo" ou arquivos sensíveis sejam enviados para o histórico de versão.*

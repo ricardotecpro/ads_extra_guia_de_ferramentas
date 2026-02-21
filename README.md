@@ -1,10 +1,10 @@
-# APIs e Microsserviços 🌐
+# Guia de Ferramentas para Desenvolvedores 🛠️
 
-[![Build Status](https://github.io/ricardotecpro/ads_mod_07_backend_e_apis/actions/workflows/ci.yml/badge.svg)](https://github.io/ricardotecpro/ads_mod_07_backend_e_apis/actions)
+[![Build Status](https://github.com/ricardotecpro/ads_extra_guia_de_ferramentas/actions/workflows/ci.yml/badge.svg)](https://github.com/ricardotecpro/ads_extra_guia_de_ferramentas/actions)
 
-Curso avançado focado na arquitetura de Microsserviços, desenvolvimento de APIs RESTful profissionais e frontends modernos utilizando o padrão SPA (Single Page Application).
+Este repositório contém o material completo do curso **Guia de Ferramentas**, parte da trilha ADS Extra. O curso foca nas ferramentas indispensáveis para o mercado de tecnologia moderno, desde a gestão ágil até a infraestrutura como código.
 
-🔗 **Acesse o curso online**: [https://ricardotecpro.github.io/ads_mod_07_backend_e_apis](https://ricardotecpro.github.io/ads_mod_07_backend_e_apis)
+🔗 **Acesse o curso online**: [https://ricardotecpro.github.io/ads_extra_guia_de_ferramentas](https://ricardotecpro.github.io/ads_extra_guia_de_ferramentas)
 
 ---
 
@@ -12,44 +12,38 @@ Curso avançado focado na arquitetura de Microsserviços, desenvolvimento de API
 
 O curso está dividido em quatro módulos estratégicos:
 
-### 🧩 Módulo 1: Serviços e Microsserviços
-*   **Aula 01**: Introdução a Serviços e Microsserviços
-*   **Aula 02**: Arquitetura e API Gateway
-*   **Aula 03**: Modelagem de APIs RESTful
-*   **Aula 04**: Documentação e Mock de APIs
+### 🧩 Módulo 1: Fundamentos e Gestão
+- **Aula 01**: Intro ao Ecossistema de Ferramentas
+- **Aula 02**: Gestão de Projetos e Tarefas
+- **Aula 03**: Ambiente de Desenvolvimento
+- **Aula 04**: Controle de Versão com Git: Fundamentos
 
-### ⚙️ Módulo 2: CRUD e Persistência
-*   **Aula 05**: Implementação de APIs (Backend)
-*   **Aula 06**: Persistência e Integração com Banco
-*   **Aula 07**: Testes Unitários com Mocks
-*   **Aula 08**: Testes Integrados e Build
+### 🤝 Módulo 2: Colaboração e Dados
+- **Aula 05**: Plataformas de Colaboração (GitHub/GitLab)
+- **Aula 06**: Bancos de Dados Relacionais e Clientes GUI
+- **Aula 07**: Bancos de Dados NoSQL e Cache
+- **Aula 08**: Frameworks de Teste e Qualidade
 
-### 🔐 Módulo 3: Autenticação e Segurança
-*   **Aula 09**: Estratégias Web (Cookies/Tokens)
-*   **Aula 10**: Autenticação com JWT
-*   **Aula 11**: Autorização e RBAC
+### ⚡ Módulo 3: Qualidade e Automação
+- **Aula 09**: Testes de API e Ferramentas (Postman)
+- **Aula 10**: Qualidade de Código e Formatação
+- **Aula 11**: Automação e CI/CD Moderno
 
-### 🌐 Módulo 4: Aplicações Web SPA
-*   **Aula 12**: Conceito de SPA e Estrutura
-*   **Aula 13**: Componentes e Templates
-*   **Aula 14**:# Guia de Ferramentas para Desenvolvedores 🛠️
+### 🚀 Módulo 4: Infraestrutura e Integração
+- **Aula 12**: Servidores, Automação e IaC
+- **Aula 13**: Contêineres com Docker e Compose
+- **Aula 14**: Orquestração com Kubernetes e Runners
+- **Aula 15**: Comunicação e Colaboração em Equipe
+- **Aula 16**: Design, Prototipagem e Handoff (Figma)
 
-Este repositório contém o material completo do curso **Guia de Ferramentas**, parte da trilha ADS Extra. O curso foca nas ferramentas indispensáveis para o mercado de tecnologia moderno, desde a gestão ágil até a infraestrutura como código.
+---
 
-## 🚀 O que este curso cobre?
-
-- **Módulo 1**: Gestão e Planejamento (Jira, Trello, Git Fundamentos).
-- **Módulo 2**: Colaboração e Dados (GitHub, GitLab, SQL/NoSQL Clients).
-- **Módulo 3**: Qualidade e Automação (Postman, Linters, GitHub Actions).
-- **Módulo 4**: Infraestrutura e Integração (Ansible, Docker, Kubernetes, Figma).
-
-## 🛠️ Tecnologias e Padrões
+## 🛠️ Tecnologias Utilizadas
 
 - **Site**: [MkDocs Material](https://squidfunk.github.io/mkdocs-material/)
 - **Slides**: [Reveal.js](https://revealjs.com/) via `mkdocs-revealjs`
 - **Diagramas**: [Mermaid.js](https://mermaid.js.org/)
 - **Terminal CLI**: [Termynal.js](https://github.com/chimeces/termynal)
-- **Quizzes**: [mkdocs-quiz](https://github.com/timvink/mkdocs-quiz)
 
 ## 📦 Como rodar localmente
 
@@ -64,12 +58,5 @@ Este repositório contém o material completo do curso **Guia de Ferramentas**, 
     ```
 4.  Acesse `http://localhost:8000`
 
-## 🏗️ Build e Deploy
-
-Este projeto é configurado para deploy automático no GitHub Pages via GitHub Actions. O processo de build inclui a geração dinâmica de slides e quizzes a partir dos arquivos fonte em `.src`.
-
 ---
 Feito com ❤️ por [Ricardo Tecpro](https://github.com/ricardotecpro)
-
----
-Feito com ❤️ por [Ricardo Pires](https://ricardotecpro.github.io/)

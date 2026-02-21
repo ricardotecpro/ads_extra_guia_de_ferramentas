@@ -1,104 +1,162 @@
-# Aula 06 - Services e Regras de Negócio 🧠
-## O Cérebro da Aplicação
+# Aula 06: Bancos de Dados Relacionais 💾
 
 ---
 
-## Agenda 📅
-
-1. Por que separar as coisas? { .fragment }
-2. Responsabilidades do Service { .fragment }
-3. O Fluxo: Controller -> Service { .fragment }
-4. Tratamento de Erros Profissional { .fragment }
-5. DTOs: Protegendo os Dados { .fragment }
-6. Service vs ViewModel (Mobile) { .fragment }
+## 🎯 Nossa Missão
+*   Entender o modelo relacional.
+*   Dominar a linguagem SQL básica.
+*   Conhecer os principais SGBDs (Postgres, MySQL).
+*   Usar ferramentas visuais (DBeaver).
 
 ---
 
-## 1. O Problema: "Controller Gordo" 🍔
-
-- Lógica de negócio misturada com HTTP. { .fragment }
-- Código impossível de reutilizar. { .fragment }
-- Difícil de testar. { .fragment }
-
----
-
-## 2. A Solução: Layered Architecture 🧱
-
-- **Controller**: Trata o transporte (HTTP). { .fragment }
-- **Service**: Trata a regra (O QUE fazer). { .fragment }
+## 🤔 O que é um Banco de Dados?
+É um sistema organizado para armazenar, gerenciar e recuperar informações.
+*   **Persistent**: Os dados ficam lá mesmo se desligar. { .fragment }
+*   **Seguro**: Controle de quem pode ver ou mudar. { .fragment }
+*   **Escalável**: Suporta de 10 a milhões de linhas. { .fragment }
 
 ---
 
-## 3. O que vai no Service? ⚖️
-
-- Validações complexas. { .fragment }
-- Cálculos de valores. { .fragment }
-- Envio de e-mails/notificações. { .fragment }
-- Integração com repositórios. { .fragment }
+## 🧩 O Modelo Relacional
+Imagine uma coleção de planilhas Excel que se conversam.
+*   **Tabelas**: Categorias de dados (ex: Usuarios). { .fragment }
+*   **Colunas**: Atributos (ex: Nome, Email). { .fragment }
+*   **Linhas**: Registros individuais (ex: O usuário João). { .fragment }
 
 ---
 
-## 4. Tratamento de Erros ⚠️
+## 🏗️ Conceitos: Chaves
+O segredo da organização.
+*   **Primary Key (PK)**: O RG da linha. Único e obrigatório. { .fragment }
+*   **Foreign Key (FK)**: O link para outra tabela. Cria a relação. { .fragment }
 
-- O Service **Lança** (Throws). { .fragment }
-- O Controller **Captura** (Catches). { .fragment }
+---
 
-```javascript
-// Service
-if (!saldo) throw new Error("Saldo Insuficiente");
+## 🗺️ Exemplo de Tabela
+**Tabela: Ferramentas**
+| id (PK) | nome | categoria |
+| :--- | :--- | :--- |
+| 1 | VS Code | Editor |
+| 2 | Git | Versionador |
+| 3 | Postgres | Banco |
 
-// Controller
-try { ... } catch (e) { res.status(400)... }
+---
+
+## 🗣️ SQL: Structured Query Language
+A língua oficial dos bancos relacionais.
+*   Não é uma linguagem de programação, é uma linguagem de consulta.
+*   Padronizada, mas cada banco tem seu "sotaque".
+
+---
+
+## 🔍 SELECT: Buscando Dados
+```sql
+SELECT nome, email FROM usuarios;
 ```
+*   O `*` (asterisco) busca todas as colunas. { .fragment }
+*   Sempre filtre o que você precisa para não pesar o banco! { .fragment }
 
 ---
 
-## 5. DTOs: Filtrando a Saída 📦
-
-- Nunca envie "tudo" do banco para o cliente. { .fragment }
-- Proteja campos sensíveis (Ex: `senha_hash`). { .fragment }
-- Melhore a performance (menos dados trafegados). { .fragment }
-
----
-
-## 6. Service vs ViewModel 🆚
-
-- No Backend: **Service** é o cérebro. { .fragment }
-- No Mobile/Front: **ViewModel** é o cérebro. { .fragment }
-- Ambos servem para "limpar" a camada de visualização. { .fragment }
+## 🎯 WHERE: Filtrando Resultados
+```sql
+SELECT * FROM produtos 
+WHERE preco > 100 AND categoria = 'Eletrônicos';
+```
+*   Operadores: `=`, `>`, `<`, `<>`, `LIKE`, `IN`. { .fragment }
 
 ---
 
-## 7. Prática: Validando um Cadastro 💻
-
-- Verificando se o e-mail é válido. { .fragment }
-- Verificando se o usuário já existe. { .fragment }
-- Lançando erros específicos. { .fragment }
-
----
-
-## Desafio: Onde colocar? ⚡
-
-Se uma regra diz: "Usuários VIP ganham 20% de desconto", essa regra deve ficar no **Controller** ou no **Service**?
+## ➕ INSERT: Inserindo Dados
+```sql
+INSERT INTO categorias (nome) 
+VALUES ('Desenvolvimento');
+```
+*   Lembre-se de respeitar os tipos de dados (Texto vs Número). { .fragment }
 
 ---
 
-## Resumo ✅
-
-- Controllers recebem, Services processam. { .fragment }
-- Mantenha seus Controllers "finos" (Slim Controllers). { .fragment }
-- Centralize as regras para facilitar a manutenção. { .fragment }
-- DTOs são as fronteiras dos dados. { .fragment }
-
----
-
-## Próxima Aula: Onde os dados vivem! 🗄️
-
-### Repositories e Banco de Dados
-
-- PostgreSQL e SQL básico. { .fragment }
-- Camada de persistência. { .fragment }
+## 🔄 UPDATE: Alterando Dados
+```sql
+UPDATE usuarios 
+SET nivel = 'Senior' 
+WHERE id = 42;
+```
+*   **Atenção**: Sempre use o `WHERE` ou você vai alterar a tabela inteira! 😱 { .fragment }
 
 ---
 
-## Dúvidas? 🧠
+## ❌ DELETE: Removendo Dados
+```sql
+DELETE FROM logs 
+WHERE data < '2024-01-01';
+```
+*   **Atenção**: Sem `WHERE`, você apaga tudo! Cuidado redobrado. { .fragment }
+
+---
+
+## 🐘 PostgreSQL: O Elefante Poderoso
+*   Open Source e extremamente robusto. { .fragment }
+*   Foco em conformidade com padrões e integridade. { .fragment }
+*   Suporta tipos complexos (JSON, Geometria). { .fragment }
+*   **Queridinho das grandes empresas.** { .fragment }
+
+---
+
+## 🐬 MySQL: A Rapidez da Web
+*   Muito popular em sites e blogs (WordPress). { .fragment }
+*   Simples de usar e configurar. { .fragment }
+*   Atualmente pertence à Oracle, mas tem o fork livre MariaDB. { .fragment }
+
+---
+
+## 🦫 DBeaver: A Interface Universal
+Por que usar um GUI Client?
+*   Visualizar tabelas como se fossem planilhas. { .fragment }
+*   Autocompletar comandos SQL. { .fragment }
+*   Gerar diagramas (DER) automaticamente. { .fragment }
+*   Exportar dados para Excel/CSV facilmente. { .fragment }
+
+---
+
+## 📐 Modelagem: Normalização
+Organizar para não repetir.
+*   Evite salvar o nome do país em cada usuário. { .fragment }
+*   Crie uma tabela `Paises` e use uma `ID` (FK). { .fragment }
+*   Isso economiza espaço e evita erros de digitação. { .fragment }
+
+---
+
+## 📉 Índices: Velocidade de Busca
+*   Como o índice de um livro. { .fragment }
+*   Acelera muito a busca em tabelas com milhões de linhas. { .fragment }
+*   **Custo**: Deixa a inserção um pouco mais lenta. { .fragment }
+
+---
+
+## 🛡️ Transações: Tudo ou Nada (ACID)
+Imagine uma transferência bancária:
+1.  Tira dinheiro da conta A. { .fragment }
+2.  Coloca dinheiro na conta B. { .fragment }
+*   Se o passo 2 falhar, o passo 1 deve ser desfeito automaticamente. { .fragment }
+
+---
+
+## 🏆 Checklist de Banco Pro
+*   [ ] Entende a diferença entre PK e FK. { .fragment }
+*   [ ] Consegue fazer um SELECT com filtro. { .fragment }
+*   [ ] Instalou e conectou o DBeaver. { .fragment }
+*   [ ] Sabe que rodar DELETE sem WHERE é perigoso. { .fragment }
+
+---
+
+## 📝 Prática de Hoje
+1.  Conectar ao banco via DBeaver.
+2.  Criar uma tabela `Ferramentas`.
+3.  Inserir 3 linhas e fazer um SELECT filtrado.
+
+---
+
+## 🏁 Dúvidas?
+O banco de dados é o coração da aplicação! ❤️🚀

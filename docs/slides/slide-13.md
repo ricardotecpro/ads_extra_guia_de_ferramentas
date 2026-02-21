@@ -1,89 +1,167 @@
-# Aula 13 - Estado e Hooks 🎣
-## Tornando seu App Interativo
+# Aula 13: Contêineres com Docker 📦
 
 ---
 
-## Agenda 📅
-
-1. O que é o Estado (State)? <!-- .element: class="fragment" -->
-2. Hook `useState` <!-- .element: class="fragment" -->
-3. Lidando com Cliques e Eventos <!-- .element: class="fragment" -->
-4. Inputs Controlados <!-- .element: class="fragment" -->
-5. Imutabilidade e Arrays <!-- .element: class="fragment" -->
+## 🎯 Nossa Missão
+*   Resolver o problema "na minha máquina funciona".
+*   Entender a tecnologia de contêineres.
+*   Dominar Dockerfiles e Imagens.
+*   Orquestração local com Docker Compose.
 
 ---
 
-## 1. O Problema da Estática 🧱
-
-- Variáveis comuns mudam nos bastidores... <!-- .element: class="fragment" -->
-- ...mas a tela continua a mesma! <!-- .element: class="fragment" -->
-- O React precisa de um sinal para re-desenhar. <!-- .element: class="fragment" -->
+## 😫 O Conflito de Versões
+*   Projeto A precisa de Node 14. <!-- .element: class="fragment" -->
+*   Projeto B precisa de Node 18. <!-- .element: class="fragment" -->
+*   Seu computador vira uma bagunça de versões conflitantes. <!-- .element: class="fragment" -->
+*   **O Docker isola tudo isso.** <!-- .element: class="fragment" -->
 
 ---
 
-## 2. useState: O Motor de Mudança 🚀
+## 🐳 O que é o Docker?
+Não é uma máquina virtual!
+*   **Contêiner**: Um processo isolado que compartilha o kernel do S.O. <!-- .element: class="fragment" -->
+*   **Imagem**: O "molde" ou fotografia do sistema pronto. <!-- .element: class="fragment" -->
+*   **Docker Hub**: Onde baixamos as imagens prontas. <!-- .element: class="fragment" -->
 
-```jsx
-const [cont, setCont] = useState(0);
+---
+
+## ⚖️ VM vs Contêiner
+```mermaid
+graph TD
+    subgraph VM [Maquina Virtual]
+        OS1[OS Hospedeiro] --- Hyp[Hypervisor]
+        Hyp --- GOS[Guest OS]
+        GOS --- App1[App + Libs]
+    end
+    subgraph CT [Conteiner]
+        OS2[OS Hospedeiro] --- DE[Docker Engine]
+        DE --- App2[App + Libs]
+    end
+```
+*   Contêineres são muito mais leves e rápidos. <!-- .element: class="fragment" -->
+
+---
+
+## 📜 O Dockerfile: A Receita
+```dockerfile
+# 1. Base (Qual S.O.?)
+FROM node:20-alpine
+# 2. Pasta de trabalho
+WORKDIR /app
+# 3. Copiar arquivos
+COPY . .
+# 4. Instalar dependencias
+RUN npm install
+# 5. Comando de inicio
+CMD ["npm", "start"]
 ```
 
-1. **cont**: O valor atual. <!-- .element: class="fragment" -->
-2. **setCont**: A função que atualiza. <!-- .element: class="fragment" -->
-3. **0**: O ponto de partida. <!-- .element: class="fragment" -->
+---
+
+## 🛠️ Comandos Essenciais (Build)
+*   `docker build -t meu-app .`: Criar a imagem. <!-- .element: class="fragment" -->
+*   `docker images`: Listar imagens no PC. <!-- .element: class="fragment" -->
+*   `docker rmi <id>`: Deletar imagem. <!-- .element: class="fragment" -->
 
 ---
 
-## 3. Eventos no React ⚡
-
-- `onClick={funcao}` <!-- .element: class="fragment" -->
-- `onChange={(e) => ...}` <!-- .element: class="fragment" -->
-- Sempre em **CamelCase**! <!-- .element: class="fragment" -->
-
----
-
-## 4. Inputs Controlados ⌨️
-
-- O React é quem manda no valor do input. <!-- .element: class="fragment" -->
-- `value={estado}` + `onChange`. <!-- .element: class="fragment" -->
-- Facilita validação e limpeza de campos. <!-- .element: class="fragment" -->
+## 🚀 Comandos Essenciais (Run)
+*   `docker run -p 8080:80 meu-app`: Rodar o app. <!-- .element: class="fragment" -->
+*   `docker ps`: Ver o que está rodando. <!-- .element: class="fragment" -->
+*   `docker stop <id>`: Parar o contêiner. <!-- .element: class="fragment" -->
+*   `docker exec -it <id> sh`: Entrar no contêiner. <!-- .element: class="fragment" -->
 
 ---
 
-## 5. Imutabilidade (Muito Importante!) 💎
-
-- Nunca altere o estado original: `lista.push(x)` ❌ <!-- .element: class="fragment" -->
-- Sempre crie uma cópia nova: `setLista([...lista, x])` ✅ <!-- .element: class="fragment" -->
-
----
-
-## 6. Fluxo de Dados 🌊
-
-- O estado flui do Pai para o Filho via Props. <!-- .element: class="fragment" -->
-- Se o estado do Pai muda, todo mundo abaixo dele atualiza. <!-- .element: class="fragment" -->
+## 🔗 Mapeamento de Portas
+`8080:80`
+*   **8080**: Porta do seu computador (Host). <!-- .element: class="fragment" -->
+*   **80**: Porta dentro do Docker (Container). <!-- .element: class="fragment" -->
+*   Permite acessar o serviço via browser no seu PC. <!-- .element: class="fragment" -->
 
 ---
 
-## Desafio de Estado ⚡
-
-Se eu tenho um botão que soma +1 ao contador, o que acontece com a interface se eu esquecer de importar o `useState` e usar uma variável global `let contador = 0`?
-
----
-
-## Resumo ✅
-
-- `useState` traz vida aos componentes. <!-- .element: class="fragment" -->
-- Mudança de estado = Re-renderização. <!-- .element: class="fragment" -->
-- Use sempre funções disparadoras (`set...`). <!-- .element: class="fragment" -->
+## 📂 Volumes: Persistência de Dados
+Contêineres são efêmeros (se deletar, os dados somem).
+*   **Volumes** conectam uma pasta do seu HD à pasta do Docker. <!-- .element: class="fragment" -->
+*   Os dados sobrevivem mesmo se o contêiner for destruído. <!-- .element: class="fragment" -->
 
 ---
 
-## Próxima Aula: Efeitos e APIs 🌐
-
-### Buscando dados no mundo real!
-
-- Hook: `useEffect`. <!-- .element: class="fragment" -->
-- Consumindo nossa API Backend. <!-- .element: class="fragment" -->
+## 🗺️ Docker Compose: O Maestro Local
+E se eu precisar de uma API + Banco de Dados?
+*   Arquivo `docker-compose.yml`. <!-- .element: class="fragment" -->
+*   Define todos os serviços e suas redes. <!-- .element: class="fragment" -->
+*   Comando: `docker-compose up`. <!-- .element: class="fragment" -->
 
 ---
 
-## Dúvidas? 🎣
+## 🏗️ Exemplo de Docker Compose
+```yaml
+services:
+  web:
+    build: .
+    ports: ["3000:3000"]
+  db:
+    image: postgres:alpine
+    environment:
+      POSTGRES_PASSWORD: root
+```
+
+---
+
+## 🌐 Redes no Docker (Networks)
+*   Contêineres podem falar uns com os outros pelo nome. <!-- .element: class="fragment" -->
+*   Isolamento de tráfego para maior segurança. <!-- .element: class="fragment" -->
+
+---
+
+## 🦁 Otimizando Imagens
+*   Use imagens `alpine` (ultra leves). <!-- .element: class="fragment" -->
+*   Evite instalar ferramentas desnecessárias na imagem. <!-- .element: class="fragment" -->
+*   Use `.dockerignore` para não copiar o `node_modules` local. <!-- .element: class="fragment" -->
+
+---
+
+## 🛡️ Segurança no Docker
+*   Não rode o app como usuário `root` dentro do Docker. <!-- .element: class="fragment" -->
+*   Mantenha suas imagens base sempre atualizadas. <!-- .element: class="fragment" -->
+*   Use ferramentas de scan de vulnerabilidades. <!-- .element: class="fragment" -->
+
+---
+
+## 📉 Ciclo de Desenvolvimento Docker
+```mermaid
+graph LR
+    C[Código] --> B[Build Image]
+    B --> R[Run Container]
+    R --> T[Test]
+    T --> P[Push to Hub]
+```
+
+---
+
+## 🌟 O Futuro: DevContainers
+*   Use o Docker para configurar seu ambiente de VS Code. <!-- .element: class="fragment" -->
+*   Todo o time usa exatamente as mesmas extensões e ferramentas. <!-- .element: class="fragment" -->
+
+---
+
+## 🏆 Checklist de Docker Pro
+*   [ ] Entende a diferença entre Imagem e Contêiner. <!-- .element: class="fragment" -->
+*   [ ] Sabe escrever um Dockerfile básico. <!-- .element: class="fragment" -->
+*   [ ] Consegue rodar um banco de dados via Docker. <!-- .element: class="fragment" -->
+*   [ ] Entende para que serve o Docker Compose. <!-- .element: class="fragment" -->
+
+---
+
+## 📝 Prática de Hoje
+1.  Criar um Dockerfile para um site estático.
+2.  Fazer o Build e conferir o tamanho da imagem.
+3.  Rodar o contêiner e acessar via navegador.
+
+---
+
+## 🏁 Dúvidas?
+Contêineres mudaram o mundo do software! 🚀📦

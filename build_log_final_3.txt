@@ -1,0 +1,177 @@
+WARNING -  [git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs' has no git logs, using current timestamp
+INFO    -  [macros] - No default module `main` found
+INFO    -  [macros] - Config variables: ['extra', 'config', 'environment', 'plugin', 'git', 'social', 'version', 'macros', 'filters', 'filters_builtin']
+INFO    -  [macros] - Config macros: ['context', 'macros_info', 'now', 'fix_url']
+INFO    -  [macros] - Config filters: ['pretty', 'relative_url']
+INFO    -  Cleaning site directory
+INFO    -  Building documentation to directory: D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\site
+WARNING -  [git-authors-plugin] D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\setups\setup-03.md has not been committed yet. Lines are not counted
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\index.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\materiais.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\aulas\aula-04.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\print_page.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\project_roadmap.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\aulas\aula-05.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\aulas\aula-06.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\aulas\aula-07.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\aulas\aula-08.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\aulas\aula-09.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\aulas\aula-10.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\aulas\aula-11.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\plano-ensino.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\aulas\index.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\sobre.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\aulas\aula-12.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\aulas\aula-13.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\aulas\aula-03.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\aulas\aula-14.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\aulas\aula-01.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\aulas\aula-02.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\aulas\aula-15.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\aulas\aula-16.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\exercicios\exercicio-01.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\exercicios\index.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\exercicios\exercicio-02.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\exercicios\exercicio-03.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\exercicios\exercicio-04.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\exercicios\exercicio-07.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\exercicios\exercicio-06.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\exercicios\exercicio-09.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\exercicios\exercicio-05.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\exercicios\exercicio-08.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\exercicios\exercicio-11.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\exercicios\exercicio-10.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\exercicios\exercicio-12.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\exercicios\exercicio-13.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\exercicios\exercicio-14.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\exercicios\exercicio-16.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\exercicios\exercicio-15.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\projetos\index.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\projetos\projeto-02.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\projetos\projeto-01.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\projetos\projeto-03.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\projetos\projeto-05.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\projetos\projeto-04.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\projetos\projeto-06.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\projetos\projeto-07.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\projetos\projeto-08.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\projetos\projeto-09.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\projetos\projeto-10.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\projetos\projeto-13.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\projetos\projeto-11.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\projetos\projeto-12.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\projetos\projeto-16.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\projetos\projeto-15.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\index.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\projetos\projeto-14.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\quiz-01.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\quiz-02.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\quiz-03.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\quiz-04.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\quiz-05.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\quiz-06.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\quiz-08.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\quiz-07.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\quiz-10.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\quiz-09.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\quiz-11.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\quiz-12.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\quiz-13.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\quiz-15.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\quiz-14.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\quiz-16.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\src\quiz-02.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\src\quiz-01.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\src\quiz-04.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\src\quiz-03.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\src\quiz-05.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\src\quiz-06.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\src\quiz-07.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\src\quiz-08.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\src\quiz-10.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\src\quiz-09.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\src\quiz-12.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\src\quiz-11.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\src\quiz-13.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\src\quiz-14.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\src\quiz-15.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\setups\index.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\quizzes\src\quiz-16.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\setups\setup-01.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\setups\setup-02.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\setups\setup-03.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\slide-01.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\index.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\slide-02.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\slide-03.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\slide-04.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\slide-05.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\slide-06.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\slide-07.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\slide-08.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\slide-09.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\slide-10.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\slide-11.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\slide-13.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\slide-12.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\slide-15.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\slide-14.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\slide-16.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\src\slide-01.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\src\slide-03.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\src\slide-02.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\src\slide-04.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\src\slide-05.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\src\slide-06.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\src\slide-07.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\src\slide-08.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\src\slide-09.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\src\slide-10.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\src\slide-11.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\src\slide-12.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\src\slide-13.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\src\slide-15.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\src\slide-14.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\templates\template-aula.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\slides\src\slide-16.md' has no git logs, using current timestamp
+[git-revision-date-localized-plugin] 'D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\setups\setup-03.md' has no git logs, using current timestamp
+WARNING:root:First revision timestamp is older than last revision timestamp for page setups\setup-03.md. This can be due to a quirk in `git` follow behaviour. You can try to set `enable_git_follow: false` in the plugin configuration.
+INFO    -  [RSS-plugin]: Dates could not be retrieved for page: D:\SourceCode\REPOS\github.io\ads_extra_guia_de_ferramentas\docs\setups\setup-03.md.
+Copiando slides HTML...
+  -- slide-01.html
+  -- slide-02.html
+  -- slide-03.html
+  -- slide-04.html
+  -- slide-05.html
+  -- slide-06.html
+  -- slide-07.html
+  -- slide-08.html
+  -- slide-09.html
+  -- slide-10.html
+  -- slide-11.html
+  -- slide-12.html
+  -- slide-13.html
+  -- slide-14.html
+  -- slide-15.html
+  -- slide-16.html
+Copiando slides Markdown...
+  -- slide-01.md
+  -- slide-02.md
+  -- slide-03.md
+  -- slide-04.md
+  -- slide-05.md
+  -- slide-06.md
+  -- slide-07.md
+  -- slide-08.md
+  -- slide-09.md
+  -- slide-10.md
+  -- slide-11.md
+  -- slide-12.md
+  -- slide-13.md
+  -- slide-14.md
+  -- slide-15.md
+  -- slide-16.md
+V 16 slide(s) HTML copiados
+V 16 slide(s) Markdown copiados
+
+Aborted with 2 warnings in strict mode!

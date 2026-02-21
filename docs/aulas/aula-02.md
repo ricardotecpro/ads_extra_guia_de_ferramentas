@@ -40,20 +40,23 @@ O Kanban é a forma mais comum de visualizar o trabalho. Consiste em colunas que
 ### Fluxo Típico de Desenvolvimento (Mermaid)
 
 ```mermaid
-kanban
-  Todo
-    [ ] Criar Banco de Dados
-    [ ] Desenvolver Login
-  Doing
-    [/] Configurar Docker
-  Review
-    [x] Definir Escopo do Projeto
-  Done
-    [x] Instalar VS Code
+graph TD
+    A[Criar Tarefa] --> B{Em Execução?}
+    B -- Sim --> C[Desenvolvimento]
+    B -- Não --> A
+    C --> D[Revisão de Código]
+    D --> E[Concluído]
+    
+    subgraph "Estados Kanban"
+    A
+    C
+    D
+    E
+    end
 ```
 
-> [!NOTE]
-> Nota: O diagrama acima é uma representação visual simplificada do fluxo.
+!!! info "Nota"
+    O diagrama acima é uma representação visual simplificada do fluxo.
 
 ---
 

@@ -1,106 +1,165 @@
-# Aula 07 - Repositories e Banco de Dados 🗄️
-## Onde a informação descansa
+# Aula 07: NoSQL e Cache ⚡
 
 ---
 
-## Agenda 📅
-
-1. Por que Bancos de Dados? <!-- .element: class="fragment" -->
-2. PostgreSQL: O Robusto <!-- .element: class="fragment" -->
-3. SQL Básico (SELECT, INSERT...) <!-- .element: class="fragment" -->
-4. Relacionamentos (1:N, N:N) <!-- .element: class="fragment" -->
-5. Camada de Persistence <!-- .element: class="fragment" -->
-6. O Padrão Repository <!-- .element: class="fragment" -->
+## 🎯 Nossa Missão
+*   Entender quando o SQL não é suficiente.
+*   Conhecer o modelo de Documentos (MongoDB).
+*   Dominar o conceito de Cache (Redis).
+*   Escalabilidade Horizontal: Pensando grande.
 
 ---
 
-## 1. Persistência de Dados 💾
-
-- Sem banco, o servidor esquece tudo ao reiniciar. <!-- .element: class="fragment" -->
-- Precisamos de segurança e integridade. <!-- .element: class="fragment" -->
-- **Estritamente Tipado**: O banco garante o formato. <!-- .element: class="fragment" -->
-
----
-
-## 2. Por que PostgreSQL? 🐘
-
-- Código Aberto (Open Source). <!-- .element: class="fragment" -->
-- Extremamente confiável (ACID). <!-- .element: class="fragment" -->
-- Suporta dados complexos (JSONB). <!-- .element: class="fragment" -->
+## 🦖 O limite do Relacional
+Bancos SQL são incríveis, mas:
+*   Esquema rígido (alterar tabela é lento). <!-- .element: class="fragment" -->
+*   Dificuldade em escalar para bilhões de linhas. <!-- .element: class="fragment" -->
+*   Lentidão em requisições repetitivas. <!-- .element: class="fragment" -->
+*   **O NoSQL resolve esses gargalos.** <!-- .element: class="fragment" -->
 
 ---
 
-## 3. SQL: A Linguagem Universal 🗣️
-
-```sql
--- Buscar usuários VIP
-SELECT * FROM usuarios 
-WHERE tipo = 'VIP' 
-ORDER BY nome;
-```
-
-- **DDL**: Define a estrutura (Tabelas). <!-- .element: class="fragment" -->
-- **DML**: Manipula os dados (Linhas). <!-- .element: class="fragment" -->
+## 🧠 O que é NoSQL?
+*   **Not Only SQL**. <!-- .element: class="fragment" -->
+*   Não usa obrigatoriamente tabelas e colunas. <!-- .element: class="fragment" -->
+*   Foco em performance e flexibilidade. <!-- .element: class="fragment" -->
+*   Padrão para Big Data e Redes Sociais. <!-- .element: class="fragment" -->
 
 ---
 
-## 4. O Coração: Relacionamentos 🔗
-
-- **1:N**: Um cliente, muitos pedidos. <!-- .element: class="fragment" -->
-- **N:N**: Muitos alunos, muitos cursos. <!-- .element: class="fragment" -->
-- **Foreign Key**: A âncora que liga tudo. <!-- .element: class="fragment" -->
-
----
-
-## 5. Camada de Persistence 🧱
-
-- O código que conversa com o driver do banco. <!-- .element: class="fragment" -->
-- Onde as queries são traduzidas para o código. <!-- .element: class="fragment" -->
+## 📂 Tipos de NoSQL
+1.  **Documentos**: MongoDB (tipo JSON). <!-- .element: class="fragment" -->
+2.  **Chave-Valor**: Redis (ultra rápido). <!-- .element: class="fragment" -->
+3.  **Grafos**: Neo4j (relacionamentos complexos). <!-- .element: class="fragment" -->
+4.  **Colunares**: Cassandra (dados massivos). <!-- .element: class="fragment" -->
 
 ---
 
-## 6. Padrão Repository 📥
-
-- "Não me diga como, diga O QUE você quer". <!-- .element: class="fragment" -->
-- Isola o SQL da regra de negócio. <!-- .element: class="fragment" -->
-
-```javascript
-// No Service
-userRepository.findByEmail(email);
+## 🍃 MongoDB: O Rei dos Documentos
+Em vez de Linhas, usamos **Documentos**.
+Em vez de Tabelas, usamos **Collections**.
+```json
+{
+  "_id": "abc123",
+  "nome": "João",
+  "habilidades": ["Git", "Docker"],
+  "ativo": true
+}
 ```
 
 ---
 
-## 7. Migrations 📜
-
-- Controle de versão para o Banco. <!-- .element: class="fragment" -->
-- Permite "voltar no tempo" se algo quebrar. <!-- .element: class="fragment" -->
-- Mantém o time em sincronia. <!-- .element: class="fragment" -->
-
----
-
-## Desafio SQL ⚡
-
-Qual comando você usaria para mudar o preço de todos os produtos da categoria 'Games' para 99.90?
+## 📐 Por que usar Documentos?
+*   **Flexibilidade**: Um documento pode ser diferente do outro. <!-- .element: class="fragment" -->
+*   **Agilidade**: Ótimo para MVPs e dados desestruturados. <!-- .element: class="fragment" -->
+*   **Hierarquia**: Você pode anular objetos dentro de objetos. <!-- .element: class="fragment" -->
 
 ---
 
-## Resumo ✅
-
-- Bancos de dados dão memória ao sistema. <!-- .element: class="fragment" -->
-- PostgreSQL é o padrão da indústria. <!-- .element: class="fragment" -->
-- SQL é habilidade obrigatória para backend. <!-- .element: class="fragment" -->
-- Repository Pattern traz flexibilidade. <!-- .element: class="fragment" -->
+## ⚡ Redis: Velocidade Extrema
+*   **In-Memory**: Os dados ficam na RAM, não no HD. <!-- .element: class="fragment" -->
+*   **Latência**: Respostas em milissegundos. <!-- .element: class="fragment" -->
+*   **Estrutura**: Chave-Valor simples. <!-- .element: class="fragment" -->
 
 ---
 
-## Próxima Aula: Integridade! ✅
-
-### Validação e Boas Práticas
-
-- Garantindo que dados "sujos" não entrem no banco. <!-- .element: class="fragment" -->
-- Tratamento de exceções de banco. <!-- .element: class="fragment" -->
+## 🧊 O Conceito de Cache
+```mermaid
+graph TD
+    User[Usuário] --> App[Aplicação]
+    App -- 1. Tem no Cache? --> Redis{Redis}
+    Redis -- Sim --> User
+    Redis -- Não --> DB[(Banco Postgres)]
+    DB --> App
+    App -- 2. Salva no Cache --> Redis
+```
 
 ---
 
-## Dúvidas? 🗄️
+## 🕑 Expiração de Dados (TTL)
+No cache, os dados não vivem para sempre.
+*   `SET token "abc" EX 3600` (Valido por 1 hora). <!-- .element: class="fragment" -->
+*   Evita que o cache fique lotado de lixo antigo. <!-- .element: class="fragment" -->
+*   Ideal para sessões de login e tokens. <!-- .element: class="fragment" -->
+
+---
+
+## 🪜 Escalabilidade: Vertical vs Horizontal
+```mermaid
+graph TD
+    V[Vertical: Aumentar o Servidor]
+    H[Horizontal: Adicionar + Servidores]
+    V --- Cost[Custo Exponencial]
+    H --- Scale[Escala Infinita]
+```
+*   NoSQL é mestre na escalabilidade **Horizontal**. <!-- .element: class="fragment" -->
+
+---
+
+## 🌐 Onde usar cada um?
+*   **E-commerce (Carrinho)**: Redis. <!-- .element: class="fragment" -->
+*   **Rede Social (Posts/Feeds)**: MongoDB. <!-- .element: class="fragment" -->
+*   **Financeiro (Transações)**: Postgres (SQL). <!-- .element: class="fragment" -->
+*   **Logs**: ElasticSearch. <!-- .element: class="fragment" -->
+
+---
+
+## 🔄 Consistência Eventual
+O "problema" do NoSQL.
+*   Em sistemas gigantes, pode levar milissegundos para o dado sincronizar em todos os servidores. <!-- .element: class="fragment" -->
+*   **Exemplo**: O número de likes de uma foto pode variar um pouco entre usuários por instantes. <!-- .element: class="fragment" -->
+
+---
+
+## 🪟 Ferramentas Visuais
+*   **MongoDB Compass**: Explorar documentos visualmente. <!-- .element: class="fragment" -->
+*   **Beekeeper Studio**: Client moderno para NoSQL e SQL. <!-- .element: class="fragment" -->
+*   **Redis Insight**: Monitorar o uso de memória. <!-- .element: class="fragment" -->
+
+---
+
+## 🚀 Performance na Prática
+Imagine buscar o perfil de um usuário famoso:
+*   No SQL: 50ms (muitos joins). <!-- .element: class="fragment" -->
+*   No NoSQL: 10ms (objeto pronto). <!-- .element: class="fragment" -->
+*   No Cache: 1ms (direto da RAM). <!-- .element: class="fragment" -->
+
+---
+
+## 📦 Modelagem no MongoDB
+"Embed" (Embutir) vs "Link" (Referenciar).
+*   Se os dados mudam pouco, salve dentro do documento. <!-- .element: class="fragment" -->
+*   Se os dados são gigantes, use a ID (referência). <!-- .element: class="fragment" -->
+
+---
+
+## 🛡️ Quando NÃO usar NoSQL?
+*   Quando a integridade dos dados e relações complexas são críticas. <!-- .element: class="fragment" -->
+*   Sistemas contábeis e ERPs tradicionais. <!-- .element: class="fragment" -->
+*   Quando você não tem volume de dados que justifique a troca. <!-- .element: class="fragment" -->
+
+---
+
+## 📈 O Futuro: Multi-Model
+Bancos modernos (como Postgres) já suportam campos JSON.
+*   A linha entre SQL e NoSQL está ficando cada vez mais tênue! <!-- .element: class="fragment" -->
+
+---
+
+## 🏆 Checklist NoSQL Pro
+*   [ ] Entende o formato JSON/Documento. <!-- .element: class="fragment" -->
+*   [ ] Sabe explicar para que serve o Cache. <!-- .element: class="fragment" -->
+*   [ ] Reconhece que Redis vive na Memória RAM. <!-- .element: class="fragment" -->
+*   [ ] Diferencia escala vertical de horizontal. <!-- .element: class="fragment" -->
+
+---
+
+## 📝 Prática de Hoje
+1.  Criar um documento JSON de perfil.
+2.  Instalar o MongoDB localmente.
+3.  Simular um cenário de cache para uma notícia famosa.
+
+---
+
+## 🏁 Dúvidas?
+Otimize seu app para milhões de usuários! 🚀⚡

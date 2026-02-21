@@ -1,100 +1,132 @@
-# Aula 15 - React Router 🚦
-## Criando Apps Multi-Página
+# Aula 15: Comunicação e Colaboração em Equipe 💬
 
 ---
 
-## Agenda 📅
-
-1. O que são SPAs? { .fragment }
-2. Multi-páginas (Simuladas) { .fragment }
-3. Componentes de Rota { .fragment }
-4. Navegação (`Link` e `useNavigate`) { .fragment }
-5. Parâmetros dinâmicos (`:id`) { .fragment }
+## 🎯 Nossa Missão
+*   Desenvolver Soft Skills essenciais.
+*   Dominar a comunicação assíncrona.
+*   Aprender a etiqueta no Slack e Teams.
+*   Entender a cultura de documentação.
 
 ---
 
-## 1. O Mundo do SPA ⚛️
-
-- O site é uma única página HTML. { .fragment }
-- O Javascript "troca" a tela sem recarregar. { .fragment }
-- UX rápida e fluida. { .fragment }
+## 🗣️ Por que falar é tão importante quanto codar?
+*   Software é feito por pessoas para pessoas. { .fragment }
+*   Falhas de comunicação custam caro (retrabalho). { .fragment }
+*   O bom desenvolvedor sabe explicar o que fez. { .fragment }
 
 ---
 
-## 2. React Router Dom ⚙️
+## 🔄 Síncrono vs Assíncrono
+*   **Síncrono**: Reuniões, ligações, conversa no café. (Resposta na hora). { .fragment }
+*   **Assíncrono**: Slack, E-mail, PRs, Docs. (Resposta quando possível). { .fragment }
+*   **Dica**: Proteja seu tempo de foco usando o assíncrono! { .fragment }
 
-```bash
-npm install react-router-dom
+---
+
+## 🟣 Slack / Teams: O Hub do Time
+Não é apenas um chat. É onde tudo acontece.
+*   Canais por assunto. { .fragment }
+*   Integração com ferramentas. { .fragment }
+*   Threads para organização. { .fragment }
+
+---
+
+## 📜 Regras de Etiqueta (Slack)
+1.  **Vá direto ao ponto**: Evite apenas "Oi". { .fragment }
+2.  **Use Threads**: Não polua o canal principal. { .fragment }
+3.  **Status**: Mantenha atualizado (Foco, Almoço, Férias). { .fragment }
+4.  **Reações**: Use emojis para confirmar leitura. { .fragment }
+
+---
+
+## 🤖 ChatOps: Automação no Chat
+Lidando com o sistema via texto.
+```text
+/deploy api to production
 ```
-
-- A biblioteca padrão para web. { .fragment }
-- Permite que a URL combine com o que aparece na tela. { .fragment }
-
----
-
-## 3. A Estrutura Básica 🏗️
-
-- **BrowserRouter**: O container principal. { .fragment }
-- **Routes**: O seletor de rotas. { .fragment }
-- **Route**: Define o caminho (`path`) e o componente (`element`). { .fragment }
+*   O bot processa a ordem e avisa a todos. { .fragment }
+*   Transparência total no que está acontecendo. { .fragment }
 
 ---
 
-## 4. Navegando sem Recarregar! 🏃‍♂️
-
-- Use `<Link to="/contato">` { .fragment }
-- **NUNCA** use `<a href="...">` para rotas internas. { .fragment }
-
----
-
-## 5. Navegação Programática 🚀
-
-```javascript
-const navigate = useNavigate();
-
-onClick={() => navigate("/dashboard")}
-```
-
-- Ideal para redirecionar após ações (Login, Clique em Card). { .fragment }
+## 🤝 Pair Programming (Programação em Par)
+Dois desenvolvedores, um código.
+*   **Piloto**: Escreve o código. { .fragment }
+*   **Co-piloto**: Revisa, pensa na lógica, busca documentação. { .fragment }
+*   Melhor forma de compartilhar conhecimento sênior/júnior. { .fragment }
 
 ---
 
-## 6. Rotas Dinâmicas (URL Params) 🆔
-
-- `path="/perfil/:username"` { .fragment }
-- Hook `useParams()` captura o valor. { .fragment }
-- Uma única página que se adapta a mil perfis. { .fragment }
-
----
-
-## 7. Página 404 (Not Found) 👻
-
-- `path="*"` { .fragment }
-- Garante que o usuário nunca caia em uma tela em branco. { .fragment }
+## ⏰ Reuniões Eficazes: Stand-up
+A reunião diária de 15 minutos.
+*   O que eu fiz ontem? { .fragment }
+*   O que farei hoje? { .fragment }
+*   Tenho algum impedimento? { .fragment }
+*   **Foco total em sincronizar o time.** { .fragment }
 
 ---
 
-## Desafio de Roteamento ⚡
-
-Se eu digitar `www.meusite.com/asdfg` e não tiver uma rota configurada para isso, o que o usuário vai ver se eu NÃO colocar uma rota com o `path="*"`?
-
----
-
-## Resumo ✅
-
-- Roteamento traz a sensação de um site real. { .fragment }
-- Hooks `useNavigate` e `useParams` são essenciais. { .fragment }
-- SPAs são o padrão da indústria moderna. { .fragment }
+## 📖 Cultura de Documentação
+"Se não está escrito, não existe."
+*   **README**: O cartão de visitas do projeto. { .fragment }
+*   **Wiki / Notion**: Regras de negócio e guias. { .fragment }
+*   **Changelog**: O que mudou em cada versão? { .fragment }
 
 ---
 
-## Próxima Aula: O Grande Final 🏆
-
-### Projeto Integrado: Backend + Frontend!
-
-- Conectando nossa API Node ao site React. { .fragment }
-- O Projeto Final do Curso! { .fragment }
+## 🔍 Feedback Construtivo
+Como falar do erro do colega?
+*   Foque no **código**, não na pessoa. { .fragment }
+*   Sugira soluções em vez de apenas criticar. { .fragment }
+*   Reconheça o que está bom também! { .fragment }
 
 ---
 
-## Dúvidas? 🚦
+## 🏠 Trabalho Remoto: Desafios
+*   Isolamento social. { .fragment }
+*   Dificuldade em separar casa de trabalho. { .fragment }
+*   **Solução**: Comunicação excessiva e transparente (Overcommunication). { .fragment }
+
+---
+
+## 📉 Gerenciamento de Conflitos
+*   Conflitos técnicos são normais (e bons!). { .fragment }
+*   Busque consenso ouvindo todos os lados. { .fragment }
+*   Se não houver acordo, o time concorda em seguir um caminho e testar. { .fragment }
+
+---
+
+## 🛡️ Segurança Psicológica
+Um time onde as pessoas não têm medo de:
+*   Perguntar o que parece "óbvio". { .fragment }
+*   Admitir erros. { .fragment }
+*   Sugerir ideias malucas. { .fragment }
+*   **Times seguros performam 2x mais.** { .fragment }
+
+---
+
+## 📊 Ferramentas de Documentação Modernas
+*   **Notion**: O canivete suíço. { .fragment }
+*   **Confluence**: O padrão para grandes empresas. { .fragment }
+*   **Obsidian / Logseq**: Gestão de conhecimento pessoal. { .fragment }
+
+---
+
+## 🏆 Checklist de Colaboração Pro
+*   [ ] Sabe usar Threads no Slack. { .fragment }
+*   [ ] Sabe explicar suas tarefas na Stand-up. { .fragment }
+*   [ ] Escreve READMEs claros. { .fragment }
+*   [ ] Pratica a empatia no Code Review. { .fragment }
+
+---
+
+## 📝 Prática de Hoje
+1.  Simular uma Stand-up com seu grupo.
+2.  Redigir uma mensagem assíncrona de ajuda.
+3.  Criticar um código fictício de forma construtiva.
+
+---
+
+## 🏁 Dúvidas?
+O código é feito por humanos! 🤝🚀

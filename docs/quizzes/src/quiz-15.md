@@ -1,71 +1,71 @@
-# Quiz 15 - Navegação com React Router 🚦
+# Quiz: Aula 15 - Comunicação e Colaboração em Equipe 💬
 
-1. O que é uma SPA (Single Page Application)?
-    - [ ] Um site que só funciona em um navegador
-    - [x] Uma aplicação onde o HTML é carregado uma única vez e o Javascript troca o conteúdo da tela
-    - [ ] Um site que não tem Javascript
-    - [ ] Um aplicativo de celular que não usa internet
-    *Explicação: SPAs oferecem uma experiência fluida, parecida com um app nativo, sem recarregamentos de página.*
+1.  **Por que a comunicação é vital em um time de tecnologia?**
+    *   ( ) Para fofocar sobre os chefes.
+    *   (x) Para alinhar requisitos, evitar retrabalho e garantir que todos entendam os objetivos do projeto.
+    *   ( ) Porque programadores não gostam de ficar sozinhos.
+    *   ( ) É apenas uma exigência do RH da empresa.
+    *   *Explicação: Soft Skills são tão importantes quanto Hard Skills para o sucesso de um produto.*
 
-2. Qual componente é obrigatório para envolver toda a aplicação que usará rotas?
-    - [ ] <Route>
-    - [ ] <Link>
-    - [x] <BrowserRouter>
-    - [ ] <RouterManager>
-    *Explicação: Ele é o "contexto" que permite ao React monitorar a URL do navegador.*
+2.  **O que é "Comunicação Assíncrona"?**
+    *   ( ) Falar com várias pessoas ao mesmo tempo.
+    *   (x) Comunicação que não exige resposta imediata, permitindo que as pessoas respondam quando puderem (ex: Slack, E-mail).
+    *   ( ) Falar sozinho no meio do código.
+    *   ( ) Usar apenas emojis nas conversas.
+    *   *Explicação: Respeita o foco e a produtividade do time, especialmente em trabalho remoto.*
 
-3. Como definimos uma rota específica para a página de contato?
-    - [ ] <Route url="/contato" component={Contato} />
-    - [x] <Route path="/contato" element={<Contato />} />
-    - [ ] <Link to="/contato" />
-    - [ ] <a href="/contato">
-    *Explicação: No React Router v6, usamos os atributos `path` e `element`.*
+3.  **Qual a principal vantagem do Slack em relação ao WhatsApp para uso profissional?**
+    *   ( ) Ele tem mais stickers animados.
+    *   (x) Permite organização por canais, threads e integrações poderosas com ferramentas de código (GitHub, Jira).
+    *   ( ) Ele é obrigatório por lei para programadores.
+    *   ( ) Ele é mais rápido que o WhatsApp.
+    *   *Explicação: O Slack foi desenhado para o trabalho colaborativo focado em projetos.*
 
-4. Por que não devemos usar a tag `<a>` para navegar entre rotas no React?
-    - [ ] Porque ela é proibida pelo Google
-    - [ ] Porque ela gasta mais bateria
-    - [x] Porque ela causa um recarregamento total da página, perdendo o estado do React
-    - [ ] Porque ela não aceita CSS
-    *Explicação: O componente `<Link>` intercepta o clique para manter a troca de telas interna.*
+4.  **Para que servem as "Threads" (Linhas de conversa) no Slack ou Teams?**
+    *   ( ) Para esconder conversas proibidas.
+    *   (x) Para manter discussões específicas organizadas sem poluir o canal principal da equipe.
+    *   ( ) Para enviar arquivos pesados.
+    *   ( ) Para criar bots de inteligência artificial.
+    *   *Explicação: Threads mantêm a organização e o contexto das discussões.*
 
-5. Para que serve o caractere `*` no atributo `path`?
-    - [ ] Para indicar uma rota secreta
-    - [x] Como um "coringa" para capturar qualquer URL que não foi definida anteriormente (Página 404)
-    - [ ] Para multiplicar o número de páginas
-    - [ ] Para aceitar qualquer tipo de arquivo
-    *Explicação: É a forma padrão de lidar com links inexistentes.*
+5.  **O que é o "ChatOps"?**
+    *   ( ) O ato de conversar enquanto opera o computador.
+    *   (x) Operar infraestrutura e disparar automações através do chat (ex: digitar um comando no Slack para fazer deploy).
+    *   ( ) Um novo modelo de celular para programadores.
+    *   ( ) Uma regra que proíbe o chat durante o deploy.
+    *   *Explicação: Traz a operação para onde o time já está conversando, aumentando a visibilidade.*
 
-6. Qual hook usamos para capturar parâmetros da URL (ex: o ID em `/post/10`)?
-    - [ ] useID()
-    - [ ] useRoute()
-    - [x] useParams()
-    - [ ] useQuery()
-    *Explicação: Os parâmetros definidos com `:` na rota são extraídos por este hook.*
+6.  **Por que o "Olá" vazio (sem a pergunta logo em seguida) é desencorajado em times tech?**
+    *   ( ) Porque gasta internet desnecessária.
+    *   (x) Porque faz com que a outra pessoa tenha que esperar você escrever a dúvida, gerando interrupções desnecessárias.
+    *   ( ) Porque é considerado má educação.
+    *   ( ) Porque o Slack cobra por cada mensagem enviada.
+    *   *Explicação: Ser direto e enviar a dúvida completa economiza tempo de todos.*
 
-7. Como redirecionamos o usuário para a Home após ele clicar em um botão de "Sair"?
-    - [ ] window.location.href = "/"
-    - [x] const navigate = useNavigate(); navigate("/");
-    - [ ] <Link to="/" />
-    - [ ] useRoute("/")
-    *Explicação: O hook `useNavigate` permite navegação via lógica de programação.*
+7.  **Qual a função do Microsoft Teams no ecossistema corporativo?**
+    *   ( ) Substituir o Windows.
+    *   (x) Centralizar chat, chamadas de vídeo, reuniões e edição colaborativa de documentos do Office.
+    *   ( ) Criar códigos de alta performance.
+    *   ( ) Jogar games com a equipe após o expediente.
+    *   *Explicação: É uma plataforma de colaboração completa integrada às ferramentas da Microsoft.*
 
-8. O que acontece se removermos o componente `<Routes>` e deixarmos apenas os `<Route>`?
-    - [ ] O app continua funcionando
-    - [x] O React Router gerará um erro, pois os Route precisam estar dentro de um provedor de rotas
-    - [ ] O site fica mais lento
-    - [ ] O menu desaparece
-    *Explicação: `<Routes>` é o componente que escolhe qual rota renderizar baseada na URL atual.*
+8.  **Sobre o uso de Emojis em conversas profissionais, é correto afirmar:**
+    *   ( ) Devem ser totalmente proibidos.
+    *   (x) Podem ser usados para confirmar recebimento (ex: :check:) ou dar tom à mensagem, economizando tempo.
+    *   ( ) Só podem ser usados em feriados.
+    *   ( ) Devem substituir todas as palavras em um relatório.
+    *   *Explicação: Ajudam na expressividade e agilidade da comunicação assíncrona.*
 
-9. Em qual pacote extra encontramos as ferramentas de roteamento do React?
-    - [ ] react-dom
-    - [ ] react-router
-    - [x] react-router-dom
-    - [ ] vite-plugin-router
-    *Explicação: O `react-router-dom` é a versão específica para navegadores web.*
+9.  **O que é um "Stand-up Meeting" (Reunião Diária)?**
+    *   ( ) Uma reunião onde um comediante conta piadas para o time.
+    *   (x) Uma reunião rápida diária (geralmente em pé) para alinhar o que foi feito e quais os impedimentos do dia.
+    *   ( ) Uma reunião que dura 4 horas para detalhar todo o projeto.
+    *   ( ) Uma reunião para discutir o salário de todos.
+    *   *Explicação: Foca no sincronismo rápido e na remoção de obstáculos.*
 
-10. Como definimos um parâmetro dinâmico chamado `slug` na URL?
-    - [ ] path="/blog/slug"
-    - [x] path="/blog/:slug"
-    - [ ] path="/blog/{slug}"
-    - [ ] path="/blog/*slug"
-    *Explicação: O uso dos dois pontos (`:`) sinaliza que aquela parte da URL é uma variável.*
+10. **Por que você deve integrar o GitHub ao Slack do seu time?**
+    *   ( ) Para o GitHub poder ler suas mensagens privadas.
+    *   (x) Para que todos saibam quando um novo código foi enviado ou quando um Pull Request precisa de revisão.
+    *   ( ) Para o Slack poder deletar o código se ele estiver ruim.
+    *   ( ) Não existe nenhuma vantagem técnica.
+    *   *Explicação: Aumenta a velocidade de resposta do time às necessidades do código.*

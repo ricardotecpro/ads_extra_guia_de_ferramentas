@@ -1,92 +1,176 @@
-# Aula 11 - Refresh Token e Segurança Avançada 🏗️
-## Blindando sua API contra o mundo
+# Aula 11: CI/CD Moderno (GitHub Actions) 🚀
 
 ---
 
-## Agenda 📅
-
-1. O Problema do Token Curto ⏰ { .fragment }
-2. Refresh Tokens (O que são?) { .fragment }
-3. CORS: Origens e Destinos { .fragment }
-4. Helmet: Headers de Aço { .fragment }
-5. Rate Limit: Contra Brute Force { .fragment }
-6. Ataques Comuns (XSS, Injection) { .fragment }
+## 🎯 Nossa Missão
+*   Entender o que é CI e CD.
+*   Conhecer o GitHub Actions.
+*   Aprender a sintaxe YAML de workflows.
+*   Automatizar o ciclo de vida do código.
 
 ---
 
-## 1. Por que Tokens Expiram? ⏰
-
-- Segurança! Se roubarem o token, ele dura pouco. { .fragment }
-- **Problema**: O usuário odeia fazer login toda hora. { .fragment }
-
----
-
-## 2. Refresh Token 🔁
-
-- Um token de longa duração (7 dias+). { .fragment }
-- Serve apenas para trocar por um novo Access Token. { .fragment }
-- Deve ser invalidado se o usuário deslogar. { .fragment }
+## 🏗️ O que é CI (Continuous Integration)?
+Integrar o código com frequência.
+*   Testes automáticos rodam a cada push. { .fragment }
+*   Erros de integração são pegos cedo. { .fragment }
+*   Garante que a `main` nunca quebre. { .fragment }
 
 ---
 
-## 3. CORS: Cross-Origin Resource Sharing 🌍
-
-- "Quem pode me chamar?". { .fragment }
-- Resolvido via Headers no Servidor. { .fragment }
-- **Nunca** use `origin: '*'` em ambientes reais! { .fragment }
-
----
-
-## 4. Helmet: Proteção de Headers 🪖
-
-- Remove o `X-Powered-By` (não diz que é Express). { .fragment }
-- Adiciona proteção contra Clickjacking e XSS. { .fragment }
+## 🚚 O que é CD (Continuous Delivery/Deployment)?
+Entregar o código pronto para o usuário.
+*   **Delivery**: Build pronto para ser lançado (clique manual). { .fragment }
+*   **Deployment**: Lançamento 100% automático em produção. { .fragment }
 
 ---
 
-## 5. Rate Limiting 🔨
-
-- 5 tentativas de login por minuto? Sim. { .fragment }
-- Evita que robôs tentem descobrir senhas via "força bruta". { .fragment }
-
----
-
-## 6. Onde salvar os Tokens? 🛡️
-
-- **Frontend**: LocalStorage? Seguro? { .fragment }
-- **Melhor Prática**: Cookies `HttpOnly` + `Secure`. { .fragment }
+## ♾️ O Infinito do DevOps
+```mermaid
+graph TD
+    Plan --> Code --> Build --> Test
+    Test --> Release --> Deploy --> Operate
+    Operate --> Monitor --> Plan
+```
 
 ---
 
-## 7. Melhores Práticas de Segurança 🏆
-
-1. Use HTTPS sempre. { .fragment }
-2. Valide TODAS as entradas do usuário. { .fragment }
-3. Mantenha as bibliotecas atualizadas. { .fragment }
-
----
-
-## Desafio de Segurança ⚡
-
-Qual a diferença entre 401 e 403 no contexto de Refresh Tokens? Se eu recebo 401, eu tento o refresh ou deslogo o usuário?
+## 🐙 Por que GitHub Actions?
+*   Integrado ao repositório. { .fragment }
+*   Nativamente grátis para repos públicos. { .fragment }
+*   Ecossistema gigante de ações prontas. { .fragment }
+*   Suporta Linux, Mac e Windows. { .fragment }
 
 ---
 
-## Resumo ✅
-
-- Refresh Token equilibra UX e Segurança. { .fragment }
-- CORS e Helmet são as portas do seu castelo. { .fragment }
-- Proteja-se contra robôs com Rate Limit. { .fragment }
-
----
-
-## Próximo Módulo: Front-End Moderno 🎨
-
-### Saindo das APIs e indo para a Web!
-
-- Introdução ao React/Vite. { .fragment }
-- Consumindo nossas APIs no navegador. { .fragment }
+## 🗂️ A Anatomia do GitHub Actions
+1.  **Workflow**: O processo completo (arquivo `.yml`). { .fragment }
+2.  **Event (Trigger)**: O que dispara o processo (push, pr). { .fragment }
+3.  **Job**: Um conjunto de tarefas em um servidor. { .fragment }
+4.  **Step**: Uma tarefa individual (comando ou script). { .fragment }
+5.  **Runner**: O servidor virtual que executa tudo. { .fragment }
 
 ---
 
-## Dúvidas? 🏗️
+## 📄 O Formato YAML
+Yet Another Markup Language.
+*   Baseado em indentação (espaços). { .fragment }
+*   Muito fácil de ler para humanos. { .fragment }
+*   Padrão para ferramentas de DevOps. { .fragment }
+
+---
+
+## 🎯 Gatilhos (Triggers)
+Quando a mágica acontece?
+```yaml
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+```
+
+---
+
+## 🏗️ Definindo o Ambiente (Runner)
+Onde seu código vai rodar?
+```yaml
+jobs:
+  meu-teste:
+    runs-on: ubuntu-latest
+```
+*   O GitHub cria uma máquina virtual limpa para você. { .fragment }
+
+---
+
+## 🔨 Passos (Steps)
+A lista de tarefas.
+```yaml
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rodar Testes
+        run: npm test
+```
+*   `uses`: Usa uma ação pronta da comunidade. { .fragment }
+*   `run`: Roda um comando de terminal. { .fragment }
+
+---
+
+## 🤫 Gerenciando Segredos (Secrets)
+**NUNCA** escreva senhas no arquivo YAML.
+*   Use as **Settings > Secrets** do GitHub. { .fragment }
+*   Acesse via: `{% raw %}${{ secrets.MINHA_SENHA }}{% endraw %}`. { .fragment }
+*   O log do GitHub esconde o valor automaticamente! { .fragment }
+
+---
+
+## 📉 Visualizando a Pipeline
+```mermaid
+sequenceDiagram
+    participant D as Dev
+    participant G as GitHub
+    participant R as Runner (Ubuntu)
+
+    D->>G: git push
+    G->>G: Detecta Push na main
+    G->>R: Inicia Workflow
+    R->>R: Checkout Código
+    R->>R: Instala Dependências
+    R->>R: Roda Testes
+    R->>G: Relata Sucesso (CHECK VERDE)
+```
+
+---
+
+## 🧩 Actions Marketplace
+Não reinvente a roda! Existem ações prontas para:
+*   Enviar mensagem no Slack. { .fragment }
+*   Fazer deploy na Amazon (AWS). { .fragment }
+*   Escritar código no Docker Hub. { .fragment }
+*   Login no Firebase. { .fragment }
+
+---
+
+## 🔄 Cache em Pipelines
+Economizando tempo (e dinheiro).
+*   Você não precisa baixar as bibliotecas (`node_modules`) do zero a cada vez. { .fragment }
+*   O Actions pode guardar o cache e acelerar a build em 50%! { .fragment }
+
+---
+
+## 🛡️ Proteção de Branch
+Combine Actions com regras de repositório.
+*   Impeça o `merge` se a pipeline falhar. { .fragment }
+*   Exija pelo menos 1 aprovação de colega (Code Review). { .fragment }
+
+---
+
+## 📉 Artefatos
+Onde fica o arquivo final?
+*   Você pode salvar o resultado da build (ex: um `.zip` ou um `.apk`) como artefato para download no final do workflow. { .fragment }
+
+---
+
+## 💰 Custos e Limites
+*   Gratuito para Open Source. { .fragment }
+*   Minutos limitados para repos privados (2000 min/mês no plano free). { .fragment }
+
+---
+
+## 🏆 Checklist de CI/CD Pro
+*   [ ] Entende a diferença entre Workflow, Job e Step. { .fragment }
+*   [ ] Sabe criar um arquivo `.yml` básico. { .fragment }
+*   [ ] Entende o conceito de Secrets. { .fragment }
+*   [ ] Consegue visualizar o log de erro no GitHub. { .fragment }
+
+---
+
+## 📝 Prática de Hoje
+1.  Criar a pasta `.github/workflows`.
+2.  Criar um workflow de "Hello World".
+3.  Ver ele rodar na aba "Actions" após o push.
+
+---
+
+## 🏁 Dúvidas?
+Automação é o que separa amadores de profissionais! 🚀🚀

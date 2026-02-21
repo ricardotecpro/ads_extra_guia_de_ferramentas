@@ -64,8 +64,24 @@ $ code .
 
 Muitos desenvolvedores profissionais (especialmente em Mac e Linux) utilizam o **ZSH** com o **Oh My Zsh**. Ele adiciona temas e plugins que mostram em qual "branch" do Git você está, se há erros no comando anterior, entre outros.
 
-> [!TIP]
-> **Dica**: No Windows, você pode usar o **Windows Terminal** e configurar o **Oh My Posh** para ter uma experiência visual similar.
+### Componentes do Setup (Mermaid)
+
+```mermaid
+graph TD
+    Dev[Desenvolvedor] --> OS[Sistema Operacional]
+    OS --> Shell[Terminal/Shell]
+    Shell --> ZSH[ZSH / Oh My Zsh]
+    OS --> Editor[VS Code]
+    Editor --> Ext[Extensões]
+    
+    subgraph "Ambiente Local"
+    Shell
+    Editor
+    end
+```
+
+!!! tip "Dica: Windows"
+    No Windows, você pode usar o **Windows Terminal** e configurar o **Oh My Posh** para ter uma experiência visual similar.
 
 ---
 

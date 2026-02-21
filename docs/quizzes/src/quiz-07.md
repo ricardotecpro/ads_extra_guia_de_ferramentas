@@ -1,71 +1,71 @@
-# Quiz 07 - Repositories e Banco de Dados 🗄️
+# Quiz: Aula 07 - NoSQL e Cache ⚡
 
-1. Qual a função do PostgreSQL em uma arquitetura backend?
-    - [ ] Criar a interface visual
-    - [x] Armazenar dados de forma persistente e relacional
-    - [ ] Enviar e-mails automaticamente
-    - [ ] Compilar o código Javascript
-    *Explicação: O PostgreSQL é um Sistema de Gerenciamento de Banco de Dados (SGBD) que garante que os dados não se percam.*
+1.  **O que significa o termo NoSQL?**
+    *   ( ) No (Não) SQL.
+    *   (x) Not Only SQL (Não Apenas SQL).
+    *   ( ) No Speed Quality Logic.
+    *   ( ) New Object Standard Language.
+    *   *Explicação: Indica bancos que não seguem o modelo rígido de tabelas e relações do SQL tradicional.*
 
-2. O que significa a sigla CRUD?
-    - [ ] Create, Remove, Update, Delete
-    - [x] Create, Read, Update, Delete
-    - [ ] Clear, Read, Unit, Deploy
-    - [ ] Code, Run, Update, Debug
-    *Explicação: CRUD representa as quatro operações básicas de manipulação de dados em qualquer sistema.*
+2.  **Qual a principal característica do MongoDB?**
+    *   ( ) Usa apenas tabelas e colunas fixas.
+    *   (x) Armazena dados em documentos flexíveis (tipo JSON/BSON).
+    *   ( ) Só funciona em servidores de arquivos pequenos.
+    *   ( ) É um software pago da Microsoft.
+    *   *Explicação: No MongoDB, cada documento pode ter campos diferentes, o que dá muita flexibilidade.*
 
-3. Qual o comando SQL usado para buscar dados em uma tabela?
-    - [ ] INSERT
-    - [ ] UPDATE
-    - [x] SELECT
-    - [ ] DELETE
-    *Explicação: O SELECT é o comando fundamental para realizar consultas no banco de dados.*
+3.  **Qual a principal vantagem do Redis?**
+    *   ( ) É excelente para guardar terabytes de fotos pesadas.
+    *   (x) Sua velocidade extrema, pois armazena os dados na Memória RAM.
+    *   ( ) Ele substitui a necessidade de usar o Git.
+    *   ( ) Ele funciona apenas como um editor de texto.
+    *   *Explicação: O Redis é usado para dados que precisam ser acessados em milissegundos.*
 
-4. Para que serve o padrão Repository?
-    - [ ] Para salvar arquivos PDF no servidor
-    - [x] Para isolar a lógica de acesso ao banco da lógica de negócio
-    - [ ] Para criar rotas no Express
-    - [ ] Para acelerar o download do app
-    *Explicação: O Repository centraliza as chamadas ao banco, facilitando a troca de tecnologia sem afetar o resto do sistema.*
+4.  **O que é o "Cache" em uma aplicação web?**
+    *   ( ) Uma forma de esconder o código do concorrente.
+    *   (x) Uma camada de armazenamento temporário rápido para evitar consultas lentas ao banco principal.
+    *   ( ) O ato de apagar os cookies do navegador.
+    *   ( ) Um comando para acelerar o processador do computador.
+    *   *Explicação: O cache "guarda" resultados frequentes para responder o usuário mais rápido.*
 
-5. O que é uma Primary Key (Chave Primária)?
-    - [ ] A senha master do servidor
-    - [x] Um identificador único para cada registro (linha) em uma tabela
-    - [ ] O nome da tabela principal
-    - [ ] O primeiro campo de um formulário HTML
-    *Explicação: A PK garante que não existam dois registros idênticos e facilita a busca rápida.*
+5.  **Qual destes bancos é considerado NoSQL do tipo "Chave-Valor"?**
+    *   ( ) PostgreSQL.
+    *   ( ) MySQL.
+    *   (x) Redis.
+    *   ( ) MongoDB.
+    *   *Explicação: O Redis trabalha essencialmente ligando uma chave única a um valor específico.*
 
-6. Quando usamos uma Foreign Key (Chave Estrangeira)?
-    - [ ] Para traduzir o banco de dados
-    - [x] Para criar um link (relacionamento) entre duas tabelas diferentes
-    - [ ] Para encriptar os dados
-    - [ ] Para mudar o nome das colunas
-    *Explicação: A FK é o que permite conectar, por exemplo, um Pedido ao Usuário que o realizou.*
+6.  **Sobre a escalabilidade do NoSQL, é correto afirmar:**
+    *   ( ) Ele não escala.
+    *   (x) Ele é desenhado para escalar horizontalmente (distribuir dados entre vários servidores) facilmente.
+    *   ( ) Ele só escala se o servidor for muito caro.
+    *   ( ) Ele escala apenas se as tabelas forem pequenas.
+    *   *Explicação: NoSQL é o padrão ouro para sistemas que lidam com bilhões de registros (ex: redes sociais).*
 
-7. O que acontece se rodarmos um `DELETE FROM usuarios` sem a cláusula `WHERE`?
-    - [ ] O banco pede confirmação
-    - [x] Todos os registros da tabela "usuarios" serão apagados!
-    - [ ] Apenas o primeiro registro é apagado
-    - [ ] O comando dá erro de sintaxe
-    *Explicação: Sem o WHERE, o comando afeta todas as linhas da tabela. Muito cuidado!*
+7.  **O formato JSON é muito usado no NoSQL porque:**
+    *   ( ) É criptografado por padrão.
+    *   (x) É leve, fácil de ler para humanos e fácil de processar para máquinas.
+    *   ( ) Ele substitui a necessidade de programar.
+    *   ( ) É um formato proprietário do Google.
+    *   *Explicação: JSON (JavaScript Object Notation) se tornou o padrão de troca de dados na web.*
 
-8. O que são "Migrations"?
-    - [ ] Pessoas que mudam de país
-    - [x] Arquivos que versionam a estrutura do banco de dados (schema)
-    - [ ] A troca de servidor de hospedagem
-    - [ ] Um tipo de loop em Javascript
-    *Explicação: Migrations garantem que todos os desenvolvedores tenham a mesma versão da estrutura do banco.*
+8.  **Quando você escolheria o MongoDB em vez de um banco SQL (Postgres)?**
+    *   ( ) Quando o projeto é muito simples e sem usuários.
+    *   (x) Quando a estrutura dos dados muda com frequência ou não é bem definida.
+    *   ( ) Quando você precisa de máxima segurança financeira e transacional.
+    *   ( ) Quando você não sabe usar SQL.
+    *   *Explicação: Para dados desestruturados (logs, perfis sociais), o MongoDB brilha pela flexibilidade.*
 
-9. Qual o tipo de relacionamento quando um Autor pode escrever vários livros?
-    - [ ] 1:1 (Um para um)
-    - [x] 1:N (Um para muitos)
-    - [ ] N:N (Muitos para muitos)
-    - [ ] N:1 (Muitos para um)
-    *Explicação: Um único recurso pai (Autor) está ligado a múltiplos recursos filhos (Livros).*
+9.  **O termo "In-Memory Database" se aplica a qual ferramenta?**
+    *   ( ) Docker.
+    *   ( ) Git.
+    *   (x) Redis.
+    *   ( ) Jira.
+    *   *Explicação: Significa que os dados ficam na memória volátil (RAM) para acesso ultra rápido.*
 
-10. Por que o Service deve chamar o Repository em vez de rodar SQL direto?
-    - [ ] Para o código ficar mais longo
-    - [x] Para seguir o princípio de responsabilidade única e facilitar testes
-    - [ ] Porque SQL é uma linguagem antiga
-    - [ ] Porque o computador processa Services mais rápido
-    *Explicação: Separar as camadas torna o sistema modular: o Service dita O QUE fazer, o Repository sabe COMO buscar.*
+10. **O que acontece com os dados no Redis se não houver persistência configurada e o servidor for desligado?**
+    *   ( ) Eles continuam lá normalmente.
+    *   (x) Eles são perdidos (por estarem na memória RAM).
+    *   ( ) Eles são enviados automaticamente para o GitHub.
+    *   ( ) O Redis cria uma cópia física em papel.
+    *   *Explicação: Sem configuração de "Snapshot" ou "AOF", o Redis limpa ao desligar.*

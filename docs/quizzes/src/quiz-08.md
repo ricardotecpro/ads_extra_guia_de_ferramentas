@@ -1,71 +1,71 @@
-# Quiz 08 - Boas Práticas e Validação de Dados ✅
+# Quiz: Aula 08 - Frameworks de Teste e Qualidade 🧪
 
-1. Por que o backend nunca deve confiar nos dados vindos do frontend?
-    - [ ] Para economizar bateria do servidor
-    - [x] Porque a requisição pode ter sido interceptada, alterada ou burlada
-    - [ ] Porque o frontend é sempre feito por iniciantes
-    - [ ] Porque os navegadores são lentos
-    *Explicação: Segurança baseada em "confiança" no cliente é uma vulnerabilidade grave.*
+1.  **Qual o principal objetivo dos testes automatizados?**
+    *   ( ) Substituir o trabalho do desenvolvedor.
+    *   (x) Garantir que o software continue funcionando corretamente após mudanças (evitar regressão).
+    *   ( ) Deixar o código mais bonito visualmente.
+    *   ( ) Aumentar o tamanho do arquivo final do projeto.
+    *   *Explicação: Testes servem como uma rede de segurança para o programador mexer no código sem medo.*
 
-2. Qual a diferença entre Validar e Sanitizar?
-    - [ ] Validar limpa o dado, Sanitizar checa a regra
-    - [x] Validar checa se o dado está correto, Sanitizar "limpa" o dado de impurezas (espaços, tags HTML)
-    - [ ] São a mesma coisa com nomes diferentes
-    - [ ] Validar é para banco SQL, Sanitizar é para NoSQL
-    *Explicação: Validar diz "SIM ou NÃO", Sanitizar diz "AGORA ESTÁ LIMPO".*
+2.  **O que são "Testes Unitários"?**
+    *   ( ) Testes feitos apenas por uma pessoa da equipe.
+    *   (x) Testes que validam pequenas partes isoladas do código (como uma única função).
+    *   ( ) Testes feitos apenas uma vez no final do ano.
+    *   ( ) Testes que verificam se o site carrega no celular.
+    *   *Explicação: São a base da pirâmide e testam a menor unidade lógica possível.*
 
-3. Para que servem bibliotecas como Zod ou Joi?
-    - [ ] Para acelerar a conexão com o banco
-    - [x] Para definir e aplicar esquemas de validação de forma declarativa e robusta
-    - [ ] Para desenhar gráficos no painel do administrador
-    - [ ] Para comprimir arquivos PDF
-    *Explicação: Essas bibliotecas removem o excesso de "if/else" e centralizam as regras de entrada.*
+3.  **Qual ferramenta de teste é o padrão para o ecossistema JavaScript/Node.js?**
+    *   ( ) JUnit.
+    *   (x) Jest.
+    *   ( ) PyTest.
+    *   ( ) Selenium.
+    *   *Explicação: O Jest é amplamente adotado por sua facilidade de uso e recursos integrados.*
 
-4. O que é o princípio DRY (Don't Repeat Yourself)?
-    - [ ] Beber água durante o código
-    - [x] Evitar a duplicação de lógica, transformando repetir em funções ou serviços únicos
-    - [ ] Escrever o código o mais rápido possível
-    - [ ] Não usar a tecla Backspace
-    *Explicação: Código repetido é difícil de manter; se a regra muda, você esquece de atualizar em algum lugar.*
+4.  **O que significa a sigla TDD (Test Driven Development)?**
+    *   ( ) Testar Depois de Desenvolver.
+    *   (x) Desenvolvimento Orientado por Testes (escrever o teste antes do código).
+    *   ( ) Técnicas de Design para Desenvolvedores.
+    *   ( ) Total Data Delivery.
+    *   *Explicação: No TDD, o teste "guia" a implementação da funcionalidade.*
 
-5. O que um Middleware de Erro Global faz?
-    - [ ] Impede que o computador trave
-    - [x] Captura qualquer erro não tratado e envia uma resposta padronizada ao cliente
-    - [ ] Apaga os logs do servidor
-    - [ ] Avisa o usuário que a internet caiu
-    *Explicação: Centralizar o erro evita que o servidor "morra" e permite um tratamento profissional de falhas.*
+5.  **A Pirâmide de Testes sugere que devemos ter:**
+    *   ( ) Mais testes de Interface (E2E) do que Unitários.
+    *   (x) Muitos testes Unitários na base e poucos testes E2E/UI no topo.
+    *   ( ) Apenas um tipo de teste para economizar tempo.
+    *   ( ) Testes apenas na fase de deploy.
+    *   *Explicação: Testes unitários são mais rápidos, baratos e fáceis de manter.*
 
-6. Por que NÃO devemos enviar o Stack Trace (detalhes técnicos do erro) para o usuário final?
-    - [ ] Porque gasta muitos dados de internet
-    - [x] Por segurança, pois revela detalhes da estrutura do banco e do código (ajuda hackers)
-    - [ ] Porque o usuário não entende inglês
-    - [ ] Porque o Stack Trace é feio
-    *Explicação: Informações técnicas sobre o erro devem ser logadas internamente, nunca expostas publicamente.*
+6.  **O que é um "Teste de Integração"?**
+    *   ( ) Um teste de cultura para novos funcionários.
+    *   (x) Um teste que verifica se dois ou mais módulos do sistema funcionam bem juntos (ex: App + Banco de Dados).
+    *   ( ) Um teste feito apenas no navegador Chrome.
+    *   ( ) O ato de baixar o código do GitHub.
+    *   *Explicação: Foca na comunicação entre os componentes do sistema.*
 
-7. Qual a vantagem de usar nomes de funções altamente descritivos?
-    - [ ] O código fica mais colorido no editor
-    - [x] Melhora a legibilidade e facilita a manutenção por outros desenvolvedores (ou por você no futuro)
-    - [ ] O compilador processa nomes longos mais rápido
-    - [ ] Ocupa menos espaço no servidor
-    *Explicação: Código deve ser lido como um livro; o nome da função deve dizer exatamente O QUE ela faz.*
+7.  **Sobre o PyTest, é correto afirmar:**
+    *   ( ) É um framework de testes exclusivo para Java.
+    *   (x) É o framework de teste mais popular e poderoso para a linguagem Python.
+    *   ( ) Ele serve para criar interfaces gráficas.
+    *   ( ) Ele deleta arquivos com erro automaticamente.
+    *   *Explicação: O PyTest é conhecido por sua sintaxe simples e extensibilidade.*
 
-8. O que caracteriza um Erro 400 (Bad Request)?
-    - [ ] O servidor parou de funcionar
-    - [x] O cliente enviou dados inválidos ou incompletos que o sistema não aceita
-    - [ ] O usuário não tem permissão para acessar
-    - [ ] A página não existe
-    *Explicação: Erros 400 indicam que a culpa é do "lado de lá" (cliente/requisição).*
+8.  **O que é um "Mock" ou "Dublê de Teste"?**
+    *   ( ) Um erro que aparece no terminal.
+    *   (x) Um objeto que simula o comportamento de um componente real (ex: simular o envio de um e-mail sem enviá-lo de verdade).
+    *   ( ) Uma extensão do VS Code para formatar código.
+    *   ( ) O nome do desenvolvedor que criou o teste.
+    *   *Explicação: Mocks permitem testar partes do sistema sem depender de serviços externos lentos ou caros.*
 
-9. O que caracteriza um Erro 500 (Internal Server Error)?
-    - [ ] O usuário digitou a senha errada
-    - [x] Ocorreu uma falha inesperada na lógica ou infraestrutura do servidor
-    - [ ] O link está quebrado
-    - [ ] A conta do usuário foi deletada
-    *Explicação: Erros 500 indicam que algo "quebrou" no backend e precisa de reparo.*
+9.  **No ciclo TDD, o que significa o passo "Red" (Vermelho)?**
+    *   ( ) Que o computador travou.
+    *   (x) Que o teste foi executado e falhou (pois o código ainda não foi escrito).
+    *   ( ) Que o código contém vírus.
+    *   ( ) Que o desenvolvedor está bravo com o projeto.
+    *   *Explicação: Ver o teste falhar prova que ele é capaz de detectar erros.*
 
-10. Como o Clean Code ajuda na escalabilidade de um projeto?
-    - [ ] Comprimindo o banco de dados
-    - [x] Mantendo o código organizado e modular, facilitando a adição de novas funcionalidades
-    - [ ] Diminuindo o preço da hospedagem
-    - [ ] Aumentando o número de acessos simultâneos
-    *Explicação: Um código limpo é como um quebra-cabeça bem encaixado; é fácil adicionar peças novas.*
+10. **Por que é importante rodar os testes automaticamente no GitHub (CI)?**
+    *   ( ) Para gastar o dinheiro da empresa.
+    *   (x) Para garantir que nenhum código quebrado entre na branch principal sem que ninguém perceba.
+    *   ( ) Porque os testes locais não funcionam na nuvem.
+    *   ( ) Para preencher a aba "Actions" com informações inúteis.
+    *   *Explicação: A automação garante que o padrão de qualidade seja mantido por todo o time.*

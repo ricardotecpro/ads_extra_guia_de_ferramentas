@@ -1,89 +1,149 @@
-# Aula 14 - Efeitos e APIs 🌐
-## Conectando seu App ao Mundo Real
+# Aula 14: Orquestração com Kubernetes e Runners ☸️
 
 ---
 
-## Agenda 📅
-
-1. O que são Side Effects? { .fragment }
-2. Hook `useEffect` { .fragment }
-3. O Array de Dependências { .fragment }
-4. Buscando dados com `fetch` { .fragment }
-5. Estados de Carregamento e Erro { .fragment }
+## 🎯 Nossa Missão
+*   Entender a necessidade da orquestração.
+*   Conhecer a arquitetura do Kubernetes (K8s).
+*   Descobrir o que são Pods, Nodes e Clusters.
+*   Compreender o papel dos Runners em CI/CD.
 
 ---
 
-## 1. Além da Interface 🧪
-
-- Efeitos colaterais são ações que tocam o mundo externo ao componente. { .fragment }
-- Ex: Buscar usuários, mudar o título da aba, iniciar um cronômetro. { .fragment }
-
----
-
-## 2. useState vs useEffect 🥊
-
-- **useState**: Para dados que o usuário vê mudando. { .fragment }
-- **useEffect**: Para ações que o componente faz "sozinho". { .fragment }
+## 🤔 Por que Kubernetes?
+O Docker é ótimo para 1 servidor. E para 1000?
+*   Quem reinicia o contêiner se ele cair? { .fragment }
+*   Como dividir o tráfego entre 10 cópias do app? { .fragment }
+*   Como atualizar o sistema sem tirar ninguém do ar? { .fragment }
+*   **O Kubernetes é o maestro dessa orquestra.** { .fragment }
 
 ---
 
-## 3. Os 3 Momentos do useEffect 🕒
-
-1. **Montagem**: Quando o componente nasce. { .fragment }
-2. **Atualização**: Quando um dado monitorado muda. { .fragment }
-3. **Desmontagem**: Quando o componente morre (Cleanup). { .fragment }
-
----
-
-## 4. O Array de Dependências `[]` 🗃️
-
-- `[]` -> Roda só uma vez. { .fragment }
-- `[cont]` -> Roda sempre que `cont` mudar. { .fragment }
-- `Sem array` -> Roda em toda atualização (Perigo!). { .fragment }
-
----
-
-## 5. Chamadas de API (Fetch) 📨
-
-```javascript
-useEffect(() => {
-  fetch("https://api...")
-    .then(res => res.json())
-    .then(data => setData(data));
-}, []);
+## 🏗️ Arquitetura do Cluster
+```mermaid
+graph TD
+    CP[Control Plane - Cerebro] --> N1[Worker Node 1]
+    CP --> N2[Worker Node 2]
+    N1 --> P1[Pod]
+    N1 --> P2[Pod]
+    N2 --> P3[Pod]
 ```
 
 ---
 
-## 6. UX: Estados de Rede 🛡️
-
-- **Loading**: Mostre um Spinner enquanto espera. { .fragment }
-- **Error**: Avise se a internet caiu ou o usuário não existe. { .fragment }
-- **Empty**: Diga se não há resultados. { .fragment }
+## 🧠 Control Plane vs Worker Nodes
+*   **Control Plane**: Toma decisões (agendamento, detecção de falhas). { .fragment }
+*   **Worker Nodes**: Os servidores que carregam o peso (onde o app roda). { .fragment }
 
 ---
 
-## Desafio de Efeito ⚡
-
-Se você colocar um `alert("Olá")` dentro de um `useEffect` sem o array `[]`, quantas vezes o alerta vai aparecer se o usuário ficar digitando em um campo de texto que atualiza o estado?
-
----
-
-## Resumo ✅
-
-- `useEffect` organiza as ações assíncronas. { .fragment }
-- Controle quando rodar via array de dependências. { .fragment }
-- Trate sempre o carregamento e erros para uma boa UX. { .fragment }
+## 📦 O que é um Pod?
+A menor peça do quebra-cabeça.
+*   Um Pod pode ter um ou mais contêineres colados. { .fragment }
+*   Eles compartilham o mesmo IP e o mesmo volume. { .fragment }
+*   O Kubernetes gerencia Pods, não contêineres isolados. { .fragment }
 
 ---
 
-## Próxima Aula: Navegação 🚦
-
-### Multi-páginas com React Router!
-
-- `/home`, `/perfil`, `/contato`. { .fragment }
-- Links e Navegação Programática. { .fragment }
+## 🛠️ Objetos Essenciais
+1.  **Deployment**: Define como seu app deve rodar (quantas cópias). { .fragment }
+2.  **Service**: Cria um IP fixo para acessar seus Pods. { .fragment }
+3.  **Ingress**: A porta de entrada do cluster (o que o mundo vê). { .fragment }
 
 ---
 
-## Dúvidas? 🌐
+## 🩹 Auto-Cura (Self-Healing)
+*   Se um contêiner morre, o K8s reinicia. { .fragment }
+*   Se um servidor morre, o K8s move os Pods para outro servidor disponível. { .fragment }
+*   Seu sistema fica sempre online (High Availability). { .fragment }
+
+---
+
+## 🪜 Auto-Escala (Scaling)
+*   **HPA**: Aumenta o número de Pods se o tráfego subir. { .fragment }
+*   **VPA**: Dá mais CPU/RAM se o processo estiver pesado. { .fragment }
+*   **Cluster Autoscaler**: Compra mais servidores reais na Amazon/Google se precisar de mais espaço. { .fragment }
+
+---
+
+## 🚀 Deployment Estratégico
+Como atualizar o código sem erros?
+*   **Rolling Update**: Troca um por um, sem downtime. { .fragment }
+*   **Canary Deployment**: Libera a versão nova apenas para 5% dos usuários primeiro. { .fragment }
+*   **Blue/Green**: Sobe o novo app ao lado do antigo e vira a chave. { .fragment }
+
+---
+
+## 📄 Manifestos YAML
+Tudo no K8s é declarado em arquivos.
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meu-app
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+      - name: web
+        image: meu-app:v2
+```
+
+---
+
+## 🐚 kubectl: O Controle Remoto
+A ferramenta de linha de comando para falar com o K8s.
+*   `kubectl get pods`: Ver quem está vivo. { .fragment }
+*   `kubectl logs <pod>`: Ver os erros. { .fragment }
+*   `kubectl apply -f arquivo.yml`: Enviar ordens para o cluster. { .fragment }
+
+---
+
+## 🏃‍♂️ O que são Runners?
+Conectando a Orquestração com o CI/CD.
+*   Runners são as máquinas que executam seus testes. { .fragment }
+*   Eles podem ser contêineres rodando dentro do seu próprio Kubernetes! { .fragment }
+*   **Self-hosted Runners**: Mais segurança e controle de custos. { .fragment }
+
+---
+
+## 🏢 K8s Gerenciado (Cloud)
+Instalar o K8s do zero é muito difícil!
+*   **AWS EKS** { .fragment }
+*   **Google GKE** { .fragment }
+*   **Azure AKS** { .fragment }
+*   A nuvem cuida do Control Plane pra você. { .fragment }
+
+---
+
+## 🌐 Networking e DNS
+No K8s, um serviço pode achar outro apenas pelo nome:
+*   `api-service` consegue falar com `db-service` sem saber o IP real! { .fragment }
+
+---
+
+## 🛡️ RBAC: Segurança no Cluster
+*   Quem pode criar Pods? { .fragment }
+*   Quem pode ver os logs? { .fragment }
+*   O Kubernetes permite controle total de permissões por usuário. { .fragment }
+
+---
+
+## 🏆 Checklist de Orquestração Pro
+*   [ ] Entende o papel do Control Plane. { .fragment }
+*   [ ] Sabe que um Pod é a unidade mínima. { .fragment }
+*   [ ] Compreende o conceito de Réplicas e Auto-Cura. { .fragment }
+*   [ ] Sabe para que serve o `kubectl`. { .fragment }
+
+---
+
+## 📝 Prática de Hoje
+1.  Explorar a arquitetura visual de um cluster K8s.
+2.  Analisar um manifesto YAML de Deployment.
+3.  Diferenciar o papel do Runner no GitHub Actions.
+
+---
+
+## 🏁 Dúvidas?
+Bem-vindo ao mundo da alta disponibilidade! ☸️🚀

@@ -1,84 +1,149 @@
-# Aula 12 - Introdução ao React ⚛️
-## O Poder dos Componentes Modernos
+# Aula 12: Automação e IaC (Ansible e Terraform) ⚙️
 
 ---
 
-## Agenda 📅
-
-1. O que são SPAs? <!-- .element: class="fragment" -->
-2. Por que React? <!-- .element: class="fragment" -->
-3. Vite: A Ferramenta Rápida <!-- .element: class="fragment" -->
-4. JSX: JS + HTML <!-- .element: class="fragment" -->
-5. Componentes e LEGO <!-- .element: class="fragment" -->
-6. Props: O Coração Dinâmico <!-- .element: class="fragment" -->
+## 🎯 Nossa Missão
+*   Entender o conceito de Infraestrutura como Código (IaC).
+*   Provisionamento vs Configuração.
+*   Conhecer o Terraform (Estatura).
+*   Conhecer o Ansible (Recheio).
 
 ---
 
-## 1. Single Page Applications (SPA) 📄
-
-- O site que nunca recarrega. <!-- .element: class="fragment" -->
-- Navegação fluida e instantânea. <!-- .element: class="fragment" -->
-- Ex: Gmail, Facebook, Spotify Web. <!-- .element: class="fragment" -->
-
----
-
-## 2. Por que o React venceu? ⚔️
-
-- **Componentização** (Foco no Reuso). <!-- .element: class="fragment" -->
-- **Virtual DOM** (Foco na Performance). <!-- .element: class="fragment" -->
-- **Gigantesco Ecossistema** (Foco no Emprego). <!-- .element: class="fragment" -->
+## 😫 O Mundo Antes do IaC
+*   Configuração manual de servidores via SSH. <!-- .element: class="fragment" -->
+*   "Qual era a senha mesmo?" <!-- .element: class="fragment" -->
+*   "Por que o servidor 1 está diferente do servidor 2?" <!-- .element: class="fragment" -->
+*   Impossível de escalar ou repetir com precisão. <!-- .element: class="fragment" -->
 
 ---
 
-## 3. Vite: O Novo Padrão ⚡
-
-- Inicia o projeto em segundos. <!-- .element: class="fragment" -->
-- Feedback instantâneo durante o código. <!-- .element: class="fragment" -->
+## 🧠 O que é IaC?
+Infraestrutura tratada como software.
+*   Versionada no Git. <!-- .element: class="fragment" -->
+*   Testável. <!-- .element: class="fragment" -->
+*   Repetível (Idempotência). <!-- .element: class="fragment" -->
+*   Documentação viva do ambiente. <!-- .element: class="fragment" -->
 
 ---
 
-## 4. JSX: A Mistura Perfeita 🧪
+## 🏗️ Provisionar vs Configurar
+Uma analogia com culinária:
+*   **Provisionar (Terraform)**: É comprar a cozinha, o fogão e as panelas. <!-- .element: class="fragment" -->
+*   **Configurar (Ansible)**: É ligar o fogo, colocar os ingredientes e cozinhar. <!-- .element: class="fragment" -->
 
-```jsx
-function Titulo() {
-  const nome = "React";
-  return <h1>Olá, {nome}!</h1>;
+---
+
+## 🌍 Terraform: O Orquestrador de Nuvem
+*   Focado em criar os recursos (VMs, Redes, Bancos). <!-- .element: class="fragment" -->
+*   Declarativo: Você diz "O que" quer, não "Como" fazer. <!-- .element: class="fragment" -->
+*   Multicloud: AWS, Azure, Google Cloud, DigitalOcean. <!-- .element: class="fragment" -->
+
+---
+
+## 📄 Sintaxe HCL (Terraform)
+```hcl
+resource "aws_instance" "web_server" {
+  ami           = "ami-12345"
+  instance_type = "t2.micro"
 }
 ```
-
-- Parece HTML, mas tem o poder do Javascript. <!-- .element: class="fragment" -->
-
----
-
-## 5. Componentes = LEGO 🧩
-
-- Pequenas partes isoladas. <!-- .element: class="fragment" -->
-- Facilita testes e trabalho em equipe. <!-- .element: class="fragment" -->
+*   Fácil de ler e gerenciar. <!-- .element: class="fragment" -->
 
 ---
 
-## 6. Props: Passando o Bastão 🎁
-
-- Permite que componentes recebam dados do "pai". <!-- .element: class="fragment" -->
-- Torna componentes genéricos e reutilizáveis. <!-- .element: class="fragment" -->
-
----
-
-## Resumo ✅
-
-- SPA torna a Web parecida com Apps. <!-- .element: class="fragment" -->
-- React organiza sua UI em componentes. <!-- .element: class="fragment" -->
-- Vite é seu melhor amigo no desenvolvimento. <!-- .element: class="fragment" -->
+## 🔄 O Ciclo do Terraform
+1.  **Write**: Escreve o arquivo `.tf`. <!-- .element: class="fragment" -->
+2.  **Plan**: Vê o que vai mudar antes de aplicar. <!-- .element: class="fragment" -->
+3.  **Apply**: Executa as mudanças na nuvem. <!-- .element: class="fragment" -->
+4.  **Destroy**: Remove tudo de uma vez. <!-- .element: class="fragment" -->
 
 ---
 
-## Próxima Aula: Dinâmica e Estado 🎣
-
-### O que acontece quando o usuário clica?
-
-- Hooks: `useState`. <!-- .element: class="fragment" -->
-- Reatividade na prática. <!-- .element: class="fragment" -->
+## 🍳 Ansible: Automação Simples
+*   Agentless: Não precisa instalar nada no servidor alvo (usa SSH). <!-- .element: class="fragment" -->
+*   Focado em instalar apps e configurar arquivos. <!-- .element: class="fragment" -->
+*   Usa Playbooks em YAML. <!-- .element: class="fragment" -->
 
 ---
 
-## Dúvidas? ⚛️
+## 📜 Exemplo de Playbook (Ansible)
+```yaml
+- name: Instalar Nginx
+  hosts: servidores_web
+  tasks:
+    - name: Garantir que Nginx está instalado
+      apt:
+        name: nginx
+        state: present
+```
+
+---
+
+## 🔄 Idempotência: A Regra de Ouro
+"Se eu rodar 10 vezes, o resultado final é o mesmo."
+*   Se o software já está instalado, o Ansible não faz nada. <!-- .element: class="fragment" -->
+*   Garante consistência e evita duplicidade de erros. <!-- .element: class="fragment" -->
+
+---
+
+## 🏗️ Estrutura de Infraestrutura Moderna
+```mermaid
+graph TD
+    Code[Codigo no Git] --> Pipeline[GitHub Actions]
+    Pipeline --> TF[Terraform: Cria VM]
+    TF --> ANS[Ansible: Instala App]
+    ANS --> App[Servidor pronto para uso]
+```
+
+---
+
+## 🛡️ Benefícios da Automação
+*   **Velocidade**: Criar 100 servidores em minutos. <!-- .element: class="fragment" -->
+*   **Consistência**: Todos os ambientes (Dev/Prod) são idênticos. <!-- .element: class="fragment" -->
+*   **Disaster Recovery**: Recriar tudo do zero após um erro grave. <!-- .element: class="fragment" -->
+
+---
+
+## 🐚 O Papel do YAML e SSH
+*   **YAML**: A língua franca da configuração. <!-- .element: class="fragment" -->
+*   **SSH**: A porta de entrada segura para a automação. <!-- .element: class="fragment" -->
+
+---
+
+## 📈 Automação além da Infra
+*   Backup de bancos de dados. <!-- .element: class="fragment" -->
+*   Limpeza de logs. <!-- .element: class="fragment" -->
+*   Atualização de patches de segurança de uma só vez. <!-- .element: class="fragment" -->
+
+---
+
+## 💰 Cloud Computing e IaC
+*   **Pay-as-you-go**: Pague só pelo que usa. <!-- .element: class="fragment" -->
+*   O IaC ajuda a desligar recursos que não estão sendo usados e economizar dinheiro! <!-- .element: class="fragment" -->
+
+---
+
+## 🕵️‍♂️ Verificação de Conformidade
+*   Ferramentas que verificam se a infraestrutura real é igual ao que está no código. <!-- .element: class="fragment" -->
+*   Evita o "Desvio de Configuração" (Config Drift). <!-- .element: class="fragment" -->
+
+---
+
+## 🏆 Checklist de Automação Pro
+*   [ ] Entende a diferença entre Terraform e Ansible. <!-- .element: class="fragment" -->
+*   [ ] Sabe que IaC deve estar no Git. <!-- .element: class="fragment" -->
+*   [ ] Entende o conceito de Idempotência. <!-- .element: class="fragment" -->
+*   [ ] Conhece o básico da sintaxe YAML. <!-- .element: class="fragment" -->
+
+---
+
+## 📝 Prática de Hoje
+1.  Escrever um Playbook Ansible fictício.
+2.  Analisar um arquivo de configuração Terraform.
+3.  Desenhar o fluxo de criação de um servidor.
+
+---
+
+## 🏁 Dúvidas?
+A infraestrutura agora é código! 🚀⚙️

@@ -1,71 +1,71 @@
-# Quiz 01 - Introdução a Microsserviços 🌐
+# Quiz: Aula 01 - Introdução ao Ecossistema 🧠
 
-1. Qual a principal característica de uma arquitetura Monolítica?
-    - [ ] É composta por vários serviços independentes
-    - [x] O sistema é um único bloco de código onde tudo está acoplado
-    - [ ] É escrita apenas em JavaScript
-    - [ ] Não utiliza banco de dados
-    *Explicação: No monólito, todas as funcionalidades residem em um único processo e base de código.*
+1.  **Qual a principal função de uma ferramenta no desenvolvimento de software?**
+    *   ( ) Tirar o emprego dos programadores.
+    *   (x) Automatizar tarefas repetitivas e aumentar a qualidade.
+    *   ( ) Deixar o computador mais pesado.
+    *   ( ) Substituir a necessidade de aprender lógica de programação.
+    *   *Explicação: Ferramentas existem para que o desenvolvedor foque no que é criativo e complexo, enquanto a máquina faz o trabalho mecânico.*
 
-2. Qual vantagem é mais associada aos Microsserviços?
-    - [ ] Simplicidade de deploy inicial
-    - [ ] Baixo custo de infraestrutura
-    - [x] Escalabilidade granular e isolamento de falhas
-    - [ ] Facilidade em depurar logs centralizados
-    *Explicação: Microsserviços permitem escalar apenas a parte do sistema que precisa de mais fôlego (ex: pagamentos).*
+2.  **O que diferencia um Editor de Código (ex: VS Code) de uma IDE (ex: IntelliJ)?**
+    *   ( ) O editor é pago e a IDE é gratuita.
+    *   ( ) O editor serve apenas para Python e a IDE para Java.
+    *   (x) A IDE já vem com ferramentas complexas (compilador, debugger) integradas nativamente.
+    *   ( ) O editor não permite salvar arquivos.
+    *   *Explicação: Uma IDE é um "ambiente integrado", enquanto o editor é mais leve e depende de extensões para ganhar poder.*
 
-3. O que é "Escalabilidade Horizontal"?
-    - [ ] Aumentar a memória RAM de um único servidor
-    - [x] Adicionar mais máquinas ou instâncias para dividir a carga
-    - [ ] Trocar o banco de dados SQL por NoSQL
-    - [ ] Aumentar o tamanho das tabelas
-    *Explicação: É o ato de adicionar mais "trabalhadores" ao sistema ao invés de aumentar o poder de um só (vertical).*
+3.  **A qual categoria pertence o Git?**
+    *   ( ) Gestão de Projetos.
+    *   ( ) Infraestrutura.
+    *   (x) Controle de Versão.
+    *   ( ) Design.
+    *   *Explicação: O Git é o software que gerencia o histórico de alterações do seu código.*
 
-4. Qual o papel de uma API (Application Programming Interface)?
-    - [ ] Criar o design da interface do usuário
-    - [x] Permitir a comunicação e troca de dados entre sistemas
-    - [ ] Servir como o sistema operacional do servidor
-    - [ ] Substituir o banco de dados
-    *Explicação: APIs são os contratos de comunicação entre o backend e seus clientes ou outros serviços.*
+4.  **Por que a automação é importante na cultura DevOps?**
+    *   ( ) Para que os desenvolvedores possam dormir mais.
+    *   (x) Para garantir que o processo de teste e deploy seja rápido e sem erros humanos.
+    *   ( ) Porque códigos manuais não funcionam.
+    *   ( ) Porque é uma exigência legal.
+    *   *Explicação: A automação elimina a falha humana em processos críticos como o deploy.*
 
-5. Sobre Microsserviços, o que significa ser "Poliglota"?
-    - [ ] Falar várias línguas humanas
-    - [x] A liberdade de usar diferentes linguagens/tecnologias para cada serviço
-    - [ ] Rodar apenas em servidores internacionais
-    - [ ] Usar apenas tradução automática nas rotas
-    *Explicação: Um serviço pode ser em Node.js e outro em Java, dependendo da necessidade técnica.*
+5.  **Qual destas é uma ferramenta de Gestão de Projetos?**
+    *   ( ) Docker.
+    *   ( ) Postman.
+    *   (x) Jira.
+    *   ( ) ESLint.
+    *   *Explicação: O Jira é focado em organizar tarefas, bugs e sprints.*
 
-6. Qual destas ferramentas é usada para testar requisições para uma API sem precisar de frontend?
-    - [ ] Photoshop
-    - [x] Postman / Insomnia
-    - [ ] Excel
-    - [ ] Docker
-    *Explicação: Clients HTTP como o Postman permitem enviar verbos como GET, POST, etc., e ver a resposta direta.*
+6.  **O que significa a sigla CLI?**
+    *   ( ) Computer Logical Interface.
+    *   (x) Command Line Interface (Interface de Linha de Comando).
+    *   ( ) Creative Language Integration.
+    *   ( ) Code Login Identificator.
+    *   *Explicação: CLI se refere ao uso do terminal para interagir com o computador.*
 
-7. O que acontece se um módulo de um monólito tiver um "Memory Leak" crítico?
-    - [ ] Apenas aquele módulo para de funcionar
-    - [ ] O banco de dados se apaga automaticamente
-    - [x] Provavelmente todo o sistema ficará instável ou sairá do ar
-    - [ ] O sistema migra sozinho para microsserviços
-    *Explicação: Como tudo roda no mesmo processo, falhas críticas afetam o bloco inteiro.*
+7.  **Qual a principal vantagem de usar o Terminal em vez de uma interface visual (GUI)?**
+    *   ( ) É mais bonito.
+    *   ( ) É obrigatório para todos os programadores.
+    *   (x) Velocidade, precisão e facilidade de automação por scripts.
+    *   ( ) O terminal gasta menos energia elétrica.
+    *   *Explicação: No terminal, você executa tarefas complexas com uma única linha de comando que pode ser salva em um script.*
 
-8. Qual o formato de dados mais comum usado hoje para comunicação entre serviços?
-    - [ ] XML
-    - [x] JSON
-    - [ ] CSV
-    - [ ] TXT
-    *Explicação: O JSON é leve, legível por humanos e o padrão de facto para APIs REST.*
+8.  **Sobre o ecossistema de ferramentas, é correto afirmar:**
+    *   ( ) Você deve aprender todas as ferramentas existentes.
+    *   (x) O desenvolvedor moderno deve conhecer pelo menos uma ferramenta líder de cada categoria.
+    *   ( ) Ferramentas antigas são sempre inúteis.
+    *   ( ) O bloco de notas é o suficiente para grandes empresas.
+    *   *Explicação: Ter um "cinto de utilidades" variado permite que você se adapte a diferentes projetos.*
 
-9. Por que Microsserviços são considerados mais complexos operacionalmente?
-    - [ ] Porque exigem mais linhas de código
-    - [x] Devido à necessidade de monitorar muitos serviços, redes e consistência distribuída
-    - [ ] Porque só funcionam com Linux
-    - [ ] Porque requerem hardware da NASA
-    *Explicação: Manter 50 serviços conversando entre si exige muito mais automação e observabilidade.*
+9.  **O que é o StackShare?**
+    *   ( ) Um site para compartilhar senhas.
+    *   (x) Uma plataforma onde empresas listam as ferramentas (stack) que utilizam.
+    *   ( ) Um editor de código online.
+    *   ( ) Uma rede social para designers.
+    *   *Explicação: No StackShare, você pode ver quais ferramentas o Uber, Spotify, etc., usam em seus projetos.*
 
-10. Qual ferramenta ajuda a garantir que o ambiente de desenvolvimento seja idêntico ao de produção?
-    - [ ] Git
-    - [ ] Postman
-    - [ ] VS Code
-    - [x] Docker (Containerização)
-    *Explicação: O Docker isola o serviço e suas dependências em um container que roda igual em qualquer lugar.*
+10. **A ferramenta Figma se encaixa em qual categoria?**
+    *   ( ) Qualidade de Código.
+    *   ( ) Banco de Dados.
+    *   ( ) Controle de Versão.
+    *   (x) Design e Prototipagem.
+    *   *Explicação: O Figma é usado para criar o visual do aplicativo antes dele ser codificado.*

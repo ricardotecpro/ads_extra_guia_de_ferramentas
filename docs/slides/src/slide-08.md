@@ -1,103 +1,150 @@
-# Aula 08 - Boas Práticas e Validação ✅
-## Qualidade e Segurança no Backend
+# Aula 08: Frameworks de Teste e Qualidade 🧪
 
 ---
 
-## Agenda 📅
-
-1. Por que Validar Tudo? { .fragment }
-2. Validação vs Sanitização { .fragment }
-3. Schema Validation (Ex: Zod) { .fragment }
-4. Clean Code (Código Limpo) { .fragment }
-5. Tratamento de Erros Profissional { .fragment }
-6. Middlewares Globais { .fragment }
+## 🎯 Nossa Missão
+*   Entender a importância dos testes automatizados.
+*   Conhecer a Pirâmide de Testes.
+*   Descobrir frameworks (Jest, PyTest, JUnit).
+*   Introdução ao TDD (Test Driven Development).
 
 ---
 
-## 1. Regra de Ouro: Desconfiança 🛡️
-
-- O cliente é o "lado perigoso" da aplicação. { .fragment }
-- Validações evitam dados corrompidos. { .fragment }
-- **Defesa em Profundidade**: Garanta a regra no banco E no código. { .fragment }
-
----
-
-## 2. Validar vs Sanitizar 🧼
-
-- **Validar**: Checar (Idade > 18?). { .fragment }
-- **Sanitizar**: Limpar (Remover `<script>`). { .fragment }
+## 😱 O Medo de Mudar o Código
+*   "Se eu mexer aqui, o que será que quebra?" { .fragment }
+*   "No meu PC funcionava, no servidor parou." { .fragment }
+*   "O bug que eu corrigi ontem voltou hoje." { .fragment }
+*   **Testes são a sua rede de segurança!** { .fragment }
 
 ---
 
-## 3. Schema Validation 📐
-
-- Crie "moldes" para seus dados. { .fragment }
-- Validação centralizada e reutilizável. { .fragment }
-
-```javascript
-const userSchema = {
-    nome: string().min(3),
-    email: string().email()
-};
+## 🏗️ A Pirâmide de Testes
+```mermaid
+graph TD
+    U[Testes Unitários - MUITOS]
+    I[Integração - ALGUNS]
+    E[E2E / Interface - POUCOS]
+    U ---|Rápido/Barato| I
+    I ---|Lento/Caro| E
 ```
 
 ---
 
-## 4. O Backend Elegante (Clean Code) ✨
-
-- **DRY**: Don't Repeat Yourself (Não repita lógica). { .fragment }
-- **KISS**: Keep It Simple, Stupid (Mantenha o simples). { .fragment }
-- Nomes de funções que explicam o que está acontecendo. { .fragment }
-
----
-
-## 5. Tratamento de Erros 🚨
-
-- Controller trata o fluxo, não o detalhe técnico. { .fragment }
-- **Try/Catch Global**: Evite crashes. { .fragment }
-- Mensagens amigáveis para o cliente. { .fragment }
+## 1. Testes Unitários 🧩
+Testam a menor parte possível do código (funções isoladas).
+*   **Vantagem**: Execução instantânea. { .fragment }
+*   **Foco**: Lógica pura, cálculos, pequenas regras. { .fragment }
+*   **Ferramentas**: Jest, PyTest. { .fragment }
 
 ---
 
-## 6. Logs vs Mensagens 📜
-
-- **Terminal/Log**: Detalhe técnico completo. { .fragment }
-- **Cliente (JSON)**: Apenas o que ele precisa saber. { .fragment }
-
-> "Ocorreu um erro interno" (Cliente) ✅
-> "Query failed at line 42 due to NULL constraint" (Logs) ✅
+## 2. Testes de Integração 🔗
+Verificam se dois ou mais componentes funcionam bem juntos.
+*   Ex: Aplicação + Banco de Dados. { .fragment }
+*   Ex: Serviço A + API externa. { .fragment }
+*   Buscam erros na comunicação entre partes. { .fragment }
 
 ---
 
-## 7. Prática: O Schema Perfeito 💻
-
-- Validando um produto complexo. { .fragment }
-- Tratando erros de tipo (String no lugar de Number). { .fragment }
-
----
-
-## Desafio: Limpeza ⚡
-
-Se você recebe um texto de um post com muitos espaços em branco no final, você deve **Validar** ou **Sanitizar**?
+## 3. Testes End-to-End (E2E) 🌐
+Simulam o usuário real usando o sistema completo.
+*   Abre o navegador, clica em botões, preenche forms. { .fragment }
+*   **Custo**: São lentos e "frágeis" (quebram se o layout muda). { .fragment }
+*   **Ferramentas**: Cypress, Playwright, Selenium. { .fragment }
 
 ---
 
-## Resumo ✅
-
-- Backend robusto exige validação rigorosa. { .fragment }
-- Limpe os dados antes de salvar (Sanitize). { .fragment }
-- Middleware Global centraliza a gestão de falhas. { .fragment }
-- Código limpo economiza meses de manutenção. { .fragment }
-
----
-
-## Próxima Aula: Módulo 3! 🔐
-
-### Segurança e Autenticação
-
-- Quem é você? (Authentication). { .fragment }
-- O que você pode fazer? (Authorization). { .fragment }
+## 🔴 Ciclo TDD (Red, Green, Refactor)
+Uma nova forma de pensar o desenvolvimento:
+1.  **Red**: Escreva um teste que falha (o código não existe). { .fragment }
+2.  **Green**: Escreva o mínimo de código para o teste passar. { .fragment }
+3.  **Refactor**: Melhore o código sem quebrar o teste. { .fragment }
 
 ---
 
-## Dúvidas? ✅
+## 🤡 O que são Mocks?
+Simulando o mundo real.
+*   Você não quer enviar um e-mail de verdade toda vez que rodar o teste. { .fragment }
+*   Você cria um "objeto dublê" que finge ser o serviço de e-mail. { .fragment }
+*   Isso isola o teste e o deixa muito mais rápido. { .fragment }
+
+---
+
+## 📦 Framework: Jest (JavaScript)
+*   Simples: `expect(soma(2,2)).toBe(4)`. { .fragment }
+*   Extremamente rápido (paralelismo). { .fragment }
+*   Inclui ferramentas de Cobertura de Código. { .fragment }
+
+---
+
+## 🐍 Framework: PyTest (Python)
+*   Sintaxe limpa: `assert soma(2,2) == 4`. { .fragment }
+*   Poderoso sistema de Fixtures (preparação de dados). { .fragment }
+*   Ecossistema de plugins gigante. { .fragment }
+
+---
+
+## ☕ Framework: JUnit (Java)
+*   O avô dos frameworks modernos. { .fragment }
+*   Robusto e integrado nativamente com IDEs. { .fragment }
+*   Padrão absoluto no mundo corporativo Java. { .fragment }
+
+---
+
+## 📊 Cobertura de Código (Coverage)
+"Quanto do meu projeto está sendo testado?"
+*   Gera relatórios mostrando quais linhas foram executadas pelos testes. { .fragment }
+*   **Meta**: 80% a 90% (100% é quase impossível e caro). { .fragment }
+
+---
+
+## 💎 Qualidade de Código (Linting)
+Diferente de testes, o Linter foca na "estética" e "segurança estática".
+*   ESLint (JS), Flake8 (Python). { .fragment }
+*   Evita variáveis não usadas. { .fragment }
+*   Garante estilos uniformes. { .fragment }
+
+---
+
+## 🔄 Testes na Pipeline (CI)
+Nunca confie apenas no teste local!
+*   A pipeline roda os testes a cada `git push`. { .fragment }
+*   Impede que código "quebrado" chegue na produção. { .fragment }
+*   Feedback automático para o time. { .fragment }
+
+---
+
+## 🧪 Anatomia de um Teste
+```javascript
+test('deve somar dois números corretamente', () => {
+  // 1. Arrange (Preparar)
+  const a = 10;
+  const b = 5;
+
+  // 2. Act (Agir)
+  const resultado = soma(a, b);
+
+  // 3. Assert (Verificar)
+  expect(resultado).toBe(15);
+});
+```
+
+---
+
+## 🏆 Checklist de Qualidade Pro
+*   [ ] Entende os níveis da pirâmide. { .fragment }
+*   [ ] Sabe o que é um Mock e por que usar. { .fragment }
+*   [ ] Instalou um framework de teste no seu projeto. { .fragment }
+*   [ ] Entende o ciclo básico do TDD. { .fragment }
+
+---
+
+## 📝 Prática de Hoje
+1.  Criar uma função simples de cálculo.
+2.  Escrever um teste unitário para ela usando Jest ou PyTest.
+3.  Ver o teste passar e o teste falhar (mudando a expectativa).
+
+---
+
+## 🏁 Dúvidas?
+Dormir tranquilo = Ter uma boa suite de testes! 🚀💤

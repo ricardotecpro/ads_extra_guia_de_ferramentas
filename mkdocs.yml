@@ -11,7 +11,9 @@ theme:
   features:
     - navigation.tracking
     - navigation.tabs
+    - navigation.sections
     - navigation.expand
+    - navigation.path
     - navigation.top
     - navigation.footer
     - navigation.indexes
@@ -20,6 +22,7 @@ theme:
     - content.code.annotate
     - search.suggest
     - search.highlight
+    - search.share
   palette:
     # Light Mode (Default)
     - media: "(prefers-color-scheme: light)"
@@ -72,12 +75,6 @@ markdown_extensions:
 
 
 plugins:
-  - mkdocs-revealjs:
-      revealjs_config:
-        transition: slide
-        backgroundTransition: fade
-        slideNumber: true
-
   - search:
       lang: pt
   - mkdocs-jupyter
@@ -95,6 +92,7 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
       type: datetime
+      enable_git_follow: false
   - macros
   - mkdocs-video
   - termynal:
@@ -125,7 +123,7 @@ extra_css:
 
 extra_javascript:
   - assets/js/quiz.js
-  - https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js
+  - https://unpkg.com/mermaid@11.12.3/dist/mermaid.min.js
   - assets/js/mermaid-init.js
   - assets/js/custom_termynal.js
   - assets/js/mathjax.js
@@ -149,6 +147,7 @@ nav:
   - Início: index.md
   - Plano de Ensino: plano-ensino.md
   - Aulas:
+      - 'Índice': aulas/index.md
       - 'Aula 01 - Intro ao Ecossistema': aulas/aula-01.md
       - 'Aula 02 - Gestão de Projetos': aulas/aula-02.md
       - 'Aula 03 - Ambiente de Dev': aulas/aula-03.md
@@ -239,10 +238,15 @@ nav:
       - 'Slide 16': slides/slide-16.md
   - Configuração:
       - 'Índice': setups/index.md
-      - 'Setup Backend': setups/setup-01.md
-      - 'Setup Frontend SPA': setups/setup-02.md
+      - 'Android Studio': setups/setup-01.md
+      - 'Xcode (iOS)': setups/setup-02.md
+      - 'Ferramentas de Apoio': setups/setup-03.md
   - Sobre:
       - 'O Curso': sobre.md
       - 'Roadmap': project_roadmap.md
       - 'Materiais Extras': materiais.md
   - Impressão: print_page.md
+
+exclude_docs: |
+  slides/src/*
+  quizzes/src/*

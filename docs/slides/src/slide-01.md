@@ -1,140 +1,152 @@
-# Aula 01 - Introdução a Microsserviços 🌐
-## De Monólitos a Sistemas Distribuídos
+# Aula 01: Introdução ao Ecossistema de Ferramentas 🌐
 
 ---
 
-## Agenda de Hoje 📅
-
-1. Panorama do Software Moderno { .fragment }
-2. Monólitos vs Microsserviços { .fragment }
-3. A Economia das APIs { .fragment }
-4. Escalabilidade Vertical vs Horizontal { .fragment }
-5. Cinto de Utilidades (Ferramentas) { .fragment }
-6. Setup do Ambiente { .fragment }
+## 🎯 Nosso Objetivo Hoje
+*   Entender o ecossistema do desenvolvedor moderno.
+*   Diferenciar as categorias de ferramentas.
+*   Conhecer o poder da automação.
+*   Primeiros passos no Terminal.
 
 ---
 
-## 1. O Mundo Cloud-Native ☁️
-
-- Sistemas globais exigem disponibilidade **24/7**. { .fragment }
-- Milhões de requisições por segundo. { .fragment }
-- Deploy contínuo (várias vezes ao dia). { .fragment }
-
----
-
-## 2. A Evolução da Arquitetura 🏛️➡️🏗️
+## 🚀 Por que ferramentas importam?
+*   Economia de Tempo ⏳
+*   Padronização 📏
+*   Qualidade do Código 💎
+*   Trabalho em Equipe 🤝
 
 ---
 
-## 2.1 O Monólito 🏛️
-
-- Um único projeto, um único deploy. { .fragment }
-- Tudo ou nada: erro em um lugar afeta tudo. { .fragment }
-- Difícil de escalar partes específicas. { .fragment }
-- **Ideal para**: Projetos pequenos, MVPs rápidos. { .fragment }
-
----
-
-## 2.2 Microsserviços 🏗️
-
-- Conjunto de serviços independentes. { .fragment }
-- Comunicação via rede (APIs). { .fragment }
-- Cada um com seu banco de dados. { .fragment }
-- **Ideal para**: Sistemas complexos e escaláveis. { .fragment }
+## 🧩 O "Cinto de Utilidades" do Dev
+Um desenvolvedor profissional não vive apenas de escrever código.
+Ele gerencia:
+*   Tarefas { .fragment }
+*   Versões { .fragment }
+*   Ambientes { .fragment }
+*   Qualidade { .fragment }
 
 ---
 
-## 3. O Papel das APIs 📡
-
-- **Contract-First**: Acordo de comunicação. { .fragment }
-- REST como padrão dominante. { .fragment }
-- JSON: A língua universal. { .fragment }
-
----
-
-## Escalabilidade: Vertical vs Horizontal
-
-| Vertical (Scale Up) | Horizontal (Scale Out) |
-| :--- | :--- |
-| Aumenta CPU/RAM | Adiciona mais servidores |
-| Tem limite físico | Virtualmente ilimitada |
-| Causa downtime no upgrade | Zero downtime (Redundância) |
+## 🛠️ Categorias de Ferramentas
+1.  **Gestão de Projetos** (Jira, Trello) { .fragment }
+2.  **Ambiente de Dev** (VS Code, Terminal) { .fragment }
+3.  **Controle de Versão** (Git, GitHub) { .fragment }
+4.  **Banco de Dados** (Postgres, DBeaver) { .fragment }
 
 ---
 
-## Arquitetura de Microsserviços
+## 🛠️ Categorias de Ferramentas (Cont.)
+5.  **Qualidade e Testes** (Jest, Sonar) { .fragment }
+6.  **Infraestrutura e CI/CD** (Docker, Actions) { .fragment }
+7.  **Comunicação** (Slack, Teams) { .fragment }
+8.  **Design** (Figma) { .fragment }
 
+---
+
+## 🧠 Conceito: Automação
+> "Se você faz a mesma coisa mais de 3 vezes, você deve automatizá-la."
+
+---
+
+## 📈 O Ciclo de Vida do Software
 ```mermaid
 graph LR
-    User[Cliente] --> AGW[API Gateway]
-    AGW --> S1[Usuários]
-    AGW --> S2[Pedidos]
-    AGW --> S3[Pagamentos]
-    S1 --> DB1[(DB)]
-    S2 --> DB2[(DB)]
-    S3 --> DB3[(DB)]
+    P[Planejar] --> C[Codar]
+    C --> T[Testar]
+    T --> D[Deploy]
+    D --> O[Operar]
+    O --> P
 ```
 
 ---
 
-## 4. Ferramentas Indispensáveis 🛠️
+## 💻 IDE vs Editor de Código
+*   **Editor**: Leve, rápido, extensível (ex: VS Code). { .fragment }
+*   **IDE**: Completa, "pesada", ferramentas nativas (ex: IntelliJ). { .fragment }
 
 ---
 
-## Client HTTP: Postman & Insomnia
-
-- Testar rotas sem Frontend. { .fragment }
-- Analisar Headers e Status Codes. { .fragment }
-- Simular diferentes cenários de erro. { .fragment }
-
----
-
-## Containerização: Docker 🐋
-
-- "Roda na minha máquina, roda em qualquer lugar". { .fragment }
-- Isola dependências e versões. { .fragment }
-- Facilita a subida de múltiplos serviços locais. { .fragment }
+## 🖥️ O Poder do Terminal (CLI)
+A interface de linha de comando é a casa do desenvolvedor.
+*   **Rapidez**: Sem cliques infinitos. { .fragment }
+*   **Scripts**: Repetir tarefas complexas. { .fragment }
+*   **Controle**: Acesso total ao sistema. { .fragment }
 
 ---
 
-## 5. Estrutura de Projeto Backend 📂
-
-- Divisão clara de responsabilidades. { .fragment }
-- Controllers, Services e Repositories. { .fragment }
-- Tratamento global de exceções. { .fragment }
-
----
-
-## 6. Setup do Ambiente 🚀
+## ⌨️ Comandos Básicos (Terminal)
+*   `ls`: Listar arquivos. { .fragment }
+*   `cd`: Entrar em pasta. { .fragment }
+*   `mkdir`: Criar pasta. { .fragment }
+*   `pwd`: Onde eu estou? { .fragment }
 
 ---
 
-## Requisitos:
-
-- IDE: VS Code ou IntelliJ. { .fragment }
-- Postman (Desktop ou Extensão). { .fragment }
-- Docker Desktop. { .fragment }
-- Git & GitHub. { .fragment }
-
----
-
-## Resumo da Aula ✅
-
-- Microsserviços trazem resiliência e escala. { .fragment }
-- APIs são o coração da comunicação moderna. { .fragment }
-- Ferramentas como Docker mudaram o jogo. { .fragment }
-- Começamos nossa jornada Fullstack! { .fragment }
+## 📂 Organização de Pastas
+Mantenha seus projetos organizados!
+*   Ex: `~/SourceCode/REPOS/github/` { .fragment }
+*   Evite espaços nos nomes de pastas. { .fragment }
+*   Use `hifen-ou-underscore`. { .fragment }
 
 ---
 
-## Próxima Aula: Arquitetura e Gateway 🏗️
-
-- Como os serviços conversam? { .fragment }
-- O que é Service Discovery? { .fragment }
-- Protegendo a porta de entrada. { .fragment }
+## 🦀 Ferramentas de Gestão
+*   **Jira**: O padrão corporativo. { .fragment }
+*   **Trello**: Visual e simples (Kanban). { .fragment }
+*   **GitHub Issues**: Integrado ao código. { .fragment }
 
 ---
 
-## Dúvidas? 🤔
+## 🐙 O Ecossistema Git
+*   **Git**: O software local. { .fragment }
+*   **GitHub**: A rede social do código. { .fragment }
+*   **GitLab**: Foco em CI/CD e empresas. { .fragment }
 
-> "A arquitetura de hoje é o legado de amanhã. Escolha com sabedoria."
+---
+
+## 📦 O Mundo dos Contêineres
+O que é Docker?
+*   Empacota o app. { .fragment }
+*   Funciona igual em todo lugar. { .fragment }
+*   "Na minha máquina funciona" acabou! { .fragment }
+
+---
+
+## 💎 Qualidade de Código
+*   **Linters**: Corretor ortográfico de código. { .fragment }
+*   **Formatters**: Deixa o código padronizado. { .fragment }
+*   **Testes**: Garante que nada quebra. { .fragment }
+
+---
+
+## 📡 Ferramentas de API
+Testando a comunicação entre sistemas.
+*   Postman { .fragment }
+*   Insomnia { .fragment }
+
+---
+
+## 🎨 O Elo com o Design
+*   **Figma**: Onde o app nasce visualmente.
+*   **Handoff**: A entrega para o desenvolvedor.
+
+---
+
+## 🏆 Conclusão da Intro
+Você não precisa dominar todas hoje.
+*   Escolha uma de cada categoria. { .fragment }
+*   Pratique a linha de comando. { .fragment }
+*   Mantenha a curiosidade ativa. { .fragment }
+
+---
+
+## 📝 Próximos Passos
+1.  Instalar o VS Code.
+2.  Configurar o Git.
+3.  Criar conta no GitHub.
+
+---
+
+## 🏁 Dúvidas?
+Vamos para a prática! 🚀

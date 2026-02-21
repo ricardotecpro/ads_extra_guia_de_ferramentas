@@ -1,130 +1,151 @@
-# Aula 03 - Modelagem de APIs RESTful 📡
-## Recursos, Verbos e Contratos
+# Aula 03: Ambiente de Desenvolvimento 💻
 
 ---
 
-## Agenda 📅
-
-1. O que é REST? <!-- .element: class="fragment" -->
-2. Recursos e URIs <!-- .element: class="fragment" -->
-3. Verbos HTTP (GET, POST, PUT...) <!-- .element: class="fragment" -->
-4. Status Codes <!-- .element: class="fragment" -->
-5. JSON: A Linguagem das APIs <!-- .element: class="fragment" -->
-6. Boas Práticas de Design <!-- .element: class="fragment" -->
+## 🎯 Nosso Foco
+*   Dominar o VS Code.
+*   Configurar extensões essenciais.
+*   Navegar pelo Terminal com confiança.
+*   Customizar seu workflow.
 
 ---
 
-## 1. REST: A "Língua" da Web 🌐
-
-- Style arquitetural para sistemas distribuídos. <!-- .element: class="fragment" -->
-- Baseado no protocolo **HTTP**. <!-- .element: class="fragment" -->
-- Independência entre Client e Server. <!-- .element: class="fragment" -->
-
----
-
-## Princípios REST
-
-- **Stateless**: Cada requisição é única. <!-- .element: class="fragment" -->
-- **Uniform Interface**: Padrões compartilhados. <!-- .element: class="fragment" -->
-- **Cacheable**: Melhore a performance. <!-- .element: class="fragment" -->
+## 🏗️ Por que investir no ambiente?
+*   Menos tempo configurando, mais tempo criando. <!-- .element: class="fragment" -->
+*   Erros capturados antes de rodar o código. <!-- .element: class="fragment" -->
+*   Saúde ocular e mental (Temas e Fontes). <!-- .element: class="fragment" -->
+*   **Seu computador é sua oficina!** <!-- .element: class="fragment" -->
 
 ---
 
-## 2. Identificando Recursos 📍
-
-- Um recurso é qualquer coisa que expomos. <!-- .element: class="fragment" -->
-- **URI**: O endereço do recurso. <!-- .element: class="fragment" -->
-
-### O que NÃO fazer:
-`GET /obterUsuarios` ❌
-
-### O que fazer:
-`GET /usuarios` ✅ (Sempre substantivos no plural!)
+## 🟦 VS Code: O Rei dos Editores
+*   Lançado pela Microsoft em 2015. <!-- .element: class="fragment" -->
+*   Escrito em TypeScript/Electron. <!-- .element: class="fragment" -->
+*   Arquitetura de plugins leve. <!-- .element: class="fragment" -->
+*   **Standard de mercado.** <!-- .element: class="fragment" -->
 
 ---
 
-## 3. Os Verbos HTTP 🛠️
-
-Eles definem a intenção da chamada:
-
-- **GET**: Buscar dados. <!-- .element: class="fragment" -->
-- **POST**: Criar novo dado. <!-- .element: class="fragment" -->
-- **PUT**: Atualizar (Trocar tudo). <!-- .element: class="fragment" -->
-- **PATCH**: Atualizar (Apenas um pedaço). <!-- .element: class="fragment" -->
-- **DELETE**: Remover dado. <!-- .element: class="fragment" -->
+## 🎨 Personalização Visual
+*   **Temas**: Dracula, One Dark Pro, Night Owl. <!-- .element: class="fragment" -->
+*   **Ícones**: Material Icon Theme, vscode-icons. <!-- .element: class="fragment" -->
+*   **Fontes**: Fira Code, JetBrains Mono (Ligatures). <!-- .element: class="fragment" -->
 
 ---
 
-## Idempotência e Segurança
-
-| Verbo | Seguro? | Idempotente? |
-| :--- | :--- | :--- |
-| GET | Sim ✅ | Sim ✅ |
-| POST | Não ❌ | Não ❌ |
-| PUT | Não ❌ | Sim ✅ |
-| DELETE | Não ❌ | Sim ✅ |
+## 🔌 Extensões: Produtividade Pura
+1.  **Prettier**: Formatação automática. <!-- .element: class="fragment" -->
+2.  **ESLint**: Análise de código em tempo real. <!-- .element: class="fragment" -->
+3.  **GitLens**: Quem escreveu essa linha? <!-- .element: class="fragment" -->
+4.  **Error Lens**: Erros destacados na linha. <!-- .element: class="fragment" -->
 
 ---
 
-## 4. Status Codes: A Resposta 🚦
-
-- **2xx**: Deu certo! (200, 201, 204). <!-- .element: class="fragment" -->
-- **4xx**: Você (cliente) errou algo (400, 401, 404). <!-- .element: class="fragment" -->
-- **5xx**: Eu (servidor) quebrei (500, 503). <!-- .element: class="fragment" -->
+## 🔌 Extensões: Utilidades
+5.  **Path Intellisense**: Auto-completar caminhos de arquivos. <!-- .element: class="fragment" -->
+6.  **Auto Close/Rename Tag**: Agilidade no HTML. <!-- .element: class="fragment" -->
+7.  **Thunder Client**: Testar APIs dentro do editor. <!-- .element: class="fragment" -->
 
 ---
 
-## 5. O Formato JSON 🏗️
+## ⌨️ Atalhos do VS Code (Ninja Mode)
+*   `Ctrl + P`: Abrir arquivo rapidamente. <!-- .element: class="fragment" -->
+*   `Ctrl + Shift + P`: Paleta de comandos. <!-- .element: class="fragment" -->
+*   `Alt + Up/Down`: Mover linha de lugar. <!-- .element: class="fragment" -->
+*   `Ctrl + D`: Selecionar próxima ocorrência. <!-- .element: class="fragment" -->
 
-```json
-{
-  "nome": "Curso Backend",
-  "modulo": 1,
-  "ativo": true
-}
+---
+
+## ⌨️ Atalhos do VS Code (Edição)
+*   `Ctrl + /`: Comentar bloco de código. <!-- .element: class="fragment" -->
+*   `Ctrl + B`: Esconder barra lateral. <!-- .element: class="fragment" -->
+*   `Ctrl + '`: Abrir/Fechar Terminal. <!-- .element: class="fragment" -->
+*   `Ctrl + \`: Dividir o editor (Split View). <!-- .element: class="fragment" -->
+
+---
+
+## 🖥️ O Terminal Integrado
+```mermaid
+graph TD
+    Editor[Editor de Texto] -- Atalho Ctrl + ' --> Term[Terminal Integrado]
+    Term -- Executa --> Node[Node.js / Python]
+    Term -- Comanda --> Git[Git / Docker]
 ```
 
-- Leve, legível e universal. <!-- .element: class="fragment" -->
+---
+
+## 🏠 Navegação de Diretórios
+*   `pwd`: Print Working Directory (Onde estou?). <!-- .element: class="fragment" -->
+*   `ls -la`: Listar tudo (inclusive ocultos). <!-- .element: class="fragment" -->
+*   `cd ..`: Voltar uma pasta. <!-- .element: class="fragment" -->
+*   `cd ~`: Ir para a Home. <!-- .element: class="fragment" -->
 
 ---
 
-## 6. Design de URIs Complexas
-
-Como buscar os pedidos de um usuário específico?
-
-`GET /usuarios/123/pedidos` ✅
-
-- Hierarquia lógica e limpa. <!-- .element: class="fragment" -->
+## 🔨 Manipulação de Arquivos
+*   `touch index.js`: Criar arquivo vazio. <!-- .element: class="fragment" -->
+*   `mkdir src`: Criar pasta "src". <!-- .element: class="fragment" -->
+*   `mv velho.js novo.js`: Renomear. <!-- .element: class="fragment" -->
+*   `rm -rf pasta`: Deletar recursivamente (CUIDADO!). <!-- .element: class="fragment" -->
 
 ---
 
-## 7. Prática: Postman em Ação 💻
-
-- Testando verbos em APIs reais. <!-- .element: class="fragment" -->
-- Analisando Headers e Body. <!-- .element: class="fragment" -->
-
----
-
-## Desafio REST ⚡
-
-Se você quer mudar apenas o e-mail de um usuário, qual verbo deve usar: PUT ou PATCH?
+## 🔍 Gerenciamento de Conteúdo
+*   `cat file.txt`: Ver conteúdo no terminal. <!-- .element: class="fragment" -->
+*   `grep "erro" log.txt`: Buscar texto dentro do arquivo. <!-- .element: class="fragment" -->
+*   `echo "olá" > file.txt`: Escrever no arquivo. <!-- .element: class="fragment" -->
 
 ---
 
-## Resumo ✅
-
-- REST é sobre recursos e padrões. <!-- .element: class="fragment" -->
-- URIs usam substantivos no plural. <!-- .element: class="fragment" -->
-- Status codes guiam o frontend. <!-- .element: class="fragment" -->
-- JSON é o padrão de facto. <!-- .element: class="fragment" -->
-
----
-
-## Próxima Aula: Swagger e Mocks 📝
-
-- Documentação automática. <!-- .element: class="fragment" -->
-- Como trabalhar sem o backend pronto? <!-- .element: class="fragment" -->
+## 💡 Dica de Ouro: Alias
+Você pode criar apelidos para comandos longos!
+*   `gs` -> `git status` <!-- .element: class="fragment" -->
+*   `ga` -> `git add .` <!-- .element: class="fragment" -->
+*   `gc` -> `git commit -m` <!-- .element: class="fragment" -->
 
 ---
 
-## Dúvidas? 📡
+## 🐚 Alternativas de Terminal
+*   **Windows**: WSL2 (Linux no Windows), PowerShell 7. <!-- .element: class="fragment" -->
+*   **Mac/Linux**: Zsh (Oh My Zsh), Fish Shell. <!-- .element: class="fragment" -->
+
+---
+
+## 🛠️ Configurando o `settings.json`
+Tudo no VS Code é texto!
+*   Acesse com `Ctrl + Shift + P` > `Open User Settings (JSON)`. <!-- .element: class="fragment" -->
+*   Sincronize suas configurações com o GitHub. <!-- .element: class="fragment" -->
+
+---
+
+## 📈 Autocomplete (IntelliSense)
+*   Sugestões baseadas no contexto. <!-- .element: class="fragment" -->
+*   Documentação rápida ao passar o mouse. <!-- .element: class="fragment" -->
+*   **Snippets**: Pedaços de código prontos. <!-- .element: class="fragment" -->
+
+---
+
+## 🦁 Debugging Diferenciado
+*   Pare de usar `console.log` para tudo! <!-- .element: class="fragment" -->
+*   Use Breakpoints (pontos de parada). <!-- .element: class="fragment" -->
+*   Inspecione variáveis em tempo real no editor. <!-- .element: class="fragment" -->
+
+---
+
+## 🏆 Checklist do Ambiente Pro
+*   [ ] Tema escuro configurado. <!-- .element: class="fragment" -->
+*   [ ] Extensões de linting e format instaladas. <!-- .element: class="fragment" -->
+*   [ ] Atalhos básicos memorizados. <!-- .element: class="fragment" -->
+*   [ ] Terminal configurado com `zsh` ou `pwsh`. <!-- .element: class="fragment" -->
+
+---
+
+## 📝 Prática de Hoje
+1.  Customizar seu VS Code.
+2.  Criar uma estrutura de 3 pastas via Terminal.
+3.  Configurar o Auto-Format ao Salvar.
+
+---
+
+## 🏁 Dúvidas?
+Seu ambiente, suas regras! 🚀

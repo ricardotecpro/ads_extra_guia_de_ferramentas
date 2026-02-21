@@ -1,71 +1,71 @@
-# Quiz 10 - Controle de Acesso (RBAC) 🛡️
+# Quiz: Aula 10 - Qualidade de Código (ESLint / Prettier) ✨
 
-1. O que significa a sigla RBAC?
-    - [ ] Real-Binary-Authentication-Code
-    - [x] Role-Based Access Control
-    - [ ] Route-Based Authorization Check
-    - [ ] Restricted-Backend-Access-Control
-    *Explicação: É o padrão de mercado para gerenciar permissões baseadas em "perfis" ou "papéis" do usuário.*
+1.  **O que é análise estática de código?**
+    *   ( ) Executar o código para ver se ele trava.
+    *   (x) Analisar o código sem executá-lo para encontrar erros de lógica ou estilo.
+    *   ( ) Deletar arquivos que não são usados.
+    *   ( ) Traduzir o código para outra linguagem.
+    *   *Explicação: Ferramentas como Linters fazem a análise dos arquivos em busca de padrões.*
 
-2. No RBAC, a quem atribuímos as permissões de acesso?
-    - [ ] A cada usuário individualmente por seu CPF
-    - [x] A um perfil (Role) que pode ser compartilhado por vários usuários
-    - [ ] Apenas ao dono da empresa
-    - [ ] Ao endereço IP do computador
-    *Explicação: Atribuir a perfis facilita a manutenção, especialmente em sistemas com muitos usuários.*
+2.  **Qual a principal função do Prettier?**
+    *   ( ) Encontrar bugs de segurança.
+    *   (x) Formatar o código automaticamente (estilo visual).
+    *   ( ) Compilar o código para produção.
+    *   ( ) Gerenciar as versões do projeto no Git.
+    *   *Explicação: O Prettier garante que todo o time siga o mesmo padrão visual (aspas, espaços, vírgulas).*
 
-3. Qual o código HTTP para "Acesso Negado" (Usuário identificado, mas sem permissão)?
-    - [ ] 401 Unauthorized
-    - [ ] 404 Not Found
-    - [x] 403 Forbidden
-    - [ ] 500 Internal Error
-    *Explicação: O 403 indica que o servidor entendeu quem é você, mas proibiu a ação.*
+3.  **Qual a diferença entre um Linter e um Formatter?**
+    *   ( ) São nomes diferentes para a mesma coisa.
+    *   (x) O Linter verifica a qualidade e lógica (bugs); o Formatter verifica apenas o visual (estilo).
+    *   ( ) O Formatter é para CSS e o Linter para JavaScript.
+    *   ( ) O Linter é obrigatório e o Formatter é proibido em empresas.
+    *   *Explicação: Linters como o ESLint podem detectar variáveis não usadas ou loops infinitos.*
 
-4. Qual a ordem correta dos middlewares em uma rota protegida?
-    - [ ] Primeiro Autorização, depois Autenticação
-    - [x] Primeiro Autenticação, depois Autorização
-    - [ ] Ambos devem rodar ao mesmo tempo
-    - [ ] Apenas um é necessário
-    *Explicação: Primeiro desvendamos QUEM é o usuário (Token), para depois checar O QUE ele pode fazer.*
+4.  **Por que é importante padronizar o código em uma equipe?**
+    *   ( ) Para que o computador não quebre.
+    *   (x) Para facilitar a leitura, manutenção e evitar discussões desnecessárias sobre estilo.
+    *   ( ) Porque linguagens como JavaScript só rodam se o código estiver bonito.
+    *   ( ) Por uma questão de estética pessoal do sênior da equipe.
+    *   *Explicação: Código padronizado parece ter sido escrito por uma única pessoa, reduzindo a carga cognitiva.*
 
-5. O que um Middleware de Autorização faz se o usuário não tem o nível necessário?
-    - [ ] Reinicia o servidor
-    - [x] Interrompe a requisição e retorna um erro 403 ao cliente
-    - [ ] Envia a requisição para outra rota aleatória
-    - [ ] Formata o banco de dados
-    *Explicação: O middleware age como uma trava que impede a execução do código do Controller.*
+5.  **A regra "no-unused-vars" do ESLint faz o quê?**
+    *   ( ) Permite usar variáveis globais.
+    *   (x) Avisa ou bloqueia o código se existirem variáveis declaradas que nunca são usadas.
+    *   ( ) Deleta as variáveis que o desenvolvedor esqueceu.
+    *   ( ) Muda o nome das variáveis para nomes mais curtos.
+    *   *Explicação: Variáveis não usadas poluem o código e podem indicar lógica incompleta.*
 
-6. Por que o Erro 401 (Unauthorized) é retornado quando o token JWT é inválido?
-    - [ ] Porque o usuário é feio
-    - [x] Porque a identidade do usuário não pôde ser confirmada
-    - [ ] Porque o servidor está desligado
-    - [ ] Porque o sistema está em manutenção
-    *Explicação: 401 significa "Quem é você? Não te conheço ou seu crachá é falso".*
+6.  **O que significa "Format on Save" (Formatar ao Salvar)?**
+    *   ( ) Uma regra que impede você de salvar arquivos se houver erro.
+    *   (x) Um recurso do editor (VS Code) que roda o formatador toda vez que você salva o arquivo.
+    *   ( ) O ato de formatar o disco rígido após o deploy.
+    *   ( ) Um comando do terminal que salva o código no GitHub.
+    *   *Explicação: É uma das configurações mais produtivas para qualquer desenvolvedor.*
 
-7. Em um sistema de E-commerce, quem deve ter permissão para a rota `DELETE /produtos/:id`?
-    - [ ] Todos os clientes
-    - [x] Apenas usuários com a Role 'ADMIN' ou 'GERENTE'
-    - [ ] Qualquer pessoa sem login
-    - [ ] Apenas o programador que criou o site
-    *Explicação: Ações destrutivas devem ser restritas a perfis de alta confiança.*
+7.  **Qual o papel do arquivo `.eslintrc` ou `.prettierrc`?**
+    *   ( ) Guardar as senhas do banco de dados.
+    *   (x) Configurar as regras específicas que o Linter ou Formatter deve seguir no projeto.
+    *   ( ) Criar o backup do código na nuvem.
+    *   ( ) Impedir que outros desenvolvedores instalem extensões.
+    *   *Explicação: Nesses arquivos você define se quer usar aspas simples, ponto e vírgula, etc.*
 
-8. O que é "Hierarquia de Roles"?
-    - [ ] Uma lista de nomes em ordem alfabética
-    - [x] Quando perfis superiores (ex: Admin) herdam automaticamente as permissões de perfis inferiores
-    - [ ] O tamanho da letra no banco de dados
-    - [ ] A ordem de criação dos usuários
-    *Explicação: Facilita o código, evitando ter que listar 'ADMIN' em todas as rotas simples.*
+8.  **Dizer que um Linter ajuda a evitar "bugs silenciosos" significa que:**
+    *   ( ) Ele remove o som do computador quando ocorre um erro.
+    *   (x) Ele encontra erros que passariam despercebidos pelo olho humano mas que causariam falhas em produção.
+    *   ( ) Ele apaga o código antes do erro acontecer.
+    *   ( ) Ele impede o desenvolvedor de falar durante o trabalho.
+    *   *Explicação: Erros sutis de lógica são capturados pela análise estática automática.*
 
-9. O que acontece se chamarmos a função `next()` dentro de um middleware?
-    - [ ] O servidor para
-    - [x] O processamento passa para o próximo middleware ou para o Controller
-    - [ ] O usuário é deslogado
-    - [ ] Uma nova aba abre no navegador
-    *Explicação: O `next()` é o sinal verde para a requisição seguir seu fluxo.*
+9.  **O ESLint é exclusivo para JavaScript?**
+    *   ( ) Sim, não existem linters para outras linguagens.
+    *   (x) Não, embora seja o mais famoso para JS, existem linters como Flake8 (Python) ou Checkstyle (Java).
+    *   ( ) Sim, mas ele pode ser usado para formatar fotos também.
+    *   ( ) Não, ele é um sistema operacional completo.
+    *   *Explicação: Quase todas as linguagens modernas possuem seus próprios Linters.*
 
-10. Qual a principal vantagem de centralizar a autorização em middlewares?
-    - [ ] O app fica mais bonito
-    - [x] Segurança e Reuso: você protege rotas inteiras com uma única linha de código
-    - [ ] O banco de dados fica mais rápido
-    - [ ] Os usuários ganham descontos
-    *Explicação: Centralizar evita que você esqueça de colocar "if" em algum Controller, deixando brechas de segurança.*
+10. **Qual a maior vantagem de rodar o Linter na pipeline de CI (Aula 11)?**
+    *   ( ) Deixar a build mais lenta e segura.
+    *   (x) Impedir que código fora dos padrões seja mesclado ao projeto principal.
+    *   ( ) Economizar energia nos servidores da empresa.
+    *   ( ) Mostrar para o chefe quem é o desenvolvedor que erra mais.
+    *   *Explicação: Garante que a qualidade do repositório nunca caia, automatizando a revisão.*

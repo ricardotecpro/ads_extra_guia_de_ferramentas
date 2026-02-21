@@ -1,71 +1,71 @@
-# Quiz 05 - Implementação de APIs ⚙️
+# Quiz: Aula 05 - Plataformas de Colaboração 🤝
 
-1. Qual a principal responsabilidade da camada de Controller?
-    - [ ] Salvar dados no banco de dados
-    - [x] Gerenciar a requisição HTTP e retornar a resposta adequada
-    - [ ] Fazer cálculos complexos de impostos
-    - [ ] Criar a interface gráfica do usuário
-    *Explicação: O Controller age como um intermediário entre o mundo externo (HTTP) e a lógica interna do sistema.*
+1.  **Qual a função do comando `git clone`?**
+    *   ( ) Deletar um repositório da internet.
+    *   (x) Baixar uma cópia completa de um repositório remoto para sua máquina local.
+    *   ( ) Criar uma nova branch no GitHub.
+    *   ( ) Mesclar (merge) dois projetos diferentes.
+    *   *Explicação: O `clone` é o ponto de partida para trabalhar em um projeto que já existe online.*
 
-2. O que é um "Handler" em um sistema de rotas?
-    - [ ] Um tipo de vírus de computador
-    - [x] A função específica que é executada quando uma rota é chamada
-    - [ ] O nome do servidor de hospedagem
-    - [ ] O arquivo onde guardamos as senhas
-    *Explicação: Cada rota (Verbo + Path) é mapeada para um Handler que processa aquela ação específica.*
+2.  **O que significa o termo "Remote" no Git?**
+    *   ( ) Um controle remoto para o computador.
+    *   (x) A versão do projeto que está hospedada em um servidor (como o GitHub).
+    *   ( ) O desenvolvedor que trabalha de casa.
+    *   ( ) Um arquivo que foi deletado do computador.
+    *   *Explicação: "Remote" se refere ao repositório na nuvem que sincroniza com o seu local.*
 
-3. Qual a melhor forma de capturar o ID de um usuário para uma busca individual (ex: /usuarios/10)?
-    - [ ] Query Param (?id=10)
-    - [x] Path Param (/usuarios/:id)
-    - [ ] Request Body ({ "id": 10 })
-    - [ ] Através de um cookie
-    *Explicação: Path Params são ideais para identificar recursos de forma única e hierárquica na URI.*
+3.  **Para que serve o comando `git push`?**
+    *   ( ) Para baixar as atualizações do servidor.
+    *   (x) Para enviar seus commits locais para o repositório remoto.
+    *   ( ) Para apagar o histórico de commits.
+    *   ( ) Para criar uma nova conta no GitHub.
+    *   *Explicação: Você "empurra" suas alterações para que outros possam vê-las.*
 
-4. Quando devemos usar "Query Params"?
-    - [ ] Para enviar a senha do usuário
-    - [x] Para filtros, ordenação e paginação (ex: ?cor=azul)
-    - [ ] Para atualizar o nome de um produto
-    - [ ] Para deletar o banco de dados
-    *Explicação: Query Params são usados para modificar ou filtrar a representação dos dados retornados.*
+4.  **O que é um "Pull Request" (PR)?**
+    *   ( ) Um pedido para deletar o código.
+    *   (x) Uma solicitação para unir as mudanças de uma branch para a branch principal (main).
+    *   ( ) Um comando para desligar o servidor.
+    *   ( ) Uma forma de bloquear o acesso de outros desenvolvedores.
+    *   *Explicação: O PR é o centro da colaboração, onde o código é revisado antes de ser aceito.*
 
-5. Em qual objeto da requisição costuma vir o JSON enviado via POST?
-    - [ ] req.params
-    - [ ] req.query
-    - [x] req.body
-    - [ ] req.headers
-    *Explicação: O Body é a parte da mensagem HTTP reservada para o transporte de dados complexos e volumosos.*
+5.  **Qual o objetivo do "Code Review" (Revisão de Código)?**
+    *   ( ) Criticar pessoalmente o colega de trabalho.
+    *   (x) Garantir a qualidade do código, encontrar bugs e compartilhar conhecimento entre o time.
+    *   ( ) Atrasar o lançamento do projeto.
+    *   ( ) Contar quantas linhas de código foram escritas.
+    *   *Explicação: É uma etapa de aprendizado e segurança coletiva.*
 
-6. Qual analogia melhor define o papel do Controller?
-    - [ ] O cozinheiro que prepara o prato
-    - [x] O garçom que anota o pedido e entrega o prato
-    - [ ] O dono do restaurante que cuida do banco de dados
-    - [ ] O cliente que come a comida
-    *Explicação: O Controller apenas coordena a entrada e a saída, delegando a "preparação" para outras camadas.*
+6.  **Como você traz as atualizações do GitHub para o seu computador?**
+    *   ( ) `git push`
+    *   (x) `git pull`
+    *   ( ) `git send`
+    *   ( ) `git update`
+    *   *Explicação: O `pull` "puxa" as novidades que seus colegas enviaram para o servidor.*
 
-7. Por que a Injeção de Dependência é útil nos Controllers?
-    - [ ] Para o código ficar mais pesado e seguro
-    - [x] Para facilitar a troca de comportamentos e a criação de testes automatizados
-    - [ ] Para economizar espaço no HD
-    - [ ] Porque o Google obriga
-    *Explicação: Receber dependências prontas torna o Controller menos acoplado e mais fácil de manter.*
+7.  **O que é um "Fork" no GitHub?**
+    *   ( ) Uma ferramenta para comer código.
+    *   (x) Uma cópia pessoal de um repositório de outra pessoa na sua própria conta.
+    *   ( ) Um erro grave que trava o Git.
+    *   ( ) Uma branch que foi deletada.
+    *   *Explicação: Muito usado em projetos Open Source para você sugerir mudanças em projetos alheios.*
 
-8. O que acontece se o Controller não retornar um Status Code?
-    - [ ] O servidor explode
-    - [x] O cliente pode receber um status padrão (ex: 200) que não condiz com o resultado real
-    - [ ] O computador trava
-    - [ ] A internet cai
-    *Explicação: É vital ser explícito sobre o que aconteceu (201 para sucesso, 400 para erro, etc).*
+8.  **Sobre o termo "origin", é correto afirmar:**
+    *   ( ) É o nome do primeiro commit do projeto.
+    *   (x) É o nome padrão (alias) dado ao link do servidor remoto principal.
+    *   ( ) É a pasta onde o Git foi instalado.
+    *   ( ) É o nome do criador do Git.
+    *   *Explicação: Ao rodar `git remote add origin ...`, você está apelidando a URL do GitHub de "origin".*
 
-9. Onde configuramos o mapeamento de Verbo + Path no backend?
-    - [ ] No banco de dados
-    - [x] No arquivo de roteamento (Router)
-    - [ ] No arquivo de interface (CSS)
-    - [ ] Dentro do arquivo de imagem .png
-    *Explicação: O roteador é quem diz: "Se chegar esse verbo nesse caminho, chame essa função".*
+9.  **O que acontece se houver um "Merge Conflict"?**
+    *   ( ) O computador explode.
+    *   (x) O Git não consegue unir os códigos automaticamente e pede para o desenvolvedor escolher qual versão manter.
+    *   ( ) O GitHub deleta o repositório por segurança.
+    *   ( ) O código é mesclado de qualquer jeito, sobrescrevendo tudo.
+    *   *Explicação: Conflitos acontecem quando duas pessoas mexem na mesma linha do mesmo arquivo.*
 
-10. Qual a vantagem de padronizar as respostas de erro em JSON?
-    - [ ] Para o erro ficar mais bonito
-    - [x] Para que o frontend consiga ler a mensagem e exibir um alerta amigável ao usuário
-    - [ ] Para economizar bateria do servidor
-    - [ ] Para esconder o código do erro
-    *Explicação: Um JSON de erro estruturado permite que o app reaja de forma inteligente a falhas.*
+10. **Qual a principal vantagem de usar o GitHub Flow (trabalhar com branches e PRs)?**
+    *   ( ) Deixa o processo mais lento e burocrático.
+    *   (x) Protege a branch principal de códigos quebrados ou inacabados.
+    *   ( ) Impede que estagiários mexam no código.
+    *   ( ) Economiza espaço em disco no servidor.
+    *   *Explicação: O fluxo garante que a `main` esteja sempre funcional e testada.*

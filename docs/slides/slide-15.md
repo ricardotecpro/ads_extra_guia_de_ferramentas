@@ -1,100 +1,132 @@
-# Aula 15 - React Router 🚦
-## Criando Apps Multi-Página
+# Aula 15: Comunicação e Colaboração em Equipe 💬
 
 ---
 
-## Agenda 📅
-
-1. O que são SPAs? <!-- .element: class="fragment" -->
-2. Multi-páginas (Simuladas) <!-- .element: class="fragment" -->
-3. Componentes de Rota <!-- .element: class="fragment" -->
-4. Navegação (`Link` e `useNavigate`) <!-- .element: class="fragment" -->
-5. Parâmetros dinâmicos (`:id`) <!-- .element: class="fragment" -->
+## 🎯 Nossa Missão
+*   Desenvolver Soft Skills essenciais.
+*   Dominar a comunicação assíncrona.
+*   Aprender a etiqueta no Slack e Teams.
+*   Entender a cultura de documentação.
 
 ---
 
-## 1. O Mundo do SPA ⚛️
-
-- O site é uma única página HTML. <!-- .element: class="fragment" -->
-- O Javascript "troca" a tela sem recarregar. <!-- .element: class="fragment" -->
-- UX rápida e fluida. <!-- .element: class="fragment" -->
+## 🗣️ Por que falar é tão importante quanto codar?
+*   Software é feito por pessoas para pessoas. <!-- .element: class="fragment" -->
+*   Falhas de comunicação custam caro (retrabalho). <!-- .element: class="fragment" -->
+*   O bom desenvolvedor sabe explicar o que fez. <!-- .element: class="fragment" -->
 
 ---
 
-## 2. React Router Dom ⚙️
+## 🔄 Síncrono vs Assíncrono
+*   **Síncrono**: Reuniões, ligações, conversa no café. (Resposta na hora). <!-- .element: class="fragment" -->
+*   **Assíncrono**: Slack, E-mail, PRs, Docs. (Resposta quando possível). <!-- .element: class="fragment" -->
+*   **Dica**: Proteja seu tempo de foco usando o assíncrono! <!-- .element: class="fragment" -->
 
-```bash
-npm install react-router-dom
+---
+
+## 🟣 Slack / Teams: O Hub do Time
+Não é apenas um chat. É onde tudo acontece.
+*   Canais por assunto. <!-- .element: class="fragment" -->
+*   Integração com ferramentas. <!-- .element: class="fragment" -->
+*   Threads para organização. <!-- .element: class="fragment" -->
+
+---
+
+## 📜 Regras de Etiqueta (Slack)
+1.  **Vá direto ao ponto**: Evite apenas "Oi". <!-- .element: class="fragment" -->
+2.  **Use Threads**: Não polua o canal principal. <!-- .element: class="fragment" -->
+3.  **Status**: Mantenha atualizado (Foco, Almoço, Férias). <!-- .element: class="fragment" -->
+4.  **Reações**: Use emojis para confirmar leitura. <!-- .element: class="fragment" -->
+
+---
+
+## 🤖 ChatOps: Automação no Chat
+Lidando com o sistema via texto.
+```text
+/deploy api to production
 ```
-
-- A biblioteca padrão para web. <!-- .element: class="fragment" -->
-- Permite que a URL combine com o que aparece na tela. <!-- .element: class="fragment" -->
-
----
-
-## 3. A Estrutura Básica 🏗️
-
-- **BrowserRouter**: O container principal. <!-- .element: class="fragment" -->
-- **Routes**: O seletor de rotas. <!-- .element: class="fragment" -->
-- **Route**: Define o caminho (`path`) e o componente (`element`). <!-- .element: class="fragment" -->
+*   O bot processa a ordem e avisa a todos. <!-- .element: class="fragment" -->
+*   Transparência total no que está acontecendo. <!-- .element: class="fragment" -->
 
 ---
 
-## 4. Navegando sem Recarregar! 🏃‍♂️
-
-- Use `<Link to="/contato">` <!-- .element: class="fragment" -->
-- **NUNCA** use `<a href="...">` para rotas internas. <!-- .element: class="fragment" -->
-
----
-
-## 5. Navegação Programática 🚀
-
-```javascript
-const navigate = useNavigate();
-
-onClick={() => navigate("/dashboard")}
-```
-
-- Ideal para redirecionar após ações (Login, Clique em Card). <!-- .element: class="fragment" -->
+## 🤝 Pair Programming (Programação em Par)
+Dois desenvolvedores, um código.
+*   **Piloto**: Escreve o código. <!-- .element: class="fragment" -->
+*   **Co-piloto**: Revisa, pensa na lógica, busca documentação. <!-- .element: class="fragment" -->
+*   Melhor forma de compartilhar conhecimento sênior/júnior. <!-- .element: class="fragment" -->
 
 ---
 
-## 6. Rotas Dinâmicas (URL Params) 🆔
-
-- `path="/perfil/:username"` <!-- .element: class="fragment" -->
-- Hook `useParams()` captura o valor. <!-- .element: class="fragment" -->
-- Uma única página que se adapta a mil perfis. <!-- .element: class="fragment" -->
-
----
-
-## 7. Página 404 (Not Found) 👻
-
-- `path="*"` <!-- .element: class="fragment" -->
-- Garante que o usuário nunca caia em uma tela em branco. <!-- .element: class="fragment" -->
+## ⏰ Reuniões Eficazes: Stand-up
+A reunião diária de 15 minutos.
+*   O que eu fiz ontem? <!-- .element: class="fragment" -->
+*   O que farei hoje? <!-- .element: class="fragment" -->
+*   Tenho algum impedimento? <!-- .element: class="fragment" -->
+*   **Foco total em sincronizar o time.** <!-- .element: class="fragment" -->
 
 ---
 
-## Desafio de Roteamento ⚡
-
-Se eu digitar `www.meusite.com/asdfg` e não tiver uma rota configurada para isso, o que o usuário vai ver se eu NÃO colocar uma rota com o `path="*"`?
-
----
-
-## Resumo ✅
-
-- Roteamento traz a sensação de um site real. <!-- .element: class="fragment" -->
-- Hooks `useNavigate` e `useParams` são essenciais. <!-- .element: class="fragment" -->
-- SPAs são o padrão da indústria moderna. <!-- .element: class="fragment" -->
+## 📖 Cultura de Documentação
+"Se não está escrito, não existe."
+*   **README**: O cartão de visitas do projeto. <!-- .element: class="fragment" -->
+*   **Wiki / Notion**: Regras de negócio e guias. <!-- .element: class="fragment" -->
+*   **Changelog**: O que mudou em cada versão? <!-- .element: class="fragment" -->
 
 ---
 
-## Próxima Aula: O Grande Final 🏆
-
-### Projeto Integrado: Backend + Frontend!
-
-- Conectando nossa API Node ao site React. <!-- .element: class="fragment" -->
-- O Projeto Final do Curso! <!-- .element: class="fragment" -->
+## 🔍 Feedback Construtivo
+Como falar do erro do colega?
+*   Foque no **código**, não na pessoa. <!-- .element: class="fragment" -->
+*   Sugira soluções em vez de apenas criticar. <!-- .element: class="fragment" -->
+*   Reconheça o que está bom também! <!-- .element: class="fragment" -->
 
 ---
 
-## Dúvidas? 🚦
+## 🏠 Trabalho Remoto: Desafios
+*   Isolamento social. <!-- .element: class="fragment" -->
+*   Dificuldade em separar casa de trabalho. <!-- .element: class="fragment" -->
+*   **Solução**: Comunicação excessiva e transparente (Overcommunication). <!-- .element: class="fragment" -->
+
+---
+
+## 📉 Gerenciamento de Conflitos
+*   Conflitos técnicos são normais (e bons!). <!-- .element: class="fragment" -->
+*   Busque consenso ouvindo todos os lados. <!-- .element: class="fragment" -->
+*   Se não houver acordo, o time concorda em seguir um caminho e testar. <!-- .element: class="fragment" -->
+
+---
+
+## 🛡️ Segurança Psicológica
+Um time onde as pessoas não têm medo de:
+*   Perguntar o que parece "óbvio". <!-- .element: class="fragment" -->
+*   Admitir erros. <!-- .element: class="fragment" -->
+*   Sugerir ideias malucas. <!-- .element: class="fragment" -->
+*   **Times seguros performam 2x mais.** <!-- .element: class="fragment" -->
+
+---
+
+## 📊 Ferramentas de Documentação Modernas
+*   **Notion**: O canivete suíço. <!-- .element: class="fragment" -->
+*   **Confluence**: O padrão para grandes empresas. <!-- .element: class="fragment" -->
+*   **Obsidian / Logseq**: Gestão de conhecimento pessoal. <!-- .element: class="fragment" -->
+
+---
+
+## 🏆 Checklist de Colaboração Pro
+*   [ ] Sabe usar Threads no Slack. <!-- .element: class="fragment" -->
+*   [ ] Sabe explicar suas tarefas na Stand-up. <!-- .element: class="fragment" -->
+*   [ ] Escreve READMEs claros. <!-- .element: class="fragment" -->
+*   [ ] Pratica a empatia no Code Review. <!-- .element: class="fragment" -->
+
+---
+
+## 📝 Prática de Hoje
+1.  Simular uma Stand-up com seu grupo.
+2.  Redigir uma mensagem assíncrona de ajuda.
+3.  Criticar um código fictício de forma construtiva.
+
+---
+
+## 🏁 Dúvidas?
+O código é feito por humanos! 🤝🚀

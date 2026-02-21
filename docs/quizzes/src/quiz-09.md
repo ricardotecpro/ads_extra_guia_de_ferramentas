@@ -1,71 +1,71 @@
-# Quiz 09 - Segurança e Autenticação com JWT 🔐
+# Quiz: Aula 09 - Ferramentas de API (Postman / Insomnia) 📡
 
-1. Qual a diferença entre Autenticação e Autorização?
-    - [ ] Autenticação é sobre permissões, Autorização é sobre identidade
-    - [x] Autenticação checa quem você é, Autorização checa o que você pode fazer
-    - [ ] Autenticação é para o backend, Autorização é para o frontend
-    - [ ] É a mesma coisa, apenas nomes diferentes
-    *Explicação: Primeiro você prova quem é (Login), depois o sistema checa se você tem acesso (Roles).*
+1.  **Qual o principal objetivo do Postman ou Insomnia?**
+    *   ( ) Editar o código fonte do servidor.
+    *   (x) Testar e documentar o comportamento de APIs (solicitar e receber dados).
+    *   ( ) Criar o design das telas do aplicativo.
+    *   ( ) Acelerar a conexão de internet do computador.
+    *   *Explicação: São clientes HTTP que permitem simular requisições de frontend sem precisar de uma interface gráfica final.*
 
-2. O que significa a sigla JWT?
-    - [ ] Java Web Tool
-    - [x] JSON Web Token
-    - [ ] Javascript Web Transfer
-    - [ ] Just Web Ticket
-    *Explicação: É um padrão de mercado para transmissão segura de informações como objetos JSON.*
+2.  **Qual o método HTTP usado para buscar uma lista de dados no servidor?**
+    *   ( ) POST.
+    *   (x) GET.
+    *   ( ) DELETE.
+    *   ( ) PATCH.
+    *   *Explicação: O GET é o método padrão de consulta de informações.*
 
-3. Quantas partes compõem um token JWT?
-    - [ ] Uma parte única
-    - [ ] Duas partes (Dados e Assinatura)
-    - [x] Três partes (Header, Payload e Signature)
-    - [ ] Quatro partes (Header, Payload, Signature e Expire)
-    *Explicação: As três partes são unidas por pontos para formar o token completo.*
+3.  **Para que serve o método HTTP `POST`?**
+    *   ( ) Para apagar um registro.
+    *   (x) Para enviar novos dados e criar um recurso no servidor (ex: cadastrar usuário).
+    *   ( ) Para atualizar uma informação parcial.
+    *   ( ) Para baixar um arquivo PDF.
+    *   *Explicação: O POST envia informações no "Corpo" (Body) da requisição para criação.*
 
-4. O que é o "Payload" do JWT?
-    - [ ] O algoritmo de criptografia
-    - [ ] A senha do banco de dados
-    - [x] O corpo do token, onde ficam os dados do usuário (ex: id, nome)
-    - [ ] A chave secreta do servidor
-    *Explicação: É aqui que guardamos as "alegações" (claims) sobre o usuário logado.*
+4.  **O que significa um Status Code iniciado em 2xx (ex: 200, 201)?**
+    *   ( ) Erro do Servidor.
+    *   (x) Sucesso! A requisição foi processada corretamente.
+    *   ( ) Erro do Usuário (ex: senha errada).
+    *   ( ) O site está em manutenção.
+    *   *Explicação: A família 200 indica que a comunicação correu conforme o esperado.*
 
-5. Por que a "Assinatura" (Signature) é a parte mais importante para a segurança?
-    - [ ] Porque ela deixa o token colorido
-    - [x] Porque ela garante que o Payload não foi alterado por terceiros
-    - [ ] Porque ela esconde o nome do usuário
-    - [ ] Porque ela faz o token expirar mais rápido
-    *Explicação: Se alguém mudar um único caractere no Payload, a assinatura deixará de ser válida.*
+5.  **Qual Status Code o servidor retorna quando você tenta acessar algo que não existe?**
+    *   ( ) 200 OK.
+    *   ( ) 500 Internal Error.
+    *   (x) 404 Not Found.
+    *   ( ) 403 Forbidden.
+    *   *Explicação: O 404 é o erro clássico de "página ou recurso não encontrado".*
 
-6. O que significa dizer que o JWT é "Stateless" (Sem Estado)?
-    - [ ] Que o servidor não tem banco de dados
-    - [x] Que o servidor não precisa guardar informações da sessão do usuário na memória
-    - [ ] Que o token nunca expira
-    - [ ] Que o usuário não precisa de internet
-    *Explicação: Toda a informação necessária para validar o usuário está dentro do próprio token.*
+6.  **O que é o "Request Body" (Corpo da Requisição)?**
+    *   ( ) O título do site.
+    *   (x) O local onde enviamos os dados complexos (geralmente JSON) em métodos como POST e PUT.
+    *   ( ) A lista de erros do desenvolvedor.
+    *   ( ) O link do repositório no GitHub.
+    *   *Explicação: É no Body que os dados do formulário ou objeto viajam até o servidor.*
 
-7. Onde o Payload do JWT pode ser lido?
-    - [ ] Apenas pelo servidor que tem a chave secreta
-    - [x] Por qualquer pessoa, pois ele é apenas codificado (Base64), não encriptado
-    - [ ] Apenas por usuários com permissão de Admin
-    - [ ] Em lugar nenhum, ele é invisível
-    *Explicação: CUIDADO! Nunca guarde senhas ou dados sensíveis no Payload, pois qualquer um pode ler.*
+7.  **Sobre o método `DELETE`, é correto afirmar:**
+    *   ( ) Ele limpa o histórico do navegador.
+    *   (x) Ele solicita a remoção de um recurso específico do servidor.
+    *   ( ) Ele deve ser usado para buscar dados de usuários.
+    *   ( ) Ele é o método mais seguro para enviar senhas.
+    *   *Explicação: O DELETE tem a intenção semântica de excluir um dado.*
 
-8. Qual o objetivo do campo "expiresIn" (ou 'exp')?
-    - [ ] Mudar o nome do usuário
-    - [x] Definir um tempo de validade para o token, após o qual ele será rejeitado
-    - [ ] Apagar o banco de dados
-    - [ ] Aumentar a velocidade da API
-    *Explicação: Tokens não devem ser eternos; limitando a duração, reduzimos riscos de roubo de sessão.*
+8.  **Qual a diferença entre erro 401 e 403?**
+    *   ( ) Não há diferença.
+    *   (x) 401 significa que você não está autenticado (logado); 403 significa que você não tem permissão para aquele recurso específico.
+    *   ( ) 401 é erro de rede; 403 é erro de banco de dados.
+    *   ( ) 401 é para sites; 403 é para apps mobile.
+    *   *Explicação: 401 é "quem é você?"; 403 é "você não pode entrar aqui".*
 
-9. Onde o frontend geralmente envia o JWT para o servidor?
-    - [ ] No corpo da mensagem (Body)
-    - [x] No cabeçalho (Header) de autorização: `Authorization: Bearer <token>`
-    - [ ] No nome do arquivo
-    - [ ] Por e-mail
-    *Explicação: O padrão Bearer Token nos headers HTTP é a forma mais comum de enviar o JWT.*
+9.  **O que são os "Headers" (Cabeçalhos) em uma requisição?**
+    *   ( ) O título do documento HTML.
+    *   (x) Metadados que enviam informações extras (como tipo do conteúdo ou tokens de autenticação).
+    *   ( ) O rodapé da página.
+    *   ( ) O nome das variáveis do banco de dados.
+    *   *Explicação: Headers dizem ao servidor como interpretar os dados que estão chegando.*
 
-10. O que acontece se o servidor perder a "Chave Secreta"?
-    - [ ] Os usuários ganham acesso livre
-    - [x] Todos os tokens emitidos anteriormente se tornam inválidos instantaneamente
-    - [ ] O banco de dados é deletado
-    - [ ] Nada, a chave secreta não é importante
-    *Explicação: Sem a chave, o servidor não consegue mais verificar se as assinaturas dos tokens são legítimas.*
+10. **Por que usar "Collections" (Coleções) no Postman?**
+    *   ( ) Para economizar espaço no computador.
+    *   (x) Para organizar e salvar todas as rotas de um projeto, facilitando o teste repetitivo e o trabalho em equipe.
+    *   ( ) Para mudar a cor da interface da ferramenta.
+    *   ( ) Para substituir a documentação do código.
+    *   *Explicação: Collections permitem agrupar requisições por contexto ou projeto.*

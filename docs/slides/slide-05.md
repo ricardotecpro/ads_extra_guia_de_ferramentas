@@ -1,102 +1,161 @@
-# Aula 05 - Implementação de APIs ⚙️
-## Controllers e Rotas
+# Aula 05: Plataformas de Colaboração 🤝
 
 ---
 
-## Agenda 📅
-
-1. Camadas do Backend <!-- .element: class="fragment" -->
-2. O Papel do Controller <!-- .element: class="fragment" -->
-3. Rotas e Handlers <!-- .element: class="fragment" -->
-4. Capturando Dados (Params/Body) <!-- .element: class="fragment" -->
-5. Status Codes na Prática <!-- .element: class="fragment" -->
-6. Injeção de Dependência <!-- .element: class="fragment" -->
+## 🎯 Nossa Missão
+*   Levar o código local para a nuvem.
+*   Trabalhar em equipe sem sobrescrever o colega.
+*   Dominar Pull Requests e Code Review.
+*   Conhecer GitHub, GitLab e Bitbucket.
 
 ---
 
-## 1. Organização em Camadas 🧱
-
-- **Controller**: Trata a entrada (HTTP). <!-- .element: class="fragment" -->
-- **Service**: Regras de negócio. <!-- .element: class="fragment" -->
-- **Repository**: Acesso ao banco. <!-- .element: class="fragment" -->
-
----
-
-## 2. O Papel do Controller 🎮
-
-- Ele é o ponto de entrada. <!-- .element: class="fragment" -->
-- **Não deve ter lógica complexa!** <!-- .element: class="fragment" -->
-- Deve apenas orquestrar a execução. <!-- .element: class="fragment" -->
-
-> **Controller** = Garçom 🤵
-> **Service** = Cozinheiro 👨‍🍳
+## ☁️ Por que usar repositórios remotos?
+*   **Backup Seguro**: Se o PC pifar, o código está na nuvem. <!-- .element: class="fragment" -->
+*   **Colaboração**: Várias pessoas no mesmo projeto. <!-- .element: class="fragment" -->
+*   **Deploy**: Servidores buscam o código de lá. <!-- .element: class="fragment" -->
+*   **Portfólio**: Mostrar seu trabalho para o mundo. <!-- .element: class="fragment" -->
 
 ---
 
-## 3. Rotas e Handlers 📍
+## 🏢 O Big Three das Plataformas
+1.  **GitHub**: A maior e mais social. <!-- .element: class="fragment" -->
+2.  **GitLab**: Foco em empresas e CI/CD integrado. <!-- .element: class="fragment" -->
+3.  **Bitbucket**: Integração nativa com Jira. <!-- .element: class="fragment" -->
 
-- **Rota**: Verbo HTTP + Path. <!-- .element: class="fragment" -->
-- **Handler**: Função executada. <!-- .element: class="fragment" -->
+---
 
-```javascript
-router.post('/login', controller.realizarLogin);
+## 🔗 Conectando Local com Remoto
+`git remote add origin <url-do-servidor>`
+*   **origin**: É o apelido padrão do seu servidor remoto. <!-- .element: class="fragment" -->
+*   Você pode ter mais de um remoto (ex: `upstream`). <!-- .element: class="fragment" -->
+
+---
+
+## 🚀 Enviando Código: `git push`
+O ato de "empurrar" seus commits para a nuvem.
+```bash
+git push -u origin main
+```
+*   `-u`: Salva a preferência (upstream), depois basta usar `git push`. <!-- .element: class="fragment" -->
+
+---
+
+## 📥 Trazendo Código: `git pull`
+Sincronizando as mudanças que outros fizeram.
+*   Executa um `fetch` (busca) + `merge` (une). <!-- .element: class="fragment" -->
+*   Mantenha seu código local sempre atualizado! <!-- .element: class="fragment" -->
+
+---
+
+## 👯‍♀️ Clonando um Projeto: `git clone`
+Baixando um repositório que já existe online.
+*   Cria a pasta, inicia o git e baixa todos os arquivos. <!-- .element: class="fragment" -->
+*   Baixa todo o histórico de commits. <!-- .element: class="fragment" -->
+
+---
+
+## 🌳 Trabalhando com Branches
+O segredo da colaboração segura.
+```mermaid
+graph LR
+    M((Main)) --- A((Fix A))
+    M --- B((Feature B))
+    A -.-> M
+    B -.-> M
+```
+*   **Main**: Sempre código funcional e testado. <!-- .element: class="fragment" -->
+*   **Features**: Branches para cada tarefa nova. <!-- .element: class="fragment" -->
+
+---
+
+## 🏗️ O Ciclo de Vida de uma Alteração
+```mermaid
+sequenceDiagram
+    participant D as Desenvolvedor
+    participant G as GitHub (Cloud)
+    participant T as Time (Equipe)
+
+    D->>D: Cria Branch & Commits
+    D->>G: git push branch
+    D->>G: Abre Pull Request (PR)
+    G->>T: Notifica Time
+    T->>G: Faz Code Review & Sugestões
+    D->>G: Ajusta Código
+    G->>G: Merge para Main
 ```
 
 ---
 
-## 4. Capturando Dados 📥
-
-- **Path Params**: `/id/123` (Identificação). <!-- .element: class="fragment" -->
-- **Query Params**: `?q=busca` (Filtro). <!-- .element: class="fragment" -->
-- **Body**: Enviando JSON (Criação/Update). <!-- .element: class="fragment" -->
-
----
-
-## 5. Respostas de Qualidade 📤
-
-- Nunca esqueça o Status Code! <!-- .element: class="fragment" -->
-- Sucesso: 200, 201, 204. <!-- .element: class="fragment" -->
-- Erro: 400, 401, 404, 500. <!-- .element: class="fragment" -->
+## 📝 O Pull Request (PR)
+Não é apenas código, é uma conversa.
+*   **Título Claro**: O que isso resolve? <!-- .element: class="fragment" -->
+*   **Descrição**: Explique as mudanças complexas. <!-- .element: class="fragment" -->
+*   **Prints/Vídeos**: Se houver mudança visual. <!-- .element: class="fragment" -->
 
 ---
 
-## 6. Injeção de Dependência 💉
-
-- Receber serviços prontos. <!-- .element: class="fragment" -->
-- Facilita testar o Controller "isolado". <!-- .element: class="fragment" -->
-
----
-
-## 7. Prática: O Primeiro Endpoint 💻
-
-- Mapeando um `GET /ping`. <!-- .element: class="fragment" -->
-- Retornando um `pong` em JSON. <!-- .element: class="fragment" -->
-- Testando no Insomnia/Postman. <!-- .element: class="fragment" -->
+## 🔍 Code Review: A Etapa de Ouro
+Por que revisar código alheio?
+*   Encontrar bugs que o autor não viu. <!-- .element: class="fragment" -->
+*   Aprender novas técnicas. <!-- .element: class="fragment" -->
+*   Garantir a padronização do time. <!-- .element: class="fragment" -->
+*   **Seja gentil nas críticas!** <!-- .element: class="fragment" -->
 
 ---
 
-## Desafio: Params vs Query ⚡
-
-Se você quer listar todos os alunos de uma sala com o nome "Pedro", qual tipo de parâmetro você usaria para o nome?
-
----
-
-## Resumo ✅
-
-- Controllers são a porta de entrada. <!-- .element: class="fragment" -->
-- Devem ser leves e objetivos. <!-- .element: class="fragment" -->
-- Capturam dados e retornam status/JSON. <!-- .element: class="fragment" -->
-- Seguem as rotas definidas. <!-- .element: class="fragment" -->
+## 👯‍♂️ Fork: Colaboração Externa
+Muito comum em Open Source.
+*   Você cria uma cópia do projeto de outra pessoa na sua conta. <!-- .element: class="fragment" -->
+*   Faz as mudanças e envia um PR de volta para o autor original. <!-- .element: class="fragment" -->
 
 ---
 
-## Próxima Aula: Regras de Negócio! 🧠
-
-### Services e Validações
-
-- Onde o cálculo acontece. <!-- .element: class="fragment" -->
-- Isolando o código do "mundo externo". <!-- .element: class="fragment" -->
+## 🐙 GitHub: Recursos Sociais
+*   **Stars**: Curtir um projeto. <!-- .element: class="fragment" -->
+*   **Watch**: Receber notificações de mudanças. <!-- .element: class="fragment" -->
+*   **Profile**: Seu currículo visual como dev. <!-- .element: class="fragment" -->
 
 ---
 
-## Dúvidas? ⚙️
+## 🛑 Cuidados com a Segurança
+*   **NUNCA** envie senhas (`.env`) para o GitHub. <!-- .element: class="fragment" -->
+*   Use Chaves SSH para conexão segura sem senha. <!-- .element: class="fragment" -->
+*   Ative o Double Factor Authentication (2FA). <!-- .element: class="fragment" -->
+
+---
+
+## ⚠️ Lidando com Conflitos (Remoto)
+Se você e um colega mudam a mesma linha:
+1.  O `push` será rejeitado. <!-- .element: class="fragment" -->
+2.  Você deve fazer `git pull`. <!-- .element: class="fragment" -->
+3.  Resolver o conflito localmente. <!-- .element: class="fragment" -->
+4.  Fazer novo `add/commit/push`. <!-- .element: class="fragment" -->
+
+---
+
+## 📊 Insights do GitHub
+*   **Network Graph**: Visualizar as branches. <!-- .element: class="fragment" -->
+*   **Contributors**: Quem mais trabalhou no projeto? <!-- .element: class="fragment" -->
+*   **Dependency Graph**: Quais bibliotecas seu código usa? <!-- .element: class="fragment" -->
+
+---
+
+## 🏆 Checklist Pro do Dia
+*   [ ] Repositório remoto configurado. <!-- .element: class="fragment" -->
+*   [ ] `git push` realizado com sucesso. <!-- .element: class="fragment" -->
+*   [ ] Entende o papel de uma Branch de Feature. <!-- .element: class="fragment" -->
+*   [ ] Sabe abrir um Pull Request descritivo. <!-- .element: class="fragment" -->
+
+---
+
+## 📝 Prática de Hoje
+1.  Criar um Repo Público no GitHub.
+2.  Conectar seu projeto local e fazer Push.
+3.  Editar online, fazer Pull local.
+4.  Simular um PR com um colega.
+
+---
+
+## 🏁 Dúvidas?
+O código agora é global! 🌎🚀

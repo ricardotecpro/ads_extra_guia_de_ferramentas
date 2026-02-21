@@ -1,130 +1,151 @@
-# Aula 03 - Modelagem de APIs RESTful 📡
-## Recursos, Verbos e Contratos
+# Aula 03: Ambiente de Desenvolvimento 💻
 
 ---
 
-## Agenda 📅
-
-1. O que é REST? { .fragment }
-2. Recursos e URIs { .fragment }
-3. Verbos HTTP (GET, POST, PUT...) { .fragment }
-4. Status Codes { .fragment }
-5. JSON: A Linguagem das APIs { .fragment }
-6. Boas Práticas de Design { .fragment }
+## 🎯 Nosso Foco
+*   Dominar o VS Code.
+*   Configurar extensões essenciais.
+*   Navegar pelo Terminal com confiança.
+*   Customizar seu workflow.
 
 ---
 
-## 1. REST: A "Língua" da Web 🌐
-
-- Style arquitetural para sistemas distribuídos. { .fragment }
-- Baseado no protocolo **HTTP**. { .fragment }
-- Independência entre Client e Server. { .fragment }
-
----
-
-## Princípios REST
-
-- **Stateless**: Cada requisição é única. { .fragment }
-- **Uniform Interface**: Padrões compartilhados. { .fragment }
-- **Cacheable**: Melhore a performance. { .fragment }
+## 🏗️ Por que investir no ambiente?
+*   Menos tempo configurando, mais tempo criando. { .fragment }
+*   Erros capturados antes de rodar o código. { .fragment }
+*   Saúde ocular e mental (Temas e Fontes). { .fragment }
+*   **Seu computador é sua oficina!** { .fragment }
 
 ---
 
-## 2. Identificando Recursos 📍
-
-- Um recurso é qualquer coisa que expomos. { .fragment }
-- **URI**: O endereço do recurso. { .fragment }
-
-### O que NÃO fazer:
-`GET /obterUsuarios` ❌
-
-### O que fazer:
-`GET /usuarios` ✅ (Sempre substantivos no plural!)
+## 🟦 VS Code: O Rei dos Editores
+*   Lançado pela Microsoft em 2015. { .fragment }
+*   Escrito em TypeScript/Electron. { .fragment }
+*   Arquitetura de plugins leve. { .fragment }
+*   **Standard de mercado.** { .fragment }
 
 ---
 
-## 3. Os Verbos HTTP 🛠️
-
-Eles definem a intenção da chamada:
-
-- **GET**: Buscar dados. { .fragment }
-- **POST**: Criar novo dado. { .fragment }
-- **PUT**: Atualizar (Trocar tudo). { .fragment }
-- **PATCH**: Atualizar (Apenas um pedaço). { .fragment }
-- **DELETE**: Remover dado. { .fragment }
+## 🎨 Personalização Visual
+*   **Temas**: Dracula, One Dark Pro, Night Owl. { .fragment }
+*   **Ícones**: Material Icon Theme, vscode-icons. { .fragment }
+*   **Fontes**: Fira Code, JetBrains Mono (Ligatures). { .fragment }
 
 ---
 
-## Idempotência e Segurança
-
-| Verbo | Seguro? | Idempotente? |
-| :--- | :--- | :--- |
-| GET | Sim ✅ | Sim ✅ |
-| POST | Não ❌ | Não ❌ |
-| PUT | Não ❌ | Sim ✅ |
-| DELETE | Não ❌ | Sim ✅ |
+## 🔌 Extensões: Produtividade Pura
+1.  **Prettier**: Formatação automática. { .fragment }
+2.  **ESLint**: Análise de código em tempo real. { .fragment }
+3.  **GitLens**: Quem escreveu essa linha? { .fragment }
+4.  **Error Lens**: Erros destacados na linha. { .fragment }
 
 ---
 
-## 4. Status Codes: A Resposta 🚦
-
-- **2xx**: Deu certo! (200, 201, 204). { .fragment }
-- **4xx**: Você (cliente) errou algo (400, 401, 404). { .fragment }
-- **5xx**: Eu (servidor) quebrei (500, 503). { .fragment }
+## 🔌 Extensões: Utilidades
+5.  **Path Intellisense**: Auto-completar caminhos de arquivos. { .fragment }
+6.  **Auto Close/Rename Tag**: Agilidade no HTML. { .fragment }
+7.  **Thunder Client**: Testar APIs dentro do editor. { .fragment }
 
 ---
 
-## 5. O Formato JSON 🏗️
+## ⌨️ Atalhos do VS Code (Ninja Mode)
+*   `Ctrl + P`: Abrir arquivo rapidamente. { .fragment }
+*   `Ctrl + Shift + P`: Paleta de comandos. { .fragment }
+*   `Alt + Up/Down`: Mover linha de lugar. { .fragment }
+*   `Ctrl + D`: Selecionar próxima ocorrência. { .fragment }
 
-```json
-{
-  "nome": "Curso Backend",
-  "modulo": 1,
-  "ativo": true
-}
+---
+
+## ⌨️ Atalhos do VS Code (Edição)
+*   `Ctrl + /`: Comentar bloco de código. { .fragment }
+*   `Ctrl + B`: Esconder barra lateral. { .fragment }
+*   `Ctrl + '`: Abrir/Fechar Terminal. { .fragment }
+*   `Ctrl + \`: Dividir o editor (Split View). { .fragment }
+
+---
+
+## 🖥️ O Terminal Integrado
+```mermaid
+graph TD
+    Editor[Editor de Texto] -- Atalho Ctrl + ' --> Term[Terminal Integrado]
+    Term -- Executa --> Node[Node.js / Python]
+    Term -- Comanda --> Git[Git / Docker]
 ```
 
-- Leve, legível e universal. { .fragment }
+---
+
+## 🏠 Navegação de Diretórios
+*   `pwd`: Print Working Directory (Onde estou?). { .fragment }
+*   `ls -la`: Listar tudo (inclusive ocultos). { .fragment }
+*   `cd ..`: Voltar uma pasta. { .fragment }
+*   `cd ~`: Ir para a Home. { .fragment }
 
 ---
 
-## 6. Design de URIs Complexas
-
-Como buscar os pedidos de um usuário específico?
-
-`GET /usuarios/123/pedidos` ✅
-
-- Hierarquia lógica e limpa. { .fragment }
+## 🔨 Manipulação de Arquivos
+*   `touch index.js`: Criar arquivo vazio. { .fragment }
+*   `mkdir src`: Criar pasta "src". { .fragment }
+*   `mv velho.js novo.js`: Renomear. { .fragment }
+*   `rm -rf pasta`: Deletar recursivamente (CUIDADO!). { .fragment }
 
 ---
 
-## 7. Prática: Postman em Ação 💻
-
-- Testando verbos em APIs reais. { .fragment }
-- Analisando Headers e Body. { .fragment }
-
----
-
-## Desafio REST ⚡
-
-Se você quer mudar apenas o e-mail de um usuário, qual verbo deve usar: PUT ou PATCH?
+## 🔍 Gerenciamento de Conteúdo
+*   `cat file.txt`: Ver conteúdo no terminal. { .fragment }
+*   `grep "erro" log.txt`: Buscar texto dentro do arquivo. { .fragment }
+*   `echo "olá" > file.txt`: Escrever no arquivo. { .fragment }
 
 ---
 
-## Resumo ✅
-
-- REST é sobre recursos e padrões. { .fragment }
-- URIs usam substantivos no plural. { .fragment }
-- Status codes guiam o frontend. { .fragment }
-- JSON é o padrão de facto. { .fragment }
-
----
-
-## Próxima Aula: Swagger e Mocks 📝
-
-- Documentação automática. { .fragment }
-- Como trabalhar sem o backend pronto? { .fragment }
+## 💡 Dica de Ouro: Alias
+Você pode criar apelidos para comandos longos!
+*   `gs` -> `git status` { .fragment }
+*   `ga` -> `git add .` { .fragment }
+*   `gc` -> `git commit -m` { .fragment }
 
 ---
 
-## Dúvidas? 📡
+## 🐚 Alternativas de Terminal
+*   **Windows**: WSL2 (Linux no Windows), PowerShell 7. { .fragment }
+*   **Mac/Linux**: Zsh (Oh My Zsh), Fish Shell. { .fragment }
+
+---
+
+## 🛠️ Configurando o `settings.json`
+Tudo no VS Code é texto!
+*   Acesse com `Ctrl + Shift + P` > `Open User Settings (JSON)`. { .fragment }
+*   Sincronize suas configurações com o GitHub. { .fragment }
+
+---
+
+## 📈 Autocomplete (IntelliSense)
+*   Sugestões baseadas no contexto. { .fragment }
+*   Documentação rápida ao passar o mouse. { .fragment }
+*   **Snippets**: Pedaços de código prontos. { .fragment }
+
+---
+
+## 🦁 Debugging Diferenciado
+*   Pare de usar `console.log` para tudo! { .fragment }
+*   Use Breakpoints (pontos de parada). { .fragment }
+*   Inspecione variáveis em tempo real no editor. { .fragment }
+
+---
+
+## 🏆 Checklist do Ambiente Pro
+*   [ ] Tema escuro configurado. { .fragment }
+*   [ ] Extensões de linting e format instaladas. { .fragment }
+*   [ ] Atalhos básicos memorizados. { .fragment }
+*   [ ] Terminal configurado com `zsh` ou `pwsh`. { .fragment }
+
+---
+
+## 📝 Prática de Hoje
+1.  Customizar seu VS Code.
+2.  Criar uma estrutura de 3 pastas via Terminal.
+3.  Configurar o Auto-Format ao Salvar.
+
+---
+
+## 🏁 Dúvidas?
+Seu ambiente, suas regras! 🚀
