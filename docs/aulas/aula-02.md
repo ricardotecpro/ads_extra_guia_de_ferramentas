@@ -10,7 +10,12 @@
 Um projeto de software moderno envolve centenas de tarefas, bugs e melhorias. Sem uma ferramenta de gestão, a equipe se perde em e-mails e mensagens de chat.
 
 ### 🧠 Conceito: Gestão Ágil
-A maioria das ferramentas modernas baseia-se em metodologias ágeis (Agile), focadas em entregas rápidas, feedback constante e transparência.
+
+=== "Teoria"
+    A maioria das ferramentas modernas baseia-se em metodologias ágeis (Agile). Diferente do modelo Cascata, o Agile foca em ciclos curtos de entrega (Sprints), feedback constante do cliente e transparência total sobre o que cada membro está desenvolvendo, garantindo previsibilidade.
+    
+=== "Prática"
+    Nas dailys (reuniões diárias de 15 minutos), a equipe se reúne em frente ao quadro Kanban para responder: **O que eu fiz ontem? O que farei hoje? Existe algum impedimento bloqueando a minha tarefa?**
 
 ---
 
@@ -41,11 +46,12 @@ O Kanban é a forma mais comum de visualizar o trabalho. Consiste em colunas que
 
 ```mermaid
 graph TD
-    A[Criar Tarefa] --> B{Em Execução?}
-    B -- Sim --> C[Desenvolvimento]
+    A([Criar Tarefa]) --> B{Em Execução?}
+    B -- Sim --> C([Desenvolvimento])
     B -- Não --> A
-    C --> D[Revisão de Código]
-    D --> E[Concluído]
+    C --> D([Revisão de Código])
+    D --> E([Concluído])
+
     
     subgraph "Estados Kanban"
     A
@@ -64,6 +70,7 @@ graph TD
 
 Vamos simular a criação de uma tarefa no terminal, algo comum em ferramentas que possuem CLI ou integrações:
 
+<div class="termy" markdown="1">
 ```termynal
 $ jira issue create --summary "Configurar ambiente de dev" --priority High
 Issue ADS-101 created successfully.
@@ -72,6 +79,7 @@ ID       Summary                      Priority
 ADS-101  Configurar ambiente de dev   High
 ADS-99   Estudar Git                  Medium
 ```
+</div>
 
 ---
 

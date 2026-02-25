@@ -10,7 +10,12 @@
 No passado, para criar um servidor, um técnico precisava configurar tudo manualmente: instalar o Linux, o banco de dados, as senhas, etc. Se precisasse de 10 servidores, ele repetia o processo 10 vezes.
 
 ### 🧠 Conceito: Infraestrutura como Código (IaC)
-É a prática de gerenciar e provisionar a infraestrutura através de arquivos de definição (código), em vez de processos manuais ou ferramentas interativas.
+
+=== "Manual vs Automatizado"
+    O provisionamento manual envolve dezenas de cliques em painéis como AWS ou Azure. Quando a empresa cresce e precisa de 100 servidores idênticos, a chance de erro humano (configuração esquecida, porta aberta, versão errada) beira os 100%.
+
+=== "Reprodutibilidade"
+    Com **IaC**, a infraestrutura vira um script de texto versionado no Git. Se um servidor queimar, basta apertar "Run" novamente e um gêmeo idêntico subirá em minutos. Do mesmo modo, se um desenvolvedor injetar uma falha na infra, o time poderá simplesmente revogar (reverter) o *commit* no código de infraestrutura.
 
 ---
 
@@ -34,10 +39,10 @@ Enquanto o Terraform "constrói o prédio" (servidor), o **Ansible** entra para 
 
 ```mermaid
 graph TD
-    Code[Arquivo de Definição] --> TF[Terraform: Cria o Servidor]
-    TF --> Server[Servidor Vazio]
-    Server --> ANS[Ansible: Instala Node/Nginx]
-    ANS --> Prod[Servidor Pronto para Uso]
+    Code([Arquivo de Definição]) --> TF([Terraform: Cria o Servidor])
+    TF --> Server([Servidor Vazio])
+    Server --> ANS([Ansible: Instala Node/Nginx])
+    ANS --> Prod([Servidor Pronto para Uso])
 ```
 
 ---
@@ -45,6 +50,12 @@ graph TD
 ## 4. O Arquivo Ansible (Exemplo) 📄
 
 Mesmo sem rodar, veja como é simples descrever uma instalação de servidor:
+
+<div class="termy" markdown="1">
+```termynal
+$ ansible-playbook playbook.yml
+```
+</div>
 
 ```yaml
 ---

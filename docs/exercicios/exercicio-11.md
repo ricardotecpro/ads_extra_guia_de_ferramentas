@@ -19,3 +19,7 @@
 ### 🔴 Desafio (Exploração)
 
 5.  **Matriz de Testes**: Pesquise o que é uma "Build Matrix" no GitHub Actions. Como ela permite que você teste seu código em várias versões do Windows, Linux e Mac simultaneamente com um único arquivo?
+
+---
+
+[**🔍 Ver Solução e Lógica do Exercício**](./solucao-11.md)

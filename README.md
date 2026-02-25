@@ -1,10 +1,10 @@
 # Guia de Ferramentas para Desenvolvedores 🛠️
 
-[![Build Status](https://github.com/ricardotecpro/ads_extra_guia_de_ferramentas/actions/workflows/ci.yml/badge.svg)](https://github.com/ricardotecpro/ads_extra_guia_de_ferramentas/actions)
+[![Build Status](https://github.com/ricardotecpro/ads_extra_ferramentas_para_projetos/actions/workflows/ci.yml/badge.svg)](https://github.com/ricardotecpro/ads_extra_ferramentas_para_projetos/actions)
 
 Este repositório contém o material completo do curso **Guia de Ferramentas**, parte da trilha ADS Extra. O curso foca nas ferramentas indispensáveis para o mercado de tecnologia moderno, desde a gestão ágil até a infraestrutura como código.
 
-🔗 **Acesse o curso online**: [https://ricardotecpro.github.io/ads_extra_guia_de_ferramentas](https://ricardotecpro.github.io/ads_extra_guia_de_ferramentas)
+🔗 **Acesse o curso online**: [https://ricardotecpro.github.io/ads_extra_ferramentas_para_projetos](https://ricardotecpro.github.io/ads_extra_ferramentas_para_projetos)
 
 ---
 

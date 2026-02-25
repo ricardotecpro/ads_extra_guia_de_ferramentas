@@ -10,9 +10,12 @@
 Nem todo dado se encaixa bem em linhas e colunas rígidas. Para dados flexíveis e que precisam escalar rapidamente, usamos o **NoSQL (Not Only SQL)**.
 
 ### 📄 Orientado a Documentos (MongoDB)
-Em vez de tabelas, usamos **Coleções** e **Documentos** (muito parecidos com arquivos JSON).
-*   **Flexibilidade**: Um documento de "Produto" pode ter campos diferentes de outro no mesmo banco.
-*   **Escalabilidade**: Muito fácil de distribuir entre vários servidores.
+
+=== "A Estrutura"
+    Em vez de tabelas rigorosas, usamos **Coleções**, que armazenam **Documentos**. Esses documentos se assemelham a objetos JSON na estrutura de chave-valor.
+    
+=== "Escalonamento"
+    Ao dispensar "joins" complexos e predefinir que um mesmo Produto A pode ter especificações ausentes no Produto B, o MongoDB facilita muito o **sharding** — ou seja, espalhar os dados horizontalmente por dezenas de discos diferentes.
 
 ---
 
@@ -56,6 +59,7 @@ sequenceDiagram
 
 ## 4. Praticando com Redis no Terminal 💻
 
+<div class="termy" markdown="1">
 ```termynal
 $ redis-cli
 127.0.0.1:6379> SET saudacao "Olá Mundo"
@@ -66,6 +70,7 @@ OK
 (integer) 1
 # (Apaga o dado automaticamente em 10 segundos)
 ```
+</div>
 
 ---
 

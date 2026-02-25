@@ -13,3 +13,7 @@
 ### 🔴 Desafio (Exploração)
 
 5.  **Performance de Consulta**: Se uma tabela de `Vendas` tiver 10 milhões de linhas, a busca por uma data específica pode ficar lenta. Pesquise o que é um **Índice (Index)** em bancos de dados SQL e como ele ajuda a acelerar essa busca.
+
+---
+
+[**🔍 Ver Solução e Lógica do Exercício**](./solucao-06.md)

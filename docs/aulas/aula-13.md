@@ -10,7 +10,12 @@
 Este é o pesadelo de todo desenvolvedor. Um código que funciona no seu computador, mas quebra quando vai para o servidor porque a versão do banco de dados ou do Node.js é diferente.
 
 ### 🧠 Conceito: Contêineres
-Um contêiner é uma unidade padrão de software que empacota o código e todas as suas dependências para que a aplicação seja executada de forma rápida e confiável em qualquer ambiente.
+
+=== "Virtualização Clássica"
+    Antigamente, para isolar um sistema, criava-se uma Máquina Virtual (VM) pesada, com seu próprio Sistema Operacional completo (Linux/Windows), sugando dezenas de Gigabytes e minutos de RAM apenas para ligar.
+    
+=== "A Era dos Contêineres"
+    Contêineres empacotam apenas o código e bibliotecas essenciais, compartilhando de forma inteligente o "kernel" do sistema operacional hospedeiro. Isso garante inicialização instantânea e economia brutal de recursos.
 
 ---
 
@@ -26,16 +31,14 @@ O **Docker** é a plataforma líder mundial em contêineres.
 ```mermaid
 graph TD
     subgraph "Máquina Virtual (Lenta)"
-        App1[App 1] --- GuestSO1[SO Completo]
-        GuestSO1 --- Hyper[Hypervisor]
+        App1([App 1]) --- GuestSO1([SO Completo])
+        GuestSO1 --- Hyper([Hypervisor])
     end
     subgraph "Docker (Rápido)"
-        App2[App 2] --- Engine[Docker Engine]
-        Engine --- HostSO[Host SO Kernel]
+        App2([App 2]) --- Engine([Docker Engine])
+        Engine --- HostSO([Host SO Kernel])
     end
 ```
-
----
 
 ## 3. Docker Compose: Multi-Serviços 🎼
 
@@ -58,6 +61,7 @@ services:
 
 ## 4. Praticando no Terminal 💻
 
+<div class="termy" markdown="1">
 ```termynal
 $ docker build -t meu-app .
 # (Cria a imagem a partir do Dockerfile)
@@ -67,6 +71,7 @@ $ docker ps
 CONTAINER ID   IMAGE      STATUS          PORTS
 a1b2c3d4e5f6   meu-app    Up 5 minutes    0.0.0.0:8080->80/tcp
 ```
+</div>
 
 ---
 

@@ -13,3 +13,7 @@
 ### 🔴 Desafio (Exploração)
 
 5.  **Contribuição Open Source**: Vá até um repositório famoso de código aberto no GitHub (ex: React, VS Code ou Vue) e clique na aba "Pull Requests". Tente encontrar um PR que foi aceito e um que foi rejeitado. Identifique nos comentários qual foi o feedback dado pelos revisores.
+
+---
+
+[**🔍 Ver Solução e Lógica do Exercício**](./solucao-05.md)

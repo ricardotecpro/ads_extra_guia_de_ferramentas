@@ -13,3 +13,7 @@
 ### 🔴 Desafio (Exploração)
 
 5.  **DevOps na Prática**: Pesquise como o Terraform e o Ansible podem ser usados dentro de uma pipeline do GitHub Actions (Aula 11) para criar e configurar um servidor de forma 100% automática a cada novo release.
+
+---
+
+[**🔍 Ver Solução e Lógica do Exercício**](./solucao-12.md)

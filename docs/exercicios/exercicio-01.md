@@ -13,3 +13,7 @@
 ### 🔴 Desafio (Exploração)
 
 5.  **Análise de Mercado**: Escolha uma grande empresa de tecnologia (ex: Netflix, Uber ou Airbnb) e pesquise sobre o "StackShare" ou "Engineering Blog" dela. Liste pelo menos 5 ferramentas que eles utilizam em seu ecossistema e tente identificar em qual categoria de aula elas se encaixam.
+
+---
+
+[**🔍 Ver Solução e Lógica do Exercício**](./solucao-01.md)

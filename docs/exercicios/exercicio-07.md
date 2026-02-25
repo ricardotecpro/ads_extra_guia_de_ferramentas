@@ -13,3 +13,7 @@
 ### 🔴 Desafio (Exploração)
 
 5.  **Arquitetura Híbrida**: É muito comum empresas usarem PostgreSQL e Redis juntos. Explique como essas duas ferramentas "conversam" em um sistema onde o Postgres é a fonte da verdade e o Redis é a camada de velocidade.
+
+---
+
+[**🔍 Ver Solução e Lógica do Exercício**](./solucao-07.md)

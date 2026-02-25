@@ -10,7 +10,12 @@
 Software sem testes é uma bomba relógio. À medida que o código cresce, mudar uma linha pode quebrar algo que já estava funcionando.
 
 ### 🧠 Conceito: Regressão
-Testes automatizados servem para evitar a **regressão**: garantir que as funcionalidades antigas continuem funcionando após a chegada de novas alterações.
+
+=== "Riscos"
+    Na engenharia, um pequeno *hotfix* numa função utilitária pode desencadear uma reação em cadeia oculta. Se os desenvolvedores precisarem testar a tela toda a vez que o código muda, perde-se eficiência e confiabilidade.
+    
+=== "A Rede de Proteção"
+    Testes automatizados evitam a **regressão**. Eles processam as regras de negócio em frações de segundos garantindo que um módulo continue retornando o que você esperava antes de aprovar uma mudança nova.
 
 ---
 
@@ -26,8 +31,8 @@ Nem todos os testes são iguais. Os desenvolvedores seguem a **Pirâmide de Test
 
 ```mermaid
 graph TD
-    UI[Testes E2E / UI] -- Lento/Caro --- INT[Testes de Integração]
-    INT --- UNIT[Testes Unitários]
+    UI([Testes E2E / UI]) -- Lento/Caro --- INT([Testes de Integração])
+    INT --- UNIT([Testes Unitários])
     UNIT -- Rápido/Barato --- UNIT
 ```
 
@@ -60,6 +65,7 @@ Alguns desenvolvedores preferem escrever o teste **antes** do código. Este proc
 
 Simulando a execução de um teste com o Jest:
 
+<div class="termy" markdown="1">
 ```termynal
 $ npm test
 > jest
@@ -74,6 +80,7 @@ Snapshots:   0 total
 Time:        1.2 s
 Ran all test suites.
 ```
+</div>
 
 ---
 

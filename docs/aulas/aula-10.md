@@ -10,7 +10,12 @@
 Não basta o código "funcionar". Para que um projeto dure anos e seja mantido por várias pessoas, ele precisa ser legível e seguir padrões.
 
 ### 🧩 Análise Estática
-É o processo de ler o código sem executá-lo para encontrar problemas. Ferramentas de análise estática são como "corretores ortográficos" para programadores.
+
+=== "Prevenção"
+    Ferramentas de análise estática são o primeiro filtro de qualidade de um time. Elas leem seu código antes mesmo de você tentar rodá-lo (sem executá-lo), detectando anomalias e *code smells* (códigos mal estruturados).
+    
+=== "A Regra de Ouro"
+    As regras são configuráveis. O time decide que "Toda função deve ter limite de 20 linhas" ou "Ninguém pode usar aspas duplas". O *Linter* se torna o policial automático que barra códigos fora do padrão no GitHub.
 
 ---
 
@@ -32,11 +37,11 @@ O Formatter deixa o código bonito; o Linter garante que ele está correto e seg
 
 ```mermaid
 graph TD
-    Code[Escrever Código] --> Lint[Executar Linter]
-    Lint -- Erro Encontrado --> Fix[Corrigir Lógica]
+    Code([Escrever Código]) --> Lint([Executar Linter])
+    Lint -- Erro Encontrado --> Fix([Corrigir Lógica])
     Fix --> Lint
-    Lint -- OK --> Format[Executar Formatter]
-    Format --> Clean[Código Limpo e Padronizado]
+    Lint -- OK --> Format([Executar Formatter])
+    Format --> Clean([Código Limpo e Padronizado])
 ```
 
 ---
@@ -45,6 +50,7 @@ graph TD
 
 Simulando o uso do ESLint para encontrar erros e do Prettier para formatar:
 
+<div class="termy" markdown="1">
 ```termynal
 $ npx eslint index.js
 # index.js
@@ -53,6 +59,7 @@ $ npx eslint index.js
 $ npx prettier --write index.js
 index.js 220ms (formatted)
 ```
+</div>
 
 ---
 

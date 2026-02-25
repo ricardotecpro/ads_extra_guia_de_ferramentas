@@ -10,7 +10,13 @@
 No desenvolvimento moderno, escrever código é apenas uma parte do trabalho. Para entregar software de forma eficiente, segura e colaborativa, utilizamos um conjunto de ferramentas que formam o nosso **ecossistema de desenvolvimento**.
 
 ### 🧠 Conceito: O Cinto de Utilidades do Dev
-Assim como um marceneiro precisa de martelos, serras e fitas métricas, um desenvolvedor de software utiliza IDEs, sistemas de controle de versão e plataformas de automação para aumentar sua produtividade e reduzir erros.
+
+=== "Teoria"
+    Assim como um marceneiro precisa de ferramentas especializadas para diferentes cortes e acabamentos, o ciclo de vida do software exige plataformas dedicadas. IDEs, controle de versão e pipelines formam uma cadeia de valor onde a saída de uma ferramenta alimenta a entrada da próxima.
+    
+=== "Prática"
+    No seu dia a dia profissional, você não abrirá apenas o VS Code. Seu fluxo será: **Ler a Issue no Jira -> Criar branch no Git -> Escrever Código no VS Code -> Testar com Jest -> Subir um Pull Request no GitHub -> Ver o CI/CD (Actions) validar seu código**.
+
 
 ---
 
@@ -29,13 +35,13 @@ Podemos dividir as ferramentas essenciais em grandes blocos:
 
 ```mermaid
 graph LR
-    Plan[Planejamento] --> Dev[Desenvolvimento]
-    Dev --> Test[Testes]
-    Test --> Deploy[Deploy/Produção]
-    Deploy --> Monitor[Monitoramento]
+    Plan([Planejamento]) --> Dev([Desenvolvimento])
+    Dev --> Test([Testes])
+    Test --> Deploy([Deploy/Produção])
+    Deploy --> Monitor([Monitoramento])
     Monitor --> Plan
     
-    subgraph "Ferramentas"
+    subgraph Ferramentas
     Plan -.-> Jira
     Dev -.-> VSCode
     Test -.-> Postman
@@ -58,6 +64,7 @@ Uma das metas deste curso é ensinar você a parar de fazer tarefas repetitivas 
 
 Quase todas as ferramentas profissionais possuem uma interface de linha de comando (CLI). Dominar o terminal é o primeiro passo para se tornar um desenvolvedor avançado.
 
+<div class="termy" markdown="1">
 ```termynal
 $ echo "Bem-vindo ao Guia de Ferramentas!"
 Bem-vindo ao Guia de Ferramentas!
@@ -66,6 +73,7 @@ git version 2.40.1
 $ docker --version
 Docker version 24.0.2
 ```
+</div>
 
 ---
 

@@ -13,3 +13,7 @@
 ### 🔴 Desafio (Exploração)
 
 5.  **Mocks e Dublês**: Pesquise o que é um **Mock** (ou dublê de teste). Como você usaria um Mock para testar uma função que envia e-mails reais, sem realmente disparar e-mails toda vez que o teste rodar?
+
+---
+
+[**🔍 Ver Solução e Lógica do Exercício**](./solucao-08.md)

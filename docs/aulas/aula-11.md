@@ -7,10 +7,13 @@
 
 ## 1. O que é CI/CD? 🔄
 
-Em vez de rodar testes e linters manualmente na sua máquina, deixamos que um servidor faça isso por nós sempre que enviamos uma mudança.
+Em vez de rodar testes e linters manualmente na sua máquina local, a nuvem assume a responsabilidade após cada interação no controle de versão.
 
-*   **CI (Continuous Integration)**: Integrar código de vários devs com frequência, rodando testes automáticos para garantir que nada "quebrou".
-*   **CD (Continuous Deployment)**: Se os testes passaram, enviar o código automaticamente para o servidor de produção ou homologação.
+=== "CI (Integração Contínua)"
+    Integrar e validar o código de dezenas de desenvolvedores repetidas vezes ao dia. O servidor "puxa" o código, roda os linters, compila (build) e dispara centenas de testes unitários. Se algo quebrar, o pull request é bloqueado.
+    
+=== "CD (Entrega/Deploy Contínuo)"
+    Uma vez que os testes garantem que o software está estável (CI passou), o processo de CD empacota esse aplicativo e o instale automaticamente nos servidores hospedados de teste ou de produção, sem intervenção humana.
 
 ---
 
@@ -30,13 +33,13 @@ O GitHub Actions é a ferramenta de CI/CD integrada ao GitHub. Ele funciona atra
 
 ```mermaid
 graph LR
-    Push[Git Push] --> Trigger{GitHub Event}
-    Trigger --> VM[Spin up Virtual Machine]
-    VM --> Install[npm install]
-    Install --> Lint[npx eslint .]
-    Lint --> Test[npm test]
-    Test -- Success --> Deploy[Auto Deploy]
-    Test -- Failure --> Notify[Notificar Developer]
+    Push([Git Push]) --> Trigger{GitHub Event}
+    Trigger --> VM([Spin up Virtual Machine])
+    VM --> Install([npm install])
+    Install --> Lint([npx eslint .])
+    Lint --> Test([npm test])
+    Test -- Success --> Deploy([Auto Deploy])
+    Test -- Failure --> Notify([Notificar Developer])
 ```
 
 ---
@@ -65,6 +68,7 @@ jobs:
 
 Imagine o terminal do servidor do GitHub executando seu workflow:
 
+<div class="termy" markdown="1">
 ```termynal
 $ runner-ci --start
 Starting Workflow: Node.js CI
@@ -76,6 +80,7 @@ Step 4: Running npm test...
  PASS  test/db.test.js
 Step 5: All tests passed! Pipeline completed.
 ```
+</div>
 
 ---
 

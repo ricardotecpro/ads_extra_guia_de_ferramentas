@@ -13,3 +13,7 @@
 ### 🔴 Desafio (Exploração)
 
 5.  **Simulação de Conflito**: Em um quadro de equipe, dois desenvolvedores movem a mesma tarefa para "Em Execução" ao mesmo tempo. Como uma ferramenta como o Jira ajuda a evitar ou resolver esse tipo de confusão na organização do trabalho?
+
+---
+
+[**🔍 Ver Solução e Lógica do Exercício**](./solucao-02.md)

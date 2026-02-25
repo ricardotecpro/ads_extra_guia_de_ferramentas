@@ -13,3 +13,7 @@
 ### 🔴 Desafio (Exploração)
 
 5.  **O Desastre do .git**: O que acontece se você apagar acidentalmente a pasta oculta `.git` de um projeto que já tinha 50 commits? Os arquivos atuais somem? O histórico pode ser recuperado localmente? Justifique.
+
+---
+
+[**🔍 Ver Solução e Lógica do Exercício**](./solucao-04.md)

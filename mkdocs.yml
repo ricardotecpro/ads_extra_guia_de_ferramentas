@@ -1,7 +1,7 @@
 site_name: Guia de Ferramentas - ADS Extra
-site_url: https://ricardotecpro.github.io/ads_extra_guia_de_ferramentas
-repo_url: https://github.com/ricardotecpro/ads_extra_guia_de_ferramentas
-repo_name: ricardotecpro/ads_extra_guia_de_ferramentas
+site_url: https://ricardotecpro.github.io/ads_extra_ferramentas_para_projetos
+repo_url: https://github.com/ricardotecpro/ads_extra_ferramentas_para_projetos
+repo_name: ricardotecpro/ads_extra_ferramentas_para_projetos
 theme:
   name: material
   language: pt-BR
@@ -17,134 +17,8 @@ theme:
     - navigation.top
     - navigation.footer
     - navigation.indexes
-    - toc.follow
-    - content.code.copy
-    - content.code.annotate
-    - search.suggest
-    - search.highlight
-    - search.share
-  palette:
-    # Light Mode (Default)
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: teal
-      accent: amber
-      toggle:
-        icon: material/weather-sunny
-        name: Mudar para modo escuro
-    # Dark Mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: teal
-      accent: amber
-      toggle:
-        icon: material/weather-night
-        name: Mudar para modo claro
-  icon:
-    repo: fontawesome/brands/github
-
-markdown_extensions:
-  - pymdownx.critic
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.details
-  - pymdownx.keys
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - footnotes
-  - admonition
-  - attr_list
-  - md_in_html
-  - tables
-  - pymdownx.snippets:
-      base_path: docs
-  - pymdownx.arithmatex:
-      generic: true
-
-
-plugins:
-  - search:
-      lang: pt
-  - mkdocs-jupyter
-  - glightbox
-  - mkdocs_quiz
-  - git-authors:
-      show_contribution: true
-      show_line_count: true
-      count_empty_lines: false
-      fallback_to_empty: false
-      sort_authors_by: contribution
-      authorship_threshold_percent: 10
-      exclude:
-        - index.md
-  - git-revision-date-localized:
-      enable_creation_date: true
-      type: datetime
-      enable_git_follow: false
-  - macros
-  - mkdocs-video
-  - termynal:
-      title: shell
-      buttons: macos
-      prompt_literal_start:
-        - "$"
-  - rss:
-      match_path: .*
-      date_from_meta:
-        datetime_format: '%Y-%m-%d %H:%M:%S'
-  - print-site:
-      add_to_navigation: false
-      # print_page_rel_path: 'print_page.md' # Deprecated or invalid
-      print_page_title: 'Versão para Impressão'
-      add_print_site_banner: false
-      enumerate_headings: false
-      enumerate_figures: false
-
-hooks:
-  - hooks/copy_slides.py
-
-extra_css:
-  - assets/css/quiz.css
-  - assets/css/home.css
-  - assets/css/extra.css
-  - https://cdn.jsdelivr.net/npm/termynal/termynal.css
-
-extra_javascript:
-  - assets/js/quiz.js
-  - https://unpkg.com/mermaid@11.12.3/dist/mermaid.min.js
-  - assets/js/mermaid-init.js
-  - assets/js/custom_termynal.js
-  - assets/js/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - https://cdn.jsdelivr.net/npm/termynal/termynal.min.js
-
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/ricardotecpro
-    - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/in/ricardotecpro
-    - icon: fontawesome/solid/globe
-      link: https://ricardotecpro.github.io/
-  version:
-    provider: mike
-    default: estavel
-
 nav:
-  - Início: index.md
+  - Guia de Ferramentas: index.md
   - Plano de Ensino: plano-ensino.md
   - Aulas:
       - 'Índice': aulas/index.md
@@ -182,6 +56,23 @@ nav:
       - 'Ex 14': exercicios/exercicio-14.md
       - 'Ex 15': exercicios/exercicio-15.md
       - 'Ex 16': exercicios/exercicio-16.md
+  - Gabaritos (Exercícios):
+      - 'Gabarito 01': exercicios/solucao-01.md
+      - 'Gabarito 02': exercicios/solucao-02.md
+      - 'Gabarito 03': exercicios/solucao-03.md
+      - 'Gabarito 04': exercicios/solucao-04.md
+      - 'Gabarito 05': exercicios/solucao-05.md
+      - 'Gabarito 06': exercicios/solucao-06.md
+      - 'Gabarito 07': exercicios/solucao-07.md
+      - 'Gabarito 08': exercicios/solucao-08.md
+      - 'Gabarito 09': exercicios/solucao-09.md
+      - 'Gabarito 10': exercicios/solucao-10.md
+      - 'Gabarito 11': exercicios/solucao-11.md
+      - 'Gabarito 12': exercicios/solucao-12.md
+      - 'Gabarito 13': exercicios/solucao-13.md
+      - 'Gabarito 14': exercicios/solucao-14.md
+      - 'Gabarito 15': exercicios/solucao-15.md
+      - 'Gabarito 16': exercicios/solucao-16.md
   - Projetos:
       - 'Índice': projetos/index.md
       - 'Proj 01': projetos/projeto-01.md

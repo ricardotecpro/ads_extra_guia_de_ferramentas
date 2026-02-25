@@ -13,3 +13,7 @@
 ### 🔴 Desafio (Exploração)
 
 5.  **O Ecossistema K8s**: Pesquise o que é o **Minikube** ou o **Kind**. Como um estudante pode praticar Kubernetes no seu próprio computador pessoal sem pagar por um servidor na nuvem?
+
+---
+
+[**🔍 Ver Solução e Lógica do Exercício**](./solucao-14.md)

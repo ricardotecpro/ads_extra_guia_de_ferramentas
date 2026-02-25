@@ -10,7 +10,12 @@
 Quase toda aplicação precisa salvar informações permanentemente (usuários, pedidos, produtos). Para isso, usamos **Sistemas de Gerenciamento de Banco de Dados (SGBDs)**.
 
 ### 🧩 Modelo Relacional (SQL)
-É a base dos bancos de dados mais seguros e tradicionais. Os dados são organizados em **Tabelas**, que se relacionam entre si através de chaves.
+
+=== "Tabelas Rígidas"
+    O modelo SQL usa estruturação forte, em que cada coluna representa um atributo muito claro e inquebrável (Ex: ID, Nome, Email). Para organizar isso e mitigar a redundância de dados, divide-se em múltiplas tabelas que se "relacionam".
+    
+=== "Escopo"
+    No exemplo abaixo, as informações estão na Tabela `Usuarios`. Se este usuário realiza compras, não reescrevemos o nome/email na venda, mas guardamos uma referência apontando para o seu `ID`.
 
 | Exemplo de Tabela: `Usuarios` |
 | :--- | :--- | :--- |
@@ -47,9 +52,9 @@ Uma alternativa moderna, mais bonita e simples de usar, ideal para quem está co
 
 ```mermaid
 erDiagram
-    USUARIO ||--o{ PEDIDO : faz
-    PEDIDO ||--|{ ITEM_PEDIDO : contem
-    PRODUTO ||--o{ ITEM_PEDIDO : pertence
+    USUARIO ||--o{ PEDIDO : "faz"
+    PEDIDO ||--|{ ITEM_PEDIDO : "contem"
+    PRODUTO ||--o{ ITEM_PEDIDO : "pertence"
 ```
 
 ---
@@ -58,6 +63,7 @@ erDiagram
 
 Mesmo com ferramentas visuais, é bom conhecer o básico:
 
+<div class="termy" markdown="1">
 ```termynal
 $ psql -U postgres -d meu_banco
 psql (15.3)
@@ -68,6 +74,7 @@ meu_banco=# SELECT * FROM usuarios WHERE id = 1;
   1 | Ana Silva | ana@email.com
 (1 row)
 ```
+</div>
 
 ---
 

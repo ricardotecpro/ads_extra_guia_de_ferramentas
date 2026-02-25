@@ -15,9 +15,12 @@ São leves, rápidos e "nascem" simples. Você os torna poderosos através de ex
 *   **Desvantagens**: Exige configuração manual para algumas linguagens.
 
 ### 🏎️ IDEs - Ambientes Integrados (Ex: IntelliJ, PyCharm)
-São "tanques de guerra" que já vêm com tudo o que um dev precisa (debugger, profiler, integração db).
-*   **Vantagens**: Produtividade extrema para linguagens específicas (Java, Python, C#).
-*   **Desvantagens**: Pesadas, muitas vezes pagas e com curva de aprendizado maior.
+
+=== "Editores (Leveza)"
+    Editores transferem a responsabilidade da configuração para o desenvolvedor. Eles carregam em milissegundos, consomem pouca RAM e são perfeitos para stacks modernas focadas em JavaScript/TypeScript.
+    
+=== "IDEs (Poder Nativo)"
+    IDEs automatizam o *onboarding*. Ao criar um projeto Spring Boot (Java), a IDE já configura o *classpath*, baixa as dependências Maven, mapeia botões para o banco de dados e levanta as configurações de debug automaticamente. Seu custo é o alto consumo de recursos da máquina.
 
 ---
 
@@ -48,6 +51,7 @@ O terminal é onde a magia acontece. Ele permite automatizar tarefas que levaria
 
 ### Exemplo Prático de Fluxo no Terminal
 
+<div class="termy" markdown="1">
 ```termynal
 $ mkdir meu-projeto
 $ cd meu-projeto
@@ -57,6 +61,7 @@ index.html
 $ code . 
 # (Abre o projeto no VS Code)
 ```
+</div>
 
 ---
 
@@ -68,11 +73,11 @@ Muitos desenvolvedores profissionais (especialmente em Mac e Linux) utilizam o *
 
 ```mermaid
 graph TD
-    Dev[Desenvolvedor] --> OS[Sistema Operacional]
-    OS --> Shell[Terminal/Shell]
-    Shell --> ZSH[ZSH / Oh My Zsh]
-    OS --> Editor[VS Code]
-    Editor --> Ext[Extensões]
+    Dev([Desenvolvedor]) --> OS([Sistema Operacional])
+    OS --> Shell([Terminal/Shell])
+    Shell --> ZSH([ZSH / Oh My Zsh])
+    OS --> Editor([VS Code])
+    Editor --> Ext([Extensões])
     
     subgraph "Ambiente Local"
     Shell

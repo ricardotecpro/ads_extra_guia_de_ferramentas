@@ -13,3 +13,7 @@
 ### 🔴 Desafio (Exploração)
 
 5.  **Regras Customizadas**: Pesquise sobre a regra `no-console` do ESLint. Por que muitas empresas proíbem que o comando `console.log()` seja enviado para o código final em produção?
+
+---
+
+[**🔍 Ver Solução e Lógica do Exercício**](./solucao-10.md)

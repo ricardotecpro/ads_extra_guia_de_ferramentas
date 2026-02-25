@@ -10,7 +10,12 @@
 O **Git** é um sistema de controle de versão distribuído. Ele funciona como uma "Máquina do Tempo" para o seu código, permitindo que você salve estados do projeto e retorne a eles se algo der errado.
 
 ### 🧠 Conceito: Snapshot vs Backup
-Diferente de uma cópia simples de arquivos, o Git tira "fotos" (snapshots) das mudanças. Se você não alterou um arquivo, o Git apenas aponta para a versão anterior, economizando espaço e tempo.
+
+=== "Backup Comum"
+    Ferramentas convencionais (como Google Drive) salvam cópias inteiras do arquivo. Se você apagar tudo e salvar, a versão anterior se perde ou fica difícil de recuperar sem duplicar gigabytes de dados.
+    
+=== "Git (Snapshots)"
+    O Git tira "fotos" incrementais do seu projeto. Ele monitora apenas **o que mudou** (as linhas adicionadas ou removidas). Se não há alteração, o Git apenas aponta para a versão anterior, permitindo navegar por todo o histórico em milissegundos.
 
 ---
 
@@ -40,8 +45,8 @@ Para salvar alterações no Git, passamos por três estados principais:
 
 ```mermaid
 graph LR
-    WD[Working Directory] -- git add --> SA[Staging Area]
-    SA -- git commit --> LR[Local Repository]
+    WD([Working Directory]) -- git add --> SA([Staging Area])
+    SA -- git commit --> LR([Local Repository])
     LR -- git checkout --> WD
 ```
 
@@ -63,6 +68,7 @@ Estes são os comandos que você usará 90% do tempo:
 
 ## 5. Exemplo Prático de Commit 💻
 
+<div class="termy" markdown="1">
 ```termynal
 $ git init
 Initialized empty Git repository in /projeto/.git/
@@ -73,6 +79,7 @@ $ git add README.md
 $ git commit -m "Initial commit: adicionar README"
 [master (root-commit) 8b1f2] Initial commit
 ```
+</div>
 
 ---
 

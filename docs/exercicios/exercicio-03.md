@@ -13,3 +13,7 @@
 ### 🔴 Desafio (Exploração)
 
 5.  **Customização Avançada**: Pesquise o que é uma variável de ambiente **PATH** no seu sistema operacional e explique por que ela é importante para que os comandos que digitamos no terminal funcionem.
+
+---
+
+[**🔍 Ver Solução e Lógica do Exercício**](./solucao-03.md)

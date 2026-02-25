@@ -1,7 +1,7 @@
 [project]
-name = "ads_extra_guia_de_ferramentas"
+name = "ads_extra_ferramentas_para_projetos"
 version = "1.0.0"
-description = "ads_extra_guia_de_ferramentas"
+description = "ads_extra_ferramentas_para_projetos"
 authors = [
     {name = "Ricardo Tec Pro", email = "ricardotecpro@hotmail.com"}
 ]

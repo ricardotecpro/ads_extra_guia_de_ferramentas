@@ -13,3 +13,7 @@
 ### 🔴 Desafio (Exploração)
 
 5.  **Acessibilidade no Design**: Pesquise como ferramentas de design ajudam a verificar o **contraste de cores**. Por que o desenvolvedor também deve se preocupar com isso na hora de implementar a interface?
+
+---
+
+[**🔍 Ver Solução e Lógica do Exercício**](./solucao-16.md)

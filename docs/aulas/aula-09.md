@@ -10,8 +10,12 @@
 Quando desenvolvemos o backend (o "servidor"), muitas vezes ainda não temos o frontend (a "tela"). Para testar se o servidor está respondendo corretamente, usamos ferramentas que simulam requisições de um navegador ou aplicativo.
 
 ### 🏆 Líderes de Mercado
-*   **Postman**: A ferramenta mais completa, com suporte a coleções, testes automatizados e mock servers.
-*   **Insomnia**: Uma alternativa mais leve e intuitiva, focada na simplicidade e no design.
+
+=== "Postman"
+    A plataforma mais consolidada no mercado. É ideal para APIs maduras que necessitam de *Workspaces* compartilhados, *Mocks* e automação completa de coleções (com relatórios).
+    
+=== "Insomnia"
+    Foca no minimalismo, velocidade e segurança local. Por não sobrecarregar as abas com dezenas de *features*, é a escolha preferida de novos devs e projetos ágeis.
 
 ---
 
@@ -55,6 +59,7 @@ sequenceDiagram
 
 Embora o Postman seja visual, as APIs também podem ser testadas via terminal usando o comando `curl`:
 
+<div class="termy" markdown="1">
 ```termynal
 $ curl -X GET https://jsonplaceholder.typicode.com/users/1
 {
@@ -64,6 +69,7 @@ $ curl -X GET https://jsonplaceholder.typicode.com/users/1
   "email": "Sincere@april.biz"
 }
 ```
+</div>
 
 ---
 

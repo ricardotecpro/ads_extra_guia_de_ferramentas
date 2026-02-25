@@ -10,7 +10,12 @@
 Até agora, trabalhamos apenas na nossa máquina. Para colaborar com outras pessoas e garantir a segurança do nosso código, usamos plataformas como **GitHub**, **GitLab** ou **Bitbucket**.
 
 ### 🧠 Conceito: Repositório Remoto (Remote)
-Um repositório remoto é uma versão do seu projeto que vive em um servidor. O Git permite que você "empurre" (push) suas fotos locais para lá e "puxe" (pull) as fotos de outros colegas.
+
+=== "Segurança"
+    O repositório remoto atua como um porto seguro contra desastres. Se o seu computador local (Working Directory e Local Repo) for destruído, seu código ainda vive nas nuvens do GitHub/GitLab.
+    
+=== "Sincronização"
+    O Git distribui esse poder. Você "empurra" (*push*) os seus *snapshots* em lote para o repô remoto para a sua equipe, e "puxa" (*pull*) as fotos de outros colegas para se atualizar.
 
 ---
 
@@ -43,7 +48,7 @@ Em equipes profissionais, ninguém mexe direto no código "oficial" (main). Usam
 
 ```mermaid
 graph LR
-    Main[Main Branch] -- git checkout -b feature --> Feature[Sua Branch]
+    Main([Main Branch]) -- git checkout -b feature --> Feature([Sua Branch])
     Feature -- git commit --> Feature
     Feature -- Pull Request --> Review{Revisão}
     Review -- Aprovado --> Main
@@ -54,6 +59,7 @@ graph LR
 
 ## 4. Praticando a Sincronização 💻
 
+<div class="termy" markdown="1">
 ```termynal
 $ git remote add origin https://github.com/usuario/meu-projeto.git
 $ git push -u origin main
@@ -63,6 +69,7 @@ Writing objects: 100% (3/3), 220 bytes | 220.00 KiB/s, done.
 To https://github.com/usuario/meu-projeto.git
  * [new branch]      main -> main
 ```
+</div>
 
 ---
 

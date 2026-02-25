@@ -13,3 +13,7 @@
 ### 🔴 Desafio (Exploração)
 
 5.  **Autenticação e Headers**: Pesquise o que é o Header **Authorization** e como o Postman o utiliza para enviar tokens de segurança para o servidor. Por que não enviamos a senha diretamente no corpo de todas as requisições?
+
+---
+
+[**🔍 Ver Solução e Lógica do Exercício**](./solucao-09.md)

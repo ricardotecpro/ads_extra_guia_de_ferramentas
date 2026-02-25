@@ -13,3 +13,7 @@
 ### 🔴 Desafio (Exploração)
 
 5.  **Persistência com Volumes**: Por padrão, se você deletar um contêiner de banco de dados, todos os dados somem. Pesquise o que são **Volumes** no Docker e como eles resolvem o problema de salvar os dados mesmo quando o contêiner morre.
+
+---
+
+[**🔍 Ver Solução e Lógica do Exercício**](./solucao-13.md)

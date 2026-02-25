@@ -10,7 +10,12 @@
 O Docker é ótimo para rodar um ou dez contêineres. Mas e se você tiver um sistema gigante com milhares de contêineres que precisam escalar conforme o número de usuários sobe e desce?
 
 ### 🧠 Conceito: Orquestração
-Orquestração é o processo de automatizar a implantação, o gerenciamento, o dimensionamento e a rede de contêineres. O **Kubernetes** (ou K8s) é o maestro dessa orquestra.
+
+=== "O Caos Manual"
+    Sem orquestração, se um dos 1000 contêineres Docker travar, um humano precisaria rodar `docker restart`. Se o servidor ficar sem memória no meio da madrugada, alguém precisaria comprar outro servidor.
+    
+=== "O Maestro Kubernetes"
+    A Orquestração automatiza o gerenciamento. O **K8s** (Kubernetes) atua como um maestro: ele monitora a saúde das aplicações, reinicia as que falharam ou travaram e aumenta os servidores (Scale Out) quando identificam picos de acessos.
 
 ---
 
@@ -27,15 +32,15 @@ O K8s não fala "contêiner", ele fala **Pod**.
 
 ```mermaid
 graph TD
-    Control[Control Plane - O Cérebro] --> Node1[Node 1]
-    Control --> Node2[Node 2]
+    Control([Control Plane - O Cérebro]) --> Node1([Node 1])
+    Control --> Node2([Node 2])
     subgraph "Node 1"
-        Pod1[Pod A]
-        Pod2[Pod B]
+        Pod1([Pod A])
+        Pod2([Pod B])
     end
     subgraph "Node 2"
-        Pod3[Pod A]
-        Pod4[Pod C]
+        Pod3([Pod A])
+        Pod4([Pod C])
     end
 ```
 

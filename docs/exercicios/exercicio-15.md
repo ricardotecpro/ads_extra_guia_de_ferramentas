@@ -13,3 +13,7 @@
 ### 🔴 Desafio (Exploração)
 
 5.  **Cultura de Documentação**: Ferramentas como o **Notion** ou **Confluence** são usadas junto com o Slack. Por que as discussões importantes no chat devem ser transformadas em documentos permanentes nessas ferramentas?
+
+---
+
+[**🔍 Ver Solução e Lógica do Exercício**](./solucao-15.md)
