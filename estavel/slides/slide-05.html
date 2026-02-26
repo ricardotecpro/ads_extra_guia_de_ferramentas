@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 05 - Guia de Ferramentas</title>
+    <title>Aula 05 - Guia de Ferramentas - ADS Extra</title>
     
     <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/reset.css">
     <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/reveal.css">
@@ -26,10 +26,12 @@
         Atalhos: F (Tela Cheia) | S (Speaker View)
     </div>
 
+    <!-- Scripts de Transpilação Reveal/Mermaid/MathJax -->
     <script src="https://unpkg.com/reveal.js@4.5.0/dist/reveal.js"></script>
     <script src="https://unpkg.com/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
     <script src="https://unpkg.com/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
     <script src="https://unpkg.com/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+    <script src="https://unpkg.com/reveal.js@4.5.0/plugin/math/math.js"></script>
     <script>
         Reveal.initialize({
             hash: true,
@@ -39,7 +41,19 @@
             progress: true,
             transition: 'slide',
             backgroundTransition: 'fade',
-            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax3 ]
+        }).then(() => {
+            // Transpilar Mermaid pós-carregamento do Reveal
+            if (typeof mermaid !== 'undefined') {
+                mermaid.initialize({ startOnLoad: false });
+                document.querySelectorAll('code.language-mermaid').forEach(el => {
+                    const container = document.createElement('div');
+                    container.className = 'mermaid';
+                    container.textContent = el.textContent;
+                    el.parentElement.replaceWith(container);
+                });
+                mermaid.run();
+            }
         });
 
         function updateShortcutsVisibility() {
