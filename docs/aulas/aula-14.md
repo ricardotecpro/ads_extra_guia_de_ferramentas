@@ -28,7 +28,7 @@ O K8s não fala "contêiner", ele fala **Pod**.
 3.  **Cluster**: O conjunto de todos os Nodes gerenciados pelo Kubernetes.
 4.  **Deployment**: A definição de como o seu app deve rodar (ex: "quero sempre 3 cópias deste Pod ligadas").
 
-### Visualização do Cluster (Mermaid)
+### Visualização de um Cluster
 
 ```mermaid
 graph TD
@@ -61,7 +61,7 @@ No mundo do CI/CD (que vimos na Aula 11), os **Runners** são os contêineres qu
 
 ---
 
-## 5. Praticando a Lógica de Orquestração 🚀
+## 5. Prática: Lógica de Orquestração 🚀
 
 1.  Imagine que você tem uma loja virtual.
 2.  Normalmente, 3 servidores dão conta do recado.
@@ -73,14 +73,14 @@ No mundo do CI/CD (que vimos na Aula 11), os **Runners** são os contêineres qu
 
 ---
 
-## 6. Exercício de Fixação 📝
+## 📝 Prática Sugerida
 
-1.  **Básico**: Por que o Kubernetes é chamado de "Orquestrador"?
-2.  **Básico**: O que acontece se um servidor (Node) queimar em um cluster Kubernetes?
-3.  **Intermediário**: Qual a diferença entre um **Pod** e um **Contêiner**?
-4.  **Intermediário**: Explique o que é "Escalabilidade Horizontal".
-5.  **Desafio**: Pesquise o que é o **Helm** e como ele se relaciona com o Kubernetes.
+Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+
+👉 **[Ver Exercícios da Aula 14](../exercicios/exercicio-14.md)**
+👉 **[Ver Projeto da Aula 14](../projetos/projeto-14.md)**
 
 ---
 
-**Próxima Aula**: Vamos falar sobre como as pessoas se organizam com o [Slack e Microsoft Teams](./aula-15.md)! 💬
+**Próxima Aula**: Vamos falar sobre como as pessoas se organizam com o [Módulo 4 - Aula 15 - Comunicação e Colaboração em Equipe (Slack/Teams)](./aula-15.md)! 💬
+

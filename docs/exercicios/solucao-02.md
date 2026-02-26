@@ -29,3 +29,7 @@ Usar GitHub Issues permite que a gestão do projeto fique "amarrada" ao código.
 
 **5. Simulação de Conflito (Jira/Kanban)**
 Ferramentas profissionais de gestão como o Jira operam em tempo real. Se dois devs tentarem puxar o mesmo card, a plataforma atualizará o "Assignee" (Responsável) para o primeiro que clicou, e a foto dele aparecerá no card na tela de todos. Além disso, a gestão ágil prega a "Daily Meeting" (reunião diária), onde os devs se comunicam e declaram: "Hoje vou puxar a tarefa X", evitando retrabalho logo no planejamento da manhã.
+
+---
+
+[**⬅️ Voltar para o Exercício**](./exercicio-02.md)

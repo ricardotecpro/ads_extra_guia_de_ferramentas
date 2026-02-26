@@ -26,3 +26,7 @@ O arquivo criptografado de matriz `terraform.tfstate` opera como o cérebro das 
 **5. DevOps na Prática (Integração)**
 Um devops criaria as conexões da linha em um diretório automatizado (`.github/workflows/deploy.yml`):
 Na esteira de CI, ele provisionaria as credenciais seguras e injetaria o comando `terraform apply -auto-approve`, cujo script retornaria um *Output Array* de endereços IPv4 originados e elásticos de produção das três webclouds. O Action do repositório transferiria essa matriz de IPs instantaneamente para o inventário do `ansible-playbook setup.yml -i ./outputs` rodando no container efêmero a inserção final das dependências logísticas e de bibliotecas na máquina, acoplando simultaneamente o provisionamento cru do HashiCorp com a gerência do RedHat culminando em Servidor Produtivo (100% humano livre na entrega global).
+
+---
+
+[**⬅️ Voltar para o Exercício**](./exercicio-12.md)

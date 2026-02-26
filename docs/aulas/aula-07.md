@@ -37,7 +37,7 @@ O **Redis** é um banco de dados que vive na **Memória RAM**, e não no disco r
 ### 🧠 Conceito: Cache
 Imagine que um site de notícias tem 1 milhão de acessos na mesma matéria. Em vez de perguntar para o banco de dados lento 1 milhão de vezes, salvamos a resposta no **Redis** (Cache) por alguns minutos.
 
-### Exemplo de Uso (Mermaid)
+### Fluxo de Funcionamento do Cache
 
 ```mermaid
 sequenceDiagram
@@ -74,7 +74,7 @@ OK
 
 ---
 
-## 5. Mini-Projeto: Explorando um JSON 🚀
+## 5. Prática: Explorando um JSON 🚀
 
 No NoSQL, a estrutura mais comum é o **JSON**. Sua missão é criar o "esquema" de um documento para um sistema de cursos:
 
@@ -85,14 +85,13 @@ No NoSQL, a estrutura mais comum é o **JSON**. Sua missão é criar o "esquema"
 
 ---
 
-## 6. Exercício de Fixação 📝
+## 📝 Prática Sugerida
 
-1.  **Básico**: Qual a principal diferença entre um Banco de Dados Relacional e um Orientado a Documentos?
-2.  **Básico**: Por que o **Redis** é muito mais rápido que o PostgreSQL?
-3.  **Intermediário**: Em qual situação usar o MongoDB é melhor do que usar o MySQL?
-4.  **Intermediário**: Explique o conceito de "Expiração de Cache" e por que ele é necessário.
-5.  **Desafio**: Pesquise o que é "Consistência Eventual" em bancos de dados distribuídos.
+Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+
+👉 **[Ver Exercícios da Aula 07](../exercicios/exercicio-07.md)**
+👉 **[Ver Projeto da Aula 07](../projetos/projeto-07.md)**
 
 ---
 
-**Próxima Aula**: Vamos garantir que tudo funcione com os [Frameworks de Teste e Qualidade](./aula-08.md)! 🧪
+**Próxima Aula**: Vamos garantir que tudo funcione com os [Módulo 2 - Aula 08 - Frameworks de Teste e Qualidade](./aula-08.md)! 🧪

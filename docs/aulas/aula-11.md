@@ -29,7 +29,7 @@ O GitHub Actions é a ferramenta de CI/CD integrada ao GitHub. Ele funciona atra
 
 ---
 
-## 3. Visualização da Pipeline (Mermaid)
+## 3. Visualização da Pipeline
 
 ```mermaid
 graph LR
@@ -84,7 +84,7 @@ Step 5: All tests passed! Pipeline completed.
 
 ---
 
-## 6. Mini-Projeto: Monitorando um Workflow 🚀
+## 6. Prática: Monitorando um Workflow 🚀
 
 1.  Vá até um repositório seu no GitHub.
 2.  Clique na aba **Actions**.
@@ -95,14 +95,13 @@ Step 5: All tests passed! Pipeline completed.
 
 ---
 
-## 7. Exercício de Fixação 📝
+## 📝 Prática Sugerida
 
-1.  **Básico**: Qual a principal diferença entre Integração Contínua (CI) e Entrega Contínua (CD)?
-2.  **Básico**: Para que serve o evento `on: [pull_request]` em um workflow?
-3.  **Intermediário**: Por que é perigoso fazer o Deploy (CD) sem ter uma etapa de Testes (CI) antes?
-4.  **Intermediário**: O que acontece com um Pull Request se o workflow de testes falhar?
-5.  **Desafio**: Pesquise o que são "GitHub Secrets" e por que nunca devemos colocar senhas diretamente no arquivo `.yml`.
+Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+
+👉 **[Ver Exercícios da Aula 11](../exercicios/exercicio-11.md)**
+👉 **[Ver Projeto da Aula 11](../projetos/projeto-11.md)**
 
 ---
 
-**Próxima Aula**: Vamos falar de infraestrutura com [Automação e IaC (Ansible/Terraform)](./aula-12.md)! ⚙️
+**Próxima Aula**: Vamos falar de infraestrutura com [Módulo 3 - Aula 12 - Automação e IaC (Ansible/Terraform)](./aula-12.md)! ⚙️

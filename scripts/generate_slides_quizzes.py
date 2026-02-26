@@ -2,6 +2,7 @@ import pathlib
 import re
 import sys
 import io
+import yaml
 
 # Fix for Windows encoding issues with emojis
 if sys.platform == "win32":
@@ -11,6 +12,16 @@ if sys.platform == "win32":
 from rich import print
 from rich.progress import track
 
+def get_site_name():
+    """Lê o nome do site do mkdocs.yml"""
+    try:
+        with open('mkdocs.yml', 'r', encoding='utf-8') as f:
+            config = yaml.load(f, Loader=yaml.UnsafeLoader)
+            return config.get('site_name', 'Curso')
+    except Exception:
+        return 'Curso'
+
+SITE_NAME = get_site_name()
 
 def generate_slide_html(lesson_number: int) -> str:
     """Gera HTML para um slide específico"""
@@ -19,7 +30,7 @@ def generate_slide_html(lesson_number: int) -> str:
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula {lesson_number:02d} - Guia de Ferramentas</title>
+    <title>Aula {lesson_number:02d} - {SITE_NAME}</title>
     
     <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/reset.css">
     <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/reveal.css">
@@ -42,10 +53,12 @@ def generate_slide_html(lesson_number: int) -> str:
         Atalhos: F (Tela Cheia) | S (Speaker View)
     </div>
 
+    <!-- Scripts de Transpilação Reveal/Mermaid/MathJax -->
     <script src="https://unpkg.com/reveal.js@4.5.0/dist/reveal.js"></script>
     <script src="https://unpkg.com/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
     <script src="https://unpkg.com/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
     <script src="https://unpkg.com/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+    <script src="https://unpkg.com/reveal.js@4.5.0/plugin/math/math.js"></script>
     <script>
         Reveal.initialize({{
             hash: true,
@@ -55,7 +68,19 @@ def generate_slide_html(lesson_number: int) -> str:
             progress: true,
             transition: 'slide',
             backgroundTransition: 'fade',
-            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax3 ]
+        }}).then(() => {{
+            // Transpilar Mermaid pós-carregamento do Reveal
+            if (typeof mermaid !== 'undefined') {{
+                mermaid.initialize({{ startOnLoad: false }});
+                document.querySelectorAll('code.language-mermaid').forEach(el => {{
+                    const container = document.createElement('div');
+                    container.className = 'mermaid';
+                    container.textContent = el.textContent;
+                    el.parentElement.replaceWith(container);
+                }});
+                mermaid.run();
+            }}
         }});
 
         function updateShortcutsVisibility() {{
@@ -77,23 +102,19 @@ def generate_slide_html(lesson_number: int) -> str:
 </html>
 '''
 
-
 def convert_quiz_md_to_html(md_content: str) -> str:
     """Converte o formato MarkDown de quiz para o formato HTML interativo"""
-    # Regex para capturar Perguntas, Opções e Explicações
-    # 1. Título
     title_match = re.search(r'# (.*)', md_content)
     title = title_match.group(1) if title_match else "Quiz"
+    # Limpar títulos de sufixos fixos se necessário
+    title = re.sub(r' - Introdução$', '', title)
     
     html_output = [f"# {title}\n", '--8<-- "assets/quiz.html"\n']
     
-    # Split by questions
     questions = re.split(r'\n\d+\. ', md_content)
     if not questions[0].strip().startswith('1.'):
-        # The first element might be the title, discard it if it doesn't have a question
         questions = questions[1:]
     else:
-        # If it starts with 1., the first split will have it
         questions[0] = questions[0].replace('1. ', '', 1)
 
     for i, q_block in enumerate(questions, 1):
@@ -113,7 +134,6 @@ def convert_quiz_md_to_html(md_content: str) -> str:
             elif line.startswith('*Explicação:'):
                 explanation = line.replace('*Explicação:', '').strip('*').strip()
         
-        # Build HTML
         html_output.append('<div class="quiz-container">')
         html_output.append(f'  <div class="quiz-question">{i}. {question_text}</div>')
         
@@ -127,7 +147,6 @@ def convert_quiz_md_to_html(md_content: str) -> str:
         
     return "\n".join(html_output)
 
-
 def generate_all_slides():
     """Gera arquivos HTML para todos os 16 slides"""
     slides_dst_dir = pathlib.Path('docs/slides')
@@ -137,7 +156,7 @@ def generate_all_slides():
         print("[yellow]⚠ Pasta docs/slides/src/ não encontrada.[/yellow]")
         return
     
-    print("\n[bold cyan]📊 Gerando Slides HTML...[/bold cyan]")
+    print(f"\n[bold cyan]📊 Gerando Slides HTML para {SITE_NAME}...[/bold cyan]")
     
     for i in track(range(1, 17), description="Processando slides..."):
         src_md_name = f"slide-{i:02d}.md"
@@ -145,28 +164,17 @@ def generate_all_slides():
         dst_md_path = slides_dst_dir / src_md_name
         html_path = slides_dst_dir / f"slide-{i:02d}.html"
         
-        # Ensure we are using the correct source directory 'src'
-        # (Instruction: 'Atualizar o script de geração para usar o diretório de origem atualizado (src)')
-        # This is already set above, but we verify existence here.
-        
         if src_md_path.exists():
             content = src_md_path.read_text(encoding='utf-8')
-            
-            # 1. Corrigir fragmentos: transformar { .fragment } em <!-- .element: class="fragment" -->
-            # Isso permite usar uma sintaxe mais limpa no source. Captura variações de espaço.
             content = re.sub(r'\{\s*\.fragment\s*\}', '<!-- .element: class="fragment" -->', content)
             
-            # 2. Remover frontmatter (YAML) se existir, mas manter os comentários de slide do Reveal.js
             if content.startswith('---'):
                 parts = content.split('---', 2)
                 if len(parts) >= 3:
-                    header = parts[1]
-                    if 'title:' in header or 'author:' in header:
-                        content = parts[2].lstrip()
+                    content = parts[2].lstrip()
             
             dst_md_path.write_text(content, encoding='utf-8')
             html_path.write_text(generate_slide_html(i), encoding='utf-8')
-
 
 def generate_all_quizzes():
     """Gera arquivos HTML para todos os 16 quizzes"""
@@ -189,16 +197,14 @@ def generate_all_quizzes():
             html_quiz = convert_quiz_md_to_html(content)
             dst_md_path.write_text(html_quiz, encoding='utf-8')
 
-
 def main():
-    print("[bold]🚀 Automação de Conteúdo: Guia de Ferramentas[/bold]")
+    print(f"[bold]🚀 Automação de Conteúdo: {SITE_NAME}[/bold]")
     print("=" * 50)
     
     generate_all_slides()
     generate_all_quizzes()
     
     print("\n[green]✅ Conteúdo gerado com sucesso![/green]")
-
 
 if __name__ == '__main__':
     main()

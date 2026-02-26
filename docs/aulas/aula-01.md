@@ -17,7 +17,6 @@ No desenvolvimento moderno, escrever código é apenas uma parte do trabalho. Pa
 === "Prática"
     No seu dia a dia profissional, você não abrirá apenas o VS Code. Seu fluxo será: **Ler a Issue no Jira -> Criar branch no Git -> Escrever Código no VS Code -> Testar com Jest -> Subir um Pull Request no GitHub -> Ver o CI/CD (Actions) validar seu código**.
 
-
 ---
 
 ## 2. Categorias de Ferramentas 🗂️
@@ -31,7 +30,7 @@ Podemos dividir as ferramentas essenciais em grandes blocos:
 5.  **Qualidade e Testes**: Onde garantimos que tudo funciona (Postman, Jest).
 6.  **Infraestrutura e CI/CD**: Onde o código "vai pro mundo" (Docker, GitHub Actions).
 
-### Visualização do Fluxo (Mermaid)
+### Visualização do Fluxo Profissional
 
 ```mermaid
 graph LR
@@ -70,6 +69,8 @@ $ echo "Bem-vindo ao Guia de Ferramentas!"
 Bem-vindo ao Guia de Ferramentas!
 $ git --version
 git version 2.40.1
+$ code --version
+1.82.2
 $ docker --version
 Docker version 24.0.2
 ```
@@ -77,7 +78,7 @@ Docker version 24.0.2
 
 ---
 
-## 5. Mini-Projeto: Diagnóstico do Cinto de Ferramentas 🚀
+## 5. Prática: Diagnóstico do Cinto de Ferramentas 🚀
 
 Sua primeira missão é verificar o que você já tem instalado e o que precisaremos configurar:
 
@@ -88,14 +89,14 @@ Sua primeira missão é verificar o que você já tem instalado e o que precisar
 
 ---
 
-## 6. Exercício de Fixação 📝
+## 📝 Prática Sugerida
 
-1.  **Básico**: Cite três categorias de ferramentas e dê um exemplo de cada.
-2.  **Básico**: Qual a principal vantagem de usar um sistema de gestão de tarefas como o Jira?
-3.  **Intermediário**: Por que o terminal é considerado uma ferramenta mais poderosa que as interfaces visuais para desenvolvedores?
-4.  **Intermediário**: O que acontece quando uma equipe não utiliza controle de versão (Git)?
-5.  **Desafio**: Pesquise o termo "Developer Experience" (DX) e explique como as ferramentas contribuem para isso.
+Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+
+👉 **[Ver Exercícios da Aula 01](../exercicios/exercicio-01.md)**
+👉 **[Ver Projeto da Aula 01](../projetos/projeto-01.md)**
 
 ---
 
-**Próxima Aula**: Vamos aprender a organizar nosso fluxo de trabalho com o [Jira e Trello](./aula-02.md)! 📊
+**Próxima Aula**: Vamos aprender a organizar nosso fluxo de trabalho com o [Módulo 1 - Aula 02 - Gestão de Projetos](./aula-02.md)! 📊
+

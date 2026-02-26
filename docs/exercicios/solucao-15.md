@@ -26,3 +26,7 @@ A premissa do *"No Hello / Oi Nu"* é detestável pela arquitetura de fluxo cogn
 
 **5. Cultura de Documentação**
 Bate-Papos (Chats de Slack Teams) modelam correntes hídricas informacionais ("Rio"): passam velozmente, reativas, desestabilizadas e cheias de soluções operativas maravilhosas momentâneas atreladas ao contexto solto. Passados 5 meses na contratação massiva, se estivéssemos embasados ali o novato engasgaria vasculhando "Search Histories" sem sentido contextual na busca retroativa de por que usar NodeJS vs Java; A conversão pro atrelado perene estático da pirâmide (A Nuvem "Lago") no Confluence molda esse conhecimento tribal da discussão, formatando-o em sumários operacionais definitivos indexados de "Onboarding corporativo Oficial" da firma de TI inalteráveis pela correnteza de fluxos diários randômicos do bate papo trivializado daquela semana.
+
+---
+
+[**⬅️ Voltar para o Exercício**](./exercicio-15.md)

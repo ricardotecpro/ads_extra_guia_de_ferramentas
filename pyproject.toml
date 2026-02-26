@@ -1,7 +1,7 @@
 [project]
 name = "ads_extra_ferramentas_para_projetos"
 version = "1.0.0"
-description = "ads_extra_ferramentas_para_projetos"
+description = "Curso de Ferramentas para Projetos"
 authors = [
     {name = "Ricardo Tec Pro", email = "ricardotecpro@hotmail.com"}
 ]

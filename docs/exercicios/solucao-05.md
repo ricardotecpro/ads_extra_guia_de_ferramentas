@@ -32,3 +32,7 @@ Um conflito (`Merge Conflict`) surge quando duas pessoas tentam mexer na mesma p
 *   Não respeite o padrão de código da comunidade (Linting / Estilo de Identação).
 *   Seja uma quebra na arquitetura base sem discussão na área de *Issues* primeiro.
 Um PR aceito costuma ter discussão com os mantenedores, revisões em código visualizadas por "Approve" verdes e o clássico sinal de que os testes "passaram no CI".
+
+---
+
+[**⬅️ Voltar para o Exercício**](./exercicio-05.md)

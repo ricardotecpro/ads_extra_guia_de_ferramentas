@@ -3,40 +3,36 @@ Script para converter automaticamente todos os quizzes de markdown para HTML int
 """
 import pathlib
 import re
+import yaml
 from rich import print
 from rich.progress import track
 
 
+def get_site_name():
+    """Lê o nome do site do mkdocs.yml"""
+    try:
+        with open('mkdocs.yml', 'r', encoding='utf-8') as f:
+            config = yaml.load(f, Loader=yaml.UnsafeLoader)
+            return config.get('site_name', 'Curso')
+    except Exception:
+        return 'Curso'
+
+SITE_NAME = get_site_name()
+
 def parse_quiz_markdown(content: str) -> list:
-    """
-    Parse quiz markdown format e extrai perguntas
-    
-    Formato esperado:
-    1. Pergunta aqui?
-    
-        - [ ] Opção incorreta
-        - [x] Opção correta
-        - [ ] Outra incorreta
-    """
+    """Parse quiz markdown format e extrai perguntas"""
     questions = []
-    
-    # Regex para encontrar perguntas numeradas
     question_pattern = r'(\d+)\.\s+(.+?)(?=\n\n|\n\s*-|\Z)'
     
-    # Encontrar todas as perguntas
     for match in re.finditer(question_pattern, content, re.DOTALL):
         question_num = match.group(1)
         question_text = match.group(2).strip()
         
-        # Encontrar opções após esta pergunta
-        # Procurar até a próxima pergunta ou fim do arquivo
         start_pos = match.end()
         next_question = re.search(r'\n\d+\.\s+', content[start_pos:])
         end_pos = start_pos + next_question.start() if next_question else len(content)
         
         options_text = content[start_pos:end_pos]
-        
-        # Parse opções
         options = []
         option_pattern = r'-\s+\[([ x])\]\s+(.+?)(?=\n\s*-|\n\n|\Z)'
         
@@ -48,7 +44,7 @@ def parse_quiz_markdown(content: str) -> list:
                 'correct': is_correct
             })
         
-        if options:  # Só adiciona se encontrou opções
+        if options:
             questions.append({
                 'number': question_num,
                 'text': question_text,
@@ -57,13 +53,13 @@ def parse_quiz_markdown(content: str) -> list:
     
     return questions
 
-
-def generate_quiz_html(quiz_number: int, questions: list) -> str:
+def generate_quiz_html(quiz_number: int, questions: list, quiz_title: str) -> str:
     """Gera HTML completo do quiz"""
+    # Limpar títulos de sufixos fixos
+    clean_title = re.sub(r' - Introdução$', '', quiz_title)
     
-    # Cabeçalho
     html_parts = [
-        f"# Quiz {quiz_number:02d} - Introdução\n",
+        f"# {clean_title}\n",
         '\n--8<-- "assets/quiz.html"\n\n'
     ]
     
@@ -92,6 +88,10 @@ def convert_quiz(quiz_path: pathlib.Path) -> bool:
     try:
         content = quiz_path.read_text(encoding='utf-8')
         
+        # Extrair título real do arquivo se disponível, senão padrão
+        title_match = re.search(r'# (.*)', content)
+        quiz_title = title_match.group(1) if title_match else f"Quiz {re.search(r'quiz-(\d+)', quiz_path.name).group(1)}"
+        
         # Parse perguntas
         questions = parse_quiz_markdown(content)
         
@@ -103,7 +103,7 @@ def convert_quiz(quiz_path: pathlib.Path) -> bool:
         quiz_num = int(re.search(r'quiz-(\d+)', quiz_path.name).group(1))
         
         # Gerar HTML
-        html_content = generate_quiz_html(quiz_num, questions)
+        html_content = generate_quiz_html(quiz_num, questions, quiz_title)
         
         # Salvar em docs/quizzes (um nível acima de src)
         output_path = quiz_path.parent.parent / quiz_path.name
@@ -123,18 +123,16 @@ def convert_all_quizzes():
     quizzes_src_dir = pathlib.Path('docs/quizzes/src')
     
     if not quizzes_src_dir.exists():
-        print("[yellow]⚠ Pasta docs/quizzes/src/ não encontrada. Criando...[/yellow]")
-        quizzes_src_dir.mkdir(parents=True, exist_ok=True)
-        print("[yellow]⚠ Por favor, coloque os arquivos markdown originais em docs/quizzes/src/[/yellow]")
+        print(f"[yellow]⚠ Pasta {quizzes_src_dir} não encontrada.[/yellow]")
         return
     
-    print("\n[bold cyan]🧠 Convertendo Quizzes para HTML...[/bold cyan]")
+    print(f"\n[bold cyan]🧠 Convertendo Quizzes para {SITE_NAME}...[/bold cyan]")
     print(f"Fonte: {quizzes_src_dir}")
     
     quiz_files = sorted(quizzes_src_dir.glob('quiz-*.md'))
     
     if not quiz_files:
-        print("[yellow]⚠ Nenhum arquivo de quiz encontrado em docs/quizzes/src/[/yellow]")
+        print(f"[yellow]⚠ Nenhum arquivo de quiz encontrado em {quizzes_src_dir}[/yellow]")
         return
     
     converted = 0
@@ -147,13 +145,12 @@ def convert_all_quizzes():
 
 def main():
     """Função principal"""
-    print("[bold]🚀 Conversão Automática de Quizzes[/bold]")
+    print(f"[bold]🚀 Conversão Automática de Quizzes: {SITE_NAME}[/bold]")
     print("=" * 50)
     
     convert_all_quizzes()
     
     print("\n[green]✅ Conversão concluída![/green]")
-    print("\n[cyan]💡 Dica:[/cyan] Teste os quizzes em http://localhost:8000/quizzes/")
 
 
 if __name__ == '__main__':

@@ -27,7 +27,7 @@ Recentemente, o Figma lançou o **Dev Mode**, uma interface pensada exclusivamen
 
 Handoff é o momento em que o designer termina o protótipo e o entrega para o desenvolvedor começar a codificar.
 
-### Fluxo de Trabalho (Mermaid)
+### Fluxo de Trabalho
 
 ```mermaid
 graph LR
@@ -58,7 +58,7 @@ Mesmo sem o Figma aberto, imagine que você está inspecionando um botão no "De
 
 ---
 
-## 5. Mini-Projeto: Explorando um Protótipo 🚀
+## 5. Prática: Explorando um Protótipo 🚀
 
 Sua missão final é entrar no mundo do design:
 
@@ -70,14 +70,14 @@ Sua missão final é entrar no mundo do design:
 
 ---
 
-## 6. Exercício de Fixação 📝
+## 📝 Prática Sugerida
 
-1.  **Básico**: Por que o Figma substituiu ferramentas como Photoshop ou Sketch no mundo do desenvolvimento mobile e web?
-2.  **Básico**: O que é o "Handoff"?
-3.  **Intermediário**: Qual a diferença entre um protótipo estático e um protótipo interativo no Figma?
-4.  **Intermediário**: Por que é melhor exportar ícones em formato **SVG** do que em PNG?
-5.  **Desafio**: Pesquise o que significa a sigla **UX** (User Experience) e como ela difere de **UI** (User Interface).
+Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+
+👉 **[Ver Exercícios da Aula 16](../exercicios/exercicio-16.md)**
+👉 **[Ver Projeto da Aula 16](../projetos/projeto-16.md)**
 
 ---
 
 **Parabéns!** Você concluiu as 16 aulas do **Guia de Ferramentas**. Agora você tem o cinto de utilidades completo para brilhar no mercado de ADS! 🎓✨
+

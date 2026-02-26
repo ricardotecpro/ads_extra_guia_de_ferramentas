@@ -33,7 +33,7 @@ O Formatter deixa o código bonito; o Linter garante que ele está correto e seg
 
 ---
 
-## 3. O Fluxo de Correção (Mermaid)
+## 3. O Fluxo de Correção de Código
 
 ```mermaid
 graph TD
@@ -63,7 +63,7 @@ index.js 220ms (formatted)
 
 ---
 
-## 5. Mini-Projeto: Configurando o Corretor Automático 🚀
+## 5. Prática: Configurando o Corretor Automático 🚀
 
 Sua missão é ver a mágica da formatação automática no VS Code:
 
@@ -75,14 +75,14 @@ Sua missão é ver a mágica da formatação automática no VS Code:
 
 ---
 
-## 6. Exercício de Fixação 📝
+## 📝 Prática Sugerida
 
-1.  **Básico**: Qual a vantagem de uma equipe inteira usar o mesmo arquivo de configuração do Prettier?
-2.  **Básico**: O que um Linter faz que um Formatter não consegue fazer?
-3.  **Intermediário**: Por que dizemos que o Linter ajuda a evitar "bugs silenciosos"?
-4.  **Intermediário**: Explique o conceito de "Clean Code" e como essas ferramentas ajudam a atingi-lo.
-5.  **Desafio**: Pesquise o que é o arquivo `.eslintrc` e para que serve a seção `rules`.
+Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+
+👉 **[Ver Exercícios da Aula 10](../exercicios/exercicio-10.md)**
+👉 **[Ver Projeto da Aula 10](../projetos/projeto-10.md)**
 
 ---
 
-**Próxima Aula**: Vamos automatizar tudo com o [CI/CD Moderno (GitHub Actions)](./aula-11.md)! 🚀
+**Próxima Aula**: Vamos automatizar tudo com o [Módulo 3 - Aula 11 - CI/CD Moderno (GitHub Actions)](./aula-11.md)! 🚀
+

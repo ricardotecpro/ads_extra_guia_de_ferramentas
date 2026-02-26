@@ -44,7 +44,7 @@ Em equipes profissionais, ninguém mexe direto no código "oficial" (main). Usam
 4.  **Code Review**: Outros devs revisam seu código e sugerem melhorias.
 5.  **Merge**: Se tudo estiver ok, o código é unido.
 
-### Visualização do Fluxo de PR (Mermaid)
+### Visualização do Fluxo de PR
 
 ```mermaid
 graph LR
@@ -73,7 +73,7 @@ To https://github.com/usuario/meu-projeto.git
 
 ---
 
-## 5. Mini-Projeto: Meu Portfólio no Ar 🚀
+## 5. Prática: Meu Portfólio no Ar 🚀
 
 Sua missão é subir um de seus códigos para o GitHub:
 
@@ -85,14 +85,14 @@ Sua missão é subir um de seus códigos para o GitHub:
 
 ---
 
-## 6. Exercício de Fixação 📝
+## 📝 Prática Sugerida
 
-1.  **Básico**: Qual a principal diferença entre o Git (software) e o GitHub (plataforma)?
-2.  **Básico**: Para que serve o comando `git clone`?
-3.  **Intermediário**: Por que o **Code Review** é uma etapa fundamental em grandes empresas de tecnologia?
-4.  **Intermediário**: Explique o que acontece se duas pessoas alterarem a mesma linha de código e tentarem enviar para o GitHub.
-5.  **Desafio**: Pesquise o que é um "Fork" e em qual situação ele é mais utilizado do que uma "Branch".
+Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+
+👉 **[Ver Exercícios da Aula 05](../exercicios/exercicio-05.md)**
+👉 **[Ver Projeto da Aula 05](../projetos/projeto-05.md)**
 
 ---
 
-**Próxima Aula**: Vamos falar sobre onde os dados moram: [Bancos de Dados Relacionais e Clientes GUI](./aula-06.md)! 💾
+**Próxima Aula**: Vamos falar sobre onde os dados moram: [Módulo 2 - Aula 06 - Bancos de Dados Relacionais e Clientes GUI](./aula-06.md)! 💾
+

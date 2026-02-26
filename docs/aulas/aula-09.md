@@ -39,7 +39,7 @@ Para conversar com uma API, precisamos seguir as regras do protocolo HTTP.
 
 ---
 
-## 3. Fluxo de uma Requisição (Mermaid)
+## 3. Fluxo de uma Requisição
 
 ```mermaid
 sequenceDiagram
@@ -73,7 +73,7 @@ $ curl -X GET https://jsonplaceholder.typicode.com/users/1
 
 ---
 
-## 5. Mini-Projeto: Minha Primeira Collection 🚀
+## 5. Prática: Minha Primeira Collection 🚀
 
 Sua missão é testar uma API pública e organizar os resultados:
 
@@ -85,14 +85,14 @@ Sua missão é testar uma API pública e organizar os resultados:
 
 ---
 
-## 6. Exercício de Fixação 📝
+## 📝 Prática Sugerida
 
-1.  **Básico**: Qual a vantagem de usar o Postman em vez de apenas o navegador para testar uma API?
-2.  **Básico**: O que significa um erro da família **4xx** (ex: 404)?
-3.  **Intermediário**: Em qual situação usaríamos o método **PUT** em vez de **POST**?
-4.  **Intermediário**: O que é o "Body" de uma requisição e em quais métodos ele é mais comum?
-5.  **Desafio**: Pesquise o que é uma **Variável de Ambiente** no Postman e por que ela é útil para alternar entre "Ambiente de Teste" e "Ambiente de Produção".
+Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+
+👉 **[Ver Exercícios da Aula 09](../exercicios/exercicio-09.md)**
+👉 **[Ver Projeto da Aula 09](../projetos/projeto-09.md)**
 
 ---
 
-**Próxima Aula**: Vamos deixar nosso código impecável com os [Linters e Formatadores (ESLint/Prettier)](./aula-10.md)! ✨
+**Próxima Aula**: Vamos deixar nosso código impecável com os [Módulo 3 - Aula 10 - Linters e Formatadores (ESLint/Prettier)](./aula-10.md)! ✨
+

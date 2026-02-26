@@ -35,7 +35,7 @@ Enquanto o Terraform "constrói o prédio" (servidor), o **Ansible** entra para 
 *   **Sem Agente**: O Ansible não precisa ser instalado no servidor destino, ele usa apenas o acesso SSH.
 *   **Playbooks**: Arquivos YAML que descrevem o que deve ser instalado e configurado.
 
-### Fluxo Combinado (Mermaid)
+### Fluxo Combinado de Provisionamento
 
 ```mermaid
 graph TD
@@ -74,7 +74,7 @@ $ ansible-playbook playbook.yml
 
 ---
 
-## 5. Praticando a Lógica de Automação 🚀
+## 5. Prática: Lógica de Automação 🚀
 
 1.  Imagine que você tem 50 computadores em um laboratório.
 2.  Todos precisam ter o **Google Chrome** e o **VS Code** instalados hoje.
@@ -96,4 +96,13 @@ $ ansible-playbook playbook.yml
 
 ---
 
-**Próxima Aula**: Vamos empacotar tudo com os [Contêineres e Docker](./aula-13.md)! 📦
+## 📝 Prática Sugerida
+
+Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+
+👉 **[Ver Exercícios da Aula 12](../exercicios/exercicio-12.md)**
+👉 **[Ver Projeto da Aula 12](../projetos/projeto-12.md)**
+
+---
+
+**Próxima Aula**: Vamos empacotar tudo com os [Módulo 4 - Aula 13 - Contêineres e Docker](./aula-13.md)! 📦

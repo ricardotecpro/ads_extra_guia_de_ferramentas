@@ -32,3 +32,7 @@ Quando um projeto atinge o nível de 50 rotas (endpoints), montar os formulário
 
 **5. Autenticação e Headers**
 O *Header Authorization* é um metadado mandatório, invisível ao layout gráfico comum, levado na "cabeça" do protocolo de internet da sua tela até o servidor. O Postman o anexa ativamente em variáveis como o *Bearer Token*. Evitamos mandar senhas textuais em corpos de formulário nas milhares de idas e vindas de requisição pois: 1. O Token expira logo se for roubado. 2. A senha viajando legível infinitamente expõe os ecossistemas num sniffer virtual. 3. O Token concede delimitação de domínios (*Access Scopes*).
+
+---
+
+[**⬅️ Voltar para o Exercício**](./exercicio-09.md)

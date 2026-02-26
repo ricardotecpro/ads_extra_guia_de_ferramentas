@@ -25,3 +25,7 @@ A sintaxe hierárquica base original das automações Github não lida textualiz
 
 **5. Matriz de Testes (Build Matrix)**
 Criar uma "Build Matrix" exime o mantenedor de redigir longos 3 *Jobs* e scripts isolados massivos caso um projeto (como o próprio NodeJS) precise rodar e atestar estabilidade cruzada em Microsoft Windows, CentOS GNU/Linux e MacOSX. Através de um array indexado no `.yml` (tipo `os: [ubuntu-latest, windows-latest, macos-latest]`), o Github lê o comando solitário multiplicando virtualmente a execução paralelizada criando 3 Máquinas instantâneas operacionais a partir das regras básicas. Isso poupa 80% do texto base scriptado, conferindo escalabilidade de automação para testadores.
+
+---
+
+[**⬅️ Voltar para o Exercício**](./exercicio-11.md)

@@ -36,3 +36,7 @@ Acessando o StackShare ou Blog de Engenharia da Netflix, encontramos ferramentas
 3.  **Docker / Kubernetes** (Infraestrutura/Orquestração): Para levantar os milhões de contêineres que servem os vídeos.
 4.  **Jira** (Gestão de Projetos): Para coordenar as centenas de equipes em sprints ágeis.
 5.  **Slack** (Comunicação): Para notificar incidentes no servidor via integrações (ChatOps).
+
+---
+
+[**⬅️ Voltar para o Exercício**](./exercicio-01.md)

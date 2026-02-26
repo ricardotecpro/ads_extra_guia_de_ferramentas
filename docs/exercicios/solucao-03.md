@@ -31,3 +31,7 @@ Uma tarefa clássica é a criação de dezenas de pastas com nomes diferentes ba
 
 **5. Customização Avançada (PATH)**
 A variável de ambiente **PATH** é uma lista de caminhos (diretórios) que o sistema operacional consulta toda vez que você digita um comando no terminal. Por exemplo, quando você digita `node`, o sistema não sabe o que é isso, mas ele olha no PATH, acha a pasta de instalação do Node.js e executa o binário. Sem a configuração correta do PATH, você precisaria digitar o endereço completo do programa (ex: `C:\Program Files\Nodejs\node.exe`) toda vez que fosse usá-lo.
+
+---
+
+[**⬅️ Voltar para o Exercício**](./exercicio-03.md)

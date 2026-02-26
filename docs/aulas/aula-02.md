@@ -42,7 +42,7 @@ Integradas diretamente ao repositório de código.
 
 O Kanban é a forma mais comum de visualizar o trabalho. Consiste em colunas que representam o status de cada tarefa.
 
-### Fluxo Típico de Desenvolvimento (Mermaid)
+### Fluxo Típico de Desenvolvimento
 
 ```mermaid
 graph TD
@@ -52,7 +52,6 @@ graph TD
     C --> D([Revisão de Código])
     D --> E([Concluído])
 
-    
     subgraph "Estados Kanban"
     A
     C
@@ -83,7 +82,7 @@ ADS-99   Estudar Git                  Medium
 
 ---
 
-## 5. Mini-Projeto: Organizando seu Semestre 🚀
+## 5. Prática: Organizando seu Semestre 🚀
 
 Sua missão é criar um quadro de gestão para suas atividades acadêmicas ou pessoais:
 
@@ -95,14 +94,14 @@ Sua missão é criar um quadro de gestão para suas atividades acadêmicas ou pe
 
 ---
 
-## 6. Exercício de Fixação 📝
+## 📝 Prática Sugerida
 
-1.  **Básico**: Qual a diferença visual entre uma lista de tarefas comum e um quadro Kanban?
-2.  **Básico**: Em qual situação o **Jira** é mais recomendado do que o **Trello**?
-3.  **Intermediário**: Por que é importante que a ferramenta de gestão esteja integrada ao repositório de código (como as GitHub Issues)?
-4.  **Intermediário**: Explique o que é o "Backlog" de um projeto.
-5.  **Desafio**: Pesquise sobre a metodologia **Scrum** e explique a diferença entre o quadro Scrum e o quadro Kanban.
+Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+
+👉 **[Ver Exercícios da Aula 02](../exercicios/exercicio-02.md)**
+👉 **[Ver Projeto da Aula 02](../projetos/projeto-02.md)**
 
 ---
 
-**Próxima Aula**: Vamos preparar nossa máquina com o [Ambiente de Desenvolvimento (VS Code/Terminal)](./aula-03.md)! 💻
+**Próxima Aula**: Vamos preparar nossa máquina com o [Módulo 1 - Aula 03 - Ambiente de Desenvolvimento](./aula-03.md)! 💻
+

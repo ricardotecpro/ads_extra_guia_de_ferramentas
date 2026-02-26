@@ -23,6 +23,7 @@ O **Git** é um sistema de controle de versão distribuído. Ele funciona como u
 
 Antes de começar, o Git precisa saber quem você é. Isso é importante para que cada alteração tenha um autor identificado.
 
+<div class="termy" markdown="1">
 ```termynal
 $ git config --global user.name "Seu Nome"
 $ git config --global user.email "seu@email.com"
@@ -30,6 +31,7 @@ $ git config --list
 user.name=Seu Nome
 user.email=seu@email.com
 ```
+</div>
 
 ---
 
@@ -41,7 +43,7 @@ Para salvar alterações no Git, passamos por três estados principais:
 2.  **Staging Area (Index)**: A "sala de espera". Aqui você escolhe o que será salvo.
 3.  **Local Repository**: Onde a "foto" é guardada permanentemente.
 
-### Visualização do Fluxo (Mermaid)
+### Visualização do Fluxo de Trabalho
 
 ```mermaid
 graph LR
@@ -83,7 +85,7 @@ $ git commit -m "Initial commit: adicionar README"
 
 ---
 
-## 6. Mini-Projeto: Minha Primeira Máquina do Tempo 🚀
+## 6. Prática: Minha Primeira Máquina do Tempo 🚀
 
 1.  Crie uma pasta chamada `meu-primeiro-repo`.
 2.  Inicie o Git nesta pasta.
@@ -94,14 +96,13 @@ $ git commit -m "Initial commit: adicionar README"
 
 ---
 
-## 7. Exercício de Fixação 📝
+## 📝 Prática Sugerida
 
-1.  **Básico**: Para que serve o comando `git status`?
-2.  **Básico**: Por que é obrigatório colocar uma mensagem no `git commit`?
-3.  **Intermediário**: Qual a diferença entre o `Working Directory` e a `Staging Area`?
-4.  **Intermediário**: O que acontece se você deletar a pasta oculta `.git` do seu projeto?
-5.  **Desafio**: Pesquise o que é o arquivo `.gitignore` e dê um exemplo de arquivo que nunca deve ser enviado para o Git.
+Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+
+👉 **[Ver Exercícios da Aula 04](../exercicios/exercicio-04.md)**
+👉 **[Ver Projeto da Aula 04](../projetos/projeto-04.md)**
 
 ---
 
-**Próxima Aula**: Vamos aprender a levar nosso código para a nuvem com as [Plataformas de Colaboração (GitHub/GitLab)](./aula-05.md)! 🤝
+**Próxima Aula**: Vamos aprender a levar nosso código para a nuvem com as [Módulo 2 - Aula 05 - Plataformas de Colaboração (GitHub/GitLab)](./aula-05.md)! 🤝

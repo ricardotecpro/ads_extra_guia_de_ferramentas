@@ -41,3 +41,7 @@ Isso guardou `'Joao'` e programou ele para expirar (se autodestruir) em 60 segun
 **5. Arquitetura Híbrida**
 Nessa mescla (A Receita de Ouro), nós utilizamos a força garantida matemática de bancos SQL somada ao Cache temporário de RAM do banco Redis. 
 **O Fluxo**: O usuário pede informações do seu perfil. A CPU do servidor pesquisa PRIMEIRO na memória temporária super-veloz (Redis). Caso não exista a informação (isso é o famoso *Cache Miss*), a CPU avisa: "Ok, precisaremos bater à porta do Postgres." Dessa forma, vai até o Postgres (que roda em disco, de forma duradoura mas demorada), puxa a leitura e envia o perfil do cara no site... entretanto... **Antes de despachar isso**, nós salvamos o resultado da query na memória do Redis de novo! Se o usuário de fato pedir o mesmo pacote em cinco minutos depois? O Redis já possui o dado (*Cache Hit*) e serve de forma cem vezes mais célere sem estressar a máquina principal.
+
+---
+
+[**⬅️ Voltar para o Exercício**](./exercicio-07.md)

@@ -1,68 +1,79 @@
-# Guia de Ferramentas para Desenvolvedores 🛠️
+# 🛠️ Curso: Ferramentas para Projetos
 
-Domine o ecossistema de ferramentas essenciais para transformar código em software de alta qualidade: da gestão de tarefas e controle de versão à automação, infraestrutura e design.
+> "Dominar a ferramenta certa é o primeiro passo para transformar uma ideia em um produto de sucesso."
 
-!!! tip "Foco do Curso"
-    **Metodologia**: Aprendizado prático focado no domínio das ferramentas padrão da indústria, capacitando o desenvolvedor para atuar em equipes ágeis e ambientes corporativos modernos.
+Bem-vindo ao Guia Mestre de Ferramentas. Este curso foi projetado para capacitar desenvolvedores a dominar o ecossistema moderno de software: da gestão ágil e controle de versão à infraestrutura escalável, automação de CI/CD e design colaborativo.
 
 ---
 
-## 🎯 O Que Você Vai Aprender
+## ⚡ Atalhos Rápidos
 
 <div class="grid cards" markdown>
 
--   :material-briefcase-check: **Gestão e Planejamento**
+-   :material-book-open-page-variant: **Trilha de Aulas**
     ---
-    Organize tarefas, rastreie bugs e gerencie fluxos de trabalho com Jira, Trello e GitHub Issues.
-    [:octicons-arrow-right-24: Ver Módulo 1](aulas/aula-01.md)
+    16 lições práticas englobando gestão, desenvolvimento, infra e design.
+    [:octicons-arrow-right-24: Iniciar Jornada](aulas/index.md)
 
--   :material-git: **Controle de Versão**
+-   :material-presentation: **Slides Interativos**
     ---
-    Domine o Git e as principais plataformas de hospedagem (GitHub, GitLab, Bitbucket) para colaboração eficiente.
-    [:octicons-code-24: Ver Ferramentas](aulas/aula-04.md)
+    Material visual moderno com Reveal.js para acompanhamento das aulas.
+    [:octicons-arrow-right-24: Ver Slides](slides/index.md)
 
--   :material-docker: **Infraestrutura e CI/CD**
+-   :material-school: **Quizzes Interativos**
     ---
-    Aprenda Docker, Kubernetes e automação com GitHub Actions para deploy contínuo e escalável.
-    [:octicons-rocket-24: Ver Automação](aulas/aula-11.md)
+    Avalie seu progresso com testes dinâmicos para cada módulo do curso.
+    [:octicons-arrow-right-24: Testar Conhecimento](quizzes/index.md)
 
--   :material-palette: **Design e Qualidade**
+-   :material-rocket: **Laboratórios e Projetos**
     ---
-    Garanta a qualidade do código com Linters e Testes, e faça a ponte com Design usando Figma.
-    [:octicons-repo-24: Ver Projetos](projetos/index.md)
+    Aplique as ferramentas em cenários reais para consolidar o aprendizado.
+    [:octicons-arrow-right-24: Ver Projetos](projetos/index.md)
+
+-   :material-dumbbell: **Exercícios Progressivos**
+    ---
+    Do básico ao desafio prático para dominar comandos e fluxos.
+    [:octicons-arrow-right-24: Praticar Agora](exercicios/index.md)
+
+-   :material-cog: **Setup e Ferramentas**
+    ---
+    Configurações essenciais para seu ambiente de desenvolvimento.
+    [:octicons-arrow-right-24: Configurar](setups/index.md)
 
 </div>
 
 ---
 
-## 📚 Jornada de Aprendizado (16 Aulas)
+## 🗺️ Mapa da Jornada (Módulos)
 
-O curso é estruturado em quatro trilhas fundamentais de ferramentas.
+O curso está estruturado em **5 Módulos** cruciais para a agilidade no desenvolvimento:
 
-### 🧩 Módulo 1: Fundamentos e Gestão (Aulas 01-04)
-*   [Aula 01 - Intro ao Ecossistema](aulas/aula-01.md) 🌐
-*   [Aula 02 - Gestão de Projetos (Jira/Trello)](aulas/aula-02.md) 📊
-*   [Aula 03 - Ambiente de Dev (VS Code/Terminal)](aulas/aula-03.md) 💻
-*   [Aula 04 - Git Fundamentos](aulas/aula-04.md) 🛠️
+### 🧩 Módulo 1: Ecossistema e Gestão
+*O alicerce do projeto: organização e ambiente.*
+- **Aulas 01 a 04**: Intro ao Ecossistema, Gestão de Projetos, Ambiente de Dev e Git Fundamentos.
 
-### 🏗️ Módulo 2: Colaboração e Dados (Aulas 05-08)
-*   [Aula 05 - Plataformas Git (GitHub/GitLab)](aulas/aula-05.md) 🤝
-*   [Aula 06 - DB Relacional (Postgres/DBeaver)](aulas/aula-06.md) 💾
-*   [Aula 07 - NoSQL e Cache (MongoDB/Redis)](aulas/aula-07.md) ⚡
-*   [Aula 08 - Frameworks de Teste](aulas/aula-08.md) 🧪
+### 🏗️ Módulo 2: Colaboração e Dados
+*Escalando o desenvolvimento e persistindo informação.*
+- **Aulas 05 a 08**: Plataformas Git, DB Relacional, NoSQL e Cache, e Frameworks de Teste.
 
-### 🔌 Módulo 3: Qualidade e Automação (Aulas 09-11)
-*   [Aula 09 - Ferramentas de API (Postman)](aulas/aula-09.md) 📡
-*   [Aula 10 - Qualidade de Código (ESLint/Prettier)](aulas/aula-10.md) ✨
-*   [Aula 11 - CI/CD Moderno (Actions)](aulas/aula-11.md) 🚀
+### 🔌 Módulo 3: API e Qualidade
+*Conectividade robusta e código impecável.*
+- **Aulas 09 a 12**: Ferramentas de API, Qualidade de Código, CI/CD Moderno e Automação/IaC.
 
-### 🚀 Módulo 4: Infraestrutura e Integração (Aulas 12-16)
-*   [Aula 12 - Automação e IaC (Ansible/Terraform)](aulas/aula-12.md) ⚙️
-*   [Aula 13 - Docker e Compose](aulas/aula-13.md) 📦
-*   [Aula 14 - K8s e Runners](aulas/aula-14.md) ☸️
-*   [Aula 15 - Comunicação (Slack/Teams)](aulas/aula-15.md) 💬
-*   [Aula 16 - Design e Figma](aulas/aula-16.md) 🎨
+### 🚀 Módulo 4: Infraestrutura e Docker
+*Virtualização e orquestração para o mundo real.*
+- **Aulas 13 a 15**: Docker e Compose, K8s e Runners, e Comunicação Corporativa.
+
+### 🎨 Módulo 5: Design e UI
+*A ponte entre a funcionalidade e a experiência do usuário.*
+- **Aula 16**: Design System e Figma para Desenvolvedores.
 
 ---
 
-[:material-play: Começar Minha Jornada](aulas/aula-01.md){ .md-button .md-button--primary .md-button--large }
+## 💡 Dicas de Sucesso
+
+1. **Domine o Terminal**: Muitas ferramentas de automação e infraestrutura (Docker, Git, IaC) dependem de um uso fluido da CLI.
+2. **Pratique o Fluxo Git**: O controle de versão é o coração da colaboração moderna; não avance sem entender `branching` e `pull requests`.
+3. **Automatize Tudo**: Sempre que possível, utilize as ferramentas de CI/CD para validar seu código automaticamente.
+
+**Pronto para dominar as ferramentas?** [:material-rocket: Ir para Aula 01](aulas/aula-01.md){ .md-button .md-button--primary }

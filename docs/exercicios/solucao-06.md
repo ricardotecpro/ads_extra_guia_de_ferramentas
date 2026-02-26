@@ -38,3 +38,7 @@ Isso é extremamente útil para um desenvolvedor, pois ele pode retirar amostras
 
 **5. Performance de Consulta (Index)**
 Um **Índice (Index)** de banco de dados funciona exatamente como o índice no final de uma enciclopédia grossa. Sem ele, para achar informações sobre o mês de Janeiro (`'2023-01-01'`) numa tabela de 10 milhões de linhas, o banco escaneia a tabela de capa a capa de forma exaustiva (*Full Table Scan*). Se eu criar um "Índice", o SQL organiza datas em uma árvore oculta ordenada e salta diretamente para a gaveta onde as de janeiro ficam, transformando uma consulta que levava 1 minuto para meros milissegundos.
+
+---
+
+[**⬅️ Voltar para o Exercício**](./exercicio-06.md)

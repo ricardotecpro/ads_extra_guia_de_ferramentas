@@ -65,11 +65,11 @@ $ code .
 
 ---
 
-## 4. Customização Profissional: ZSH e Oh My Zsh 🎨
+## 4. Customização Profissional 🎨
 
-Muitos desenvolvedores profissionais (especialmente em Mac e Linux) utilizam o **ZSH** com o **Oh My Zsh**. Ele adiciona temas e plugins que mostram em qual "branch" do Git você está, se há erros no comando anterior, entre outros.
+Muitos desenvolvedores profissionais utilizam ferramentas para tornar o terminal mais informativo (como ZSH, Oh My Zsh ou Oh My Posh).
 
-### Componentes do Setup (Mermaid)
+### Componentes do Setup Ideal
 
 ```mermaid
 graph TD
@@ -90,7 +90,7 @@ graph TD
 
 ---
 
-## 5. Mini-Projeto: Setup do Guerreiro(a) 🚀
+## 5. Prática: Setup do Guerreiro(a) 🚀
 
 Sua missão é deixar seu ambiente pronto para os próximos meses:
 
@@ -102,14 +102,14 @@ Sua missão é deixar seu ambiente pronto para os próximos meses:
 
 ---
 
-## 6. Exercício de Fixação 📝
+## 📝 Prática Sugerida
 
-1.  **Básico**: Explique uma diferença fundamental entre o VS Code e uma IDE da JetBrains.
-2.  **Básico**: Para que serve o comando `cd ..` no terminal?
-3.  **Intermediário**: Por que um desenvolvedor deveria preferir o terminal para criar uma estrutura de 10 pastas em vez de usar o explorador de arquivos?
-4.  **Intermediário**: Qual a função da extensão "Prettier" no VS Code?
-5.  **Desafio**: Pesquise o que é uma "Font with Ligatures" (como Fira Code) e qual o benefício visual que ela traz para o código.
+Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+
+👉 **[Ver Exercícios da Aula 03](../exercicios/exercicio-03.md)**
+👉 **[Ver Projeto da Aula 03](../projetos/projeto-03.md)**
 
 ---
 
-**Próxima Aula**: Vamos mergulhar no [Controle de Versão com Git: Fundamentos](./aula-04.md)! 🛠️
+**Próxima Aula**: Vamos mergulhar no [Módulo 1 - Aula 04 - Controle de Versão com Git: Fundamentos](./aula-04.md)! 🛠️
+

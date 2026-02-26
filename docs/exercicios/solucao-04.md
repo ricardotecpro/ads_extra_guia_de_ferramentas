@@ -30,3 +30,7 @@ A Staging Area serve para organizar seu trabalho de forma lógica. Se você edit
 
 **5. O Desastre do .git**
 Se você apagar a pasta `.git`, todos os **arquivos visíveis** (seu Working Directory) continuarão lá no exato momento que você deixou, intactos. O código não some. Contudo, todo o **histórico de versionamento (seus 50 commits)** é sumariamente destruído localmente, não sendo possível desfazê-lo pelo Git. Ele deixa de ser um repositório Git e vira uma pasta de arquivos comum. Se o código estiver espelhado no GitHub/GitLab, o histórico continua salvo nas nuvens.
+
+---
+
+[**⬅️ Voltar para o Exercício**](./exercicio-04.md)

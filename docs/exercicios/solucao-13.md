@@ -25,3 +25,7 @@ Caso o dev usasse o genérico `80:80`, as requisições cairiam na interface lim
 
 **5. Persistência com Volumes**
 A anatomia do Contêiner prega "efemeridade" (ser inato para morrer e renascer em limpeza de kernel pura). Isso é terrível para um SGBD onde cadastramos usuários vitais. O recurso **Docker Volumes** prega-se contornando a malha restritiva mapeando uma "pasta no disco físico exterior inabalável" (`/var/meus_dados_c:\`) diretamente e transparentemente numa "pasta virtual frágil" lá dentro no Docker (`/var/lib/postgresql/data`). A aplicação gravará os zeros e uns no falso interior iludida, repassando o chumbo na pedra duradoura física. Quando o contêiner colapsar ou atualizar imagem, a pasta enraizada persevera as gravações seguras para serem reacopladas em continentes novos.
+
+---
+
+[**⬅️ Voltar para o Exercício**](./exercicio-13.md)

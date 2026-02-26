@@ -25,3 +25,7 @@ A tolerância a intempéries de hardware (Incêndio florestal atinge CPD e cessa
 
 **5. O Ecossistema K8s (Pronto para estudos local)**
 Estudantes e freelancers que carecem faturar orçamentos trilionários aliciando *EKS/GKE* atestam doções enxutas de emulação nativa como as ferramentas do tipo **Minikube** ou a tecnologia atrativa **Kind (Kubernetes in Docker)**. O truque base dessa segunda versão provê a simulação orgânica enganadora de arquitetura clusterizada multi-nodes pesada operando como efêmeros "nózinhos leves" confinados nas jaulas já conhecidas dos docker contêineres nativos rodando na interface básica de desktops 8GB RAM de discentes.
+
+---
+
+[**⬅️ Voltar para o Exercício**](./exercicio-14.md)

@@ -26,7 +26,7 @@ O **Docker** é a plataforma líder mundial em contêineres.
 *   **Imagem**: É o "molde" ou a "receita". Contém tudo o que é necessário para rodar o app (SO, bibliotecas, código).
 *   **Contêiner**: É a instância da imagem em execução (o "bolo" pronto).
 
-### Diferença para Máquinas Virtuais (Mermaid)
+### Diferença para Máquinas Virtuais
 
 ```mermaid
 graph TD
@@ -39,6 +39,8 @@ graph TD
         Engine --- HostSO([Host SO Kernel])
     end
 ```
+
+---
 
 ## 3. Docker Compose: Multi-Serviços 🎼
 
@@ -75,7 +77,7 @@ a1b2c3d4e5f6   meu-app    Up 5 minutes    0.0.0.0:8080->80/tcp
 
 ---
 
-## 5. Mini-Projeto: Meu Primeiro Dockerfile 🚀
+## 5. Prática: Meu Primeiro Dockerfile 🚀
 
 Vamos criar a "receita" de um servidor simples:
 
@@ -92,14 +94,13 @@ Vamos criar a "receita" de um servidor simples:
 
 ---
 
-## 6. Exercício de Fixação 📝
+## 📝 Prática Sugerida
 
-1.  **Básico**: Qual a principal diferença entre uma Imagem e um Contêiner no Docker?
-2.  **Básico**: Por que usar o Docker resolve o problema do "na minha máquina funciona"?
-3.  **Intermediário**: Para que serve o comando `docker-compose up`?
-4.  **Intermediário**: Explique o que é o "Docker Hub".
-5.  **Desafio**: Pesquise sobre o conceito de "Camadas" (Layers) em uma imagem do Docker e como isso ajuda na velocidade de build.
+Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+
+👉 **[Ver Exercícios da Aula 13](../exercicios/exercicio-13.md)**
+👉 **[Ver Projeto da Aula 13](../projetos/projeto-13.md)**
 
 ---
 
-**Próxima Aula**: Vamos escalar nossos contêineres com o [Kubernetes e Runners](./aula-14.md)! ☸️
+**Próxima Aula**: Vamos escalar nossos contêineres com o [Módulo 4 - Aula 14 - Orquestração com Kubernetes e Runners](./aula-14.md)! ☸️

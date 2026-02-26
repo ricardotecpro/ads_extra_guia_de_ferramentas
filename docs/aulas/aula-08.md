@@ -27,7 +27,7 @@ Nem todos os testes são iguais. Os desenvolvedores seguem a **Pirâmide de Test
 2.  **Testes de Integração (Meio)**: Testam se dois ou mais módulos funcionam bem juntos (ex: API salvando no Banco).
 3.  **Testes E2E - Ponta a Ponta (Topo)**: Simulam o usuário real clicando na tela. São lentos e complexos.
 
-### Visualização da Pirâmide (Mermaid)
+### Pirâmide de Testes
 
 ```mermaid
 graph TD
@@ -84,7 +84,7 @@ Ran all test suites.
 
 ---
 
-## 6. Mini-Projeto: O Primeiro Teste (Lógica) 🚀
+## 6. Prática: O Primeiro Teste (Lógica) 🚀
 
 Mesmo que ainda não estejamos codificando, vamos pensar na lógica de um teste unitário:
 
@@ -96,14 +96,14 @@ Mesmo que ainda não estejamos codificando, vamos pensar na lógica de um teste 
 
 ---
 
-## 7. Exercício de Fixação 📝
+## 📝 Prática Sugerida
 
-1.  **Básico**: Por que dizemos que os Testes Unitários devem ser a base da pirâmide?
-2.  **Básico**: Qual a diferença entre um Erro de Sintaxe e um Erro de Lógica (que os testes capturam)?
-3.  **Intermediário**: Explique o que é um "Falso Positivo" em testes automatizados.
-4.  **Intermediário**: Por que os Testes de Integração são mais complexos de configurar do que os Unitários?
-5.  **Desafio**: Pesquise o que é "Cobertura de Código" (Code Coverage) e se ela deve ser sempre de 100%.
+Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+
+👉 **[Ver Exercícios da Aula 08](../exercicios/exercicio-08.md)**
+👉 **[Ver Projeto da Aula 08](../projetos/projeto-08.md)**
 
 ---
 
-**Próxima Aula**: Vamos testar a comunicação entre sistemas com as [Ferramentas de API (Postman/Insomnia)](./aula-09.md)! 📡
+**Próxima Aula**: Vamos testar a comunicação entre sistemas com as [Módulo 3 - Aula 09 - Ferramentas de API (Postman/Insomnia)](./aula-09.md)! 📡
+

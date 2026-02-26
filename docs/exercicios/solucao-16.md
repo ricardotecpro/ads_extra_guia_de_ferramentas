@@ -25,3 +25,7 @@ A manutenção contínua e a sanidade em refrações diárias. No software Figma
 
 **5. Acessibilidade no Design (Contraste visual)**
 A WCAG dita a Lei Magna visual da rede (Acessibility Guidelines for Contrast Rates estaduais ativas no Globo). Ferramentas de UX e devs inspecionam índices contrastantes perante as fontes amareladas em botões textuais acinzentados brancos (onde o checker avisa *Rate x3.0 Fail* de leitura limitadíssima sob iluminações solares abertas estressadas para daltônicos de envelhecida visão). Essa negligência na transcrição cega por desenvolvedores isola os usuários na aplicação marginalizados de ler botões de pagamento ("checkout"). Podendo gerar litígios custosos de compliance legal a empresas que renegam deficiência digital, os front enders e designers assumem co-responsabilidade de atestar visualmente interfaces humanas saudáveis em leiturabilidade inclusiva ao exportar.
+
+---
+
+[**⬅️ Voltar para o Exercício**](./exercicio-16.md)

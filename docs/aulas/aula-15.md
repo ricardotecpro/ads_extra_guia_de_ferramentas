@@ -31,7 +31,7 @@ Muito comum em grandes corporações que já utilizam o ecossistema Office.
 
 Imagine que um teste falhou na sua pipeline (Aula 11). Em vez de você ter que abrir o GitHub para descobrir, um "bot" avisa a equipe no Slack imediatamente.
 
-### Fluxo de Notificação (Mermaid)
+### Fluxo de Notificação
 
 ```mermaid
 graph LR
@@ -50,7 +50,7 @@ graph LR
 
 ---
 
-## 5. Mini-Projeto: Configurando um Webhook (Lógica) 🚀
+## 5. Prática: Configurando um Webhook (Lógica) 🚀
 
 Webhooks são a forma como ferramentas "conversam" com o Slack:
 
@@ -62,14 +62,13 @@ Webhooks são a forma como ferramentas "conversam" com o Slack:
 
 ---
 
-## 6. Exercício de Fixação 📝
+## 📝 Prática Sugerida
 
-1.  **Básico**: Qual a principal vantagem do Slack em relação ao WhatsApp para uso profissional?
-2.  **Básico**: O que é um "Canal" no Slack ou Teams?
-3.  **Intermediário**: Por que a comunicação assíncrona é preferida pelos desenvolvedores em vez de reuniões constantes?
-4.  **Intermediário**: Explique o conceito de "ChatOps".
-5.  **Desafio**: Pesquise o que é a ferramenta **Discord** e por que algumas comunidades de desenvolvedores a preferem em vez do Slack.
+Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+
+👉 **[Ver Exercícios da Aula 15](../exercicios/exercicio-15.md)**
+👉 **[Ver Projeto da Aula 15](../projetos/projeto-15.md)**
 
 ---
 
-**Próxima Aula**: Finalizando nossa jornada com [Design e Figma](./aula-16.md)! 🎨
+**Próxima Aula**: Finalizando nossa jornada com [Módulo 4 - Aula 16 - Design, Prototipagem e Handoff (Figma)](./aula-16.md)! 🎨

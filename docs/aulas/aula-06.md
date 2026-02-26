@@ -48,7 +48,7 @@ Uma alternativa moderna, mais bonita e simples de usar, ideal para quem está co
 
 ---
 
-## 4. Visualizando Estruturas (Mermaid)
+## 4. Visualizando Estruturas
 
 ```mermaid
 erDiagram
@@ -78,7 +78,7 @@ meu_banco=# SELECT * FROM usuarios WHERE id = 1;
 
 ---
 
-## 6. Mini-Projeto: Conectando os Pontos 🚀
+## 6. Prática: Conectando os Pontos 🚀
 
 Sua missão é explorar um banco de dados real usando uma ferramenta visual:
 
@@ -90,14 +90,14 @@ Sua missão é explorar um banco de dados real usando uma ferramenta visual:
 
 ---
 
-## 7. Exercício de Fixação 📝
+## 📝 Prática Sugerida
 
-1.  **Básico**: O que diferencia um banco de dados "Relacional" (SQL) de um simples arquivo de texto ou planilha?
-2.  **Básico**: Qual a principal vantagem de usar o **DBeaver** em vez de um cliente específico para cada banco?
-3.  **Intermediário**: Explique o que é uma "Chave Primária" (Primary Key) e por que ela é essencial.
-4.  **Intermediário**: Por que o **PostgreSQL** é frequentemente preferido em relação ao MySQL para sistemas financeiros?
-5.  **Desafio**: Pesquise o que significa a sigla **ACID** em bancos de dados e explique como ela garante a segurança dos dados.
+Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+
+👉 **[Ver Exercícios da Aula 06](../exercicios/exercicio-06.md)**
+👉 **[Ver Projeto da Aula 06](../projetos/projeto-06.md)**
 
 ---
 
-**Próxima Aula**: Vamos conhecer a velocidade do [NoSQL e Cache (MongoDB/Redis)](./aula-07.md)! ⚡
+**Próxima Aula**: Vamos conhecer a velocidade do [Módulo 2 - Aula 07 - NoSQL e Cache (MongoDB/Redis)](./aula-07.md)! ⚡
+

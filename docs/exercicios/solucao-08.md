@@ -27,3 +27,7 @@ Os testes **End-to-End (E2E)** (na ponta cimeira global da pirâmide) levantam n
 
 **5. Mocks e Dublês**
 Imagine que seu bloco de teste execute dez mil vezes por noite um laço de envio simulado de correspondências da API Twilio/SendGrid. Na vida real o cartão corporativo sangraria em faturas a cada acionamento dessa automação de checagem ou sobrecarregaria um e-mail com contaminação diária. Quando usamos "Mocks" (os atores e dublês digitais do Jest ou PyTest) dizemos a esse gatilho para isolar a arquitetura nativa exterior de rede (`sendEmail API`), substituí-la internamente e simplesmente chancelar (`return true / Fake Ok`) como operante. Assim simulamos conexões e serviços vitais independentemente de instabilidades de IP sem descontinuar a cadeia lógica de premissas estritas do microserviço testado.
+
+---
+
+[**⬅️ Voltar para o Exercício**](./exercicio-08.md)

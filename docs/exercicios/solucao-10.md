@@ -25,3 +25,7 @@ Linters mais rígidos têm regras predeterminadas detectando chamas no código, 
 
 **5. Regras Customizadas (no-console)**
 O uso compulsivo de `console.log()` polui terabytes em arquivos de registro (*Logs*) vitais com prints de rastreio inúteis. Mais do que estética, é gravíssimo pelo escopo sensível: deixar um console solto em código que trafegará pro frontend permite aos invasores mal isencionados extraírem *tokens* vazados ou segredos processuais corporativos. A regra `no-console` aciona um farol vermelho de erro de PR logo na raiz de CI do desenvolvedor com vistas a evitar esses lapsos bizarros em massa.
+
+---
+
+[**⬅️ Voltar para o Exercício**](./exercicio-10.md)
