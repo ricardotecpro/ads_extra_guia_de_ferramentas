@@ -36,7 +36,7 @@ def test_homepage_structure(page: Page, base_url):
     # Check navigation cards exist
     # Material uses .md-typeset .grid.cards
     # The cards might be inside a div with class "grid cards"
-    expect(page.get_by_text("Ecossistema")).to_be_visible()
+    expect(page.get_by_role("heading", name=re.compile(r"Módulo 1: Ecossistema e Gestão"))).to_be_visible()
 
 # Test 3: Navigation to Lesson 01
 def test_lesson_01_page(page: Page, base_url):

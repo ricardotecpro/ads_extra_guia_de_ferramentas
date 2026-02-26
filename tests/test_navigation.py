@@ -69,10 +69,10 @@ class TestNavigation:
         page.get_by_role("link", name="Aulas").first.click(force=True)
         
         # Click Módulo 1 – Ecossistema e Gestão
-        page.get_by_text("Módulo 1 – Ecossistema e Gestão").first.click()
+        page.get_by_role("link", name=re.compile(r"Módulo 1.*Ecossistema e Gestão")).first.click(force=True)
         
         # Click Aula 01
-        page.get_by_role("link", name="Aula 01", exact=True).first.click()
+        page.get_by_role("link", name="Aula 01", exact=True).first.click(force=True)
         
         # Verifica se chegou na página correta
         expect(page).to_have_url(re.compile(r".*/aulas/aula-01/?$"))
