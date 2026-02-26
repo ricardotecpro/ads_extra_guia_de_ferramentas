@@ -20,8 +20,14 @@ class TestNavigation:
         """Helper to ensure menu is visible (opens drawer if needed)"""
         # Use more specific selector for the header button to avoid ambiguity
         drawer_button = page.locator("label.md-header__button[for='__drawer']")
+
+        # Only try to open if the button is visible (mobile view)
         if drawer_button.is_visible():
-            drawer_button.click()
+            # Check if the drawer is already open by checking the underlying checkbox
+            # The checkbox itself is usually hidden, but we can check its state
+            drawer_checkbox = page.locator("#__drawer")
+            if not drawer_checkbox.is_checked():
+                drawer_button.click()
 
     def test_curso_menu_exists(self, page_with_base_url: Page, base_url: str):
         """Verifica se o menu 'Aulas' existe"""
@@ -68,11 +74,15 @@ class TestNavigation:
         # Click Aulas
         page.get_by_role("link", name="Aulas").first.click(force=True)
         
+        # Ensure menu is still visible (in case of navigation)
+        self._ensure_menu_visible(page)
+
         # Click Módulo 1 – Ecossistema e Gestão
         page.get_by_role("link", name=re.compile(r"Módulo 1.*Ecossistema e Gestão")).first.click(force=True)
         
         # Click Aula 01
-        page.get_by_role("link", name="Aula 01", exact=True).first.click(force=True)
+        # Use a more flexible selector for "Aula 01" as it might be "Aula 01 - Intro ao Ecossistema"
+        page.get_by_role("link", name=re.compile(r"Aula 01.*")).first.click(force=True)
         
         # Verifica se chegou na página correta
         expect(page).to_have_url(re.compile(r".*/aulas/aula-01/?$"))
