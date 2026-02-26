@@ -20,34 +20,38 @@ def get_site_name():
 SITE_NAME = get_site_name()
 
 def parse_quiz_markdown(content: str) -> list:
-    """Parse quiz markdown format e extrai perguntas"""
+    """Extrai perguntas e opções do markdown"""
     questions = []
-    question_pattern = r'(\d+)\.\s+(.+?)(?=\n\n|\n\s*-|\Z)'
     
-    for match in re.finditer(question_pattern, content, re.DOTALL):
-        question_num = match.group(1)
-        question_text = match.group(2).strip()
+    # Dividir por blocos de perguntas (número seguido de ponto)
+    blocks = re.split(r'\n(?=\d+\.\s+\*\*)', content)
+    
+    for block in blocks:
+        # Extrair pergunta
+        q_match = re.search(r'(\d+)\.\s+\*\*(.*?)\*\*', block)
+        if not q_match:
+            continue
+            
+        q_num = q_match.group(1)
+        q_text = q_match.group(2).strip()
         
-        start_pos = match.end()
-        next_question = re.search(r'\n\d+\.\s+', content[start_pos:])
-        end_pos = start_pos + next_question.start() if next_question else len(content)
-        
-        options_text = content[start_pos:end_pos]
+        # Extrair opções
         options = []
-        option_pattern = r'-\s+\[([ x])\]\s+(.+?)(?=\n\s*-|\n\n|\Z)'
+        option_lines = re.findall(r'^\s*\*\s+\((.*?)\)\s+(.*)', block, re.MULTILINE)
         
-        for opt_match in re.finditer(option_pattern, options_text, re.DOTALL):
-            is_correct = opt_match.group(1) == 'x'
-            option_text = opt_match.group(2).strip()
-            options.append({
-                'text': option_text,
-                'correct': is_correct
-            })
-        
+        for marker, text in option_lines:
+            # Remover explicação da linha da opção se houver
+            clean_text = re.sub(r'\*Explicação:.*', '', text).strip()
+            if clean_text:
+                options.append({
+                    'correct': marker.lower() == 'x',
+                    'text': clean_text
+                })
+            
         if options:
             questions.append({
-                'number': question_num,
-                'text': question_text,
+                'number': q_num,
+                'text': q_text,
                 'options': options
             })
     
@@ -90,7 +94,11 @@ def convert_quiz(quiz_path: pathlib.Path) -> bool:
         
         # Extrair título real do arquivo se disponível, senão padrão
         title_match = re.search(r'# (.*)', content)
-        quiz_title = title_match.group(1) if title_match else f"Quiz {re.search(r'quiz-(\d+)', quiz_path.name).group(1)}"
+        if title_match:
+            quiz_title = title_match.group(1)
+        else:
+            num_match = re.search(r'quiz-(\d+)', quiz_path.name)
+            quiz_title = f"Quiz {num_match.group(1)}" if num_match else "Quiz"
         
         # Parse perguntas
         questions = parse_quiz_markdown(content)

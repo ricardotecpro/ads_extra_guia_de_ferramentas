@@ -27,17 +27,16 @@ def test_homepage_structure(page: Page, base_url):
     page.goto(base_url)
     
     # Check title
-    expect(page).to_have_title("Lógica e Algoritmos - Curso")
+    expect(page).to_have_title(re.compile(r"Guia de Ferramentas - ADS Extra"))
     
     # Check main heading
     heading = page.locator("h1")
-    expect(heading).to_contain_text("Curso de Algoritmos")
+    expect(heading).to_contain_text("Ferramentas para Projetos")
     
     # Check navigation cards exist
     # Material uses .md-typeset .grid.cards
     # The cards might be inside a div with class "grid cards"
-    # We can check for the existence of the text "Lógica Sólida" which is in the first card
-    expect(page.get_by_text("Lógica Sólida")).to_be_visible()
+    expect(page.get_by_text("Ecossistema")).to_be_visible()
 
 # Test 3: Navigation to Lesson 01
 def test_lesson_01_page(page: Page, base_url):
@@ -45,12 +44,11 @@ def test_lesson_01_page(page: Page, base_url):
     page.goto(f"{base_url}/aulas/aula-01/")
     
     # Check title (flexible match)
-    # The actual title in HTML is "Aula 01 - Lógica e Algoritmos - Curso"
-    expect(page).to_have_title(re.compile(r"Aula 01 - Lógica e Algoritmos"))
+    expect(page).to_have_title(re.compile(r"Aula 01 - Intro ao Ecossistema"))
     
     # Check main heading
     heading = page.locator("h1")
-    expect(heading).to_contain_text("Introdução")
+    expect(heading).to_contain_text("Ecossistema")
     
     # Check quiz containers exist
     quiz_containers = page.locator(".quiz-container")
@@ -98,8 +96,7 @@ def test_lesson_16_page(page: Page, base_url):
     page.goto(f"{base_url}/aulas/aula-16/")
     
     # Check title
-    # Actual: "Aula 16 (PHP) - Lógica e Algoritmos - Curso"
-    expect(page).to_have_title(re.compile(r"Aula 16 \(PHP\)"))
+    expect(page).to_have_title(re.compile(r"Aula 16 - Design e Figma"))
     
     # Check quiz containers
     quiz_containers = page.locator(".quiz-container")

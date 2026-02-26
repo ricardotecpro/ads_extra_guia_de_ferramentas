@@ -176,7 +176,8 @@ nav:
   - Informações:
     - Curso: index.md
     - Sobre: sobre.md
-    - Plano: plano.md
+    - Plano de Ensino: plano-ensino.md
+    - Roadmap: project_roadmap.md
   - Aulas:
     - aulas/index.md
     - Módulo 1 – Ecossistema e Gestão:

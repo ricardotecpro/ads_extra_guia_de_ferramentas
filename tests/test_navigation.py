@@ -14,7 +14,7 @@ class TestNavigation:
         page = page_with_base_url
         page.goto(base_url)
         
-        expect(page).to_have_title("Lógica e Algoritmos - Curso")
+        expect(page).to_have_title(re.compile(r"Guia de Ferramentas - ADS Extra"))
 
     def _ensure_menu_visible(self, page: Page):
         """Helper to ensure menu is visible (opens drawer if needed)"""
@@ -64,17 +64,17 @@ class TestNavigation:
         
         self._ensure_menu_visible(page)
         
-        # Navigate Aulas -> Módulo 1: Fundamentos -> Aula 01
+        # Navigate Aulas -> Módulo 1 – Ecossistema e Gestão -> Aula 01
         # Click Aulas
         page.get_by_role("link", name="Aulas").first.click(force=True)
         
-        # Click Módulo 1: Fundamentos
-        page.get_by_text("Módulo 1: Fundamentos").first.click()
+        # Click Módulo 1 – Ecossistema e Gestão
+        page.get_by_text("Módulo 1 – Ecossistema e Gestão").first.click()
         
         # Click Aula 01
         page.get_by_role("link", name="Aula 01", exact=True).first.click()
         
         # Verifica se chegou na página correta
         expect(page).to_have_url(re.compile(r".*/aulas/aula-01/?$"))
-        # H1 is "Aula 01 - Introdução à Lógica..."
-        expect(page.locator("h1")).to_contain_text("Introdução à Lógica")
+        # H1 is "Aula 01 - Intro ao Ecossistema"
+        expect(page.locator("h1")).to_contain_text("Ecossistema")
