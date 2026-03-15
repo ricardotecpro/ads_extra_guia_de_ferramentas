@@ -133,7 +133,7 @@ def convert_all_quizzes():
         print("[yellow]⚠ Por favor, coloque os arquivos markdown originais em docs/quizzes/src/[/yellow]")
         return
     
-    print("\n[bold cyan]🧠 Convertendo Quizzes para HTML...[/bold cyan]")
+    print("\n[bold cyan]Convertendo Quizzes para HTML...[/bold cyan]")
     print(f"Fonte: {quizzes_src_dir}")
     
     quiz_files = sorted(quizzes_src_dir.glob('quiz-*.md'))
@@ -152,7 +152,7 @@ def convert_all_quizzes():
 
 def main():
     """Função principal"""
-    print("[bold]🚀 Conversão Automática de Quizzes[/bold]")
+    print("[bold]Conversão Automática de Quizzes[/bold]")
     print("=" * 50)
     
     convert_all_quizzes()
