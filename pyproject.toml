@@ -46,7 +46,7 @@ build = {cmd="mkdocs build", help="Build do site"}
 slides = {cmd="python scripts/generate_slides_quizzes.py", help="Gera slides HTML"}
 quizzes = {cmd="python scripts/convert_quizzes.py", help="Gera quizzes interativos"}
 exercises = {cmd="python scripts/build_exercises.py", help="Gera exercícios interativos"}
-audit = {cmd="python d:/SourceCode/REPOS/_prompts/scripts/unified_audit.py .", help="Audita repositório com script unificado"}
+audit = {cmd="python scripts/unified_audit.py .", help="Audita repositório com script unificado"}
 deploy = {cmd="mkdocs gh-deploy --force", help="Deploy produção no gh-pages"}
 test = {cmd="pytest tests/ -v", help="Executa todos os testes"}
 check = {cmd="python scripts/check_content.py", help="Verifica integridade do conteúdo"}
