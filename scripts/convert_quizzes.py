@@ -79,7 +79,7 @@ def generate_quiz_html(quiz_number: int, questions: list) -> str:
         for opt in q['options']:
             correct_attr = 'true' if opt['correct'] else 'false'
             expl_html = f"<br><br><strong>Explicação:</strong> {q.get('explanation', '')}" if q.get('explanation') else ""
-            feedback = f"✅ Correto! {opt['text']}{expl_html}" if opt['correct'] else f"Incorreto. {expl_html}"
+            feedback = f"Correto! {opt['text']}{expl_html}" if opt['correct'] else f"Incorreto. {expl_html}"
             
             html_parts.append(
                 f'  <div class="quiz-option" data-correct="{correct_attr}" '
@@ -101,7 +101,7 @@ def convert_quiz(quiz_path: pathlib.Path) -> bool:
         questions = parse_quiz_markdown(content)
         
         if not questions:
-            print(f"  [yellow]⚠[/yellow] Nenhuma pergunta encontrada em {quiz_path.name}")
+            print(f"  [yellow][WARN][/yellow] Nenhuma pergunta encontrada em {quiz_path.name}")
             return False
         
         # Extrair número do quiz
@@ -114,11 +114,11 @@ def convert_quiz(quiz_path: pathlib.Path) -> bool:
         output_path = quiz_path.parent.parent / quiz_path.name
         output_path.write_text(html_content, encoding='utf-8')
         
-        print(f"  [green]✓[/green] Converteu {quiz_path.name} -> {output_path} ({len(questions)} perguntas)")
+        print(f"  [green][OK][/green] Converteu {quiz_path.name} -> {output_path} ({len(questions)} perguntas)")
         return True
         
     except Exception as e:
-        print(f"  [red]✗[/red] Erro em {quiz_path.name}: {e}")
+        print(f"  [red][ERROR][/red] Erro em {quiz_path.name}: {e}")
         return False
 
 
@@ -128,9 +128,9 @@ def convert_all_quizzes():
     quizzes_src_dir = pathlib.Path('docs/quizzes/src')
     
     if not quizzes_src_dir.exists():
-        print("[yellow]⚠ Pasta docs/quizzes/src/ não encontrada. Criando...[/yellow]")
+        print("[yellow][WARN] Pasta docs/quizzes/src/ não encontrada. Criando...[/yellow]")
         quizzes_src_dir.mkdir(parents=True, exist_ok=True)
-        print("[yellow]⚠ Por favor, coloque os arquivos markdown originais em docs/quizzes/src/[/yellow]")
+        print("[yellow][WARN] Por favor, coloque os arquivos markdown originais em docs/quizzes/src/[/yellow]")
         return
     
     print("\n[bold cyan]Convertendo Quizzes para HTML...[/bold cyan]")
@@ -139,7 +139,7 @@ def convert_all_quizzes():
     quiz_files = sorted(quizzes_src_dir.glob('quiz-*.md'))
     
     if not quiz_files:
-        print("[yellow]⚠ Nenhum arquivo de quiz encontrado em docs/quizzes/src/[/yellow]")
+        print("[yellow][WARN] Nenhum arquivo de quiz encontrado em docs/quizzes/src/[/yellow]")
         return
     
     converted = 0
@@ -147,7 +147,7 @@ def convert_all_quizzes():
         if convert_quiz(quiz_path):
             converted += 1
     
-    print(f"\n[green]✓ {converted}/{len(quiz_files)} quizzes convertidos com sucesso![/green]")
+    print(f"\n[green][OK] {converted}/{len(quiz_files)} quizzes convertidos com sucesso![/green]")
 
 
 def main():
@@ -157,8 +157,8 @@ def main():
     
     convert_all_quizzes()
     
-    print("\n[green]✅ Conversão concluída![/green]")
-    print("\n[cyan]💡 Dica:[/cyan] Teste os quizzes em http://localhost:8000/quizzes/")
+    print("\n[green]Conversão concluída![/green]")
+    print("\n[cyan]Dica:[/cyan] Teste os quizzes em http://localhost:8000/quizzes/")
 
 
 if __name__ == '__main__':
