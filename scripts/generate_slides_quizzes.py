@@ -86,10 +86,11 @@ def generate_slide_html(slide_id: str) -> str:
             hash: true,
             slideNumber: 'c/t',
             showSlideNumber: 'all',
-            controls: true,
+            controls: false,
             progress: true,
+            history: true,
             transition: 'slide',
-            center: false,
+            center: true,
             plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax3 ],
             mathjax3: {{
                 mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
