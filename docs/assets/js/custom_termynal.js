@@ -1,16 +1,31 @@
-// Custom Termynal
-console.log('Termynal loaded');
-
 document.addEventListener("DOMContentLoaded", function () {
-    // Find all termynal blocks
-    const termynals = document.querySelectorAll(".termy");
-    console.log("Found termynals:", termynals.length);
+    // 1. Encontrar todos os comentários <!-- termynal -->
+    const iterator = document.createNodeIterator(
+        document.body,
+        NodeFilter.SHOW_COMMENT,
+        { acceptNode: (node) => node.nodeValue.trim() === 'termynal' ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT }
+    );
 
-    termynals.forEach(termynal => {
+    const termyDivs = [];
+    let comment;
+    while (comment = iterator.nextNode()) {
+        const nextEl = comment.nextElementSibling;
+        if (nextEl && (nextEl.classList.contains('highlight') || nextEl.tagName === 'PRE')) {
+            termyDivs.push(nextEl);
+            nextEl.classList.add('termy');
+        }
+    }
+
+    // 2. Também buscar por classes explicitas .termy (legado)
+    const directTermys = document.querySelectorAll(".termy");
+    directTermys.forEach(d => { if (!termyDivs.includes(d)) termyDivs.push(d); });
+
+    console.log("Found termynals for enhancement:", termyDivs.length);
+
+    termyDivs.forEach(termynal => {
         const addCopyButton = () => {
             if (termynal.querySelector('.termynal-copy-button')) return;
 
-            // Create copy button
             const button = document.createElement("button");
             button.className = "termynal-copy-button";
             button.innerHTML = `
@@ -20,57 +35,39 @@ document.addEventListener("DOMContentLoaded", function () {
                 <span class="termynal-copy-feedback">Copied!</span>
             `;
             button.setAttribute("aria-label", "Copy to clipboard");
+            
+            // Estilo básico para garantir visibilidade se o CSS falhar
+            button.style.position = 'absolute';
+            button.style.right = '10px';
+            button.style.top = '10px';
 
-            // Add button to terminal
+            termynal.style.position = 'relative';
             termynal.appendChild(button);
 
-            // Handle click
             button.addEventListener("click", () => {
-                // Extract text: only lines with data-ty="input"
-                const inputLines = termynal.querySelectorAll('[data-ty="input"]');
-                const lines = [];
-
-                inputLines.forEach(line => {
-                    let text = line.textContent;
-                    // Remove generic prompt if present (naive check)
-                    if (text.startsWith("$ ")) {
-                        text = text.substring(2);
-                    }
-                    // Termynal might use data-ty-prompt, handle that:
-                    const prompt = line.getAttribute("data-ty-prompt") || "$";
-                    if (line.textContent.startsWith(prompt)) {
-                        // Usually termynal keeps prompt in css/attr, not textContent, but check just in case
-                    }
-
-                    lines.push(text);
-                });
-                let textToCopy = lines.join("\\n");
-
-                // Fallback: if no input lines found or empty, copy everything that looks like code
-                if (!textToCopy) {
-                    textToCopy = termynal.textContent;
+                const code = termynal.querySelector('code');
+                let textToCopy = "";
+                
+                if (code) {
+                    const lines = code.innerText.split('\n');
+                    const filtered = lines.map(line => {
+                        let t = line.trim();
+                        if (t.startsWith('$ ')) return t.substring(2);
+                        if (t.startsWith('C:\\> ')) return t.substring(4);
+                        return t;
+                    });
+                    textToCopy = filtered.join('\n');
+                } else {
+                    textToCopy = termynal.innerText;
                 }
 
-                // Copy to clipboard
                 navigator.clipboard.writeText(textToCopy.trim()).then(() => {
                     button.classList.add("copied");
-                    setTimeout(() => {
-                        button.classList.remove("copied");
-                    }, 2000);
-                }).catch(err => {
-                    console.error("Failed to copy:", err);
+                    setTimeout(() => button.classList.remove("copied"), 2000);
                 });
             });
         };
 
-        // Initial add
         addCopyButton();
-
-        // Observer to re-add on restart (which clears innerHTML)
-        const observer = new MutationObserver((mutations) => {
-            addCopyButton();
-        });
-
-        observer.observe(termynal, { childList: true });
     });
 });

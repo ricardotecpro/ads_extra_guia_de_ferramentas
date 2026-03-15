@@ -3,7 +3,7 @@ site_url: https://ricardotecpro.github.io/ads_extra_ferramentas_para_projetos
 repo_url: https://github.com/ricardotecpro/ads_extra_ferramentas_para_projetos
 repo_name: ricardotecpro/ads_extra_ferramentas_para_projetos
 site_description: Curso focado em ferramentas essenciais para gestão, desenvolvimento e infraestrutura de projetos.
-use_directory_urls: false
+use_directory_urls: true
 
 theme:
   name: material
@@ -91,7 +91,6 @@ plugins:
   - social:
       cards: false
   - tags:
-  - mkdocs-revealjs
   - search:
       lang: pt
   - mkdocs-jupyter
