@@ -51,7 +51,8 @@ graph TD
 Simulando o uso do ESLint para encontrar erros e do Prettier para formatar:
 
 <div class="termy" markdown="1">
-```termynal
+<!-- termynal -->
+```bash
 $ npx eslint index.js
 # index.js
 #   5:12  error  'total' is assigned a value but never used (no-unused-vars)
@@ -75,14 +76,43 @@ Sua missão é ver a mágica da formatação automática no VS Code:
 
 ---
 
-## 📝 Prática Sugerida
+## 🔗 Materiais da Aula
 
-Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+<div class="grid cards" markdown>
+- :material-presentation: **Slides**
 
-👉 **[Ver Exercícios da Aula 10](../exercicios/exercicio-10.md)**
-👉 **[Ver Projeto da Aula 10](../projetos/projeto-10.md)**
+    ---
+
+    Material visual com diagramas e conceitos-chave.
+
+    [:octicons-arrow-right-24: Slide 10](../slides/slide-10.html)
+
+- :material-help-circle: **Quiz**
+
+    ---
+
+    Teste seu conhecimento com 10 questões interativas.
+
+    [:octicons-arrow-right-24: Quiz 10](../quizzes/quiz-10.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+
+    ---
+
+    5 exercícios progressivos (básico → desafio).
+
+    [:octicons-arrow-right-24: Exercício 10](../exercicios/exercicio-10.md)
+
+- :material-briefcase-outline: **Projeto**
+
+    ---
+
+    Aplicação prática dos conceitos da aula.
+
+    [:octicons-arrow-right-24: Projeto 10](../projetos/projeto-10.md)
+
+</div>
 
 ---
 
-**Próxima Aula**: Vamos automatizar tudo com o [Módulo 3 - Aula 11 - CI/CD Moderno (GitHub Actions)](./aula-11.md)! 🚀
-
+[➡️ Próxima Aula: Aula 11](./aula-11.md){ .md-button .md-button--primary }

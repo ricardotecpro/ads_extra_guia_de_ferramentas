@@ -52,7 +52,8 @@ O terminal é onde a magia acontece. Ele permite automatizar tarefas que levaria
 ### Exemplo Prático de Fluxo no Terminal
 
 <div class="termy" markdown="1">
-```termynal
+<!-- termynal -->
+```bash
 $ mkdir meu-projeto
 $ cd meu-projeto
 $ touch index.html
@@ -102,14 +103,43 @@ Sua missão é deixar seu ambiente pronto para os próximos meses:
 
 ---
 
-## 📝 Prática Sugerida
+## 🔗 Materiais da Aula
 
-Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+<div class="grid cards" markdown>
+- :material-presentation: **Slides**
 
-👉 **[Ver Exercícios da Aula 03](../exercicios/exercicio-03.md)**
-👉 **[Ver Projeto da Aula 03](../projetos/projeto-03.md)**
+    ---
+
+    Material visual com diagramas e conceitos-chave.
+
+    [:octicons-arrow-right-24: Slide 03](../slides/slide-03.html)
+
+- :material-help-circle: **Quiz**
+
+    ---
+
+    Teste seu conhecimento com 10 questões interativas.
+
+    [:octicons-arrow-right-24: Quiz 03](../quizzes/quiz-03.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+
+    ---
+
+    5 exercícios progressivos (básico → desafio).
+
+    [:octicons-arrow-right-24: Exercício 03](../exercicios/exercicio-03.md)
+
+- :material-briefcase-outline: **Projeto**
+
+    ---
+
+    Aplicação prática dos conceitos da aula.
+
+    [:octicons-arrow-right-24: Projeto 03](../projetos/projeto-03.md)
+
+</div>
 
 ---
 
-**Próxima Aula**: Vamos mergulhar no [Módulo 1 - Aula 04 - Controle de Versão com Git: Fundamentos](./aula-04.md)! 🛠️
-
+[➡️ Próxima Aula: Aula 04](./aula-04.md){ .md-button .md-button--primary }

@@ -66,7 +66,8 @@ Alguns desenvolvedores preferem escrever o teste **antes** do código. Este proc
 Simulando a execução de um teste com o Jest:
 
 <div class="termy" markdown="1">
-```termynal
+<!-- termynal -->
+```bash
 $ npm test
 > jest
 
@@ -96,14 +97,43 @@ Mesmo que ainda não estejamos codificando, vamos pensar na lógica de um teste 
 
 ---
 
-## 📝 Prática Sugerida
+## 🔗 Materiais da Aula
 
-Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+<div class="grid cards" markdown>
+- :material-presentation: **Slides**
 
-👉 **[Ver Exercícios da Aula 08](../exercicios/exercicio-08.md)**
-👉 **[Ver Projeto da Aula 08](../projetos/projeto-08.md)**
+    ---
+
+    Material visual com diagramas e conceitos-chave.
+
+    [:octicons-arrow-right-24: Slide 08](../slides/slide-08.html)
+
+- :material-help-circle: **Quiz**
+
+    ---
+
+    Teste seu conhecimento com 10 questões interativas.
+
+    [:octicons-arrow-right-24: Quiz 08](../quizzes/quiz-08.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+
+    ---
+
+    5 exercícios progressivos (básico → desafio).
+
+    [:octicons-arrow-right-24: Exercício 08](../exercicios/exercicio-08.md)
+
+- :material-briefcase-outline: **Projeto**
+
+    ---
+
+    Aplicação prática dos conceitos da aula.
+
+    [:octicons-arrow-right-24: Projeto 08](../projetos/projeto-08.md)
+
+</div>
 
 ---
 
-**Próxima Aula**: Vamos testar a comunicação entre sistemas com as [Módulo 3 - Aula 09 - Ferramentas de API (Postman/Insomnia)](./aula-09.md)! 📡
-
+[➡️ Próxima Aula: Aula 09](./aula-09.md){ .md-button .md-button--primary }

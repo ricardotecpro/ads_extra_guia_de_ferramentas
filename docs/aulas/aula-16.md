@@ -70,14 +70,46 @@ Sua missão final é entrar no mundo do design:
 
 ---
 
-## 📝 Prática Sugerida
+## 🔗 Materiais da Aula
 
-Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+<div class="grid cards" markdown>
+- :material-presentation: **Slides**
 
-👉 **[Ver Exercícios da Aula 16](../exercicios/exercicio-16.md)**
-👉 **[Ver Projeto da Aula 16](../projetos/projeto-16.md)**
+    ---
+
+    Material visual com diagramas e conceitos-chave.
+
+    [:octicons-arrow-right-24: Slide 16](../slides/slide-16.html)
+
+- :material-help-circle: **Quiz**
+
+    ---
+
+    Teste seu conhecimento com 10 questões interativas.
+
+    [:octicons-arrow-right-24: Quiz 16](../quizzes/quiz-16.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+
+    ---
+
+    5 exercícios progressivos (básico → desafio).
+
+    [:octicons-arrow-right-24: Exercício 16](../exercicios/exercicio-16.md)
+
+- :material-briefcase-outline: **Projeto**
+
+    ---
+
+    Aplicação prática dos conceitos da aula.
+
+    [:octicons-arrow-right-24: Projeto 16](../projetos/projeto-16.md)
+
+</div>
 
 ---
 
-**Parabéns!** Você concluiu as 16 aulas do **Guia de Ferramentas**. Agora você tem o cinto de utilidades completo para brilhar no mercado de ADS! 🎓✨
+!!! success "Parabéns!"
+    Você concluiu todas as aulas deste curso!
 
+[🏆 Voltar à Trilha de Aulas](./index.md){ .md-button .md-button--primary }

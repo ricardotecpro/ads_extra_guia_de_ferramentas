@@ -60,7 +60,8 @@ graph LR
 ## 4. Praticando a Sincronização 💻
 
 <div class="termy" markdown="1">
-```termynal
+<!-- termynal -->
+```bash
 $ git remote add origin https://github.com/usuario/meu-projeto.git
 $ git push -u origin main
 Enumerating objects: 3, done.
@@ -85,14 +86,43 @@ Sua missão é subir um de seus códigos para o GitHub:
 
 ---
 
-## 📝 Prática Sugerida
+## 🔗 Materiais da Aula
 
-Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+<div class="grid cards" markdown>
+- :material-presentation: **Slides**
 
-👉 **[Ver Exercícios da Aula 05](../exercicios/exercicio-05.md)**
-👉 **[Ver Projeto da Aula 05](../projetos/projeto-05.md)**
+    ---
+
+    Material visual com diagramas e conceitos-chave.
+
+    [:octicons-arrow-right-24: Slide 05](../slides/slide-05.html)
+
+- :material-help-circle: **Quiz**
+
+    ---
+
+    Teste seu conhecimento com 10 questões interativas.
+
+    [:octicons-arrow-right-24: Quiz 05](../quizzes/quiz-05.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+
+    ---
+
+    5 exercícios progressivos (básico → desafio).
+
+    [:octicons-arrow-right-24: Exercício 05](../exercicios/exercicio-05.md)
+
+- :material-briefcase-outline: **Projeto**
+
+    ---
+
+    Aplicação prática dos conceitos da aula.
+
+    [:octicons-arrow-right-24: Projeto 05](../projetos/projeto-05.md)
+
+</div>
 
 ---
 
-**Próxima Aula**: Vamos falar sobre onde os dados moram: [Módulo 2 - Aula 06 - Bancos de Dados Relacionais e Clientes GUI](./aula-06.md)! 💾
-
+[➡️ Próxima Aula: Aula 06](./aula-06.md){ .md-button .md-button--primary }

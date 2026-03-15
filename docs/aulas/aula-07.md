@@ -60,7 +60,8 @@ sequenceDiagram
 ## 4. Praticando com Redis no Terminal 💻
 
 <div class="termy" markdown="1">
-```termynal
+<!-- termynal -->
+```bash
 $ redis-cli
 127.0.0.1:6379> SET saudacao "Olá Mundo"
 OK
@@ -85,13 +86,43 @@ No NoSQL, a estrutura mais comum é o **JSON**. Sua missão é criar o "esquema"
 
 ---
 
-## 📝 Prática Sugerida
+## 🔗 Materiais da Aula
 
-Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+<div class="grid cards" markdown>
+- :material-presentation: **Slides**
 
-👉 **[Ver Exercícios da Aula 07](../exercicios/exercicio-07.md)**
-👉 **[Ver Projeto da Aula 07](../projetos/projeto-07.md)**
+    ---
+
+    Material visual com diagramas e conceitos-chave.
+
+    [:octicons-arrow-right-24: Slide 07](../slides/slide-07.html)
+
+- :material-help-circle: **Quiz**
+
+    ---
+
+    Teste seu conhecimento com 10 questões interativas.
+
+    [:octicons-arrow-right-24: Quiz 07](../quizzes/quiz-07.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+
+    ---
+
+    5 exercícios progressivos (básico → desafio).
+
+    [:octicons-arrow-right-24: Exercício 07](../exercicios/exercicio-07.md)
+
+- :material-briefcase-outline: **Projeto**
+
+    ---
+
+    Aplicação prática dos conceitos da aula.
+
+    [:octicons-arrow-right-24: Projeto 07](../projetos/projeto-07.md)
+
+</div>
 
 ---
 
-**Próxima Aula**: Vamos garantir que tudo funcione com os [Módulo 2 - Aula 08 - Frameworks de Teste e Qualidade](./aula-08.md)! 🧪
+[➡️ Próxima Aula: Aula 08](./aula-08.md){ .md-button .md-button--primary }

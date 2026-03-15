@@ -52,7 +52,8 @@ graph TD
 Mesmo sem rodar, veja como é simples descrever uma instalação de servidor:
 
 <div class="termy" markdown="1">
-```termynal
+<!-- termynal -->
+```bash
 $ ansible-playbook playbook.yml
 ```
 </div>
@@ -96,13 +97,43 @@ $ ansible-playbook playbook.yml
 
 ---
 
-## 📝 Prática Sugerida
+## 🔗 Materiais da Aula
 
-Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+<div class="grid cards" markdown>
+- :material-presentation: **Slides**
 
-👉 **[Ver Exercícios da Aula 12](../exercicios/exercicio-12.md)**
-👉 **[Ver Projeto da Aula 12](../projetos/projeto-12.md)**
+    ---
+
+    Material visual com diagramas e conceitos-chave.
+
+    [:octicons-arrow-right-24: Slide 12](../slides/slide-12.html)
+
+- :material-help-circle: **Quiz**
+
+    ---
+
+    Teste seu conhecimento com 10 questões interativas.
+
+    [:octicons-arrow-right-24: Quiz 12](../quizzes/quiz-12.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+
+    ---
+
+    5 exercícios progressivos (básico → desafio).
+
+    [:octicons-arrow-right-24: Exercício 12](../exercicios/exercicio-12.md)
+
+- :material-briefcase-outline: **Projeto**
+
+    ---
+
+    Aplicação prática dos conceitos da aula.
+
+    [:octicons-arrow-right-24: Projeto 12](../projetos/projeto-12.md)
+
+</div>
 
 ---
 
-**Próxima Aula**: Vamos empacotar tudo com os [Módulo 4 - Aula 13 - Contêineres e Docker](./aula-13.md)! 📦
+[➡️ Próxima Aula: Aula 13](./aula-13.md){ .md-button .md-button--primary }

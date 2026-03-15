@@ -73,14 +73,43 @@ No mundo do CI/CD (que vimos na Aula 11), os **Runners** são os contêineres qu
 
 ---
 
-## 📝 Prática Sugerida
+## 🔗 Materiais da Aula
 
-Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+<div class="grid cards" markdown>
+- :material-presentation: **Slides**
 
-👉 **[Ver Exercícios da Aula 14](../exercicios/exercicio-14.md)**
-👉 **[Ver Projeto da Aula 14](../projetos/projeto-14.md)**
+    ---
+
+    Material visual com diagramas e conceitos-chave.
+
+    [:octicons-arrow-right-24: Slide 14](../slides/slide-14.html)
+
+- :material-help-circle: **Quiz**
+
+    ---
+
+    Teste seu conhecimento com 10 questões interativas.
+
+    [:octicons-arrow-right-24: Quiz 14](../quizzes/quiz-14.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+
+    ---
+
+    5 exercícios progressivos (básico → desafio).
+
+    [:octicons-arrow-right-24: Exercício 14](../exercicios/exercicio-14.md)
+
+- :material-briefcase-outline: **Projeto**
+
+    ---
+
+    Aplicação prática dos conceitos da aula.
+
+    [:octicons-arrow-right-24: Projeto 14](../projetos/projeto-14.md)
+
+</div>
 
 ---
 
-**Próxima Aula**: Vamos falar sobre como as pessoas se organizam com o [Módulo 4 - Aula 15 - Comunicação e Colaboração em Equipe (Slack/Teams)](./aula-15.md)! 💬
-
+[➡️ Próxima Aula: Aula 15](./aula-15.md){ .md-button .md-button--primary }

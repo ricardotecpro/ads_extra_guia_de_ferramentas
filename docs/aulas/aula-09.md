@@ -60,7 +60,8 @@ sequenceDiagram
 Embora o Postman seja visual, as APIs também podem ser testadas via terminal usando o comando `curl`:
 
 <div class="termy" markdown="1">
-```termynal
+<!-- termynal -->
+```bash
 $ curl -X GET https://jsonplaceholder.typicode.com/users/1
 {
   "id": 1,
@@ -85,14 +86,43 @@ Sua missão é testar uma API pública e organizar os resultados:
 
 ---
 
-## 📝 Prática Sugerida
+## 🔗 Materiais da Aula
 
-Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+<div class="grid cards" markdown>
+- :material-presentation: **Slides**
 
-👉 **[Ver Exercícios da Aula 09](../exercicios/exercicio-09.md)**
-👉 **[Ver Projeto da Aula 09](../projetos/projeto-09.md)**
+    ---
+
+    Material visual com diagramas e conceitos-chave.
+
+    [:octicons-arrow-right-24: Slide 09](../slides/slide-09.html)
+
+- :material-help-circle: **Quiz**
+
+    ---
+
+    Teste seu conhecimento com 10 questões interativas.
+
+    [:octicons-arrow-right-24: Quiz 09](../quizzes/quiz-09.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+
+    ---
+
+    5 exercícios progressivos (básico → desafio).
+
+    [:octicons-arrow-right-24: Exercício 09](../exercicios/exercicio-09.md)
+
+- :material-briefcase-outline: **Projeto**
+
+    ---
+
+    Aplicação prática dos conceitos da aula.
+
+    [:octicons-arrow-right-24: Projeto 09](../projetos/projeto-09.md)
+
+</div>
 
 ---
 
-**Próxima Aula**: Vamos deixar nosso código impecável com os [Módulo 3 - Aula 10 - Linters e Formatadores (ESLint/Prettier)](./aula-10.md)! ✨
-
+[➡️ Próxima Aula: Aula 10](./aula-10.md){ .md-button .md-button--primary }

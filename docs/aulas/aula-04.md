@@ -24,7 +24,8 @@ O **Git** é um sistema de controle de versão distribuído. Ele funciona como u
 Antes de começar, o Git precisa saber quem você é. Isso é importante para que cada alteração tenha um autor identificado.
 
 <div class="termy" markdown="1">
-```termynal
+<!-- termynal -->
+```bash
 $ git config --global user.name "Seu Nome"
 $ git config --global user.email "seu@email.com"
 $ git config --list
@@ -71,7 +72,8 @@ Estes são os comandos que você usará 90% do tempo:
 ## 5. Exemplo Prático de Commit 💻
 
 <div class="termy" markdown="1">
-```termynal
+<!-- termynal -->
+```bash
 $ git init
 Initialized empty Git repository in /projeto/.git/
 $ touch README.md
@@ -96,13 +98,43 @@ $ git commit -m "Initial commit: adicionar README"
 
 ---
 
-## 📝 Prática Sugerida
+## 🔗 Materiais da Aula
 
-Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+<div class="grid cards" markdown>
+- :material-presentation: **Slides**
 
-👉 **[Ver Exercícios da Aula 04](../exercicios/exercicio-04.md)**
-👉 **[Ver Projeto da Aula 04](../projetos/projeto-04.md)**
+    ---
+
+    Material visual com diagramas e conceitos-chave.
+
+    [:octicons-arrow-right-24: Slide 04](../slides/slide-04.html)
+
+- :material-help-circle: **Quiz**
+
+    ---
+
+    Teste seu conhecimento com 10 questões interativas.
+
+    [:octicons-arrow-right-24: Quiz 04](../quizzes/quiz-04.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+
+    ---
+
+    5 exercícios progressivos (básico → desafio).
+
+    [:octicons-arrow-right-24: Exercício 04](../exercicios/exercicio-04.md)
+
+- :material-briefcase-outline: **Projeto**
+
+    ---
+
+    Aplicação prática dos conceitos da aula.
+
+    [:octicons-arrow-right-24: Projeto 04](../projetos/projeto-04.md)
+
+</div>
 
 ---
 
-**Próxima Aula**: Vamos aprender a levar nosso código para a nuvem com as [Módulo 2 - Aula 05 - Plataformas de Colaboração (GitHub/GitLab)](./aula-05.md)! 🤝
+[➡️ Próxima Aula: Aula 05](./aula-05.md){ .md-button .md-button--primary }

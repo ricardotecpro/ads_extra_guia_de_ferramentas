@@ -64,7 +64,8 @@ erDiagram
 Mesmo com ferramentas visuais, é bom conhecer o básico:
 
 <div class="termy" markdown="1">
-```termynal
+<!-- termynal -->
+```bash
 $ psql -U postgres -d meu_banco
 psql (15.3)
 Type "help" for help.
@@ -90,14 +91,43 @@ Sua missão é explorar um banco de dados real usando uma ferramenta visual:
 
 ---
 
-## 📝 Prática Sugerida
+## 🔗 Materiais da Aula
 
-Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+<div class="grid cards" markdown>
+- :material-presentation: **Slides**
 
-👉 **[Ver Exercícios da Aula 06](../exercicios/exercicio-06.md)**
-👉 **[Ver Projeto da Aula 06](../projetos/projeto-06.md)**
+    ---
+
+    Material visual com diagramas e conceitos-chave.
+
+    [:octicons-arrow-right-24: Slide 06](../slides/slide-06.html)
+
+- :material-help-circle: **Quiz**
+
+    ---
+
+    Teste seu conhecimento com 10 questões interativas.
+
+    [:octicons-arrow-right-24: Quiz 06](../quizzes/quiz-06.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+
+    ---
+
+    5 exercícios progressivos (básico → desafio).
+
+    [:octicons-arrow-right-24: Exercício 06](../exercicios/exercicio-06.md)
+
+- :material-briefcase-outline: **Projeto**
+
+    ---
+
+    Aplicação prática dos conceitos da aula.
+
+    [:octicons-arrow-right-24: Projeto 06](../projetos/projeto-06.md)
+
+</div>
 
 ---
 
-**Próxima Aula**: Vamos conhecer a velocidade do [Módulo 2 - Aula 07 - NoSQL e Cache (MongoDB/Redis)](./aula-07.md)! ⚡
-
+[➡️ Próxima Aula: Aula 07](./aula-07.md){ .md-button .md-button--primary }

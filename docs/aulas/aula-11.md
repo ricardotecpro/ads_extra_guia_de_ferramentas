@@ -69,7 +69,8 @@ jobs:
 Imagine o terminal do servidor do GitHub executando seu workflow:
 
 <div class="termy" markdown="1">
-```termynal
+<!-- termynal -->
+```bash
 $ runner-ci --start
 Starting Workflow: Node.js CI
 Step 1: Checking out code... OK
@@ -95,13 +96,43 @@ Step 5: All tests passed! Pipeline completed.
 
 ---
 
-## 📝 Prática Sugerida
+## 🔗 Materiais da Aula
 
-Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+<div class="grid cards" markdown>
+- :material-presentation: **Slides**
 
-👉 **[Ver Exercícios da Aula 11](../exercicios/exercicio-11.md)**
-👉 **[Ver Projeto da Aula 11](../projetos/projeto-11.md)**
+    ---
+
+    Material visual com diagramas e conceitos-chave.
+
+    [:octicons-arrow-right-24: Slide 11](../slides/slide-11.html)
+
+- :material-help-circle: **Quiz**
+
+    ---
+
+    Teste seu conhecimento com 10 questões interativas.
+
+    [:octicons-arrow-right-24: Quiz 11](../quizzes/quiz-11.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+
+    ---
+
+    5 exercícios progressivos (básico → desafio).
+
+    [:octicons-arrow-right-24: Exercício 11](../exercicios/exercicio-11.md)
+
+- :material-briefcase-outline: **Projeto**
+
+    ---
+
+    Aplicação prática dos conceitos da aula.
+
+    [:octicons-arrow-right-24: Projeto 11](../projetos/projeto-11.md)
+
+</div>
 
 ---
 
-**Próxima Aula**: Vamos falar de infraestrutura com [Módulo 3 - Aula 12 - Automação e IaC (Ansible/Terraform)](./aula-12.md)! ⚙️
+[➡️ Próxima Aula: Aula 12](./aula-12.md){ .md-button .md-button--primary }

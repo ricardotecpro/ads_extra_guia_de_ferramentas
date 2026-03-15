@@ -64,7 +64,8 @@ Uma das metas deste curso é ensinar você a parar de fazer tarefas repetitivas 
 Quase todas as ferramentas profissionais possuem uma interface de linha de comando (CLI). Dominar o terminal é o primeiro passo para se tornar um desenvolvedor avançado.
 
 <div class="termy" markdown="1">
-```termynal
+<!-- termynal -->
+```bash
 $ echo "Bem-vindo ao Guia de Ferramentas!"
 Bem-vindo ao Guia de Ferramentas!
 $ git --version
@@ -89,14 +90,43 @@ Sua primeira missão é verificar o que você já tem instalado e o que precisar
 
 ---
 
-## 📝 Prática Sugerida
+## 🔗 Materiais da Aula
 
-Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+<div class="grid cards" markdown>
+- :material-presentation: **Slides**
 
-👉 **[Ver Exercícios da Aula 01](../exercicios/exercicio-01.md)**
-👉 **[Ver Projeto da Aula 01](../projetos/projeto-01.md)**
+    ---
+
+    Material visual com diagramas e conceitos-chave.
+
+    [:octicons-arrow-right-24: Slide 01](../slides/slide-01.html)
+
+- :material-help-circle: **Quiz**
+
+    ---
+
+    Teste seu conhecimento com 10 questões interativas.
+
+    [:octicons-arrow-right-24: Quiz 01](../quizzes/quiz-01.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+
+    ---
+
+    5 exercícios progressivos (básico → desafio).
+
+    [:octicons-arrow-right-24: Exercício 01](../exercicios/exercicio-01.md)
+
+- :material-briefcase-outline: **Projeto**
+
+    ---
+
+    Aplicação prática dos conceitos da aula.
+
+    [:octicons-arrow-right-24: Projeto 01](../projetos/projeto-01.md)
+
+</div>
 
 ---
 
-**Próxima Aula**: Vamos aprender a organizar nosso fluxo de trabalho com o [Módulo 1 - Aula 02 - Gestão de Projetos](./aula-02.md)! 📊
-
+[➡️ Próxima Aula: Aula 02](./aula-02.md){ .md-button .md-button--primary }

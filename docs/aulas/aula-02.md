@@ -70,7 +70,8 @@ graph TD
 Vamos simular a criação de uma tarefa no terminal, algo comum em ferramentas que possuem CLI ou integrações:
 
 <div class="termy" markdown="1">
-```termynal
+<!-- termynal -->
+```bash
 $ jira issue create --summary "Configurar ambiente de dev" --priority High
 Issue ADS-101 created successfully.
 $ jira issue list --status "To Do"
@@ -94,14 +95,43 @@ Sua missão é criar um quadro de gestão para suas atividades acadêmicas ou pe
 
 ---
 
-## 📝 Prática Sugerida
+## 🔗 Materiais da Aula
 
-Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+<div class="grid cards" markdown>
+- :material-presentation: **Slides**
 
-👉 **[Ver Exercícios da Aula 02](../exercicios/exercicio-02.md)**
-👉 **[Ver Projeto da Aula 02](../projetos/projeto-02.md)**
+    ---
+
+    Material visual com diagramas e conceitos-chave.
+
+    [:octicons-arrow-right-24: Slide 02](../slides/slide-02.html)
+
+- :material-help-circle: **Quiz**
+
+    ---
+
+    Teste seu conhecimento com 10 questões interativas.
+
+    [:octicons-arrow-right-24: Quiz 02](../quizzes/quiz-02.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+
+    ---
+
+    5 exercícios progressivos (básico → desafio).
+
+    [:octicons-arrow-right-24: Exercício 02](../exercicios/exercicio-02.md)
+
+- :material-briefcase-outline: **Projeto**
+
+    ---
+
+    Aplicação prática dos conceitos da aula.
+
+    [:octicons-arrow-right-24: Projeto 02](../projetos/projeto-02.md)
+
+</div>
 
 ---
 
-**Próxima Aula**: Vamos preparar nossa máquina com o [Módulo 1 - Aula 03 - Ambiente de Desenvolvimento](./aula-03.md)! 💻
-
+[➡️ Próxima Aula: Aula 03](./aula-03.md){ .md-button .md-button--primary }

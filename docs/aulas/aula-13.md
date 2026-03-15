@@ -64,7 +64,8 @@ services:
 ## 4. Praticando no Terminal 💻
 
 <div class="termy" markdown="1">
-```termynal
+<!-- termynal -->
+```bash
 $ docker build -t meu-app .
 # (Cria a imagem a partir do Dockerfile)
 $ docker run -p 8080:80 meu-app
@@ -94,13 +95,43 @@ Vamos criar a "receita" de um servidor simples:
 
 ---
 
-## 📝 Prática Sugerida
+## 🔗 Materiais da Aula
 
-Para consolidar o conhecimento desta aula, realize os exercícios propostos:
+<div class="grid cards" markdown>
+- :material-presentation: **Slides**
 
-👉 **[Ver Exercícios da Aula 13](../exercicios/exercicio-13.md)**
-👉 **[Ver Projeto da Aula 13](../projetos/projeto-13.md)**
+    ---
+
+    Material visual com diagramas e conceitos-chave.
+
+    [:octicons-arrow-right-24: Slide 13](../slides/slide-13.html)
+
+- :material-help-circle: **Quiz**
+
+    ---
+
+    Teste seu conhecimento com 10 questões interativas.
+
+    [:octicons-arrow-right-24: Quiz 13](../quizzes/quiz-13.md)
+
+- :fontawesome-solid-pencil: **Exercícios**
+
+    ---
+
+    5 exercícios progressivos (básico → desafio).
+
+    [:octicons-arrow-right-24: Exercício 13](../exercicios/exercicio-13.md)
+
+- :material-briefcase-outline: **Projeto**
+
+    ---
+
+    Aplicação prática dos conceitos da aula.
+
+    [:octicons-arrow-right-24: Projeto 13](../projetos/projeto-13.md)
+
+</div>
 
 ---
 
-**Próxima Aula**: Vamos escalar nossos contêineres com o [Módulo 4 - Aula 14 - Orquestração com Kubernetes e Runners](./aula-14.md)! ☸️
+[➡️ Próxima Aula: Aula 14](./aula-14.md){ .md-button .md-button--primary }
