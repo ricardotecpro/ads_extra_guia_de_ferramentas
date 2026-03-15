@@ -1,19 +1,23 @@
-# Exercícios: Aula 14 - Orquestração com Kubernetes ☸️
+# Exercícios 14 - Parcerias Estratégicas 🧩
 
-### 🟢 Básicos (Fixação)
+## 🟢 Fáceis
 
-1.  **Escalabilidade**: Em qual situação um desenvolvedor decide que o Docker sozinho não é mais suficiente e ele precisa do Kubernetes?
-2.  **Pod vs Node**: Explique a diferença entre um **Pod** e um **Node** em um cluster Kubernetes. Quem contém quem?
+1. Quais os motivos base de mitigar e partilhar esforços na criação das redes puras passivas orgânicas conjuntas aos pares e redes perenes atreladas?
+2. O termo Coopetição é a base dos negócios híbridos de pares? Forneça contexto lúdico onde englobam pares puros das bases do conceito ativo fluído.
 
-### 🟡 Intermediários (Aplicação)
+## 🟡 Médios
 
-3.  **Auto-Cura**: Imagine que um Pod do seu site de vendas "trava". O que o Kubernetes faz automaticamente para que os clientes não percebam o problema?
-4.  **Disponibilidade**: Se a sua aplicação precisa ficar no ar 24h por dia, por que é importante ter um cluster com pelo menos 2 ou 3 **Nodes**?
+3. Risco fatiado no Joint Venturing interseciona lucros também ou age a título benevolente das premissas conjuntas dos acordos base?
+4. Com a nova era atestada interligada pautada nos Ecossistemas base tech fluídos puros os Parceiros perderam o contato? Elucide no marketplace nativo fluído ou intersecção nas gigantes redes perenes vitais globais.
 
-### 🔴 Desafio (Exploração)
+## 🔴 Desafio
 
-5.  **O Ecossistema K8s**: Pesquise o que é o **Minikube** ou o **Kind**. Como um estudante pode praticar Kubernetes no seu próprio computador pessoal sem pagar por um servidor na nuvem?
+5. O mercado avançado aponta 'Alianças API/Economy' substituindo elos braçais orgânicos inertes puros vitais dos moldes corporativos dos parceiros na era passada. Debata por que programar a roda inteira internamente beira ou flerta no suícidio logístico perante a aliança imediata nas APIs pautadas puras atestadamente robustas externas interlaçadas de gigantes fluídos escalonáveis mundiais.
 
 ---
 
-[**🔍 Ver Solução e Lógica do Exercício**](./solucao-14.md)
+## 📚 Correção
+
+Após tentar responder e pesquisar, verifique a resolução oficial e o gabarito para consolidar o aprendizado:
+
+**[👉 Ver Soluções (Gabarito Oficial)](solucao-14.md)**

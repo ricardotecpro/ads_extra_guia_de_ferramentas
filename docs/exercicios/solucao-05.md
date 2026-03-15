@@ -1,38 +1,34 @@
-# Resolução: Aula 05 - Plataformas de Colaboração 🤝
-
-### 🟢 Básicos (Fixação)
-
-**1. Dicionário Remix**
-*   **`git push`**: Pense na palavra "empurrar" (Push). Você está pegando o código pronto da sua máquina e empurrando-o para a "nuvem" (GitHub). Como subir uma foto para o Instagram.
-*   **`git pull`**: Pense na palavra "puxar" (Pull). Você quer jogar o código que está atualizado na nuvem para a sua máquina física. Como baixar para o celular uma imagem que está no Google Drive.
-
-**2. Segurança de Código**
-A branch `main` (ou `master`) é a versão oficial do seu projeto, aquela que os clientes estão usando em produção. Trabalhar direto nela não permite revisão de terceiros. Se você subir um bug crítico direto na `main`, o sistema sairá do ar. O correto é sempre criar uma branch paralela (`feature/login`, por exemplo), isolando suas mudanças até que sejam aprovadas pelos outros desenvolvedores.
+# Soluções - Aula 05: Estratégias e Ideação 💡
 
 ---
 
-### 🟡 Intermediários (Aplicação)
+## 🟢 Fáceis
 
-**3. Fluxo de Pull Request**
-1.  **Criar Branch Nova**: Basear seu ambiente a partir da `main` (`git checkout -b feature/botao`).
-2.  **Codar e Comitar**: Realizar as alterações e salvar o histórico localmente.
-3.  **Publicar a Branch (Push)**: Mandar a branch para o servidor do GitHub.
-4.  **Abrir o Pull Request (PR)**: Na interface do GitHub, clicar no botão de PR comparando sua branch com a `main`, pedir para a equipe revisar o código e, quando aprovado, clicar em "Merge".
+**1. Qual a finalidade de realizar uma sessão de Brainstorming focada?**
 
-**4. Resolução de Conflitos**
-Um conflito (`Merge Conflict`) surge quando duas pessoas tentam mexer na mesma parte de um arquivo simultaneamente. Exemplo: O Dev A muda o título `<title>` no arquivo `index.html` para "Site do José" e envia para a branch principal. O Dev B, com o arquivo antigo, muda a mesma linha `<title>` para "Portal do José" e tenta subir. O Git "trava" e pede que um erro humano julgue qual das duas linhas textuais deve prevalecer ou se as duas devem coexistir.
+> **Resposta**: É uma tempestade de ideias cujo objetivo é inicialmente abolir qualquer autocrítica, trazendo quantidade bruta de premissas sobre as quais os blocos refinados e inovadores mais factíveis podem brotar depois.
+
+**2. O Design Thinking coloca o humano no centro. O que isso significa na prática da ideação?**
+
+> **Resposta**: Significa inovar e desenhar processos sempre baseados em Empatia perante o usuário final. Desenvolver as soluções calçando os sapatos dele, para depois casar essas ideias com a viabilidade tecnológica e mercadológica cabíveis.
+
+## 🟡 Médios
+
+**3. Como o processo de divergência (criar escolhas) e convergência (fazer escolhas) estrutura as dinâmicas?**
+
+> **Resposta**: A ideação pura é caótica. Usa-se a divergência amplamente primeiro para abrir caminhos, então se impõe matrizes (ex: Impacto x Esforço) operando a Convergência de forma seletiva para focar o capital nos esforços vencedores.
+
+**4. Cite dois mitigadores importantes na estratégia visual ou mind-mapping para resolução.**
+
+> **Resposta**: O mind-mapping ajuda associando visual e radialmente os problemas correlacionados. Mitigadores ajudam pois destivam 'travas mentais' do cérebro linear das planilhas, operando sob associações cognitivas sinápticas soltas.
+
+## 🔴 Desafio
+
+**5. Descreva o modelo do 'Duplo Diamante' no contexto avançado e discuta como focar no Espaço do Problema é diferencial antes de pular para o Espaço da Solução.**
+
+> **Resposta**: O Duplo Diamante tem duas partes: 1) Descobrir e Definir (O Primeiro Diamante); 2) Desenhar e Entregar (O Segundo Diamante). A maioria falha ao pular ao Espaço da Solução. Disputar e mergulhar em definições precisas sobre a verdadeira dor subjacente (Espaço do Problema) evita gastar energia excelente na solução perfeita da doença totalmente equivocada.
 
 ---
 
-### 🔴 Desafio (Exploração)
-
-**5. Contribuição Open Source**
-(Esta resposta varia conforma a pesquisa do aluno). Contudo, nas comunidades open-source, um PR costuma ser rejeitado caso:
-*   Não possua testes automatizados.
-*   Não respeite o padrão de código da comunidade (Linting / Estilo de Identação).
-*   Seja uma quebra na arquitetura base sem discussão na área de *Issues* primeiro.
-Um PR aceito costuma ter discussão com os mantenedores, revisões em código visualizadas por "Approve" verdes e o clássico sinal de que os testes "passaram no CI".
-
----
-
-[**⬅️ Voltar para o Exercício**](./exercicio-05.md)
+!!! tip "Próximo Passo"
+    Maravilha! Agora que validou seus conhecimentos, avance para os próximos desafios ou retorne à [Aula 05](../aulas/aula-05.md).

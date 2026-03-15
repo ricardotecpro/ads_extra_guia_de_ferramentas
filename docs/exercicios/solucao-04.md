@@ -1,36 +1,34 @@
-# Resolução: Aula 04 - Git Fundamentos 🛠️
-
-### 🟢 Básicos (Fixação)
-
-**1. Cinto de Comandos**
-*   `git init`: Inicializa um repositório Git novo e vazio em um diretório (cria a pasta oculta `.git`).
-*   `git add`: "Prepara" as alterações de um ou mais arquivos, mandando-os para a sala de espera (Staging Area).
-*   `git commit`: "Tira a foto". Pega tudo o que estava na Staging Area e salva permanentemente no histórico local do repositório, exigindo uma mensagem descritiva.
-
-**2. Mensagens de Commit**
-A mensagem "ajustes" é terrível porque não diz o que foi ajustado, nem o porquê. Em um projeto com milhares de commits, se houver um bug, ninguém saberá o que esse commit alterou.
-Exemplos profissionais:
-1.  `Fix: Corrigir erro de cálculo na tela de pagamento`
-2.  `Feat: Adicionar botão de login com Google`
-3.  `Docs: Atualizar README com instruções de instalação`
+# Soluções - Aula 04: Processo de Inovação 💡
 
 ---
 
-### 🟡 Intermediários (Aplicação)
+## 🟢 Fáceis
 
-**3. Recuperação de Histórico**
-Primeiro, seria necessário rodar `git log` para listar todo o histórico de alterações (as fotos). Ao encontrar o commit desejado de 3 versões atrás, eu precisaria copiar o código único (Hash) daquele commit e executar o comando `git checkout <hash>`.
+**1. Quais são as diferenças conceituais entre Inovação Incremental e Inovação Disruptiva?**
 
-**4. Staging Area**
-A Staging Area serve para organizar seu trabalho de forma lógica. Se você editou 5 arquivos para consertar o rodapé do site e 2 arquivos para arrumar um erro de banco de dados, você não deveria salvar tudo em um único commit chamado "Ajustes". A Staging Area permite que você adicione primeiro apenas os arquivos do rodapé (`git add .`), faça um commit limpo, e depois adicione e comite separadamente a correção do banco de dados, mantendo o histórico cirúrgico.
+> **Resposta**: Inovação Incremental foca na melhoria contínua e paulatina do que já existe (ex: um carro mais leve). Inovação Disruptiva quebra a cadeia de paradigmas estabelecidos, revolucionando e às vezes aniquilando os antigos mercados (ex: Netflix destruindo locadoras físicas).
+
+**2. Defina sustentabilidade na inovação. Por que inovar é vital para a longevidade?**
+
+> **Resposta**: Inovação sustentável é prezar para que a empresa possa sempre se adequar às exigências vigentes para nunca tornar-se obsoleta. Produtos têm ciclos de morte e declínio curtos na era moderna, exigindo pivotagem ou obsolescência programada planejadas.
+
+## 🟡 Médios
+
+**3. Inovar sempre significa criar tecnologia do zero? Forneça um exemplo base.**
+
+> **Resposta**: Não. Às vezes a inovação é em Processo, em Modelo de Negócio ou Experiência de Usuário. O modelo de assinatura de livros não cria uma 'tecnologia' vitalmente nova, mas readapta o processo de entrega e recebimento.
+
+**4. De que maneiras a Cultura Organizacional afeta as taxas de inovação na empresa?**
+
+> **Resposta**: Culturas rígidas e que punem falhas duramente extirpam a iniciativa, matando inovações e ideias experimentais. Uma cultura de inovação demanda dar segurança psicológica para testes, iterando baseada em fatos e não em burocracia departamental inibidora.
+
+## 🔴 Desafio
+
+**5. Dado o nível de TRL (Technology Readiness Level), descreva como a inovação flui do ambiente acadêmico até o teste validado, e o que é o 'Vale da Morte' da Inovação neste percurso.**
+
+> **Resposta**: O processo começa na maturidade tecnológica nivelada em ciência básica (TRL 1) até protótipos comprovados (TRL 9). O 'Vale da Morte' (Death Valley of Innovation) descreve a lacuna letal (geralmente do TRL 4 a 6) onde projetos nascidos da academia perdem financiamento ou apoio, morrendo antes que a ideia prove-se economicamente para virar efetivamente um produto massificado.
 
 ---
 
-### 🔴 Desafio (Exploração)
-
-**5. O Desastre do .git**
-Se você apagar a pasta `.git`, todos os **arquivos visíveis** (seu Working Directory) continuarão lá no exato momento que você deixou, intactos. O código não some. Contudo, todo o **histórico de versionamento (seus 50 commits)** é sumariamente destruído localmente, não sendo possível desfazê-lo pelo Git. Ele deixa de ser um repositório Git e vira uma pasta de arquivos comum. Se o código estiver espelhado no GitHub/GitLab, o histórico continua salvo nas nuvens.
-
----
-
-[**⬅️ Voltar para o Exercício**](./exercicio-04.md)
+!!! tip "Próximo Passo"
+    Maravilha! Agora que validou seus conhecimentos, avance para os próximos desafios ou retorne à [Aula 04](../aulas/aula-04.md).

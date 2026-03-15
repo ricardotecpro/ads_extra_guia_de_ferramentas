@@ -132,9 +132,9 @@ def format_code(c):
 
 @task
 def deploy(c):
-    """Deploy para produção com Mike"""
+    """Deploy para produção com MkDocs"""
     console.print("[blue]🚀 Fazendo deploy para produção...[/blue]")
-    c.run("poetry run task deploy")
+    c.run("poetry run mkdocs gh-deploy --force")
     console.print("[green]✅ Deploy concluído[/green]")
 
 

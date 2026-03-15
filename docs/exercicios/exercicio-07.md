@@ -1,19 +1,23 @@
-# Exercícios: Aula 07 - NoSQL e Cache ⚡
+# Exercícios 07 - Modelagem Canvas 🧩
 
-### 🟢 Básicos (Fixação)
+## 🟢 Fáceis
 
-1.  **JSON Schema**: Crie um objeto JSON que represente um "Smartphone", contendo marca, modelo, ano e uma lista de 3 recursos (Ex: "Câmera 48MP", "Bateria 5000mAh").
-2.  **Identificação de Uso**: Cite um exemplo de aplicativo que você usa no dia a dia onde a velocidade do **Redis (Cache)** seria fundamental (Ex: Feed de notícias, placar de jogo ao vivo).
+1. Qual a grande diferença e grande proposta revolucionária do Canvas sobre o Plano clássico (Seapa/Sebrae)?
+2. Quantos e quais são os blocos lógicos essenciais do Business Model Canvas (BMC)?
 
-### 🟡 Intermediários (Aplicação)
+## 🟡 Médios
 
-3.  **Comparativo Técnico**: Um cliente quer criar um sistema de comentários para um blog que terá milhões de acessos. Por que você recomendaria o **MongoDB** em vez do MySQL para essa funcionalidade específica?
-4.  **Comandos Redis**: Escreva a sequência de comandos no `redis-cli` para salvar o nome de um usuário ("Joao") com a chave "user:1" e fazer com que ele suma da memória em 60 segundos.
+3. Se uma alteração radical for feita na Segmentação de Clientes, que blocos do Canvas sofreriam abalo em cadeia direto?
+4. Descreva o papel lógico e semântico dos Canais versus a área de Relacionamento no Canvas.
 
-### 🔴 Desafio (Exploração)
+## 🔴 Desafio
 
-5.  **Arquitetura Híbrida**: É muito comum empresas usarem PostgreSQL e Redis juntos. Explique como essas duas ferramentas "conversam" em um sistema onde o Postgres é a fonte da verdade e o Redis é a camada de velocidade.
+5. O Canvas não é estático. Use o conceito de Padronização e Business Model Patterns, aplique isso definindo a configuração atípica de um Business Canvas na vertente Freemium Digital e Long Tail de produtos físicos nichados.
 
 ---
 
-[**🔍 Ver Solução e Lógica do Exercício**](./solucao-07.md)
+## 📚 Correção
+
+Após tentar responder e pesquisar, verifique a resolução oficial e o gabarito para consolidar o aprendizado:
+
+**[👉 Ver Soluções (Gabarito Oficial)](solucao-07.md)**

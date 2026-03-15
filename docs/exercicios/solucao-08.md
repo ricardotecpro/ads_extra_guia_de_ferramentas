@@ -1,33 +1,34 @@
-# Resolução: Aula 08 - Frameworks de Teste 🧪
-
-### 🟢 Básicos (Fixação)
-
-**1. Cultura de Teste**
-Bugs sempre existirão devido a natureza volúvel nas construções algorítmicas, todavia "Testar Código" fornece blindagem de legado (Regression Prevent); ao redigir uma função que soma o carrinho de compras do cliente num projeto pequeno e cobri-lhe com baterias Unitárias lógicas, você tem o sinal verde ininterrupto (`PASSED`). Se no ano que vem um colaborador inexperiente quebrar as variáveis que você criou para dar um desconto no carrinho, a bateria apita (não permite o envio da ramagem) alertando uma falta estrutural de confiança. A função primordial dos testes é validar uma operação mecânica contra o medo humano.
-
-**2. Ferramentas**
-*   No ecossistema **Java**, historicamente a rainha suprema é a biblioteca unitária chamada **`JUnit`**.
-*   Num ecossistema dinâmico moderno pautado pelo **Python**, a ferramenta ágil predominante chama-se **`PyTest`**.
+# Soluções - Aula 08: Segmentação de Clientes 💡
 
 ---
 
-### 🟡 Intermediários (Aplicação)
+## 🟢 Fáceis
 
-**3. Pirâmide de Testes**
-Os testes **End-to-End (E2E)** (na ponta cimeira global da pirâmide) levantam navegadores reais (`webdriver`), manipulam campos de mouse via JavaScript (ex: Cypress) e imitam um humano navegando pelo software. Esse processamento é computacionalmente caro, frágil com mudanças de layout CSS e super demorado. Se você depende apenas deles e um quebra, a ponta de falha fica muito ampla para rastrear ("onde parou exato? no botão ou na API de checkout?"). Por isso os testes unitários constituem a base maciça da pirâmide em centenas, agindo de forma granular no código nativo sem levantar painéis HTTP (milissegundos) enquanto que testes pontuais de E2E ficam confinados na aba limítrofe apenas ratificando o sucesso generalizado da entrega das abas.
+**1. O que significa nichar um mercado e as vantagens desta restrição?**
 
-**4. Lógica TDD**
-1.  **RED**: Escreva um teste automatizado primeiro. Como não existe código efetivamente produzido para supri-lo, ele quebrará e a tela sangrará de erros em "Vermelho".
-2.  **GREEN**: Escreva a solução programática crua para aquela funcionalidade. Ela validará as requisições sintáticas com a base avaliativa construída outrora. Ficará em estado "Verde" (Passou).
-3.  **REFACTOR**: O passo mandatório; a primeira solução do Dev sempre pode sofrer rearanjos mecânicos (otimizar variáveis, deixar legível). O interessante de modificar uma tese de um código recém-testado é certificar de que qualquer fator destrutor provindo da faxina apitará quebrando as predições unitárias (e voltando para o alerta Red). 
+> **Resposta**: É a exclusão e limitação consciente e minuciosa focalizada perante pequenos grupos de hábitos correlatos fortíssimos com carências latentes onde pouca e negligenciada concorrência de tubarões do negócio atuam, diminuindo gastos e aumentando conversão monopolista isolada.
+
+**2. Tratar características demográficas sozinhas atesta resultados plenos para startups? Por quê? **
+
+> **Resposta**: Demografia avisa o corpo, mas cala sob os comportamentos. Um perfil demográfico (Homem, rico, londrino e solteiro da realeza) agruparia Príncipe Charles com o RockStar excêntrico Ozzie. Ambos consumem mundos em oposição diametral perigosa, fazendo de campanhas puramente de 'Faixa' uma miríade vazia sem gatilhos.
+
+## 🟡 Médios
+
+**3. Construa e diferencie a essência de Público-alvo versus da Persona Analítica Ideal.**
+
+> **Resposta**: Público-alvo generaliza ('homens de 35 anos casados querendo roupas sociais para frio'). A Persona refina em uma bio tangível que mimetiza comportamentais reais: ('Roberto, analista estressado que viaja de ponte aérea e detesta camisas que amassam da viagem necessitando sempre da estética perante o CEO sem ir pra tabua de passar ou lavar o terno todo momento no saguão').
+
+**4. Exemplifique B2B e B2C determinando quem efetua a ação vital de compra corporativa.**
+
+> **Resposta**: B2C vende a nós pontualmente (mercado para casa, cinema físico familiar). B2B se destina a relações perenes escaláveis onde uma empresa dita compras complexas e decisivas por fluxos rigorosos (Microsoft contratando SAP para contabilidade inteira da sua frota).
+
+## 🔴 Desafio
+
+**5. O framework Intermediário 'Job To Be Done (JTBD)' inverte as lógicas do marketing e as personas engessadas e cegas faturadas globalmente pelo sistema demográfico. Desenvolva através da explicação com uma furadeira qual seria na realidade a tarefa subjacente.**
+
+> **Resposta**: As pessoas não ligam à métrica ou brocas das furadeiras; compram furadeiras por desejar desesperadamente os Furos das Paredes e ultimamente quadros ou memórias presas alí. O JTBD dita a contratação da circunstância do Progresso onde os usuários pagariam até fitas da 3M dupla-face para sanar o 'Colar Recordação Afetiva Evocada'. Produto engessado fali. Progresso contratado pelo Consumidor ganha LTV.
 
 ---
 
-### 🔴 Desafio (Exploração)
-
-**5. Mocks e Dublês**
-Imagine que seu bloco de teste execute dez mil vezes por noite um laço de envio simulado de correspondências da API Twilio/SendGrid. Na vida real o cartão corporativo sangraria em faturas a cada acionamento dessa automação de checagem ou sobrecarregaria um e-mail com contaminação diária. Quando usamos "Mocks" (os atores e dublês digitais do Jest ou PyTest) dizemos a esse gatilho para isolar a arquitetura nativa exterior de rede (`sendEmail API`), substituí-la internamente e simplesmente chancelar (`return true / Fake Ok`) como operante. Assim simulamos conexões e serviços vitais independentemente de instabilidades de IP sem descontinuar a cadeia lógica de premissas estritas do microserviço testado.
-
----
-
-[**⬅️ Voltar para o Exercício**](./exercicio-08.md)
+!!! tip "Próximo Passo"
+    Maravilha! Agora que validou seus conhecimentos, avance para os próximos desafios ou retorne à [Aula 08](../aulas/aula-08.md).

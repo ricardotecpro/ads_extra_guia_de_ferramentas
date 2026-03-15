@@ -1,19 +1,23 @@
-# Exercícios: Aula 01 - Introdução ao Ecossistema 📝
+# Exercícios 01 - Intro ao Empreendedorismo 🧩
 
-### 🟢 Básicos (Fixação)
+## 🟢 Fáceis
 
-1.  **Diferenciação de Ferramentas**: Imagine que você está começando um projeto solo. Liste 3 ferramentas que você usaria obrigatoriamente e justifique a escolha de cada uma com base nas categorias vistas em aula.
-2.  **Identificação de Erros**: Um colega diz que "IDEs e Editores de Código são exatamente a mesma coisa, só mudam o nome". Escreva um parágrafo corrigindo essa afirmação e destacando a principal diferença técnica entre eles.
+1. Defina o que é ser um empreendedor com suas palavras.
+2. Quais são as diferenças marcantes entre o empreendedor por necessidade e o por oportunidade?
 
-### 🟡 Intermediários (Aplicação)
+## 🟡 Médios
 
-3.  **Fluxo de Trabalho**: Desenhe (em texto ou usando Mermaid) o caminho que uma nova "ideia de funcionalidade" percorre pelas ferramentas desde o planejamento até o deploy final.
-4.  **Automação na Prática**: Dê um exemplo real de uma tarefa que um desenvolvedor faz manualmente (ex: renomear 50 imagens de uma vez) e pesquise uma ferramenta ou comando de terminal que poderia automatizar esse processo.
+3. Um funcionário otimiza um setor interno reduzindo custos em 30%. Ele pode ser considerado empreendedor? Justifique baseado nos tipos de perfis.
+4. Explique a importância da característica 'Correr Riscos Calculados' na visão empreendedora.
 
-### 🔴 Desafio (Exploração)
+## 🔴 Desafio
 
-5.  **Análise de Mercado**: Escolha uma grande empresa de tecnologia (ex: Netflix, Uber ou Airbnb) e pesquise sobre o "StackShare" ou "Engineering Blog" dela. Liste pelo menos 5 ferramentas que eles utilizam em seu ecossistema e tente identificar em qual categoria de aula elas se encaixam.
+5. Como a mentalidade 'Lean Startup' e o uso de MVP revolucionam a validação de um empreendimento, diferenciando da abertura clássica de empresas de décadas atrás?
 
 ---
 
-[**🔍 Ver Solução e Lógica do Exercício**](./solucao-01.md)
+## 📚 Correção
+
+Após tentar responder e pesquisar, verifique a resolução oficial e o gabarito para consolidar o aprendizado:
+
+**[👉 Ver Soluções (Gabarito Oficial)](solucao-01.md)**

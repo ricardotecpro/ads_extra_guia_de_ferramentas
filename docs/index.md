@@ -8,35 +8,47 @@ Bem-vindo ao Guia Mestre de Ferramentas. Este curso foi projetado para capacitar
 
 ## ⚡ Atalhos Rápidos
 
-<div class="grid cards" markdown>
+<div class="grid cards" markdown="1">
 
 -   :material-book-open-page-variant: **Trilha de Aulas**
+    
     ---
+    
     16 lições práticas englobando gestão, desenvolvimento, infra e design.
     [:octicons-arrow-right-24: Iniciar Jornada](aulas/index.md)
 
 -   :material-presentation: **Slides Interativos**
+    
     ---
+    
     Material visual moderno com Reveal.js para acompanhamento das aulas.
     [:octicons-arrow-right-24: Ver Slides](slides/index.md)
 
 -   :material-school: **Quizzes Interativos**
+    
     ---
+    
     Avalie seu progresso com testes dinâmicos para cada módulo do curso.
     [:octicons-arrow-right-24: Testar Conhecimento](quizzes/index.md)
 
 -   :material-rocket: **Laboratórios e Projetos**
+    
     ---
+    
     Aplique as ferramentas em cenários reais para consolidar o aprendizado.
     [:octicons-arrow-right-24: Ver Projetos](projetos/index.md)
 
 -   :material-dumbbell: **Exercícios Progressivos**
+    
     ---
+    
     Do básico ao desafio prático para dominar comandos e fluxos.
     [:octicons-arrow-right-24: Praticar Agora](exercicios/index.md)
 
 -   :material-cog: **Setup e Ferramentas**
+    
     ---
+    
     Configurações essenciais para seu ambiente de desenvolvimento.
     [:octicons-arrow-right-24: Configurar](setups/index.md)
 

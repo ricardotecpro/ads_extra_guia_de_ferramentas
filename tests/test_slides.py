@@ -43,14 +43,13 @@ class TestSlides:
         expect(reveal_container).to_be_visible()
 
     def test_slide_navigation_exists(self, page_with_base_url: Page, base_url: str):
-        """Verifica se controles de navegação de slides existem"""
+        """Verifica se controles de navegação de slides REVEALJS ESTÃO OCULTOS (shortcut bar removido)"""
         page = page_with_base_url
         page.goto(f"{base_url}/slides/slide-01.html")
         
-        # RevealJS adiciona controles de navegação
-        # Check if controls exist in DOM (might be disabled/hidden on first slide)
+        # RevealJS adiciona controles de navegação, mas desativamos via Padrão Ouro (controls: false)
         controls = page.locator(".navigate-right")
-        expect(controls).to_be_attached()
+        expect(controls).not_to_be_visible()
 
     def test_slide_content_visible(self, page_with_base_url: Page, base_url: str):
         """Verifica se o conteúdo do slide está visível"""
@@ -86,5 +85,5 @@ class TestSlides:
         # Verificar que não houve 404
         assert len(errors_404) == 0, (
             f"Erros 404 encontrados ao carregar slide: {errors_404}. "
-            f"Verifique se os arquivos .md foram copiados para site/slides/ pelo hook."
+            f"Verifique se os arquivos .md foram copiados para site/slides/src pelo hook."
         )

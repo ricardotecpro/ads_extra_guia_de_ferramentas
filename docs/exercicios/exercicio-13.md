@@ -1,19 +1,23 @@
-# Exercícios: Aula 13 - Docker e Docker Compose 📦
+# Exercícios 13 - Recursos Essenciais 🧩
 
-### 🟢 Básicos (Fixação)
+## 🟢 Fáceis
 
-1.  **Analogia de Contêiner**: Por que usamos a metáfora de um contêiner de navio para explicar o Docker? O que o software ganha com esse "empacotamento"?
-2.  **Imagens vs Contêineres**: Se você baixar a imagem do `nginx` do Docker Hub e rodar 3 contêineres a partir dela, os 3 serão iguais? Eles compartilham os mesmos arquivos em tempo de execução?
+1. Qual é a base e elo lógico de intersecção existencial do Bloco de Recursos e das macro atividades correlatas ativas no canvas interativo?
+2. Distância de bases de recursos vitais como Patrimônio vs Finanças nas óticas modernas de empreendimentos ativos globais nascidos recém saídos dos Berços base da web 4.0 atuais perenes.
 
-### 🟡 Intermediários (Aplicação)
+## 🟡 Médios
 
-3.  **Docker Compose**: Explique por que é melhor usar um arquivo `docker-compose.yml` para rodar uma aplicação com Banco de Dados do que rodar dois comandos `docker run` separados.
-4.  **Mapeamento de Portas**: Se você rodar um contêiner com o comando `docker run -p 8080:80`, em qual porta você deve acessar a aplicação no seu navegador? O que aconteceria se você usasse `80:80`?
+3. Qual importância de capital Intelectual? Exemplifique no setor tech atual da bolsa ou de bases modernas.
+4. Cite formas e caminhos lógicos puros utilizados pelos ecossistemas orgânicos dos modelos físicos para amarrar recursos atestadamente sem incorrer falências antecipadas passivas brutais.
 
-### 🔴 Desafio (Exploração)
+## 🔴 Desafio
 
-5.  **Persistência com Volumes**: Por padrão, se você deletar um contêiner de banco de dados, todos os dados somem. Pesquise o que são **Volumes** no Docker e como eles resolvem o problema de salvar os dados mesmo quando o contêiner morre.
+5. Gestão ágil do 'Asset-Light' tem salvo Unicórnios no mercado global interligado? Explique o fenômeno tangível vital sob as siglas CAPEX (ativos fixos) a e como as sublocações dinâmicas OPEX (operacionais fluidos e variáveis lógicos) aceleraram perante incertezas do mercado atrelado passivo oscilante global. 
 
 ---
 
-[**🔍 Ver Solução e Lógica do Exercício**](./solucao-13.md)
+## 📚 Correção
+
+Após tentar responder e pesquisar, verifique a resolução oficial e o gabarito para consolidar o aprendizado:
+
+**[👉 Ver Soluções (Gabarito Oficial)](solucao-13.md)**

@@ -1,31 +1,34 @@
-# Resolução: Aula 11 - CI/CD Moderno 🚀
-
-### 🟢 Básicos (Fixação)
-
-**1. Conceito de Pipeline**
-Ao invés do envio caótico manual do seu notebook direto para o Data Center, o código entra na **Continuous Integration (CI)**: um computador "Robô" na nuvem (GitHub Actions/Jenkins) baixa sua arte, compila, resolve as bibliotecas de pacote (ex: `npm install`), execta com unhas de ferro todos os testes e linters em 2 minutos. Com luz verde, procede-se o  **Continuous Delivery (CD)**: o executor compila em formato de contêiner ou binário otimizado, joga a pasta na nuvem final com chaves sigilosas, reinicia a malha de rede em produção ou reverte automaticamente perante erros críticos de subida. 
-
-**2. Eventos do GitHub**
-*   O evento `push`: Aciona o pipeline cada e toda bendita vez que você interage salvando em linha reta com a ramagem. É usado comumente nos ambientes "dev" apenas para atestar funcionalidade de pacote e testes em tempo real da tua produção do dia.
-*   O evento `pull_request`: Age como juiz do guardião. O pipeline não opera ao acaso, só tracionando nos momentos sacros de tentativa de `Merge` num projeto vital (impedindo a incorporação de bugs num repositório *Master/Main* partilhado perante os mantenedores chefes em tempo limite de revisão).
+# Soluções - Aula 11: Relacionamento com Cliente 💡
 
 ---
 
-### 🟡 Intermediários (Aplicação)
+## 🟢 Fáceis
 
-**3. Falha na Integração**
-Completamente impedido (*Blocked on Rules*). O pressuposto principal que financia o maquinário de CI é o estabelecimento da malha fina de falhas; caso ele não sirva como barreira física (Branch Protection Rule), toda a engenharia seria inócuo "perfumaria" com testes falsos ignorados, esvaziando a integridade do código que corrompe as bases centrais. 
+**1. Como é percebida uma relação Autoatendimento e que benefício tem para startups iniciais do cenário SAAS?**
 
-**4. YAML Syntax**
-A sintaxe hierárquica base original das automações Github não lida textualizada no singular; um ciclo (*Job*) de execução engloba passos em profusão, e de tal forma a declaração matriz deveria evocar listagem (array) pluralizada na key correspondente: `steps:`.
+> **Resposta**: Trata-se do zero suporte direto humano. Beneficia margem total e atende massificações exponenciais globais do produto SaaS propiciando FAQ avançadas e fluxos fluídos intuitivos onde um em trilhares se depara a ticket humano, garantindo altíssimo escalonamento sem travamentos físicos e de turnos nos callcenters vitais locais de custeio base altíssimo.
+
+**2. No extremo adverso, para mercados Ultra High Tickets ou B2B Complexos que relacionamento se opera?**
+
+> **Resposta**: Operam no oposto total com o Relacionamento via Assistência Pessoal Dedicada em que o Gestor Pleno e Diretor intercedem contas diretas, viajam e participam ativamente da instalação nas engrenagens das mega corporações prestando curadoria infalível baseados na alta retenção e lucros colossais das faturas recorrentes da exclusividade do consultivo vital das implantações vitais longas engessadas corporativas macro ambientais do ecossistema contratado do projeto.
+
+## 🟡 Médios
+
+**3. A cocriação vem a fortalecer bases. Exemplifique cocriações.**
+
+> **Resposta**: Membros criados de comunidades vitais do YouTube participando beta-testing as vertentes do hardware que amam ativamente apontando soluções colaborativamente (Ex. Testadores Insiders influentes do software), engajando o consumidor como braço proativo das invenções plenas perante a empresa de base matricial que eles cultuam e reverenciam como adeptos das marcas vitais globais consagradas.
+
+**4. Fidelidade e Retenção custam muito mais do que Captação agressiva? Expresse o racional comum vital do Marketing.**
+
+> **Resposta**: Custa brutalmente o oposto! Adquirir cliente novo custa estatisticamente entre 5 a 7 vezes muito mais esforço no funil de Ads agressivo e convencimentos transpondo inércias brutais do que reter o próprio leal da base atual ou fazer upselling nele engajando sua rotatividade constante num ciclo infinito sem custo atrelado do zero para aquisição de atenção em mídias dispersíveis perante barulheiras do concorrente feroz da internet moderna atual ou mídias físicas saturadas mundiais engessadas.
+
+## 🔴 Desafio
+
+**5. No nível profundo analítico como Cohort Analysis e a mensuração ativa de Churn Rate (Evasões) protegem os ativos contábeis antes das falências irrevesíveis dos Modelos de Negócios e qual atuação é empregada por analistas CS (Customer Success) e Onboardings baseados nas matrizes do software de relacionamento reativo intermediário SaaS.**
+
+> **Resposta**: Medir a mortalidade (Churn) não devolve mortos, por isso as Cohorts atuam lógicas preditivas. Rastreia-se as Turmas de Datas Específicas atestando qual fase interativa dita fadigas e falhas de retenção. Sucessores e CS atuam no diagnóstico preventivo intercedendo automações (Aulas vitais tutoriais no Onboarding guiado aos usuários inativos ou estagnados nas fases sensíveis cruciais) antes do bloqueio total e evasões colossais catastróficas. A premissa central de saúde da startup e da LTV se consagra através da proatividade atrelada aos alertas da base dos cohorts.
 
 ---
 
-### 🔴 Desafio (Exploração)
-
-**5. Matriz de Testes (Build Matrix)**
-Criar uma "Build Matrix" exime o mantenedor de redigir longos 3 *Jobs* e scripts isolados massivos caso um projeto (como o próprio NodeJS) precise rodar e atestar estabilidade cruzada em Microsoft Windows, CentOS GNU/Linux e MacOSX. Através de um array indexado no `.yml` (tipo `os: [ubuntu-latest, windows-latest, macos-latest]`), o Github lê o comando solitário multiplicando virtualmente a execução paralelizada criando 3 Máquinas instantâneas operacionais a partir das regras básicas. Isso poupa 80% do texto base scriptado, conferindo escalabilidade de automação para testadores.
-
----
-
-[**⬅️ Voltar para o Exercício**](./exercicio-11.md)
+!!! tip "Próximo Passo"
+    Maravilha! Agora que validou seus conhecimentos, avance para os próximos desafios ou retorne à [Aula 11](../aulas/aula-11.md).

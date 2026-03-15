@@ -1,26 +1,37 @@
 # Materiais de Apoio 📚
 
-Abaixo, você encontrará os links oficiais para a documentação e ferramentas exploradas neste curso.
+Bem-vindo à seção de materiais complementares do curso. Aqui você encontra recursos individuais organizados por categoria.
 
-## 📊 Gestão e Planejamento
-- [Jira Software Docs](https://support.atlassian.com/jira-software-cloud/docs/)
-- [Trello Guide](https://trello.com/guide)
+<div class="grid cards" markdown="1">
 
-## 🛠️ Desenvolvimento e Git
-- [VS Code Documentation](https://code.visualstudio.com/docs)
-- [Git Book (Official)](https://git-scm.com/book/en/v2)
-- [GitHub Skills](https://skills.github.com/)
+-   :material-presentation: [**Slides**](slides/index.md)
+    
+    ---
+    
+    Material visual das aulas com diagramas e conceitos principais.
 
-## 💾 Bancos de Dados
-- [PostgreSQL Documentation](https://www.postgresql.org/docs/)
-- [DBeaver Docs](https://dbeaver.com/docs/wiki/)
-- [MongoDB Manual](https://www.mongodb.com/docs/manual/)
+-   :material-help-circle: [**Quizzes**](quizzes/index.md)
+    
+    ---
+    
+    Testes interativos de 10 questões para validar seu conhecimento.
 
-## 🚀 Automação e Infra
-- [GitHub Actions Documentation](https://docs.github.com/en/actions)
-- [Docker Documentation](https://docs.docker.com/get-started/)
-- [Kubernetes Documentation](https://kubernetes.io/docs/home/)
-- [Ansible Documentation](https://docs.ansible.com/ansible/latest/index.html)
+-   :fontawesome-solid-pencil: [**Exercícios**](exercicios/index.md)
+    
+    ---
+    
+    Listas progressivas (básico, intermediário e desafio) por aula.
 
-## 🎨 Design
-- [Figma Help Center](https://help.figma.com/hc/en-us)
+-   :material-briefcase-outline: [**Projetos**](projetos/index.md)
+    
+    ---
+    
+    Aplicações práticas para consolidar os temas de cada módulo.
+
+-   :material-cog: [**Setups**](setups/index.md)
+    
+    ---
+    
+    Guias passo a passo para configurar seu ambiente de desenvolvimento.
+
+</div>

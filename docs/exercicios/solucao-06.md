@@ -1,44 +1,34 @@
-# Resolução: Aula 06 - DB Relacional 💾
-
-### 🟢 Básicos (Fixação)
-
-**1. Criação de Tabelas**
-Para modelar uma tabela SQL clássica que receberá novos alunos, o comando seria:
-```sql
-CREATE TABLE Alunos (
-    Matricula INT PRIMARY KEY,
-    Nome VARCHAR(150),
-    Curso VARCHAR(100)
-);
-```
-
-**2. Consulta Simples**
-O comando SQL de "busca" se faz com o operador SELECT, filtrando com a cláusula WHERE:
-```sql
-SELECT Nome FROM Alunos WHERE Curso = 'ADS';
-```
+# Soluções - Aula 06: Plano de Negócios 💡
 
 ---
 
-### 🟡 Intermediários (Aplicação)
+## 🟢 Fáceis
 
-**3. Relacionamentos (Foreign Key)**
-Eu não criaria colunas do autor dentro da tabela `Livros` para não repetir os dados dele em todos os livros que escreve. O correto seria colocar na tabela `Livros` apenas o `ID` do autor (ex: coluna `Autor_ID`). Esse `Autor_ID` deve ser obrigatoriamente um valor válido que espelhe a chave primária (`ID`) da tabela de `Autores`. Esse link mágico — a chave que aparente outra tabela — é o que chamamos de **Foreign Key (Chave Estrangeira)**.
+**1. Por que estruturamos um Plano de Negócios clássico perante investidores bancários?**
 
-**4. DBeaver Workflow**
-Acessando o DBeaver: 
-1. Clicar com o botão direito na tabela pretendida ("Ex: `Vendas`").
-2. "Export Data" (Exportar Dados).
-3. Selecionar o destino como "CSV".
-Isso é extremamente útil para um desenvolvedor, pois ele pode retirar amostras formatadas de uma base inacessível aos executivos não-técnicos e passar para a equipe de negócios ler e gerar gráficos usando planilhas como Excel ou Power BI.
+> **Resposta**: Modelos como bancos tradicionais ainda não toleram total abstenção ou matrizes ágeis puras de empreendedorismo para aportes volumosos; necessitam de histórico formal, previsão plurianual de receitas, garantias reais e plano mercadológico burocratizado estrutural.
+
+**2. Destaque os principais componentes do Sumário Executivo.**
+
+> **Resposta**: É o resumo com foco na dor, a solução, mercado endereçável, vantagem competitiva e projeção da lucratividade ou margem de operação visando atrair interesse imediato a leitura minuciosa posterior.
+
+## 🟡 Médios
+
+**3. Como validar uma Projeção de Caixa sem conhecer o futuro? Que medidas usar?**
+
+> **Resposta**: Criando 3 cenários de variância: Cenario Otimista, Cenario Base, Cenario Pessimista (Conservador). Projetos sensatos operam seu planejamento pelo olhar Base, mas provisionam recursos blindados garantindo que nem em caso do Pessimista, a operação feche antes de pivotar.
+
+**4. O Plano Operacional ajuda a prever a logística, os insumos essenciais e a real viabilidade do esforço. Qual a essência fundamental nele?**
+
+> **Resposta**: Determinar qual capacidade real instalada o negócio precisa. Ele mitiga riscos traduzindo os layouts de instalação das máquinas, horários dos colaboradores ou dependências de entrega da Nuvem antes que o gargalo sufoque.
+
+## 🔴 Desafio
+
+**5. Para modelos ágeis em incerteza, como conciliar o Plano de Negócios Tradicional com a análise de Break-Even dinâmico em cenários desfavoráveis e incertos? Justifique em relação ao cálculo de OPEX e fixos contínuos.**
+
+> **Resposta**: Em startups flexíveis as variáveis mudam rapidamente e um Plano anual é ultrapassado em dias reais; mas a premissa de Break-even (Lucro Zero) é contínua. Conciliar significa injetar reavaliações trimestrais dos KPIs num Plano Ágil. O empreendedor deve modular a taxa OPEX (Despesas Mensais de Operação como cloud flexível ou pessoal subcontratado), permitindo que a variação e flexibilização garanta a descida do Break-even pontual mesmo nas adversidades temporárias de receitas falhas.
 
 ---
 
-### 🔴 Desafio (Exploração)
-
-**5. Performance de Consulta (Index)**
-Um **Índice (Index)** de banco de dados funciona exatamente como o índice no final de uma enciclopédia grossa. Sem ele, para achar informações sobre o mês de Janeiro (`'2023-01-01'`) numa tabela de 10 milhões de linhas, o banco escaneia a tabela de capa a capa de forma exaustiva (*Full Table Scan*). Se eu criar um "Índice", o SQL organiza datas em uma árvore oculta ordenada e salta diretamente para a gaveta onde as de janeiro ficam, transformando uma consulta que levava 1 minuto para meros milissegundos.
-
----
-
-[**⬅️ Voltar para o Exercício**](./exercicio-06.md)
+!!! tip "Próximo Passo"
+    Maravilha! Agora que validou seus conhecimentos, avance para os próximos desafios ou retorne à [Aula 06](../aulas/aula-06.md).

@@ -1,19 +1,23 @@
-# Exercícios: Aula 12 - Automação e IaC ⚙️
+# Exercícios 12 - Atividades-chave 🧩
 
-### 🟢 Básicos (Fixação)
+## 🟢 Fáceis
 
-1.  **Diferenciação de Papéis**: Se você precisa criar uma rede virtual e 5 servidores na nuvem, usaria o **Ansible** ou o **Terraform**? E se precisasse instalar o Python nesses servidores?
-2.  **Vantagem do IaC**: Cite um motivo pelo qual guardar a configuração do servidor em um arquivo de código é melhor do que anotar os passos em um caderno.
+1. Resuma a premissa de que o modelo de negócio baseia e direciona o foco do Empreendedor e não as macro gerências irrelevantes.
+2. Qual seria uma Atividade-chave focada em startups puras de software versus logística atestadas?
 
-### 🟡 Intermediários (Aplicação)
+## 🟡 Médios
 
-3.  **Playbooks do Ansible**: Explique como o Ansible consegue configurar um servidor remoto sem que você precise sentar na frente dele e digitar comandos. Qual tecnologia de rede ele utiliza?
-4.  **Estado do Terraform**: Por que o arquivo `terraform.tfstate` é o item mais importante para um engenheiro de infraestrutura? O que acontece se ele for perdido?
+3. Como as atividades principais protegem o núcleo da corporação perante concorrentes que agem focados lateralmente.
+4. Defina plataforma ativa e Resolução de dores interligadas a um núcleo matricial de serviço corporativo consultivo ativo vital nos fluxos diários gerenciais propostos no mercado global ativo do Canvas padrão ideal testado e validado e escalonado interativamente na gestão do time matricial base ativa do mercado corporativo clássico vital pleno moderno no cenário global atual.
 
-### 🔴 Desafio (Exploração)
+## 🔴 Desafio
 
-5.  **DevOps na Prática**: Pesquise como o Terraform e o Ansible podem ser usados dentro de uma pipeline do GitHub Actions (Aula 11) para criar e configurar um servidor de forma 100% automática a cada novo release.
+5. Elucide na profundidade da Teoria das Restrições (TOC) explanando gargalos orgânicos e justifique por que 'Otimizar um setor ou atividades irrelevante só prejudica as ineficiências latentes do modelo' perante um núcleo produtivo empresarial que subordina perdas.
 
 ---
 
-[**🔍 Ver Solução e Lógica do Exercício**](./solucao-12.md)
+## 📚 Correção
+
+Após tentar responder e pesquisar, verifique a resolução oficial e o gabarito para consolidar o aprendizado:
+
+**[👉 Ver Soluções (Gabarito Oficial)](solucao-12.md)**

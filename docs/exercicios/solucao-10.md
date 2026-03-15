@@ -1,31 +1,34 @@
-# Resolução: Aula 10 - Qualidade de Código ✨
-
-### 🟢 Básicos (Fixação)
-
-**1. Linter vs Formatter**
-*   Para os espaços textuais errados (estética sem erros operacionais): Utiliza-se um **Formatter** (ex: Prettier).
-*   Para o esquecimento de declarar a variável (falha lógica perigosa que quebra aplicação): Utiliza-se a leitura de padrões do **Linter** (ex: ESLint ou SonarLint).
-
-**2. Configuração do VS Code**
-A configuração `Format on Save` automatiza o acionamento do Formatter do editor no exato milissegundo em que apertamos o `CTRL+S`. Isso alivia o desenvolvedor de pressionar teclas de identação de escopo, ou atalhos quilométricos (`Shift+Alt+F`). O resultado é um ganho inestimável de foco na lógica base. 
+# Soluções - Aula 10: Canais de Comunicação 💡
 
 ---
 
-### 🟡 Intermediários (Aplicação)
+## 🟢 Fáceis
 
-**3. Padronização em Equipe**
-O Prettier não sofre de "vontades" ou "egos". Basta as instâncias da gerência criarem um mero arquivo padrão na raiz do código (o `.prettierrc`) e definirem nele a regra universal daquele repositório, por exemplo, o ditame de que usa-se `'singleQuote': true`. Toda vez que o dev teimoso da aspas duplas tentar salvar o script com `""`, o motor do VS Code apagará tudo automaticamente pautado no ditame silencioso e impessoal da raiz do projeto, pacificando as tretas de Code Review.
+**1. O que definem os Canais de forma teórica em relação orgânica às vendas no modelo lido?**
 
-**4. Análise Estática**
-Linters mais rígidos têm regras predeterminadas detectando chamas no código, como por exemplo os loops condicionais infinitos ou funções criadas e jamais consumidas internamente. Se a equipe envia para produção à AWS esse aplicativo com as variáveis ociosas e loops mal traçados, quando o código bater em ambiente de execução de máquina as CPUs trabalharão intensamente até atingir lentidão de infraestrutura, encarecendo a conta em dólares do faturamento mensal consideravelmente; prevenidos prematuramente via *Static Analysis*.
+> **Resposta**: Constituem canais como todos os meios tangíveis essenciais que as empresas elegem focar para comunicação e tangibilização na entrega da Venda ou Proposta exata do final dos processos interativos mercantis engajadores com Usuários Alvos puros e definidos no seu Bloco de Clientes.
+
+**2. Canal primariamente tem apenas e unicamente intuito de venda transacional? Cite um contraponto do marketing.**
+
+> **Resposta**: Jamais. São engrenagens complexas também dotadas do poder vital de Suporte no pós-vendas engajado, comunicação unilateral e bilateral nos diálogos analíticos de feedback interativos na comunidade engajadora e entrega perene (Delivery do intangível Cloud por exemplos ativados continuados aos assinantes).
+
+## 🟡 Médios
+
+**3. Qual a disparidade de viabilidade e de impacto comparando canais Diretos com canais Indiretos parceirizados.**
+
+> **Resposta**: Venda Própria via E-commerce Direto permite reter a margem cheia sem divisórias pesadas atestadas para parceiros, no entanto, captação é restrita e lenta na tração. Ingressar via canal Parceiro Indireto perante Gigantes capilariza seu horizonte em 200 vezes mais escala do dia a noite espalhando os produtos ativamente na margem onde o lucro cortado reflete uma compensação pelo tráfego passivo gigante trazido nas prateleiras dos tubarões em rede atestada em ecossistemas de terceiros e comissionados diretos.
+
+**4. Defina o viés moderno entre atuar num Multicanal perante um Omnichannel onde marcas modernas aportam.**
+
+> **Resposta**: Multicanal dispõe todos os canais perante a base de clientes, desmembradamente sem integrações fluidas onde dados truncam ou experiências rompem-se de telas e físicos. O Omnichannel entrelaça em um cordão bi-sistêmico onde a intersecção de uso se perpetua harmoniosamente no físico para site, do site as notificações mobile e das notificações às retiradas na Loja nativa do bairro sem dor gerando um Super Ecossistema atrelado focado.
+
+## 🔴 Desafio
+
+**5. Canais se comunicam matematicamente de forma contígua a taxas de funil perante CAC. Demonstre o racional intermediário estratégico que fundamenta em cancelar certas bases para manter a taxa de conversão final escalável nas estratégias focadas do Omnichannel.**
+
+> **Resposta**: O funil determina o viés exato no gargalo. Um empreendedor intermediário rastreia UTMs de canais onde gasta e perfura tráfego digital inerte, se um canal acarreta com Clics astronômicos massivos (vaidade de branding pura) porem a base Conversiva lá no check-out se esfria perto do traço fatal, o CAC engole lucros vitais, devendo assim ser aniquilado de verba redirecionando verbas otimizadas ao nicho onde Clientes ideiais operam com menor abandono convertidos nos ecossistemas vitais da escala das Retenções perenes absolutas ou do lucro líquido massificado otimamente viabilizado a aquisição e fechamentos transacionais garantidos a curtíssimo período em caixas da base central.
 
 ---
 
-### 🔴 Desafio (Exploração)
-
-**5. Regras Customizadas (no-console)**
-O uso compulsivo de `console.log()` polui terabytes em arquivos de registro (*Logs*) vitais com prints de rastreio inúteis. Mais do que estética, é gravíssimo pelo escopo sensível: deixar um console solto em código que trafegará pro frontend permite aos invasores mal isencionados extraírem *tokens* vazados ou segredos processuais corporativos. A regra `no-console` aciona um farol vermelho de erro de PR logo na raiz de CI do desenvolvedor com vistas a evitar esses lapsos bizarros em massa.
-
----
-
-[**⬅️ Voltar para o Exercício**](./exercicio-10.md)
+!!! tip "Próximo Passo"
+    Maravilha! Agora que validou seus conhecimentos, avance para os próximos desafios ou retorne à [Aula 10](../aulas/aula-10.md).

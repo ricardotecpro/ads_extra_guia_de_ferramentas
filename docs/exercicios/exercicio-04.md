@@ -1,19 +1,23 @@
-# Exercícios: Aula 04 - Git Fundamentos 🛠️
+# Exercícios 04 - Processo de Inovação 🧩
 
-### 🟢 Básicos (Fixação)
+## 🟢 Fáceis
 
-1.  **Cinto de Comandos**: Sem olhar o material, descreva para que servem os comandos: `git init`, `git add` e `git commit`.
-2.  **Mensagens de Commit**: Por que a mensagem "ajustes" é considerada uma má prática? Escreva 3 exemplos de mensagens de commit informativas e profissionais.
+1. Quais são as diferenças conceituais entre Inovação Incremental e Inovação Disruptiva?
+2. Defina sustentabilidade na inovação. Por que inovar é vital para a longevidade?
 
-### 🟡 Intermediários (Aplicação)
+## 🟡 Médios
 
-3.  **Recuperação de Histórico**: Se você cometeu um erro no seu código e quer ver como ele estava há 3 versões atrás, qual comando do Git você usaria para listar os commits e qual informação desse comando você precisaria para "voltar no tempo"?
-4.  **Staging Area**: Qual a vantagem de poder escolher quais arquivos vão para a "Staging Area" (Staging Area) em vez de salvar tudo o que foi alterado de uma vez só?
+3. Inovar sempre significa criar tecnologia do zero? Forneça um exemplo base.
+4. De que maneiras a Cultura Organizacional afeta as taxas de inovação na empresa?
 
-### 🔴 Desafio (Exploração)
+## 🔴 Desafio
 
-5.  **O Desastre do .git**: O que acontece se você apagar acidentalmente a pasta oculta `.git` de um projeto que já tinha 50 commits? Os arquivos atuais somem? O histórico pode ser recuperado localmente? Justifique.
+5. Dado o nível de TRL (Technology Readiness Level), descreva como a inovação flui do ambiente acadêmico até o teste validado, e o que é o 'Vale da Morte' da Inovação neste percurso.
 
 ---
 
-[**🔍 Ver Solução e Lógica do Exercício**](./solucao-04.md)
+## 📚 Correção
+
+Após tentar responder e pesquisar, verifique a resolução oficial e o gabarito para consolidar o aprendizado:
+
+**[👉 Ver Soluções (Gabarito Oficial)](solucao-04.md)**

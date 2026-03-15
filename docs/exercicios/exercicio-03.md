@@ -1,19 +1,23 @@
-# Exercícios: Aula 03 - Ambiente de Desenvolvimento 💻
+# Exercícios 03 - Análise de Valor 🧩
 
-### 🟢 Básicos (Fixação)
+## 🟢 Fáceis
 
-1.  **Extensões do VS Code**: Escolha uma das extensões citadas em aula (Prettier, Error Lens, etc.) e escreva como ela ajuda a evitar erros de programação.
-2.  **Navegação no Terminal**: Escreva a sequência de comandos necessária para: criar uma pasta "teste", entrar nela, criar um arquivo "info.md" e voltar para a pasta anterior.
+1. O que significa 'Percepção de Valor' pelo cliente?
+2. Qual é a relação entre preço, custo e valor na confecção de um produto?
 
-### 🟡 Intermediários (Aplicação)
+## 🟡 Médios
 
-3.  **Produtividade**: Você precisa renomear um arquivo chamado `script_velho.js` para `app.js` sem usar o mouse. Qual comando de terminal você utilizaria? (Dica: Pesquise sobre o comando `mv`).
-4.  **CLI vs GUI**: Cite uma tarefa de configuração de software que é muito mais rápida de fazer via terminal do que clicando em janelas de instalação.
+3. Se uma empresa inova mas o cliente não percebe melhoria na usabilidade, houve entrega de valor? Por quê?
+4. Apresente os três pilares que sustentam uma Proposta de Valor imbatível.
 
-### 🔴 Desafio (Exploração)
+## 🔴 Desafio
 
-5.  **Customização Avançada**: Pesquise o que é uma variável de ambiente **PATH** no seu sistema operacional e explique por que ela é importante para que os comandos que digitamos no terminal funcionem.
+5. Explique a dinâmica do CAC e do LTV. Demonstre matematicamente por que um negócio cujo LTV seja 3x maior que o CAC tem uma análise de valor robusta.
 
 ---
 
-[**🔍 Ver Solução e Lógica do Exercício**](./solucao-03.md)
+## 📚 Correção
+
+Após tentar responder e pesquisar, verifique a resolução oficial e o gabarito para consolidar o aprendizado:
+
+**[👉 Ver Soluções (Gabarito Oficial)](solucao-03.md)**

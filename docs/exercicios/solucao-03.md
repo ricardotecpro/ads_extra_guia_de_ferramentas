@@ -1,37 +1,34 @@
-# Resolução: Aula 03 - Ambiente de Desenvolvimento 💻
-
-### 🟢 Básicos (Fixação)
-
-**1. Extensões do VS Code**
-A extensão **Error Lens** destaca os erros de sintaxe (como falta de ponto e vírgula, variáveis não declaradas ou parênteses não fechados) diretamente na linha em que você está digitando, pintando a linha de vermelho. Isso evita que o desenvolvedor perca tempo procurando onde errou só depois de tentar rodar a aplicação e ver a tela quebrar.
-
-**2. Navegação no Terminal**
-A sequência lógica de comandos seria:
-```bash
-$ mkdir teste
-$ cd teste
-$ touch info.md  # Ou 'echo > info.md' no Windows
-$ cd ..
-```
+# Soluções - Aula 03: Análise de Valor 💡
 
 ---
 
-### 🟡 Intermediários (Aplicação)
+## 🟢 Fáceis
 
-**3. Produtividade (mv)**
-Para renomear arquivos no terminal sem o uso do mouse, utilizamos o comando `mv` (move), que serve tanto para mover arquivos de diretório quanto para renomeá-los no mesmo lugar.
-Comando: `$ mv script_velho.js app.js`
+**1. O que significa 'Percepção de Valor' pelo cliente?**
 
-**4. CLI vs GUI**
-Uma tarefa clássica é a criação de dezenas de pastas com nomes diferentes baseados em uma lógica. Ou, ainda mais comum, a instalação de dependências de um projeto (ex: rodar `npm install` no terminal leva segundos, enquanto baixar arquivos compactados via navegador, descompactar e colocar na pasta local consumiria minutos).
+> **Resposta**: É o quanto o cliente percebe de benefício intangível ou prático que o produto proporciona em relação ao esforço empregado (seja dinheiro, tempo ou frustração) para obtê-lo.
+
+**2. Qual é a relação entre preço, custo e valor na confecção de um produto?**
+
+> **Resposta**: Custo é o gasto real para produzir aquilo. Preço é o valor monetário de venda exigido. Valor é a representação do quanto aquele bem ou serviço transforma a vida do usuário, justificando e geralmente ultrapassando muito o preço e o custo.
+
+## 🟡 Médios
+
+**3. Se uma empresa inova mas o cliente não percebe melhoria na usabilidade, houve entrega de valor? Por quê?**
+
+> **Resposta**: Não houve. A inovação que não gera benefício percebido pelo usuário é apenas uma 'invenção' tecnológica irrelevante mercadologicamente, pois o valor é estritamente ditado pelo olhar e pela resolução do problema do cliente.
+
+**4. Apresente os três pilares que sustentam uma Proposta de Valor imbatível.**
+
+> **Resposta**: Aliviar dores (diminuir trabalhos ruins e frustrações), criar ganhos (gerar resultados positivos esperados ou inesperados) e o ajuste problema/solução, formatados em produtos que encapsulem isso.
+
+## 🔴 Desafio
+
+**5. Explique a dinâmica do CAC e do LTV. Demonstre matematicamente por que um negócio cujo LTV seja 3x maior que o CAC tem uma análise de valor robusta.**
+
+> **Resposta**: CAC (Custo de Aquisição de Cliente) é quanto o marketing gasta para atrair um cliente pagante. LTV (Lifetime Value) é todo o lucro gerado por aquele cliente o tempo que ele for seu usuário. Se LTV = R$300 e CAC = R$100, a relação >3x significa que a empresa não sangra capital. O valor retido do usuário financia com sobras as aquisições futuras, permitindo escala tracionada.
 
 ---
 
-### 🔴 Desafio (Exploração)
-
-**5. Customização Avançada (PATH)**
-A variável de ambiente **PATH** é uma lista de caminhos (diretórios) que o sistema operacional consulta toda vez que você digita um comando no terminal. Por exemplo, quando você digita `node`, o sistema não sabe o que é isso, mas ele olha no PATH, acha a pasta de instalação do Node.js e executa o binário. Sem a configuração correta do PATH, você precisaria digitar o endereço completo do programa (ex: `C:\Program Files\Nodejs\node.exe`) toda vez que fosse usá-lo.
-
----
-
-[**⬅️ Voltar para o Exercício**](./exercicio-03.md)
+!!! tip "Próximo Passo"
+    Maravilha! Agora que validou seus conhecimentos, avance para os próximos desafios ou retorne à [Aula 03](../aulas/aula-03.md).

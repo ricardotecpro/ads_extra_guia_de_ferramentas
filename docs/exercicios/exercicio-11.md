@@ -1,25 +1,23 @@
-# Exercícios: Aula 11 - CI/CD Moderno 🚀
+# Exercícios 11 - Relacionamento com Cliente 🧩
 
-### 🟢 Básicos (Fixação)
+## 🟢 Fáceis
 
-1.  **Conceito de Pipeline**: Explique o que acontece com o código de um desenvolvedor entre o momento do `git push` e o momento em que ele aparece no site oficial, em um ambiente com CI/CD.
-2.  **Eventos do GitHub**: Qual a diferença entre disparar um workflow no `push` e disparar apenas no `pull_request`?
+1. Como é percebida uma relação Autoatendimento e que benefício tem para startups iniciais do cenário SAAS?
+2. No extremo adverso, para mercados Ultra High Tickets ou B2B Complexos que relacionamento se opera?
 
-### 🟡 Intermediários (Aplicação)
+## 🟡 Médios
 
-3.  **Falha na Integração**: Se o workflow de testes falhar no GitHub Actions, o desenvolvedor deve ser impedido de fazer o "Merge" para a branch principal? Por quê?
-4.  **YAML Syntax**: Identifique o erro no trecho de código abaixo:
-    ```yaml
-    jobs:
-      build:
-        step: # Aqui falta algo
-          - run: npm install
-    ```
+3. A cocriação vem a fortalecer bases. Exemplifique cocriações.
+4. Fidelidade e Retenção custam muito mais do que Captação agressiva? Expresse o racional comum vital do Marketing.
 
-### 🔴 Desafio (Exploração)
+## 🔴 Desafio
 
-5.  **Matriz de Testes**: Pesquise o que é uma "Build Matrix" no GitHub Actions. Como ela permite que você teste seu código em várias versões do Windows, Linux e Mac simultaneamente com um único arquivo?
+5. No nível profundo analítico como Cohort Analysis e a mensuração ativa de Churn Rate (Evasões) protegem os ativos contábeis antes das falências irrevesíveis dos Modelos de Negócios e qual atuação é empregada por analistas CS (Customer Success) e Onboardings baseados nas matrizes do software de relacionamento reativo intermediário SaaS.
 
 ---
 
-[**🔍 Ver Solução e Lógica do Exercício**](./solucao-11.md)
+## 📚 Correção
+
+Após tentar responder e pesquisar, verifique a resolução oficial e o gabarito para consolidar o aprendizado:
+
+**[👉 Ver Soluções (Gabarito Oficial)](solucao-11.md)**

@@ -1,47 +1,34 @@
-# Resolução: Aula 07 - NoSQL e Cache ⚡
-
-### 🟢 Básicos (Fixação)
-
-**1. JSON Schema**
-As marcações em chaves, com strings isoladas entre aspas para atributos e colchetes para vetores marcam o formato JSON universal:
-```json
-{
-  "marca": "Samsung",
-  "modelo": "S23",
-  "ano": 2023,
-  "recursos": [
-    "Câmera 48MP",
-    "Bateria 5000mAh",
-    "NFC"
-  ]
-}
-```
-
-**2. Identificação de Uso**
-Aplicativos onde a latência ultra-baixa reflete diretamente na emoção e na usabilidade dos clientes. Por exemplo: A cotação do mercado financeiro e de *criptomoedas* ao vivo (onde 1 segundo dá muita diferença), ou um grupo de mensagens com milhares de participantes que exigem ver envios textuais em alta prioridade via tela de smartphone. O Redis os mantém salvos direto na RAM momentaneamente (Cache).
+# Soluções - Aula 07: Modelagem Canvas 💡
 
 ---
 
-### 🟡 Intermediários (Aplicação)
+## 🟢 Fáceis
 
-**3. Comparativo Técnico**
-Comentários são documentos amorfos: algumas pessoas enviam gifs, outras enviam arquivos de texto com 3 folhas, formatação *rich*, avatares colados etc. Criar e manter colunas no banco MySQL causaria enrijecimento no tráfego altíssimo pelas verificações duras de Foreign Key. O **MongoDB** não apenas aceita documentos "sem estrutura rígida" (schema-less), como é programado para espalhar seus dados por diversos servidores na horizontal facilmente para absorver os milhões de leitores daquele blog instantaneamente.
+**1. Qual a grande diferença e grande proposta revolucionária do Canvas sobre o Plano clássico (Seapa/Sebrae)?**
 
-**4. Comandos Redis**
-Podemos executar ambos os procedimentos em uma única entrada parametrizada (no CLI do Redis, os dados textuais entram como pares de chaves simples e expirações (`EX` em segundos):
-```redis
-SET user:1 "Joao" EX 60
-```
-Isso guardou `'Joao'` e programou ele para expirar (se autodestruir) em 60 segundos.
+> **Resposta**: A representação tática imediata, holística e relacional do funcionamento orgânico da empresa focado inteiramente na geração, estruturação e percepção de valor. A visualização única cabe numa folha visual onde correlações são intercedidas em tempo real nas brainstormings co-criadas e colaboradas visualmente.
+
+**2. Quantos e quais são os blocos lógicos essenciais do Business Model Canvas (BMC)?**
+
+> **Resposta**: 9 blocos fundamentais: Segmentação de Clientes, Proposta de Valor, Canais, Relacionamento, Fontes de Receita, Recursos Chave, Atividades Chave, Parceiros Chave, e Estrutura de Custo.
+
+## 🟡 Médios
+
+**3. Se uma alteração radical for feita na Segmentação de Clientes, que blocos do Canvas sofreriam abalo em cadeia direto?**
+
+> **Resposta**: A Proposta de Valor fatalmente (o encaixe que os liga), além do Relacionamento que dita a personalização deste novo usuário alvo, dos Canais necessários para atingi-lo e possivelmente nas Fontes de Receitas atreladas a cobrança tolerada deste novo alvo.
+
+**4. Descreva o papel lógico e semântico dos Canais versus a área de Relacionamento no Canvas.**
+
+> **Resposta**: Canais descrevem APENAS ONDE os clientes obtêm o valor (a via tangível: lojistas virtuais, carreta de entrega). Relacionamento dita o 'COMO' é cultivado e mantido na base o suporte cognitivo e interações que engajam esse usuário permanentemente (retenção).
+
+## 🔴 Desafio
+
+**5. O Canvas não é estático. Use o conceito de Padronização e Business Model Patterns, aplique isso definindo a configuração atípica de um Business Canvas na vertente Freemium Digital e Long Tail de produtos físicos nichados.**
+
+> **Resposta**: O Modelo Freemium anota o bloco Segmentação dividido estruturalmente entre Massa Gratuita vs Nicho Premium com a área Fontes de Receita focada em zero R$ para a vasta esmagadora fatia dependendo totalmente da pequena porcentagem pagante que tem blocos de Custos diluídos. No padrão Long Tail, a Proposta de Valor prega vastidão seletiva, Segmentação de inúmeros pequenos grupos e Recursos-Chave calcados unicamente numa Cadeia Logística infalível que entregue diversificação minúscula perene com lucro na agregação massiva das pequenezas de demandas cauda longa marginalizadas pelas vendedoras convencionais restritas aos Mainstreams blockbusters monopolistas.
 
 ---
 
-### 🔴 Desafio (Exploração)
-
-**5. Arquitetura Híbrida**
-Nessa mescla (A Receita de Ouro), nós utilizamos a força garantida matemática de bancos SQL somada ao Cache temporário de RAM do banco Redis. 
-**O Fluxo**: O usuário pede informações do seu perfil. A CPU do servidor pesquisa PRIMEIRO na memória temporária super-veloz (Redis). Caso não exista a informação (isso é o famoso *Cache Miss*), a CPU avisa: "Ok, precisaremos bater à porta do Postgres." Dessa forma, vai até o Postgres (que roda em disco, de forma duradoura mas demorada), puxa a leitura e envia o perfil do cara no site... entretanto... **Antes de despachar isso**, nós salvamos o resultado da query na memória do Redis de novo! Se o usuário de fato pedir o mesmo pacote em cinco minutos depois? O Redis já possui o dado (*Cache Hit*) e serve de forma cem vezes mais célere sem estressar a máquina principal.
-
----
-
-[**⬅️ Voltar para o Exercício**](./exercicio-07.md)
+!!! tip "Próximo Passo"
+    Maravilha! Agora que validou seus conhecimentos, avance para os próximos desafios ou retorne à [Aula 07](../aulas/aula-07.md).

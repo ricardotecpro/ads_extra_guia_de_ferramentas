@@ -1,32 +1,34 @@
-# Resolução: Aula 12 - Automação e IaC ⚙️
-
-### 🟢 Básicos (Fixação)
-
-**1. Diferenciação de Papéis**
-*   Para alocar IP's das redes, balanceadores e materializar 5 esquadras (instâncias "casca/ferro") na Amazon Cloud **Terraform** deve atuar no front processando chamadas API infraestruturais de criação crua no Datacenter.
-*   Ao acessar a massa estática já acesa de forma crua, visando manipular permissões de log, descarregar frameworks nativos de **Python** ou criar os daemons contínuos das portas Linux, utilizamos a gerência interna do **Ansible**. 
-
-**2. Vantagem do IaC**
-Imutabilidade garantida e rastreabilidade total (Git Commit Logs). Ao perder o engajamento humano das anotações (que esquecem de refazer uma regra no iptables ou erram um prefixo na digitação estressada as de madrugada), o engenheiro invoca instâncias na precisão matemática do arquivo base; e ao cometerem injeções falhas de segurança de rede o arquiteto rolará no tempo através da reversibilidade de re-aplicar o arquivamento testado *IaC* do dia anterior perfeitamente livre da memória corrompida do servidor.
+# Soluções - Aula 12: Atividades-chave 💡
 
 ---
 
-### 🟡 Intermediários (Aplicação)
+## 🟢 Fáceis
 
-**3. Playbooks do Ansible**
-O Ansible destaca-se da velha guarda de gerência infra não requerendo agentes clientes (malwares contínuos de verificação como no Puppet) na máquina do alvo principal; Ele opera estritamente o protocolo nativo encriptado **SSH (Secure Shell)** conectando-se remotamente sob ordens, transportando na memória de rede módulozinhos operacionais, manipulando os states Linux, finaliza seu engajamento e some com leveza e excelência sem deixar sujeira computacional nativa acesa na AWS.
+**1. Resuma a premissa de que o modelo de negócio baseia e direciona o foco do Empreendedor e não as macro gerências irrelevantes.**
 
-**4. Estado do Terraform**
-O arquivo criptografado de matriz `terraform.tfstate` opera como o cérebro das amarras virtuais, ele detém o dicionário cartográfico (a chave mestre de ligações com os códigos abstratos em linguagem `.tf` traduzidos para o serial ID de hardwares materializados na Azure/AWS). Perdido esse estado primordial o código local esquece do que originou na nuvem, ficando prostrado incapaz de deletar recursos ou alterá-los já que ao tentar a re-aplicação criará milhares de componentes redundantes encarecendo e conflitualizando IPs em redes fantasmas no ecossistema (Orphaned Infra).
+> **Resposta**: A empresa não existe para "Bater Ponto burocrático", atrelam e existem ao propósito direto único exclusivo orgânico que move suas entregas prometidas às dores. A Apple existe para inovar engenharia vital estética da base orgânica. Uber para gerir servidores do algoritmo em escala mundial real.
+
+**2. Qual seria uma Atividade-chave focada em startups puras de software versus logística atestadas?**
+
+> **Resposta**: Na startup focada e programada em SAAS o núcleo vital reside base em Codificação plena ativa, sustentabilidade das rotinas lógicas no servidor vital e Design base de Software perante os Cloud Engines ativos. Em distribuidão logística e marketplace atestada (Mercado Livre em base) o núcleo se direciona ativamente perante malhas atestadas de transporte modal interligado logístico atrelado pleno em galpões com CD ativo logístico fluído das esteiras de base matricial operacional.
+
+## 🟡 Médios
+
+**3. Como as atividades principais protegem o núcleo da corporação perante concorrentes que agem focados lateralmente.**
+
+> **Resposta**: Sustentam porque não se atrelam ou não desviam a mira gastando milhões ou atenção dispersível inútil do CEO base com tarefas administrativas contábeis perenes simples triviais rotineiras (essas são atestadas e viabilizadas pela terceirização passiva plena corporativa). Todo pingo vital se convergia na Propriedade de núcleo duro em barreiras da entrada imbuídas num conhecimento que NENHUM player de fora consegue mimetizar num mês de plágio.
+
+**4. Defina plataforma ativa e Resolução de dores interligadas a um núcleo matricial de serviço corporativo consultivo ativo vital nos fluxos diários gerenciais propostos no mercado global ativo do Canvas padrão ideal testado e validado e escalonado interativamente na gestão do time matricial base ativa do mercado corporativo clássico vital pleno moderno no cenário global atual.**
+
+> **Resposta**: Plataforma ativa gere e aprimora interligamento como nos Marketplaces (Uber app interativo com motoristas logados sem quedas brutais globais gerando rotas do algoritmo atrelado em segundos vitais lógicos). Resolvedor atua com foco do núcleo em Desafio como hospitais de alto patamar solucionando cirurgias vitais da complexidade atestada médica ou advogados corporativos prestando lógicas resolutivas jurídicas da intersecção processual atrelada ativamente engenhada nos fóruns atestadamente perenes da nação.
+
+## 🔴 Desafio
+
+**5. Elucide na profundidade da Teoria das Restrições (TOC) explanando gargalos orgânicos e justifique por que 'Otimizar um setor ou atividades irrelevante só prejudica as ineficiências latentes do modelo' perante um núcleo produtivo empresarial que subordina perdas.**
+
+> **Resposta**: O elo dita o poder atrelado de rebentamento de corrente onde o peso de toda a vazão flui intermitente de forma limitada ativamente pelo seu elo frágil. Se focarmos e injetarmos investimento nas partes de vendas no ápice atrelado sem garantir a performance atestada e amplificada gargalos logísticos atrelados, a força gerará um bloqueio atestado no meio que rebentará clientes que não recebem mercadorias queixando e vitimizando estopim. Subordina-se todos ao gargalo base (Ex.: Limitante de Entregas Mensais Fixa), ditando que NADA supere esse passo passivo, ou escalando primordialmente esse Setor das Restrições, antes mesmos das vaidades puras matriciais de publicidades em horários ou times irrestritos desnecessários no organograma geral do fluxo contínuo fluido da organização produtiva orgânica do Lean Manufacturing perene.
 
 ---
 
-### 🔴 Desafio (Exploração)
-
-**5. DevOps na Prática (Integração)**
-Um devops criaria as conexões da linha em um diretório automatizado (`.github/workflows/deploy.yml`):
-Na esteira de CI, ele provisionaria as credenciais seguras e injetaria o comando `terraform apply -auto-approve`, cujo script retornaria um *Output Array* de endereços IPv4 originados e elásticos de produção das três webclouds. O Action do repositório transferiria essa matriz de IPs instantaneamente para o inventário do `ansible-playbook setup.yml -i ./outputs` rodando no container efêmero a inserção final das dependências logísticas e de bibliotecas na máquina, acoplando simultaneamente o provisionamento cru do HashiCorp com a gerência do RedHat culminando em Servidor Produtivo (100% humano livre na entrega global).
-
----
-
-[**⬅️ Voltar para o Exercício**](./exercicio-12.md)
+!!! tip "Próximo Passo"
+    Maravilha! Agora que validou seus conhecimentos, avance para os próximos desafios ou retorne à [Aula 12](../aulas/aula-12.md).

@@ -1,42 +1,34 @@
-# Resolução: Aula 01 - Introdução ao Ecossistema 📝
-
-### 🟢 Básicos (Fixação)
-
-**1. Diferenciação de Ferramentas**
-*   **Git (Controle de Versão)**: Obrigatório para salvar o histórico de código de forma segura e permitir reverter erros sem dor de cabeça.
-*   **VS Code (Ambiente de Dev)**: Um editor leve para escrever o código com suporte a linting e formatação, garantindo produtividade e código limpo.
-*   **Docker (Infraestrutura)**: Essencial para garantir que o projeto rode na minha máquina e em qualquer servidor do mesmo jeito, eliminando o problema do "só funciona na minha máquina".
-
-**2. Identificação de Erros**
-A afirmação do colega está incorreta. A principal diferença técnica é que um **Editor de Código** (como o VS Code) nasce leve, focando apenas na edição de texto, e você precisa instalar extensões para que ele ganhe poder. Em contrapartida, uma **IDE** (como o IntelliJ) é um "Ambiente Integrado de Desenvolvimento" que já vem de fábrica acoplado a compiladores, depuradores avançados e perfiladores (profilers) específicos para uma linguagem, sendo muito mais "pesada" e completa nativamente.
+# Soluções - Aula 01: Intro ao Empreendedorismo 💡
 
 ---
 
-### 🟡 Intermediários (Aplicação)
+## 🟢 Fáceis
 
-**3. Fluxo de Trabalho**
-O caminho clássico de uma nova funcionalidade (Feature) percorre as seguintes categorias:
-1.  **Planejamento**: Jira / Trello (Criação do Card/Issue).
-2.  **Desenvolvimento**: VS Code + Terminal (Escrever o código).
-3.  **Controle de Versão**: Git + GitHub (Salvar e pedir revisão via Pull Request).
-4.  **Integração/Testes**: GitHub Actions (Rodar testes automatizados para validar a feature).
-5.  **Deploy**: Docker / Nuvem (Entrega do código empacotado para produção).
+**1. Defina o que é ser um empreendedor com suas palavras.**
 
-**4. Automação na Prática**
-Um desenvolvedor que precisa renomear 50 imagens (`img_1.jpg`, `img_2.jpg`...) perderia muito tempo fazendo isso pelo mouse (GUI). A automação perfeita seria abrir o **Terminal (CLI)** e usar um comando de repetição (como um laço `for` em Bash ou PowerShell) para renomear todas em fração de segundos, ou um script simples em Python para ler o diretório e modificar os nomes programaticamente.
+> **Resposta**: Ser empreendedor é uma postura de encontrar soluções, criar inovações e resolver problemas gerando valor, não se resumindo apenas a abrir o próprio negócio ou CNPJ.
+
+**2. Quais são as diferenças marcantes entre o empreendedor por necessidade e o por oportunidade?**
+
+> **Resposta**: O empreendedor por necessidade entra no mercado por falta de opção de renda (foco em sobrevivência e curto prazo). O por oportunidade observa uma lacuna no mercado e planeja seu negócio visando crescimento, lucro e inovação.
+
+## 🟡 Médios
+
+**3. Um funcionário otimiza um setor interno reduzindo custos em 30%. Ele pode ser considerado empreendedor? Justifique baseado nos tipos de perfis.**
+
+> **Resposta**: Sim, esse comportamento define o 'Intraempreendedor', aquele que inova e gera resultados exponenciais atuando dentro da empresa de terceiros, como um colaborador.
+
+**4. Explique a importância da característica 'Correr Riscos Calculados' na visão empreendedora.**
+
+> **Resposta**: Mitigar o risco é essencial para não falir precocemente. Correr risco calculado não é apostar cegamente, mas usar dados e testes pequenos para confirmar as chances antes de investir pesadamente.
+
+## 🔴 Desafio
+
+**5. Como a mentalidade 'Lean Startup' e o uso de MVP revolucionam a validação de um empreendimento, diferenciando da abertura clássica de empresas de décadas atrás?**
+
+> **Resposta**: O Lean Startup foca na agilidade. Em vez de grandes planejamentos e produções caras (que talvez o cliente não queira), cria-se um MVP (Produto Mínimo Viável) rápido e barato. A validação perante os clientes reais dita o que será realmente desenvolvido, reduzindo o custo da falha.
 
 ---
 
-### 🔴 Desafio (Exploração)
-
-**5. Análise de Mercado (Exemplo: Netflix)**
-Acessando o StackShare ou Blog de Engenharia da Netflix, encontramos ferramentas como:
-1.  **GitHub** (Controle de Versão): Para armazenar o código de seus microsserviços.
-2.  **Jenkins / GitHub Actions** (Infra/CI-CD): Para automação das pipelines de deploy.
-3.  **Docker / Kubernetes** (Infraestrutura/Orquestração): Para levantar os milhões de contêineres que servem os vídeos.
-4.  **Jira** (Gestão de Projetos): Para coordenar as centenas de equipes em sprints ágeis.
-5.  **Slack** (Comunicação): Para notificar incidentes no servidor via integrações (ChatOps).
-
----
-
-[**⬅️ Voltar para o Exercício**](./exercicio-01.md)
+!!! tip "Próximo Passo"
+    Maravilha! Agora que validou seus conhecimentos, avance para os próximos desafios ou retorne à [Aula 01](../aulas/aula-01.md).

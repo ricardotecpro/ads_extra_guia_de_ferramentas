@@ -1,19 +1,23 @@
-# Exercícios: Aula 10 - Qualidade de Código ✨
+# Exercícios 10 - Canais de Comunicação 🧩
 
-### 🟢 Básicos (Fixação)
+## 🟢 Fáceis
 
-1.  **Linter vs Formatter**: Se o seu código está com espaços errados, mas a lógica está perfeita, qual ferramenta você usaria? E se você esqueceu de declarar uma variável?
-2.  **Configuração do VS Code**: Por que a opção "Format on Save" é considerada uma grande aliada da produtividade para desenvolvedores?
+1. O que definem os Canais de forma teórica em relação orgânica às vendas no modelo lido?
+2. Canal primariamente tem apenas e unicamente intuito de venda transacional? Cite um contraponto do marketing.
 
-### 🟡 Intermediários (Aplicação)
+## 🟡 Médios
 
-3.  **Padronização em Equipe**: Imagine que um desenvolvedor gosta de usar aspas simples (`'`) e outro prefere aspas duplas (`"`). Como o **Prettier** resolve essa disputa técnica sem que ninguém precise discutir?
-4.  **Análise Estática**: Como um Linter (como o ESLint) pode ajudar a economizar dinheiro para uma empresa que paga por tempo de processamento em nuvem? (Dica: Pense em códigos ineficientes ou loops infinitos).
+3. Qual a disparidade de viabilidade e de impacto comparando canais Diretos com canais Indiretos parceirizados.
+4. Defina o viés moderno entre atuar num Multicanal perante um Omnichannel onde marcas modernas aportam.
 
-### 🔴 Desafio (Exploração)
+## 🔴 Desafio
 
-5.  **Regras Customizadas**: Pesquise sobre a regra `no-console` do ESLint. Por que muitas empresas proíbem que o comando `console.log()` seja enviado para o código final em produção?
+5. Canais se comunicam matematicamente de forma contígua a taxas de funil perante CAC. Demonstre o racional intermediário estratégico que fundamenta em cancelar certas bases para manter a taxa de conversão final escalável nas estratégias focadas do Omnichannel.
 
 ---
 
-[**🔍 Ver Solução e Lógica do Exercício**](./solucao-10.md)
+## 📚 Correção
+
+Após tentar responder e pesquisar, verifique a resolução oficial e o gabarito para consolidar o aprendizado:
+
+**[👉 Ver Soluções (Gabarito Oficial)](solucao-10.md)**
